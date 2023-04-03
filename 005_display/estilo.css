@@ -1,0 +1,43 @@
+/* DISPLAY: define o espaço do elemento. Display padrão - p/divs=block; a/img/span=inline.*/
+/* block; inline(largura/altura fixas); inline-block(largura/altura alteráveis); none(invisivel); */
+body{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.caixa_principal{
+    border: 2px dotted rgb(216, 9, 9);
+    padding: 10px;
+}
+.caixa_secundaria1{
+    border: 2px solid #000;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+  
+.caixa_secundaria2{
+    border: 2px solid #c1c1c1;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.box_sp{
+    border: 3px solid rgb(85, 12, 222);
+    /* display: block; */
+    /* visibility: hidden; mostra o espaço do elemento se display:none */
+}
+
+.box_pgf{
+    border: 3px solid rgb(85, 12, 222);
+    /* display: block; */
+}
+  
+
+

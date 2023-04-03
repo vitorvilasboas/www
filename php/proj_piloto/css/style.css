@@ -1,0 +1,82 @@
+body{font-family: 'Roboto', sans-serif;}
+
+.linha{
+    width: 960px; /*largura total da página*/
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px 0 5px 0; /* padding: 5px 0; */
+}
+
+.coluna{
+    float: left; /* flutuação do componente à esquerda */
+    padding: 0 10px 0 10px;
+}
+
+.coluna1{width: 60px;}
+.coluna2{width: 140px;}
+.coluna3{width: 220px;}
+.coluna4{width: 300px;}
+.coluna5{width: 380px;}
+.coluna6{width: 460px;}
+.coluna7{width: 540px;}
+.coluna8{width: 620px;}
+.coluna9{width: 700px;}
+.coluna10{width: 780px;}
+.coluna11{width: 860px;}
+.coluna12{width: 940px;}
+
+.topo img{
+    border: 3px solid #040404;
+    max-width: 220px;
+    min-width: 110px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.topo h2{
+    text-align: center;
+}
+
+.topo p{
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.rodape{
+    background: #8cb7ac;
+    height: 60px;
+    padding-top: 15px;
+    text-align: center;
+    color: #f8f6cb;
+}
+
+.barra-lateral {
+    padding: 0.5%;
+}
+
+.menu ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.menu ul li{
+    margin: 5%;
+    outline: 1px solid #dedede;
+    text-align: center;
+}
+
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 3%;
+}
+
+.menu a:active, .menu a:after, .menu a:before{
+    text-decoration: none;
+}
+
+.paginas{
+    min-height: 300px;
+    padding-top: 10px;
+}

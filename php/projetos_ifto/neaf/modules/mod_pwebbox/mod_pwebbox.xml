@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Perfect Everything in Everyway</name>
+    <creationDate>2016-05-30</creationDate>
+    <author>Perfect Web</author>
+    <copyright>Copyright (C) 2016 Perfect Web sp. z o.o., All rights reserved.</copyright>
+    <license>GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>office@perfect-web.co</authorEmail>
+    <authorUrl>http://www.perfect-web.co</authorUrl>
+    <version>2.0.13</version>
+    <description></description>
+    <perfect_update_id>13</perfect_update_id>
+	
+    <languages folder="lang">
+        <language tag="en-GB">en-GB.mod_pwebbox.ini</language>
+        <language tag="en-GB">en-GB.mod_pwebbox.sys.ini</language>
+    </languages>
+	
+    <files>
+        <filename module="mod_pwebbox">mod_pwebbox.php</filename>
+        <folder>form</folder>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>pluginhelper.php</filename>
+        <filename>perfectinstaller.php</filename>
+    </files>
+	
+    <media destination="mod_pwebbox">
+        <folder>cache</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>themes</folder>
+        <filename>index.html</filename>
+    </media> 
+    
+    <scriptfile>installer.script.php</scriptfile>
+
+    <config>
+        <fields name="params">
+		
+            <!-- Basic Configuration -->
+            <fieldset name="basic" addfieldpath="/modules/mod_pwebbox/form/fields" addrulepath="/modules/mod_pwebbox/form/rules">				
+				
+                <field type="pwebversion" name="MOD_PWEBBOX_VERSION" ext_type="module" ext_element="mod_pwebbox" ext_folder="" ext_client="0" />
+ 		                      
+                <field type="pwebopentag" hidden="true" class="pweb-hidden" />		
+                    <field type="pwebtext" name="plugin" hidden="true" required="true" class="required" 
+                           label="MOD_PWEBBOX_PLUGIN_LABEL" description="MOD_PWEBBOX_PLUGIN_DESC" />                   
+                    <field type="pwebmodifydate" name="modify_date" hidden="true"
+                           label="MOD_PWEBBOX_MODIFY_DATE" />                 
+                <field type="pwebclosetag" hidden="true" />	                    
+				
+                <field type="pwebasset" hidden="true" /> 
+                <field type="pweblegacy" hidden="true" />   
+                
+                <field type="pwebsummary" hidden="true" />  
+                              
+                <field type="pwebtmplcomponent" hidden="true" />                
+            </fieldset>
+            
+            <!-- Content Configuration -->
+            <fieldset name="mod_pwebbox_content">
+                <field type="pwebopentag" hidden="true" class="pweb-accordion" pweb_id="pweb_accordion2" />  
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_CONTENT_OPTIONS_LABEL"                             
+                            pweb_class_in="" 
+                            pweb_class_collapsed="collapsed" 
+                            pweb_parent_id="pweb_accordion2a"
+                            pweb_group_ajax="main" />  
+                        <field type="pwebopentag" hidden="true" class="row-fluid" /> 
+                        <field name="plugin_config" type="pwebplugin" filter="array" hidden="true" />
+                            <field type="pwebopentag" hidden="true" class="span12 content-ajax" pweb_id="pweb_content_options" />
+                                
+                            <field type="pwebclosetag" hidden="true" />
+                        <field type="pwebclosetag" hidden="true" />
+                    <field type="pwebaccordiongroupend" hidden="true" />                  
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_CHOOSE_CONTENT_TYPE_LABEL"                             
+                            pweb_class_in="in" 
+                            pweb_class_collapsed="" 
+                            pweb_parent_id="pweb_accordion2b"  /> 
+                        <field type="pwebopentag" hidden="true" class="row-fluid pweb-margin-b-10 pweb-padding-10" /> 
+                            <field type="pwebopentag" hidden="true" class="span12 pwebPlgBtnsWrapper" />
+                                <field type="pwebcontent" hidden="true" />                                                              
+                            <field type="pwebclosetag" hidden="true" />  
+                        <field type="pwebclosetag" hidden="true" />                     
+                    <field type="pwebaccordiongroupend" hidden="true" />                 
+                <field type="pwebclosetag" hidden="true" />                              
+            </fieldset>            
+            
+            <!-- Location & Effects Configuration -->
+            <fieldset name="mod_pwebbox_location_and_effects">
+                <field type="pwebopentag" hidden="true" class="pweb-accordion" pweb_id="pweb_accordion1" />    
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_LOCATION_BEFORE_OPENING_LABEL" 
+                            pweb_class_in="in" 
+                            pweb_class_collapsed="" 
+                            pweb_parent_id="pweb_accordion1a" />   
+                        <field  
+                                name="handler" 
+                                type="pwebradiowrapped" 
+                                class="required pweb-handler pweb-radio-fieldset" 
+                                default="tab" 
+                                required="true"
+                                hidden="true"
+                                label="MOD_PWEBBOX_FIELD_HANDLER_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_HANDLER_DESC">
+                                <option value="button" class="pweb-handler-button">MOD_PWEBBOX_VALUE_BUTTON</option>
+                                <option value="tab" class="pweb-handler-tab">MOD_PWEBBOX_VALUE_TAB</option>
+                                <option value="static" class="pweb-handler-static">MOD_PWEBBOX_VALUE_STATIC</option>
+                                <option value="hidden" class="pweb-handler-hidden">MOD_PWEBBOX_VALUE_HIDDEN</option>
+                                <option value="bottombar" class="pweb-handler-bottombar">MOD_PWEBBOX_VALUE_BOTTOMBAR</option>
+                        </field>
+                        <field 
+                                name="toggler_name" 
+                                type="pwebtext" 
+                                default=""
+                                pweb_showon="handler:button,tab"
+                                hidden="true"
+                                label="MOD_PWEBBOX_FIELD_TOGGLER_NAME_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_TOGGLER_NAME_DESC"/>
+                        <field 
+                                type="pwebbuttonconfig" 
+                                hidden="true" 
+                                label="MOD_PWEBBOX_BUTTON_ADVANCED_LABEL" 
+                                pweb_target_id="pweb_handler_advanced_options" />  
+                        <field type="pwebopentag" hidden="true" class="pweb-advanced-options-content pweb-hidden" pweb_id="pweb_handler_advanced_options" /> 
+                            <field  
+                                    name="open_event" 
+                                    type="pwebradio" 
+                                    default="click" 
+                                    pweb_showon="handler:button,tab"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_EVENT_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_OPEN_EVENT_DESC">
+                                    <option value="click">MOD_PWEBBOX_FIELD_OPEN_EVENT_CLICK_VALUE</option>
+                                    <option value="mouseenter">MOD_PWEBBOX_FIELD_OPEN_EVENT_MOUSEENTER_VALUE</option>
+                            </field>                          
+                            <field  
+                                    name="close_event" 
+                                    type="pwebradio" 
+                                    default="click" 
+                                    pweb_showon="handler:button,tab"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_CLOSE_EVENT_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_CLOSE_EVENT_DESC">
+                                    <option value="click">MOD_PWEBBOX_FIELD_OPEN_EVENT_CLICK_VALUE</option>
+                                    <option value="mouseleave">MOD_PWEBBOX_FIELD_CLOSE_EVENT_MOUSELEAVE_VALUE</option>
+                            </field>                          
+                            <field  
+                                    name="toggler_position" 
+                                    type="pwebradio" 
+                                    default="left" 
+                                    pweb_showon="handler:tab"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_TOGGLER_POSITION_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_TOGGLER_POSITION_DESC">
+                                    <option value="left">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_LEFT_VALUE</option>
+                                    <option value="right">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_RIGHT_VALUE</option>
+                                    <option value="top:left">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_TOP_LEFT_VALUE</option>
+                                    <option value="top:right">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_TOP_RIGHT_VALUE</option>
+                                    <option value="bottom:left">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_BOTTOM_LEFT_VALUE</option>
+                                    <option value="bottom:right">MOD_PWEBBOX_FIELD_TOGGLER_POSITION_BOTTOM_RIGHT_VALUE</option>
+                            </field>  
+                            <field
+                                    name="offset"
+                                    type="pwebtext"
+                                    pweb_showon="handler:tab"
+                                    hidden="true"
+                                    class="input-mini"
+                                    label="MOD_PWEBBOX_FIELD_OFFSET_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_OFFSET_DESC" />
+                            <field
+                                    name="zindex"
+                                    type="pwebtext"
+                                    pweb_showon="handler:button,tab,hidden"
+                                    hidden="true"
+                                    class="input-mini"
+                                    label="MOD_PWEBBOX_FIELD_ZINDEX_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_ZINDEX_DESC" />
+                            <field 
+                                    type="pwebspacer" 
+                                    pweb_showon="handler:button,tab,hidden,bottombar"
+                                    hidden="true"
+                                    label="MOD_PWEBBOX_FIELD_AUTO_OPEN_AND_CLOSE_LABEL" />     
+                            <field  
+                                    name="open_toggler" 
+                                    type="pwebradio" 
+                                    default="0" 
+                                    pweb_showon="handler:button,tab,hidden,bottombar"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_TOGGLER_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_OPEN_TOGGLER_DESC">
+                                    <option value="0">JNo</option>
+                                    <option value="1">MOD_PWEBBOX_FIELD_OPEN_TOGGLER_ON_LOAD_VALUE</option>
+                                    <option value="2">MOD_PWEBBOX_FIELD_OPEN_TOGGLER_ON_SCROLL_VALUE</option>
+                                    <option value="3">MOD_PWEBBOX_FIELD_OPEN_TOGGLER_ON_EXIT_VALUE</option>
+                            </field>  
+                            <field
+                                    name="open_count"
+                                    type="pwebtext"
+                                    pweb_showon="open_toggler:1,2,3"
+                                    hidden="true"
+                                    default="1"
+                                    class="input-mini validate-numeric"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_COUNT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_OPEN_COUNT_DESC" />     
+                            <field
+                                    name="open_after_count"
+                                    type="pwebtext"
+                                    pweb_showon="open_toggler:1,2,3"
+                                    hidden="true"
+                                    default="0"
+                                    class="input-mini validate-numeric"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_AFTER_COUNT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_OPEN_AFTER_COUNT_DESC" />                                                          
+                            <field
+                                    name="open_delay"
+                                    type="pwebtext"
+                                    pweb_showon="open_toggler:1,2,3"
+                                    hidden="true"
+                                    default="0"
+                                    class="input-mini validate-numeric"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_DELAY_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_OPEN_DELAY_DESC" />       
+                            <field  
+                                    name="open_counter_storage" 
+                                    type="pwebradio" 
+                                    default="0" 
+                                    pweb_showon="open_toggler:1,2,3"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_OPEN_COUNTER_STORAGE_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_OPEN_COUNTER_STORAGE_DESC">
+                                    <option value="0">MOD_PWEBBOX_FIELD_OPEN_COUNTER_STORAGE_COOKIE_VALUE</option>
+                                    <option value="1">MOD_PWEBBOX_FIELD_OPEN_COUNTER_STORAGE_JOOMLA_SESSION_VALUE</option>
+                            </field>                                                                                                           
+                            <field
+                                    name="cookie_lifetime"
+                                    type="pwebtext"
+                                    pweb_showon="open_toggler:1,2,3"
+                                    hidden="true"
+                                    default="30"
+                                    class="input-mini validate-numeric"
+                                    label="MOD_PWEBBOX_FIELD_COOKIE_LIFETIME_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_COOKIE_LIFETIME_DESC" />                                                                               
+                            <field  
+                                    name="modal_disable_close" 
+                                    type="pwebradio" 
+                                    default="0" 
+                                    pweb_showon="effect:modal:fade,modal:rotate,modal:square,modal:smooth"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_MODAL_DISABLE_CLOSE_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_MODAL_DISABLE_CLOSE_DESC">
+                                    <option value="0">JNo</option>
+                                    <option value="1">JYes</option>
+                            </field>                                     
+                            <field
+                                    name="close_delay"
+                                    type="pwebtext"
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    hidden="true"
+                                    default="0"
+                                    class="input-mini validate-numeric"
+                                    label="MOD_PWEBBOX_FIELD_CLOSE_DELAY_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_CLOSE_DELAY_DESC" />                                                                                  
+                            <field  
+                                    name="close_other" 
+                                    type="pwebradio" 
+                                    default="0" 
+                                    pweb_showon="effect:slidebox:slide_in,slidebox:slide_in_full,accordion:slide_down"
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_FIELD_CLOSE_OTHER_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_CLOSE_OTHER_DESC">
+                                    <option value="0">JNo</option>
+                                    <option value="1">JYes</option>
+                            </field>                                                     
+                            <field 
+                                    type="pwebspacer" 
+                                    hidden="true"
+                                    label="MOD_PWEBBOX_FIELD_JAVASCRIPT_EVENTS" />
+                            <field
+                                    name="onload"
+                                    type="pwebtextarea"
+                                    filter="raw"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    cols="20" 
+                                    rows="10"                                    
+                                    label="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONLOAD_EVENT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONLOAD_EVENT_DESC"
+                                    />
+                            <field
+                                    name="onopen"
+                                    type="pwebtextarea"
+                                    filter="raw"
+                                    pweb_showon="handler:button,tab,hidden"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    cols="20" 
+                                    rows="10"                                     
+                                    label="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONOPEN_EVENT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONOPEN_EVENT_DESC"
+                                    />
+                            <field
+                                    name="onclose"
+                                    type="pwebtextarea"
+                                    filter="raw"
+                                    pweb_showon="handler:button,tab,hidden,bottombar"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    cols="20" 
+                                    rows="10"                                     
+                                    label="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONCLOSE_EVENT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_JAVASCRIPT_ONCLOSE_EVENT_DESC"
+                                    />
+                            <field 
+                                    type="pwebspacer" 
+                                    hidden="true"
+                                    label="MOD_PWEBBOX_GOOGLE_ANALYTICS_TRACKER_HEADER" />  
+                            <field  
+                                    name="analytics_tracker_type" 
+                                    type="pwebradio" 
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    default="0" 
+                                    hidden="true"
+                                    class="btn-group btn-group-yesno"
+                                    label="MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_LABEL" 
+                                    description="MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_DESC">
+                                    <option value="0">MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_DISABLED_VALUE</option>
+                                    <option value="1">MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_TRADITIONAL_VALUE</option>
+                                    <option value="2">MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_ASYNCHRONOUS_VALUE</option>
+                                    <option value="3">MOD_PWEBBOX_ANALYTICS_TRACKER_TYPE_UNIVERSAL_VALUE</option>
+                            </field>  
+                            <field
+                                    name="analytics_tracker_page"
+                                    type="pwebtext"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    label="MOD_PWEBBOX_FIELD_ANALYTICS_TRACKER_PAGE_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_ANALYTICS_TRACKER_PAGE_DESC" />   
+                            <field
+                                    name="analytics_tracker_event"
+                                    type="pwebtext"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    label="MOD_PWEBBOX_FIELD_ANALYTICS_TRACKER_EVENT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_ANALYTICS_TRACKER_EVENT_DESC" />                                                                                                                
+                            <field 
+                                    type="pwebspacer" 
+                                    hidden="true"
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    label="MOD_PWEBBOX_ADWORDS_CONVERSION_TRACKER_HEADER" />
+                            <field 
+                                    name="adwords_url" 
+                                    type="pwebadwords" 
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    size="50" 
+                                    hidden="true"
+                                    class="pweb-filter-url input-xxlarge" 
+                                    label="MOD_PWEBBOX_ADWORDS_CONVERSION_URL_LABEL" 
+                                    description="MOD_PWEBBOX_ADWORDS_CONVERSION_URL_DESC" />
+
+                            <field 
+                                    type="pwebspacer" 
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    hidden="true" 
+                                    label="MOD_PWEBBOX_ADCENTER_CONVERSION_TRACKER_HEADER" />
+                            <field 
+                                    name="adcenter_url" 
+                                    type="pwebadcenter" 
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    size="50"
+                                    hidden="true" 
+                                    class="pweb-filter-url input-xxlarge" 
+                                    label="MOD_PWEBBOX_ADCENTER_CONVERSION_URL_LABEL" 
+                                    description="MOD_PWEBBOX_ADCENTER_CONVERSION_URL_DESC" />
+                            <field
+                                    type="pwebspacer"
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    class="pweb-pixel-code"
+                                    hidden="true"
+                                    label="MOD_PWEBBOX_FBPIXEL_CONVERSION_TRACKER_HEADER" />
+                            <field
+                                    name="fb_pixel_id"
+                                    type="pwebfbpixel"
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    size="50"
+                                    hidden="true"
+                                    class="pweb-filter-url input-xxlarge"
+                                    label="MOD_PWEBBOX_FBPIXEL_ID_LABEL"
+                                    description="MOD_PWEBBOX_FBPIXEL_ID_DESC" />
+                            <field 
+                                    type="pwebspacer" 
+                                    pweb_showon="handler:button,tab,static,hidden"
+                                    hidden="true" 
+                                    label="MOD_PWEBBOX_CUSTOM_TRACKING_SCRIPT_HEADER" />
+                            <field
+                                    name="custom_script"
+                                    type="pwebtextarea"
+                                    filter="raw"
+                                    hidden="true"
+                                    class="input-xxlarge"
+                                    cols="20" 
+                                    rows="10"                                     
+                                    label="MOD_PWEBBOX_FIELD_CUSTOM_SCRIPT_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_CUSTOM_SCRIPT_DESC"
+                                    />                            
+                        <field type="pwebclosetag" hidden="true" />                     
+                    <field type="pwebaccordiongroupend" hidden="true" />    
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_LOCATION_AFTER_OPENING_LABEL" 
+                            pweb_class_in="" 
+                            pweb_class_collapsed="collapsed" 
+                            pweb_parent_id="pweb_accordion1b" />   
+                        <field  
+                                name="effect" 
+                                type="pwebradiowrapped" 
+                                class="required pweb-effect pweb-radio-fieldset" 
+                                default="slidebox:slide_in" 
+                                required="true"
+                                hidden="true"
+                                label="MOD_PWEBBOX_FIELD_EFFECT_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_EFFECT_DESC">
+                                <option value="slidebox:slide_in" class="pweb-effect-slide-in">MOD_PWEBBOX_VALUE_SLIDEBOX_SLIDE_IN</option>
+                                <option value="slidebox:slide_in_full" class="pweb-effect-slide-in-full">MOD_PWEBBOX_VALUE_SLIDEBOX_SLIDE_IN_FULL</option>
+                                <option value="modal:fade" class="pweb-effect-fade">MOD_PWEBBOX_VALUE_MODAL_FADE</option>
+                                <option value="modal:rotate" class="pweb-effect-rotate">MOD_PWEBBOX_VALUE_MODAL_ROTATE</option>
+                                <option value="modal:square" class="pweb-effect-square">MOD_PWEBBOX_VALUE_MODAL_SQUARE</option>
+                                <option value="modal:smooth" class="pweb-effect-smooth">MOD_PWEBBOX_VALUE_MODAL_SMOOTH</option>
+                                <option value="accordion:slide_down" class="pweb-effect-slide-down">MOD_PWEBBOX_VALUE_ACCORDION_SLIDE_DOWN</option>
+                                <option value="static:none" class="pweb-effect-static-none">MOD_PWEBBOX_VALUE_ACCORDION_STATIC_NONE</option>
+                                <option value="bottombar:none" class="pweb-effect-static-bottombar">MOD_PWEBBOX_VALUE_ACCORDION_BOTTOMBAR_NONE</option>
+                        </field> 
+                        <field 
+                                type="pwebbuttonconfig" 
+                                hidden="true" 
+                                label="MOD_PWEBBOX_BUTTON_ADVANCED_LABEL" 
+                                pweb_target_id="pweb_effect_advanced_options" />  
+                        <field type="pwebopentag" hidden="true" class="pweb-advanced-options-content pweb-hidden" pweb_id="pweb_effect_advanced_options" /> 
+                            <field  
+                                    name="effect_transition" 
+                                    type="pweblist" 
+                                    pweb_showon="effect:slidebox:slide_in,slidebox:slide_in_full"
+                                    hidden="true"
+                                    default="-1" 
+                                    label="MOD_PWEBBOX_FIELD_EFFECT_TRANSITION_LABEL" 
+                                    description="MOD_PWEBBOX_FIELD_EFFECT_TRANSITION_DESC">
+                                    <option value="-1">JOPTION_USE_DEFAULT</option>
+                                    <option value="linear">linear</option>
+                                    <option value="swing">swing</option>
+                                    <option value="-2">- jQuery UI Effects -</option>
+                                    <option value="easeInQuad">easeInQuad</option>
+                                    <option value="easeOutQuad">easeOutQuad</option>
+                                    <option value="easeInOutQuad">easeInOutQuad</option>
+                                    <option value="easeInCubic">easeInCubic</option>
+                                    <option value="easeOutCubic">easeOutCubic</option>
+                                    <option value="easeInOutCubic">easeInOutCubic</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInOutQuart">easeInOutQuart</option>
+                                    <option value="easeInQuint">easeInQuint</option>
+                                    <option value="easeOutQuint">easeOutQuint</option>
+                                    <option value="easeInOutQuint">easeInOutQuint</option>
+                                    <option value="easeInExpo">easeInExpo</option>
+                                    <option value="easeOutExpo">easeOutExpo</option>
+                                    <option value="easeInOutExpo">easeInOutExpo</option>
+                                    <option value="easeInSine">easeInSine</option>
+                                    <option value="easeOutSine">easeOutSine</option>
+                                    <option value="easeInOutSine">easeInOutSine</option>
+                                    <option value="easeInCirc">easeInCirc</option>
+                                    <option value="easeOutCirc">easeOutCirc</option>
+                                    <option value="easeInOutCirc">easeInOutCirc</option>
+                                    <option value="easeInElastic">easeInElastic</option>
+                                    <option value="easeOutElastic">easeOutElastic</option>
+                                    <option value="easeInOutElastic">easeInOutElastic</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="easeInBounce">easeInBounce</option>
+                                    <option value="easeOutBounce">easeOutBounce</option>
+                                    <option value="easeInOutBounce">easeInOutBounce</option>
+                            </field>                        
+                            <field
+                                    name="effect_duration"
+                                    type="pwebtext"
+                                    pweb_showon="effect:slidebox:slide_in,slidebox:slide_in_full,modal:fade,modal:rotate,modal:square,modal:smooth,accordion:slide_down"
+                                    hidden="true"
+                                    class="validate-numeric input-mini"
+                                    label="MOD_PWEBBOX_FIELD_EFFECT_DURATION_LABEL"
+                                    description="MOD_PWEBBOX_FIELD_EFFECT_DURATION_DESC"
+                                    />
+                        <field type="pwebclosetag" hidden="true" />                                         
+                    <field type="pwebaccordiongroupend" hidden="true" /> 
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_LOCATION_TIPS_LABEL" 
+                            pweb_class_in="" 
+                            pweb_class_collapsed="collapsed" 
+                            pweb_parent_id="pweb_accordion1c" />  
+                            <field type="pwebtips" hidden="true" />                                            
+                    <field type="pwebaccordiongroupend" hidden="true" />    
+                <field type="pwebclosetag" hidden="true" />                           
+            </fieldset>
+            
+            <!-- Layout Configuration -->
+            <fieldset name="mod_pwebbox_layout"> 
+                <field type="pwebopentag" hidden="true" class="pweb-accordion" pweb_id="pweb_accordion3" />                 
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_THEME_OPTIONS_LABEL"                             
+                            pweb_class_in="in" 
+                            pweb_class_collapsed="" 
+                            pweb_parent_id="pweb_accordion3a" />  
+                            <field 
+                                    type="pwebthemeinfo" 
+                                    hidden="true" />   
+                        <field type="pwebopentag" hidden="true" class="theme-cfg-btn-container" /> 
+                                <field 
+                                        type="pwebbuttonconfig" 
+                                        hidden="true" 
+                                        class="btn-info"
+                                        label="MOD_PWEBBOX_BUTTON_THEME_CUSTOMIZER_LABEL" 
+                                        pweb_target_id="pweb_themes_advanced_options" /> 
+                        <field type="pwebclosetag" hidden="true" />                      
+                        <field type="pwebopentag" hidden="true" class="pweb-advanced-options-content pweb-hidden" pweb_id="pweb_themes_advanced_options" /> 
+                                <field type="pwebopentag" hidden="true" class="pweb-margin-b-10" />                 
+                                        <field 
+                                                type="pwebbutton" 
+                                                hidden="true" 
+                                                class=""
+                                                label="MOD_PWEBBOX_BUTTON_CLEAR_THEME_SETTINGS_LABEL" 
+                                                description="MOD_PWEBBOX_BUTTON_CLEAR_THEME_SETTINGS_DESC"
+                                                pweb_icon="icon-cancel"
+                                                pweb_id="pweb_clear_theme_settings" />    
+                                <field type="pwebclosetag" hidden="true" />                                        
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_THEME_COMMON_LABEL" />                
+                                <field  
+                                        name="rounded" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_ROUNDED_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_ROUNDED_DESC">
+                                        <option value="0">JNo</option>
+                                        <option value="1">JYes</option>
+                                </field>
+                                <field  
+                                        name="shadow" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_SHADOW_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_SHADOW_DESC">
+                                        <option value="0">JNo</option>
+                                        <option value="1">JYes</option>
+                                </field>
+                                <field  
+                                        name="gradient" 
+                                        type="pwebradio" 
+                                        default="2" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_GRADIENT_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_GRADIENT_DESC">
+                                        <option value="1">MOD_PWEBBOX_FIELD_GRADIENT_GRADIENTS_VALUE</option>
+                                        <option value="2">MOD_PWEBBOX_FIELD_GRADIENT_FLAT_VALUE</option>
+                                </field>
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_POPUPBOX_SIZE_LABEL" />  
+                                <field 
+                                        name="box_width"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini validate-numeric"
+                                        maxlength="4"
+                                        label="MOD_PWEBBOX_FIELD_BOX_WIDTH_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BOX_WIDTH_DESC" />
+                                <field 
+                                        name="box_height"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini validate-numeric"
+                                        maxlength="4"
+                                        label="MOD_PWEBBOX_FIELD_BOX_HEIGHT_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BOX_HEIGHT_DESC" />
+                                <field 
+                                        type="pwebspacer"
+                                        hidden="true"  
+                                        label="MOD_PWEBBOX_FIELD_POPUPBOX_TEXT_LABEL" />      
+                                <field
+                                        name="text_color"
+                                        type="pwebcolor"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TEXT_COLOR_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_TEXT_COLOR_DESC" />  
+                                <field 
+                                        name="font_size"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini"
+                                        label="MOD_PWEBBOX_FIELD_FONT_SIZE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_FONT_SIZE_DESC" />                                                                    
+                                <field 
+                                        name="font_family"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_FONT_FAMILY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_FONT_FAMILY_DESC" />  
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_BACKGROUND_LABEL" />  
+                                <field
+                                        name="bg_color"
+                                        type="pwebcolor"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_BG_COLOR_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_BG_COLOR_DESC" />  
+                                <field  
+                                        name="bg_opacity" 
+                                        type="pweblist" 
+                                        default="1" 
+                                        hidden="true" 
+                                        class="input-mini"
+                                        label="MOD_PWEBBOX_FIELD_BG_OPCACITY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_OPCACITY_DESC">
+                                        <option value="">JOPTION_USE_DEFAULT</option>
+                                        <option value="0.0">0.0</option>                                
+                                        <option value="0.1">0.1</option>
+                                        <option value="0.2">0.2</option>
+                                        <option value="0.3">0.3</option>
+                                        <option value="0.4">0.4</option>
+                                        <option value="0.5">0.5</option>
+                                        <option value="0.6">0.6</option>
+                                        <option value="0.7">0.7</option>
+                                        <option value="0.8">0.8</option>
+                                        <option value="0.9">0.9</option>
+                                        <option value="1">1</option>
+                                </field>                                                                                                                                          
+                                <field  
+                                        name="bg_padding_position" 
+                                        type="pweblist" 
+                                        default=""
+                                        hidden="true"  
+                                        class="input-medium"
+                                        label="MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_DESC">
+                                        <option value="">JDISABLED</option>
+                                        <option value="left">MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_LEFT_VALUE</option>
+                                        <option value="right">MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_RIGHT_VALUE</option>
+                                        <option value="top">MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_TOP_VALUE</option>
+                                        <option value="bottom">MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_BOTTOM_VALUE</option>
+                                        <option value="all">MOD_PWEBBOX_FIELD_BG_PADDING_POSITION_ALL_VALUE</option>
+                                </field>  
+                                <field 
+                                        name="bg_padding"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini validate-numeric"
+                                        maxlength="4"
+                                        label="MOD_PWEBBOX_FIELD_BG_PADDING_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_PADDING_DESC" />  
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_SPACER_BG_IMAGE_LABEL" />   
+                                <field 
+                                        name="bg_image"
+                                        type="pwebmedia"
+                                        hidden="true" 
+                                        class="input-large"
+                                        label="MOD_PWEBBOX_FIELD_BG_IMAGE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_IMAGE_DESC" />   
+                                <field  
+                                        name="bg_position" 
+                                        type="pweblist" 
+                                        default=""
+                                        hidden="true"  
+                                        class="input-medium"
+                                        label="MOD_PWEBBOX_FIELD_BG_POSITION_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_POSITION_DESC">
+                                        <option value="">JOPTION_USE_DEFAULT</option>
+                                        <option value="left top">MOD_PWEBBOX_FIELD_BG_POSITION_LEFT_TOP_VALUE</option>
+                                        <option value="left center">MOD_PWEBBOX_FIELD_BG_POSITION_LEFT_CENTER_VALUE</option>
+                                        <option value="left bottom">MOD_PWEBBOX_FIELD_BG_POSITION_LEFT_BOTTOM_VALUE</option>
+                                        <option value="right top">MOD_PWEBBOX_FIELD_BG_POSITION_RIGHT_TOP_VALUE</option>
+                                        <option value="right center">MOD_PWEBBOX_FIELD_BG_POSITION_RIGHT_CENTER_VALUE</option>
+                                        <option value="right bottom">MOD_PWEBBOX_FIELD_BG_POSITION_RIGHT_BOTTOM_VALUE</option>
+                                        <option value="center top">MOD_PWEBBOX_FIELD_BG_POSITION_CENTER_TOP_VALUE</option>
+                                        <option value="center center">MOD_PWEBBOX_FIELD_BG_POSITION_CENTER_CENTER_VALUE</option>
+                                        <option value="center bottom">MOD_PWEBBOX_FIELD_BG_POSITION_CENTER_BOTTOM_VALUE</option>
+                                </field>                                                                                                                                                                                                                                        
+                                <field  
+                                        name="bg_repeat" 
+                                        type="pweblist" 
+                                        default=""
+                                        hidden="true"  
+                                        class="input-medium"
+                                        label="MOD_PWEBBOX_FIELD_BG_REPEAT_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_REPEAT_DESC">
+                                        <option value="">JOPTION_DO_NOT_USE</option>
+                                        <option value="repeat">MOD_PWEBBOX_FIELD_BG_REPEAT_REPEAT_VALUE</option>
+                                        <option value="repeat-x">MOD_PWEBBOX_FIELD_BG_REPEAT_REPEAT_X_VALUE</option>
+                                        <option value="repeat-y">MOD_PWEBBOX_FIELD_BG_REPEAT_REPEAT_Y_VALUE</option>
+                                </field>                                                                                                                                                                                                                                        
+                                <field  
+                                        name="bg_size" 
+                                        type="pweblist" 
+                                        default=""
+                                        hidden="true"  
+                                        class="input-medium"
+                                        label="MOD_PWEBBOX_FIELD_BG_SIZE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_BG_SIZE_DESC">
+                                        <option value="">JOPTION_USE_DEFAULT</option>
+                                        <option value="cover">MOD_PWEBBOX_FIELD_BG_SIZE_COVER_VALUE</option>
+                                        <option value="contain">MOD_PWEBBOX_FIELD_BG_SIZE_CONTAIN_VALUE</option>
+                                </field>     
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_BUTTON_AND_TAB_LABEL" />   
+                                <field
+                                        name="toggler_bg"
+                                        type="pwebcolor"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_BG_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_BG_DESC" />                                                                                                                                                                                                                                                                                    
+                                <field
+                                        name="toggler_color"
+                                        type="pwebcolor"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_COLOR_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_COLOR_DESC" />  
+                                <field  
+                                        name="toggler_icon" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_ICON_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_ICON_DESC">
+                                        <option value="0">JDISABLED</option>
+                                        <option value="gallery">MOD_PWEBBOX_FIELD_TOGGLER_ICON_GALLERY_VALUE</option>
+                                        <option value="icomoon">MOD_PWEBBOX_FIELD_TOGGLER_ICON_ICOMOON_VALUE</option>
+                                        <option value="custom">MOD_PWEBBOX_FIELD_TOGGLER_ICON_CUSTOM_VALUE</option>
+                                </field> 
+                                <field  
+                                        name="toggler_icon_gallery_image" 
+                                        type="pwebimagelist"
+                                        pweb_showon="toggler_icon:gallery"
+                                        directory="media/mod_pwebbox/images/icons"
+                                        hide_default="1"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_GALLERY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_GALLERY_DESC">
+                                </field>                         
+                                <field 
+                                        name="toggler_icomoon" 
+                                        type="pwebicomoon" 
+                                        pweb_showon="toggler_icon:icomoon"
+                                        class="input-mini" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_ICOMOON_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_ICOMOON_DESC" />
+                                <field 
+                                        name="toggler_icon_custom_image"
+                                        type="pwebmedia"
+                                        pweb_showon="toggler_icon:custom"
+                                        hidden="true" 
+                                        class="input-large"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_ICON_CUSTOM_IMAGE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_ICON_CUSTOM_IMAGE_DESC" /> 
+                                <field  
+                                        name="toggler_image" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_DESC">
+                                        <option value="0">JDISABLED</option>
+                                        <option value="gallery">MOD_PWEBBOX_FIELD_TOGGLER_ICON_GALLERY_VALUE</option>
+                                        <option value="custom">MOD_PWEBBOX_FIELD_TOGGLER_ICON_CUSTOM_VALUE</option>
+                                </field>     
+                                <field  
+                                        name="toggler_image_gallery_image" 
+                                        type="pwebimagelist"
+                                        pweb_showon="toggler_image:gallery"
+                                        directory="media/mod_pwebbox/images/toggler"
+                                        hide_default="1"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_GALLERY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_GALLERY_DESC">
+                                </field> 
+                                <field 
+                                        name="toggler_image_custom_image"
+                                        type="pwebmedia"
+                                        pweb_showon="toggler_image:custom"
+                                        hidden="true" 
+                                        class="input-large"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_CUSTOM_IMAGE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_IMAGE_CUSTOM_IMAGE_DESC" />                                  
+                                <field 
+                                        name="toggler_font_size"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_FONT_SIZE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_FONT_SIZE_DESC" />                                                                                                                                                                                                                                                                                                                                                                                        
+                                <field 
+                                        name="toggler_font_family"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_FONT_FAMILY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_FONT_FAMILY_DESC" />     
+                                <field  
+                                        name="toggler_slide" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_SLIDE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_SLIDE_DESC">
+                                        <option value="0">JNo</option>
+                                        <option value="1">JYes</option>
+                                </field>  
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_VERTICAL_TOGGLER_TAB_LABEL" />   
+                                <field  
+                                        name="toggler_vertical" 
+                                        type="pwebradio" 
+                                        default="0" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_VERTICAL_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_VERTICAL_DESC">
+                                        <option value="0">JNo</option>
+                                        <option value="1">JYes</option>
+                                </field>
+
+                                <field
+                                        name="toggler_vertical_type"
+                                        type="pwebradio"
+                                        default="1"
+                                        pweb_showon="toggler_vertical:1"
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_VERTICAL_TYPE_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_VERTICAL_TYPE_DESC">
+                                    <option value="0">PHP</option>
+                                    <option value="1">CSS</option>
+                                </field>
+                                <field
+                                        name="toggler_rotate" 
+                                        type="pwebradio" 
+                                        default="-1"
+                                        pweb_showon="toggler_vertical:1"
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_ROTATE_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_ROTATE_DESC">
+                                        <option value="-1">MOD_PWEBBOX_FIELD_TOGGLER_ROTATE_COUNTER_CLOCKWISE_VALUE</option>
+                                        <option value="0">MOD_PWEBBOX_FIELD_TOGGLER_ROTATE_NO_VALUE</option>
+                                        <option value="1">MOD_PWEBBOX_FIELD_TOGGLER_ROTATE_CLOCKWISE_VALUE</option>
+                                </field>        
+                                <field  
+                                        name="toggler_font" 
+                                        type="pwebfilelist" 
+                                        pweb_showon="toggler_vertical:1"
+                                        directory="media/mod_pwebbox/images/fonts"
+                                        stripext="1"
+                                        hide_default="1"
+                                        filter=".ttf"
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_FONT_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_FONT_DESC">
+                                </field>        
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_SIZE_LABEL" />     
+                                <field 
+                                        name="toggler_width"
+                                        type="pwebtext"
+                                        hidden="true" 
+                                        class="input-mini validate-numeric"
+                                        maxlength="4"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_WIDTH_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_WIDTH_DESC" />
+                                <field 
+                                        name="toggler_height"
+                                        type="pwebtext"
+                                        hidden="true"
+                                        class="input-mini validate-numeric" 
+                                        maxlength="4"
+                                        label="MOD_PWEBBOX_FIELD_TOGGLER_HEIGHT_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_TOGGLER_HEIGHT_DESC" />  
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        pweb_showon="effect:accordion:slide_down"
+                                        label="MOD_PWEBBOX_FIELD_ACCORDION_LABEL" />     
+                                <field  
+                                        name="accordion_boxed" 
+                                        type="pwebradio" 
+                                        default="1" 
+                                        class="btn-group btn-group-yesno"
+                                        hidden="true" 
+                                        pweb_showon="effect:accordion:slide_down"
+                                        label="MOD_PWEBBOX_FIELD_SHOW_ACCORDION_WITH_ARROW_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_SHOW_ACCORDION_WITH_ARROW_DESC">
+                                        <option value="0">JNo</option>
+                                        <option value="1">JYes</option>
+                                </field>    
+                                <field 
+                                        type="pwebspacer" 
+                                        hidden="true" 
+                                        pweb_showon="effect:modal:fade,modal:rotate,modal:square,modal:smooth"
+                                        label="MOD_PWEBBOX_FIELD_LIGHTBOX_BACKDROP_LABEL" />   
+                                <field
+                                        name="modal_bg"
+                                        type="pwebcolor"
+                                        hidden="true" 
+                                        pweb_showon="effect:modal:fade,modal:rotate,modal:square,modal:smooth"
+                                        label="MOD_PWEBBOX_FIELD_MODAL_BG_LABEL"
+                                        description="MOD_PWEBBOX_FIELD_MODAL_BG_DESC" />    
+                                <field  
+                                        name="modal_opacity" 
+                                        type="pweblist" 
+                                        default="-1" 
+                                        hidden="true"
+                                        pweb_showon="effect:modal:fade,modal:rotate,modal:square,modal:smooth" 
+                                        label="MOD_PWEBBOX_FIELD_MODAL_OPCACITY_LABEL" 
+                                        description="MOD_PWEBBOX_FIELD_MODAL_OPCACITY_DESC">
+                                        <option value="-1">JOPTION_USE_DEFAULT</option>
+                                        <option value="0">MOD_PWEBBOX_FIELD_MODAL_OPACITY_HIDE_VALUE</option>
+                                        <option value="0.1">0.1</option>
+                                        <option value="0.2">0.2</option>
+                                        <option value="0.3">0.3</option>
+                                        <option value="0.4">0.4</option>
+                                        <option value="0.5">0.5</option>
+                                        <option value="0.6">0.6</option>
+                                        <option value="0.7">0.7</option>
+                                        <option value="0.8">0.8</option>
+                                        <option value="0.9">0.9</option>
+                                        <option value="1">1</option>
+                                </field>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                        <field type="pwebclosetag" hidden="true" />                                              
+                    <field type="pwebaccordiongroupend" hidden="true" />  
+                    <field 
+                            type="pwebaccordiongroupbegin" 
+                            hidden="true" 
+                            label="MOD_PWEBBOX_GROUP_CHOOSE_THEME_LABEL"                             
+                            pweb_class_in="in" 
+                            pweb_class_collapsed="" 
+                            pweb_parent_id="pweb_accordion3b" />                                                      
+                        <field type="pwebtheme" hidden="true" />  
+                        <field type="pwebopentag" hidden="true" class="pweb-hidden" />	
+                            <field 
+                                    name="theme"
+                                    type="pwebtext" 
+                                    hidden="true"  
+                                    label="MOD_PWEBBOX_THEME_LABEL"
+                                    description="MOD_PWEBBOX_THEME_DESC" />
+                        <field type="pwebclosetag" hidden="true" />  
+                    <field type="pwebaccordiongroupend" hidden="true" /> 
+                <field type="pwebclosetag" hidden="true" />                                                   
+            </fieldset>            
+            
+            <!-- Configuration Check -->
+            <fieldset name="mod_pwebbox_configuration_check">
+                <field type="pwebopentag" hidden="true" class="text-center" pweb_id="pweb_configuration_check" />
+                    <field type="pwebopentag" hidden="true" class="" pweb_id="pweb_configuration_check_not_ok" />
+                    <field type="pwebclosetag" hidden="true" /> 
+                    <field 
+                            type="pwebopentag" 
+                            hidden="true" 
+                            class="pweb-hidden" 
+                            pweb_id="pweb_configuration_check_not_ok_info"
+                            pweb_description_class="alert alert-error"
+                            description="MOD_PWEBBOX_ERRORS" />
+                    <field type="pwebclosetag" hidden="true" /> 
+                    <field 
+                            type="pwebopentag" 
+                            hidden="true" 
+                            class="" 
+                            pweb_id="pweb_configuration_check_ok" 
+                            pweb_description_class="alert alert-success"
+                            description="MOD_PWEBBOX_CONFIGURATION_CHECK_OK" />
+                            <field 
+                                    type="pwebbutton" 
+                                    hidden="true" 
+                                    class="btn-large btn-info"
+                                    label="MOD_PWEBBOX_SAVE_AND_PUBLISH" 
+                                    pweb_id="pweb_configuration_check_ok_save" />                      
+                    <field type="pwebclosetag" hidden="true" />                  
+                <field type="pwebclosetag" hidden="true" />               
+            </fieldset>            
+			
+            <!-- Advanced Configuration -->
+            <fieldset name="advanced">
+                <field 
+                        type="pwebopentag" 
+                        hidden="true" 
+                        class="" 
+                        pweb_description_class="alert"
+                        description="MOD_PWEBBOX_MODULE_ADVANCED_OPTIONS_INFO" />
+                <field type="pwebclosetag" hidden="true" /> 
+                <field 
+                        type="pwebbuttonconfig" 
+                        hidden="true" 
+                        label="MOD_PWEBBOX_BUTTON_ADVANCED_LABEL" 
+                        pweb_target_id="pweb_advanced_options" />  
+                <field type="pwebopentag" hidden="true" class="pweb-advanced-options-content pweb-hidden" pweb_id="pweb_advanced_options" />                 
+                        <field name="cache_css" type="pwebradio" class="required btn-group btn-group-yesno" default="1" hidden="true" required="true"
+                               label="MOD_PWEBBOX_CACHE_CSS_LABEL" description="MOD_PWEBBOX_CACHE_CSS_DESC">
+                            <option value="0">JNo</option>
+                            <option value="1">JYes</option>
+                        </field>                 				
+                        <field name="debug" type="pwebradio" class="btn-group btn-group-yesno" default="0" hidden="true"
+                               label="MOD_PWEBBOX_DEBUG" description="MOD_PWEBBOX_DEBUG_DESC">
+                            <option value="0">JNo</option>
+                            <option value="1">JYes</option>
+                        </field>
+                        <field  
+                                name="rtl" 
+                                type="pwebradio" 
+                                default="2" 
+                                class="btn-group btn-group-yesno"
+                                hidden="true" 
+                                label="MOD_PWEBBOX_FIELD_RTL_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_RTL_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                                <option value="2">JGLOBAL_AUTO</option>
+                        </field>    
+                        <field type="pwebspacer" hidden="true" label="MOD_PWEBBOX_JQUERY_HEADER" />  
+                        <field  
+                                name="load_jquery" 
+                                type="pwebradio" 
+                                default="1" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_JQUERY_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_JQUERY_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>                           
+                        <field  
+                                name="load_jquery_ui" 
+                                type="pwebradio" 
+                                default="1" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_JQUERY_UI_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_JQUERY_UI_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>                           
+                        <field  
+                                name="load_jquery_cookie" 
+                                type="pwebradio" 
+                                default="1" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_JQUERY_COOKIE_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_JQUERY_COOKIE_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field> 
+                        <field type="pwebspacer" hidden="true" label="MOD_PWEBBOX_BOOTSTRAP_HEADER" /> 
+                        <field  
+                                name="load_bootstrap" 
+                                type="pwebradio" 
+                                default="1" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_BOOTSTRAP_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_BOOTSTRAP_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>                                             
+                        <field  
+                                name="bootstrap_version" 
+                                type="pwebradio" 
+                                default="2" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_BOOTSTRAP_VERSION_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_BOOTSTRAP_VERSION_DESC">
+                                <option value="2">MOD_PWEBBOX_FIELD_BOOTSTRAP_VERSION_232_VALUE</option>
+                                <option value="3">MOD_PWEBBOX_FIELD_BOOTSTRAP_VERSION_3_VALUE</option>
+                        </field>                                             
+                        <field  
+                                name="load_bootstrap_css" 
+                                type="pwebradio" 
+                                default="2" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_BOOTSTRAP_CSS_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_BOOTSTRAP_CSS_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                                <option value="2">MOD_PWEBBOX_FIELD_LOAD_BOOTSTRAP_CSS_ONLY_REQUIRED_VALUE</option>
+                        </field>   
+                        <field type="pwebspacer" hidden="true" label="MOD_PWEBBOX_ICOMOON_HEADER" />                                                           
+                        <field  
+                                name="load_icomoon" 
+                                type="pwebradio" 
+                                default="1" 
+                                class="required btn-group btn-group-yesno"
+                                hidden="true" 
+                                required="true"
+                                label="MOD_PWEBBOX_FIELD_LOAD_ICOMOON_LABEL" 
+                                description="MOD_PWEBBOX_FIELD_LOAD_ICOMOON_DESC">
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>                                             
+                <field type="pwebclosetag" hidden="true" /> 
+                				
+                <field type="pwebspacer" hidden="true" label="MOD_PWEBBOX_UPDATES_HEADER" />
+                <field type="pweb" class="btn-group btn-group-yesno" default="1" 
+                       extension="mod_pwebbox"
+                       documentation_url="https://www.perfect-web.co/joomla-extensions/everything-in-everyway-for-joomla/documentation-support"
+                       hidden="true"
+                       label="MOD_PWEBBOX_FEED" description="MOD_PWEBBOX_FEED_DESC">
+                </field>
+                <field name="dlid" hidden="true" type="pwebdlid" validate="pwebdlid" 
+                       label="MOD_PWEBBOX_DOWNLOAD_ID" 
+                       description="MOD_PWEBBOX_DOWNLOAD_ID_DESC" 
+                       ext_type="module" 
+                       ext_element="mod_pwebbox" 
+                       ext_folder="" 
+                       ext_client="0" />                
+                                
+                <field type="pwebspacer" hidden="true" label="MOD_PWEBBOX_JOOMLA_HEADER" />
+                <field name="moduleclass_sfx" type="pwebtext" hidden="true"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="cache_time" type="pwebtext" default="900" hidden="true"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cache" type="pweblist" default="1" hidden="true"
+                       label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+				
+            </fieldset>
+			
+        </fields>
+    </config>
+	
+</extension>

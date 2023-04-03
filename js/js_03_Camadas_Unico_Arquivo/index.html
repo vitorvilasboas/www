@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>	<!-- Este exemplo ilustra a utilização das três camadas de desenvolvimento em um único arquivo -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JavaScript e Camadas</title>
+
+		<!-- A camada de apresentação ou aparência começa aqui, apartir da tag <style> -->
+		<style type="text/css">
+			.h1Mouse
+				{
+					font-family: Arial, Helvetica, sans-serif;
+					font-size:24px;
+					color:#0F0;
+				}
+		
+			.h1MouseOver
+				{
+					font-family: "Times New Roman", Times, serif;
+					font-size:16px;
+					color:#F00; 
+				}
+		</style>
+	
+		<!-- A camada de comportamento começa apartir da tag <script> -->
+		<script type="text/javascript">
+			function changeOver() <!-- quando o mouse em cima da linha -->
+			{
+				document.getElementById("myElement").className = "h1MouseOver";
+			}
+		
+			function changeOut() <!-- mouse fora da linha -->
+			{
+				document.getElementById("myElement").className = "h1Mouse";
+			}
+		</script>
+
+	</head>
+
+	<body> <!-- A camada de conteúdo é feita apartir da tag <body> -->
+		<h1 id="myElement" name="myElement" class="h1Mouse" onMouseOver="changeOver();" onMouseOut="changeOut();"> Esta linha reage com o ponteiro do mouse </h1>
+		<!-- atribuindo class, nome e id em h1 para ser utilizado com o CSS -->
+		
+	</body>
+
+</html>

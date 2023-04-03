@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px; /* 67.5% */
+}
+
+header{
+    overflow: hidden;
+    margin: 10px auto;
+    height: 80px;
+    padding: 15px;
+    background-color: rgb(219, 221, 217);
+    position: relative;
+}
+
+header h1 {
+    font-size: 32px; /* 2em - 32/16 */
+    line-height: 80px;
+}
+
+header .menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+header .menu li{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+header .logo{
+    /*  float: left; */
+    display: inline-block;
+    color: indigo;
+}
+
+main {
+    margin: 15px 0; /* 1.5625% 0 - 15/960 */
+    float: left;
+    width: 593px; /* 61.7708% - 593/960 */
+}
+
+.destaque {
+    margin: 25px 0; /* 4.2158% 0 - 25/593 */
+}
+
+.destaque p{
+    margin: 5px 0; /* 0.8431% - 5/593 */
+}
+
+.noticias {
+    font-size: 12px; /* .75em - 12/16 */
+}
+
+.noticias article {
+    float: left;
+    margin: 15px 15px 15px 0; /* 2.5295% 2.5295% 2.5295% 0 - 15/593 */
+    width: 280px; /* 47.2175% - 280/593 */
+}
+
+.noticias article h2 {
+    margin-bottom: 0;
+}
+
+.noticias article p {
+    margin: 5px; /* 1.7857% 0 - 5/280  */
+}
+
+.noticias article img {
+    width: 280px; /* max-width: 100% */
+    margin: 0;
+    height: 200px;
+}
+
+.noticias article a{
+    text-decoration: none;
+}
+
+aside {
+    margin: 15px 0; /* 1.5625% 0 - 15/960 */
+    background-color: #F0F0F0;
+    float: right;
+    padding: 10px; /* 1.0416% - 10/960 */
+    width: 322px; /* 33.5416% - 322/960 */
+    text-align: center;
+}
+
+aside iframe {
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+}
+
+aside nav li {
+    list-style-type: none;
+    background-color: #F9F9F9;
+    float:left;
+    margin: 15px; /* 4.6583% - 15/322 */
+    outline: 1px solid #DEDEDE;
+    text-align: center;
+    width: 130px; /* 40.3726% - 130/322 */
+}
+
+aside nav a {
+    display: block;
+    padding: 10px; /* 7.6923% - 10/130 */
+    text-decoration: none;
+}
+
+footer {
+    background-color: #F0F0F0;
+    clear: both;
+    float: left;
+    font-size: 16px; /* 1em - 16/16 */
+    margin: 15px 0;  /* 1.5625% 0  - 15/960 */
+    padding: 15px; /* 1.5625% - 15/960 */
+    text-align: center;
+    width: 100%;
+}

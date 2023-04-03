@@ -1,0 +1,190 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+html{
+	font-family: Arial, Helvetica, sans-serif; 
+}
+
+.container{
+	margin: 0 auto;
+	background: #FFFFFC;
+    margin-top: 1%;
+    width: 67%;
+    border: 0px solid black;
+}
+
+header{
+	background: url(imagens/lala.png) ;
+	background-repeat: no-repeat; 
+	background-color: #f0f0f0;
+    margin: 1% 0;
+    height: 160px;
+    width: 105%;
+	padding: 1%;
+	float: left;
+	text-align: right;
+	border: 0px solid black; 
+}
+
+.conteudo{
+	margin:1% 0;
+    padding: 0;
+}
+
+.conteudo-principal{
+	float:left;
+	width: 80%;
+}
+
+.artigo-principal{
+	margin: 1%;
+}
+
+.barra-lateral {
+	float: left;
+	width: 18%;
+	padding: 0.5%;
+	background-color: #8B0000;
+}
+
+.menu ul{
+	list-style-type: none;
+}
+
+.menu li{
+	margin: 2%;
+	text-align: center;
+	background-color: #FA8072;
+	outline: 1px solid #8B2323;
+	display: inline-block;
+	float: 
+}
+
+.menu a{
+	display: block;
+	text-decoration: none;
+	padding: 3%;
+}
+
+.rodape {
+	float: left;
+	width: 100%;
+	background-color: #CD0000;
+	font-size: .75em;
+	margin: 1% 0;
+	padding: 1%;
+	text-align: center;
+}
+
+@media all and (max-width: 320px) {
+	.menu li{
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.conteudo-principal{
+		float: none;
+	}
+
+	.barra-lateral{
+		float:none;
+	}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+html{
+	font-family: Arial, Helvetica, sans-serif; 
+}
+
+.container{
+	margin: 0 auto;
+	background: #FFFFFC;
+    margin-top: 1%;
+    width: 67%;
+    border: 0px solid black;
+}
+
+header{
+	background: url(imagens/lala.png) ;
+	background-repeat: no-repeat; 
+	background-color: #f0f0f0;
+    margin: 1% 0;
+    height: 160px;
+    width: 105%;
+	padding: 1%;
+	float: left;
+	text-align: right;
+	border: 0px solid black; 
+}
+
+.conteudo{
+	margin:1% 0;
+    padding: 0;
+}
+
+.conteudo-principal{
+	float:left;
+	width: 80%;
+}
+
+.artigo-principal{
+	margin: 1%;
+}
+
+.barra-lateral {
+	float: left;
+	width: 18%;
+	padding: 0.5%;
+	background-color: #8B0000;
+}
+
+.menu ul{
+	list-style-type: none;
+}
+
+.menu li{
+	margin: 2%;
+	text-align: center;
+	background-color: #FA8072;
+	outline: 1px solid #8B2323;
+	display: block;
+}
+
+.menu a{
+	display: block;
+	text-decoration: none;
+	padding: 3%;
+}
+
+.rodape {
+	float: left;
+	width: 100%;
+	background-color: #f0f0f0;
+	font-size: .75em;
+	margin: 1% 0;
+	padding: 1%;
+	text-align: center;
+}
+
+@media all and (max-width: 320px) {
+	.menu li{
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.conteudo-principal{
+		float: none;
+	}
+
+	.barra-lateral{
+		float:none;
+	}
+}

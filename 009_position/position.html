@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Posicionamento de elementos</title>
+</head>
+
+<body>
+    <div class="ancestral1">
+        <p>Caixa Ancestral: sem position</p>
+        <div class="caixa cx_verde">Static</div>
+        <div class="caixa cx_vermelha">Relative</div>
+        <div class="caixa cx_azul">Absolute</div>
+        <div class="limpa"></div> <!-- Estabelece fim flutuação atual -->
+    </div>
+
+    <div class="ancestral2">
+        <p>Caixa Ancestral: position Absolute/Relative</p>
+        <div class="caixa cx_amarela">Static</div>
+        <div class="caixa cx_salmao">Relative</div>
+        <div class="caixa cx_ciano">Absolute</div>
+        <div class="limpa"></div>
+    </div>
+
+    <div class="ancestral3">
+        <div class="caixa cx_red"></div>
+        <div class="caixa cx_blue"></div>
+        <div class="caixa cx_green"></div>
+        <div class="limpa"></div>
+        <div class="caixa cx_yellow">Z-index 1</div>
+        <div class="caixa cx_pink">Z-index 2</div>
+        <div class="caixa cx_brown">Z-Index 3</div>
+    </div>
+</body>
+
+</html>

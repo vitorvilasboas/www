@@ -1,0 +1,57 @@
+Abaixo um exemplo do formulário 
+
+<form id="f1" class="validate" action="" method="get" >
+	
+	<p>
+		<label>Nome:</label>
+		<input type="text" name="nome" id="nome" class="required" minlength="5" />
+		<span>Informe seu nome completo</span>
+	</p>   
+	
+	<p>
+		<label>Nome:</label>
+		<input type="text" name="email" id="email" class="required email" />
+		<span>Informe um e-mail válido</span>
+	</p>  	
+	
+</form>
+
+
+Ententendo o formulário 
+
+Para que funcione a validação é necessário que o formulário possua a class "validate" e um ID qualquer, como abaixo:
+
+<form class="validate" id="f1" action="" method="post" >
+
+Nos campos você deve definir também as classes de validação, são elas: 
+required - diz que o campo é obrigatório
+mail - deve conter um email válido 
+cpf - deve conter um cpf válido 
+data - deve conter uma data válida
+placa - deve conter o formato AAA-9999
+password - deve conferir com o outro campo de mesma classe no máximo 2 campos com a classe password
+
+Exemplo de uso, 
+	<p>
+		<label>Nome:</label>
+		<input type="text" name="email" id="email" class="required email" />
+		<span>Informe um e-mail válido</span>
+	</p>  
+
+Acima, estamos dizendo que o campo é "requerido" e que deve ser um "email" válido
+
+O texto contido no <span> é convertido para placeholder (informativo do campo quando vazio).
+O <span> pode ficar vazio se desejar, mas é necessário que ele exista para exibir as mensagens da validação, 
+em outras palavras sempre utilize o formato do exemplo para obter com exatidão a validação.
+Abaixo um exemplo resumido, no mínimo possível de informações necessárias para o plugin funcionar
+
+	<p>
+		<input type="text" name="email" id="email" class="required email" />
+		<span></span>
+	</p>
+	
+O botão "enviar" deve ser do tipo button e conter a classe "submit", exemplo:
+<button class="submit">Validar / Enviar Dados</button>
+	
+	
+	

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript HTML DOM - Fazendo alterações nos estilos CSS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+
+		<p id="p1">Tenho saudades da época em que eu me achava rico por levar dois reais pra escola.</p>
+		<p id="p2">Tenho saudades da época em que eu me achava rico por levar dois reais pra escola.</p>
+		
+		<script type="text/javascript"> <!-- Realizando alterações dos elementos html utilizando os estilos CSS -->
+			document.getElementById("p2").style.color="blue"; // Atribuindo cor utilizando as propriedades CSS
+			document.getElementById("p2").style.fontFamily="Arial"; // Atribuindo o tipo de fonte
+			document.getElementById("p2").style.fontSize="8px"; // Atribuindo o tamanho da letra
+		</script>
+		
+		<br>
+		
+		<p id="p3">Prazer mesmo é acabar a energia na sua casa e você ter internet móvel no celular.</p>
+		
+		<input type="button" value="Esconder texto" onclick="document.getElementById('p3').style.visibility='hidden'" />
+		<input type="button" value="Mostrar texto" onclick="document.getElementById('p3').style.visibility='visible'" />
+
+	</body>
+</html>

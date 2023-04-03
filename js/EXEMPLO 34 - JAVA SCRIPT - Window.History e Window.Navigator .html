@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Window.History e Window.Navigator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript">
+		
+			function voltar()
+			{
+				window.history.back(); // Este método faz com que o navegador retorne para uma página anterior
+			}
+			
+			function avançar()
+			{
+				window.history.forward(); // Este método faz com que o navegador avançe para uma página seguinte
+			}
+			
+			function Mostrar_Informacoes()
+			{
+				var txtInfo = "<p>Versão do Navegador " + navigator.appVersion + "</p>";
+				txtInfo += "<p>Cookies habilitados: " + navigator.cookieEnabled + "</p>";
+				txtInfo += "<p>Plataforma: " + navigator.platform + "</p>";
+				txtInfo += "<p>Agente de usuário: " + navigator.userAgent + "</p>";
+				
+				document.getElementById("minha_informacao").innerHTML = txtInfo;
+			}
+		
+		</script>
+		
+	</head>
+
+	<body>
+
+		<button onclick="voltar()">Voltar</button>
+
+		<br>
+
+		<button onclick="avançar()">Avançar</button>
+
+		<br>
+
+		<button onclick="Mostrar_Informacoes()">Mostrar Informações sobre o brownser</button>
+
+		<br>
+		
+		<!-- Local onde as informações do navegador serão exibidas -->
+		<div id="minha_informacao"></div>
+
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - Perfect Everything in Everyway</name>
+	<author>Perfect Web</author>
+	<creationDate>July 2015</creationDate>
+	<copyright>Copyright (C) 2015 Perfect Web. All rights reserved.</copyright>
+	<license>GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>office@perfect-web.co</authorEmail>
+	<authorUrl>www.perfect-web.co</authorUrl>
+	<version>2.0.0</version>
+	<description></description>
+	<perfect_update_id>37</perfect_update_id>
+	<files>
+		<filename plugin="perfect_everything_in_everyway">perfect_everything_in_everyway.php</filename>
+                <filename>perfectinstaller.php</filename>
+	</files>
+        
+        <scriptfile>installer.script.php</scriptfile>           
+</extension>

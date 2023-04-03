@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="file" method="upgrade">
+  <name>Idioma Português do Brasil para o Componente Phoca Gallery,seus módulos e plugins</name>
+  <tag>pt-BR</tag>
+  <version>4</version>
+  <creationDate>11 de Junho de 2012</creationDate>
+  <author>Uriel dos Santos Souza, Claudeir Ribeiro e Usiel Almeida Oliveira</author>
+  <authorEmail>contato@pontomega.com.br</authorEmail>
+  <authorUrl>http://pontomega.com.br</authorUrl>
+  <copyright>Copyright © 2012 - All rights reserved.</copyright>
+  <license>GNU General Public License v2.0</license>
+  <description>
+    <![CDATA[Tradução para o componente Phoca Gallery,seus módulos e plugins para o idioma português brasileiro.]]>
+  </description>
+  <!-- these files go into administrator/language/ -->
+  <fileset>
+    <files folder="admin" target="administrator/language/pt-BR">
+      <filename>pt-BR.com_phocagallery.ini</filename>
+      <filename>pt-BR.com_phocagallery.sys.ini</filename>
+      <filename>pt-BR.plg_content_phocagallery.ini</filename>
+      <filename>pt-BR.plg_content_phocagallery.sys.ini</filename>
+      <filename>pt-BR.plg_content_phocagallerysimple.ini</filename>
+      <filename>pt-BR.plg_content_phocagallerysimple.sys.ini</filename>
+      <filename>pt-BR.plg_content_phocagalleryslideshow.ini</filename>
+      <filename>pt-BR.plg_content_phocagalleryslideshow.sys.ini</filename>
+      <filename>pt-BR.plg_editors-xtd_phocagallery.ini</filename>
+      <filename>pt-BR.plg_editors-xtd_phocagallery.sys.ini</filename>
+      <filename>pt-BR.plg_search_phocagallery.ini</filename>
+      <filename>pt-BR.plg_search_phocagallery.sys.ini</filename>
+    </files>
+    <files folder="site" target="language/pt-BR">
+      <filename>pt-BR.mod_phocagallery_image.ini</filename>
+      <filename>pt-BR.mod_phocagallery_image.sys.ini</filename>
+      <filename>pt-BR.mod_phocagallery_menu.ini</filename>
+      <filename>pt-BR.mod_phocagallery_menu.sys.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_floom.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_floom.sys.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_nivo.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_nivo.sys.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_noob.ini</filename>
+      <filename>pt-BR.mod_phocagallery_slideshow_noob.sys.ini</filename>
+      <filename>pt-BR.mod_phocagallery_tree.ini</filename>
+      <filename>pt-BR.mod_phocagallery_tree.sys.ini</filename>
+    </files>
+  </fileset>
+</extension>

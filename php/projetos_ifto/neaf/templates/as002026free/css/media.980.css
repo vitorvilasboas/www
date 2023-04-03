@@ -1,0 +1,281 @@
+/***************************************************************************************/
+/*
+/*		Author: AS Designing
+/*		Author URI: http://www.asdesigning.com
+/*		Theme URI: http://www.astemplates.com
+/*		
+/*		Note: Design for Landscape tablets
+/*
+/***************************************************************************************/
+
+@media (max-width: 980px)
+{
+	
+	#header-wrapper,
+	#content-wrapper,
+	.top-wrapper
+	{
+		
+	}
+	
+	
+	#featured-row,
+	#featured-row .top
+	{
+		margin-top: 0;
+		padding-top: 0;
+	}
+	
+	#featured-row .top
+	{
+		margin-top: -50px;
+	}
+	
+	.camera_caption .slide_title
+	{
+		font-size: 32px !important;
+		line-height: 32px !important;
+	}
+	
+	#header-row .mod-search
+	{
+		padding-left: 0;
+	}
+	
+	#header-row .btn-search
+	{
+		left: 10px;
+	}
+	
+	#header-row .mod-search_searchword
+	{
+		width: 220px;
+	}
+	
+	#header-row #top-search .moduletable
+	{
+		float: right;
+	}
+	
+	#header-row #top-search .moduletable.social .nav
+	{
+		margin-top: 10px;
+	}
+	
+	#header-row #top-search .search
+	{
+		margin-right: 10px;	
+	}
+	
+	#header-row .navigation
+	{
+	}
+	
+	#logo
+	{
+	}
+	
+	#logo span.slogan
+	{
+		display: block;
+		left: 59px;
+		top: -10px;
+		width: auto;
+	}
+	
+	#featured-row  .mod-newsflash-adv .item
+	{
+		width: 48% !important;
+		margin-bottom: 25px;
+	}
+	
+	#content-row-5 .mod-newsflash-adv .item,
+	#content-row-6 .mod-newsflash-adv .item
+	{
+	}
+	
+	#featured-row .mod-custom .cal-us
+	{
+		background-image: none;
+		padding: 0px;	
+	}
+	
+	#featured-row .top .big h1, 
+	#featured-row .top .big h2, 
+	#featured-row .top .big h3 
+	{
+		font-size: 68px;
+	}	
+	
+	#as-menu 
+	{
+	}
+	
+	#as-menu ul.as-menu > li, 
+	#as-menu ul.as-menu > li:hover
+	{
+	}
+	
+	#as-menu ul.as-menu > li > a, 
+	#as-menu ul.as-menu > li > span	
+	{
+	}
+	
+	.nspArt img.nspImage
+	{
+	}
+	
+	.thumbnails
+	{
+		margin-left: -12px;
+	}
+	
+	.thumbnails > li
+	{
+		margin-left: 12px;
+	}
+	
+	.page-category__team .item_introtext
+	{
+		overflow: visible;
+	}
+
+	#slider-row .camera_target_content
+	{
+		
+	}
+
+	#featured-row .mod-newsflash h2, 
+	#featured-row .mod-newsflash h3
+	{
+		width: 100%;	
+	}
+	
+	#featured-row .mod-newsflash p 
+	{
+    	float: none;
+    	overflow: hidden;
+	}
+		
+	.shadow span
+	{
+		left: 2%;
+		width: 96%;
+	}
+	
+	.mod-newsflash-adv__links .item_content h2
+	{
+		line-height: 30px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+
+	aside .mod-search input.inputbox 
+	{
+	    width: 180px;
+	}
+
+	aside .mod-search button.btn.btn-search 
+	{
+		margin-top: 15px;
+		padding: 5px 10px 4px;
+	}
+	
+	aside .row-fluid .span6,
+	aside .row-fluid .span6:first-child
+	{
+		width: 100%;
+		margin-left: 15px;	
+	}
+	
+	#back-top
+	{
+		display: none !important;
+	}
+	
+	.page-featured .cols-2 .column-1 
+	{
+		padding-right: 30px;
+	}
+	
+	.page-featured .cols-2 .column-2 
+	{
+		
+	}
+	
+	.page-blog .items-row.cols-3 .item_img.img-intro
+	{
+		width: 95.5%	
+	}
+	
+	.page-item .row-fluid ul li 
+	{
+		font-size: 12px;
+	}	
+	
+	.page-featured h2.advantage_1,
+	.page-featured h2.advantage_2,
+	.page-featured h2.advantage_3,
+	.page-featured h2.advantage_4
+	{
+		line-height: 31px;
+	}
+	
+	.random-image img,
+	.footer-row-1 .span3 .item_img,
+	.footer-row-1 .span4 .item_img
+	{
+		width: 94%;	
+	}
+	
+	.footer-row-1 .span3 img,
+	.footer-row-1 .span4 img	
+	{
+		width: 100%;			
+	}
+	
+	#footer-row .moduletable.social li a
+	{
+		font-size: 18px;
+		height: 40px;
+		line-height: 40px;
+		margin-left: 10px;
+		width: 40px;
+	}
+	
+	.icon-home:before, .icon-phone:before, .icon-mobile:before, .icon-skype:before, .icon-mail:before
+	{
+		content: none;
+	}
+	
+	.spacer_w
+	{
+		 display: none;
+	}
+	
+	#phocagallery-module-ri .mosaic 
+	{
+    	width: 107px !important;
+	}
+
+	.page-gallery
+	{
+		padding-left: 12px;
+	}
+	
+	.page-gallery .item_introtext
+	{
+		display: none;
+	}
+			
+	#as-menu ul.as-menu > li, #as-menu ul.as-menu > li:hover
+	{
+		padding: 10px 20px !important;
+	}
+	
+	.camera_pag
+	{
+		bottom: -9% !important;
+		left: 37% !important;
+	}
+}

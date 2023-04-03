@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="install">
+	<name>Responsive Contact Form</name>
+	<author>Joomla Drive</author>
+	<creationDate>Novembar 30,2013</creationDate>
+	<copyright>Copyright @ Joomla Drive</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>developer@f9tech.com</authorEmail>
+	<authorUrl>http://joomladrive.com</authorUrl>
+	<version>3.0</version>
+	<description>
+		<![CDATA[
+		<style>
+			h3{
+				color: green;
+			}
+			.panelform .adminformlist .hasTip{
+				color: green;
+				font-weight: bold;
+			}
+		</style>
+		<div>
+			<h3>Responsive Contact Form</h3>			
+			<br/>
+			<p>Helps to visitors to contact you.</p>
+				<h3>Features</h3>
+				<ul>
+					<li>Compatibility with Joomla3.x</li>
+					<li>Captcha Facility is available.</li>
+					<li>Easy and friendly back-end administration.</li>
+					<li>Responsive Contact Form.</li>
+				</ul>
+				<h3>About Contact Form</h3>	
+				Copyright 2013 &copy; <a target="_blank" href="http://joomladrive.com">http://joomladrive.com</a>	
+		</div>]]>
+	</description>
+	<files>
+		<filename module="mod_responsive_contact_form">mod_responsive_contact_form.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_responsive_contact_form.xml</filename>
+		<filename>formkey_class.php</filename>
+		<filename>recaptchalib.php</filename>
+		<folder>css/</folder>
+		<folder>js/</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="module_settings" label="Module Settings">
+				<field name="email_req" type="radio" class="btn-group" default="required" label="E-Mail" description="Whether E-Mail field is required or not?">
+					<option	value="required">Required</option>
+					<option	value=" ">Not Required</option>
+				</field>
+				<field name="phone_req" type="radio" class="btn-group" default="required" label="Phone" description="Whether Phone field is required or not?">
+					<option	value="required">Required</option>
+					<option	value=" ">Not Required</option>
+				</field>
+				<field name="admin_email" type="text" description="Enter Recipient Mail Address" label="Admin E-Mail" default=""/>
+				<field name="cc_email" type="text" description="Enter CC Mail Address" label="CC" default=""/>
+				<field name="bcc_email" type="text" description="Enter BCC Mail Address" label="BCC" default=""/>
+				<field name="success_notify" type="text" description="Enter Notification Message on Successfull Sending" label="Notification on Success" default="Thank You! Your message has been sent."/>
+				<field name="failure_notify" type="text" description="Enter Notification Message on Sending Failure" label="Notification on Failure" default="Something went wrong, please try again."/>
+				<field name="msg_minlength" type="text" description="Enter Minimum Length of characters for Message field" label="Message Minlength" default="0"/>
+				<field type="spacer" name="myspacer" label="&lt;b&gt;To use captcha facility, you need to need to register at http://www.google.com/recaptcha/whyrecaptcha and get public and private keys.&lt;/b&gt;"/>			
+				<field name="captcha_req" type="radio" class="btn-group" default="0" label="Captcha" description="Whether Captcha field is required or not?">
+					<option	value="1">Required</option>
+					<option	value="0">Not Required</option>
+				</field>
+				<field name="public_key" type="text" description="Enter Public Key ( If captcha is required. )" label="Public Key ( If captcha is required )" default=""/>
+				<field name="private_key" type="text" description="Enter Private Key ( If captcha is required. )" label="Private Key ( If captcha is required )" default=""/>
+				<field name="captcha_theme" type="list" class="btn-group" default="red" label="Captcha Theme" description="to change the theme of captcha">
+					<option	value="red">Red(default)</option>
+					<option	value="white">White</option>
+					<option	value="blackglass">Black Glass</option>
+					<option	value="clean">Clean</option>
+				</field>
+				<field name="bs_name" type="text" description="Enter the name of Submit Button" label="Name of the submit button" default="Send!"/>
+				<field name="email_publish" type="radio" class="btn-group" default="1" label="E-Mail" description="Do you want to publish E-Mail field?">
+					<option	value="1">Published</option>
+					<option	value="0">Not Published</option>
+				</field>
+				<field name="phone_publish" type="radio" class="btn-group" default="1" label="Phone" description="Do you want to publish Phone field?">
+					<option	value="1">Published</option>
+					<option	value="0">Not Published</option>
+				</field>
+				<field name="subject_publish" type="radio" class="btn-group" default="1" label="Subject" description="Do you want to publish Subject field?">
+					<option	value="1">Published</option>
+					<option	value="0">Not Published</option>
+				</field>
+				<field name="message_publish" type="radio" class="btn-group" default="1" label="Message" description="Do you want to publish Message field?">
+					<option	value="1">Published</option>
+					<option	value="0">Not Published</option>
+				</field>
+				<field name="subject_type" type="radio" class="btn-group" default="1" label="Subject Type" description="Do you want to dropdown or texbox?">
+					<option	value="1">Dropdown</option>
+					<option	value="0">Textbox</option>
+				</field>
+				<field name="ffield_name" type="text" label="Name of First Field" description="Enter the name of First Field" default="Name"/>
+				<field name="sfield_name" type="text" label="Name of Second Field" description="Enter the name of Second Field" default="Email"/>
+				<field name="tfield_name" type="text" label="Name of Third Field" description="Enter the name of Third Field" default="Phone"/>
+				<field name="fofield_name" type="text" label="Name of Fourth Field" description="Enter the name of Fourth Field" default="Subject"/>
+				<field name="fifield_name" type="text" label="Name of Fifth Field" description="Enter the name of Fifth Field" default="Message"/>
+				<field name="button_color" type="list" class="btn-group" default="" label="Button Color" description="Choose the Submit Button Color">
+					<option	value="">White</option>
+					<option	value="btn-primary">Blue</option>
+					<option	value="btn-info">Baby Blue</option>
+					<option	value="btn-success">Green</option>
+					<option	value="btn-warning">Yellow</option>
+					<option	value="btn-danger">Red</option>
+					<option	value="btn-inverse">Black</option>
+				</field>
+			</fieldset>	
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

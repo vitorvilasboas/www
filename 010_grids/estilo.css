@@ -1,0 +1,44 @@
+body {
+    margin: 0 auto; /* top/bottom = 0; right/left = centralizado */
+    padding: 0;
+    width: 1200px; /* Largura total grid (dividido por 12 col) */
+}
+
+.linha{
+    overflow: auto; /* contém o conteúdo (ñ extrapola) */
+    padding: 5px 0;
+}
+
+.col1{width: 100px;}
+.col2{width: 200px;}
+.col3{width: 300px;}
+.col4{width: 400px;}
+.col5{width: 500px;}
+.col6{width: 600px;}
+.col7{width: 700px;}
+.col8{width: 800px;}
+.col9{width: 900px;}
+.col10{width: 1000px;}
+.col11{width: 1100px;}
+.col12{width: 1200px;}
+
+.topo {
+    height: 100px;
+    float: left;
+}
+
+.conteudo {
+    height: 200px;
+    float: left;
+}
+
+.rodape {
+    height: 50px;
+}
+
+.azul{background: #b4b4e2;}
+.verde{background: #8edc8e;}
+.amarelo{background: #e9da85;}
+.vermelho{background: #e98585;}
+
+

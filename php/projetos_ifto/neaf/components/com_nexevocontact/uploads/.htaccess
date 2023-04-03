@@ -1,0 +1,18 @@
+# Switch off the php engine
+# It causes an Error 500 on some Internet Service Providers, but the following statements do basically the same thing
+# php_flag engine off
+
+# Disable directory browsing
+Options All -Indexes
+
+# Forbid php code: php|php3|php4|php5|phps|phpt|pht|phtml|phar
+<FilesMatch ".+\.ph(p[345st]?|t|tml|ar)$">
+   order deny,allow
+   deny from all
+</FilesMatch>
+
+# Forbid html documents: htm|html
+<FilesMatch ".+\.htm(l?)$">
+   order deny,allow
+   deny from all
+</FilesMatch>

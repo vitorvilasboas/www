@@ -1,0 +1,44 @@
+html {
+	margin: 0 auto;
+    overflow: auto; 
+}
+body{
+
+}
+h1{
+font-size:50px;
+}
+.tab1{
+   width:150px;
+   height: 50px;
+   float:left;
+}
+.tab2{
+   width:150px;
+   height: 50px;
+   float: left;
+}
+.tab3{
+	 width:250px;
+   height: 50px;
+   float: left;
+ 
+}
+.tab4{
+	width:150px;
+   height: 50px;
+   float: left;
+
+}
+.tab5{
+	width:150px;
+   height: 50px;
+   float: left;
+}
+.res{
+	width:150px;
+   height: 50px;
+   float: height;
+}
+footer{
+	float: bottom;

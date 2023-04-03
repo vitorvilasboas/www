@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript OOP - Programação Orientada a Objetos</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/* A Linguagem JAVASCRIPT não possui uma palavra chave para a definição de classes,
+			   mas ela utiliza as funções como se fossem classes*/
+					
+			function Carro() // Exemplo de declaração de classes em JAVASCRIPT
+			{ 
+			
+			  // Exemplo de Construtor: O construtor é qualquer método que é executado quando um objeto é instanciado
+			  // A linguagem javascript não possui uma palavra chave para a declaração de construtor
+			  alert("Instancia da classe carro criada !");
+			  		  
+			  // As propriedades das classes, podem ser declaradas conforme a sintaxe a seguir this.propriedade_da_classe
+			  // Exemplo das propriedades da classe carro declaradas abaixo
+			  this.velocidade=120;
+			  this.tamanho=28;
+			  this.cor="Verde";
+			}
+			
+			var carro1 = new Carro(); // Exemplo de Instanciação de objetos em JAVASCRIPT
+			var carro2 = new Carro();
+			
+			// Exemplo de acesso as propriedades da classe carro
+			alert("Velocidade do Carro 1: " + carro1.velocidade);
+			alert("Tamanho do carro 2: " + carro2.tamanho);		
+		
+		</script>
+
+	</body>
+</html>

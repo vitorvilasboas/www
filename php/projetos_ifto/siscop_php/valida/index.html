@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validate Plugin</title>     
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery.validate.js" type="text/javascript"></script> 
+		<link href="css/validate.css" type="text/css" media="screen" rel="stylesheet" />
+		<!--[if lte IE 7]>
+		<link href="css/validate_ie7.css" type="text/css" media="screen" rel="stylesheet" />
+		<![endif]-->	
+    </head>
+    <body>
+	
+        <div id="wrap">
+
+            <form id="f1" class="validate" action="" method="post" >
+                
+                <p>
+                    <label>Combo:</label>
+                    <select name="combo" id="combo" class="required">
+                        <option value="">Selecione um item na lista</option>
+                        <option value="0">AA</option>
+                        <option value="1">BB</option>
+                    </select>
+                    <span>Selecione um item</span>
+                </p>    
+
+                <p>
+                    <label>Nome:</label>
+                    <input type="text" name="nome" id="nome" class="required" minlength="5" />
+                    <span>Informe seu nome completo</span>
+                </p>     
+
+                <p>
+                    <label>Telefone:</label>
+                    <input type="text" name="fone" id="fone" class="required fone" />
+                    <span>Informe seu telefone com DDD</span>
+                </p> 
+                
+                <p>
+                    <label>Obrigatório - Mínimo 5 letras:</label>
+                    <input type="text" name="str" id="str" class="required" minlength="5" />
+                    <span>Campo requerido, informe ao menos 5 letras</span>
+                </p>                
+
+                <p>
+                    <label>Data:</label>
+                    <input type="text" name="data" id="data" class="required data" maxlength="10" />
+                    <span>Campo requerido, informe uma data válida</span>
+                </p>
+
+                <p>
+                    <label>CPF:</label>
+                    <input type="text" name="cpf" id="cpf" class="required cpf" />
+                    <span>Campo requerido, informe um CPF válido</span>
+                </p>      
+                
+                <p>
+                    <label>CNPJ:</label>
+                    <input type="text" name="cnpj" id="cnpj" class="required cnpj" />
+                    <span>Campo requerido, informe um CNPJ válido</span>
+                </p>  
+                
+                <p>                
+                    <label>Numérico Mínimo 5 caracteres:</label>
+                    <input type="text" name="num" id="num" class="required numeric" minlength="5" maxlength="10" />
+                    <span>Campo requerido, apenas números</span>
+                </p>  
+
+                <p>                
+                    <label>Email:</label>
+                    <input type="text" name="email" id="email" class="required email" />
+                    <span>Campo requerido, informe um e-mail válido</span>
+                </p>  
+
+                <p>                
+                    <label>Senha - Mínimmo 4 caracteres</label>
+                    <input type="password" name="password" id="password"  class="required password" minlength="4" />
+                    <span>Campo requerido, informe ao menos 4 caracteres</span>
+                </p>  
+
+                <p>                
+                    <label>Repetir Senha </label>
+                    <input type="password" name="rpassword" id="rpassword"  class="required password" minlength="4" />
+                    <span>Repita a senha</span>
+                </p>  
+                <p>
+					<button class="button blue submit">Enviar</button>
+                    <button class="button gray reset">Limpar</button>
+                </p>
+
+            </form>
+        </div>
+    </body>
+</html>
+
+

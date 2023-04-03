@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Funções Callback</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			
+		<!-- Camada de comportamento-->
+		<script type="text/javascript" src="EXEMPLO 25.01 - JAVA SCRIPT - Funções Callback.js"></script>
+		
+		
+	</head>
+	<body>
+		<p>                                               <!-- O 3º parametro é uma função alert() -->
+														<!-- não esqueça de fechar corretament os elementos -->
+			<button onclick="minhascores('verde', 'azul', function(){ alert('...e varias cores.');});">
+				Clique aqui para testar a 1º função de callback
+			</button>
+		</p>
+		
+		<p>												<!-- Caso em que a função já possui declaração-->
+			<button onclick="meuscarros('BMW', 'Audi', meus_outros_carros);">
+				Clique aqui para testar a 2º função de callback
+			</button>
+		</p>
+	</body>
+</html>

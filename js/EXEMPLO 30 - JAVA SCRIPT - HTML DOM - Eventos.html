@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript HTML DOM - Eventos</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript">
+			function mudar_texto(id)
+			{
+				id.innerHTML = "Acordei porque sonhei que eu era bonito, aí me olhei no espelho e voltei a dormir (NOVA VERSÃO)";
+			}
+		</script>
+	</head>
+	<body>
+		<!-- A palavra this serve para fazer referencia ao objeto que disparou o onclick que neste caso é h1-->
+		<h1 onclick="this.innerHTML='Acordei porque sonhei que eu era bonito, aí me olhei no espelho e voltei a dormir'">Clique em cima do texto</h1>
+		
+		<br>
+		<!-- Exemplo semelhante ao anterior, mas utilizando um function -->
+		<h1 onclick="mudar_texto(this)">Clique em cima do texto (NOVA VERSÃO)</h1>
+		
+		<br>
+		
+		<p id="demo"></p>
+		<button id="demo2">Mostrar data</button>
+		
+		<script type="text/javascript">
+			document.getElementById("demo2").onclick = function(){mostrar_data()};
+			
+			function mostrar_data()
+			{
+				document.getElementById("demo").innerHTML = Date();
+			}
+		</script>
+		
+	</body>
+</html>

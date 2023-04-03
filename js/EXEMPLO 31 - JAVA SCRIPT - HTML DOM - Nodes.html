@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript HTML DOM - Document Object Model - Nodes</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	
+	<body>
+
+		<div id="meu_div_novo">
+			<p id="novo_p1">Pesquisas comprovam que quando uma mulher diz "não falo mais nada", em 5 minutos ela falará tudo de novo.</p>
+			<p id="novo_p2">Meu nome é tão lindo, que a Coca-Cola não se atreveu a colocá-la em uma simples lata.</p>
+		</div>
+		
+		<script type="text/javascript">
+			var newP = document.createElement("p");
+			var node = document.createTextNode("Tenho saudades da época em que eu me achava rico por levar dois reais pra escola.");
+			newP.appendChild(node); // anexando node ao elemento newP
+			var myElement = document.getElementById("meu_div_novo");
+			myElement.appendChild(newP);
+		</script>
+		
+		<br>
+		
+		<div id="remover_meu_div">
+			<p id="remove_p1">A vida é assim, um dia você perde, no outro você ganha. Por exemplo, ontem eu perdi o sono e hoje cedo ganhei em dobro o sono que tinha perdido.</p>
+			<p id="remove_p2">Apertar o botão do elevador várias vezes faz com que ele chegue mais rápido?</p>
+		</div>
+		
+		<script type="text/javascript">
+			var pai = document.getElementById("remover_meu_div");
+			var filho = document.getElementById("remove_p1");
+			pai.removeChild(filho);
+		</script>
+	</body>
+</html>

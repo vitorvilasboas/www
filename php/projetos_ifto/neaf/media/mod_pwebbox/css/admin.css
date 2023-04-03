@@ -1,0 +1,396 @@
+/**
+ * @package     pwebbox
+ * @version 	2.0.0
+ *
+ * @copyright   Copyright (C) 2015 Perfect Web. All rights reserved. http://www.perfect-web.co
+ * @license     GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+/* bootstrap collapse - accordion */
+.pweb-accordion .accordion-group {
+    margin-bottom: 8px;
+    clear: both;
+}
+.pweb-accordion .accordion-toggle {
+    border-radius: 3px 3px 0 0;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,#ffffff 0%,#ededed 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top,#ffffff 0%,#ededed 100%);
+    background: -o-linear-gradient(top,#ffffff 0%,#ededed 100%);
+    background: -ms-linear-gradient(top,#ffffff 0%,#ededed 100%);
+    background: linear-gradient(top,#ffffff 0%,#ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ededed',GradientType=0);
+    font-size: 18px;
+    text-shadow: 0 1px 0 #FFF;
+}
+.pweb-accordion .accordion-toggle.collapsed {
+    border-radius: 3px;
+}
+.pweb-accordion .accordion-toggle .icon-chevron-up {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.pweb-accordion .accordion-toggle.collapsed .icon-chevron-up {
+    display: none;
+}
+.pweb-accordion .accordion-toggle .icon-chevron-down {
+    display: none;
+}
+.pweb-accordion .accordion-toggle.collapsed .icon-chevron-down {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 10px;
+}
+/* end - bootstrap collapse - accordion */
+
+/* module tab */
+#pweb_summary_container h4 {
+    font-size: 15px;
+    margin-top: 0;
+}
+#pweb_summary_container h5 {
+    font-size: 14px;  
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+#pweb_summary_container button {
+    margin-top: 3px;
+    width: 120px;
+    display: block;
+    float: none;
+}
+.pweb-summary-wrapper {
+    clear: both;
+    margin-bottom: 15px;
+}
+/* end - module tab */
+
+/* location and effects configuration */
+#pweb_accordion1 .controls {
+    clear: both;
+    margin-left: 0;
+}
+.pweb-radio-option-group {
+    display: inline-block;
+    width: 230px;
+    opacity: 0.5;
+    filter: alpha(opacity=0.5); 
+    margin: 0 30px 15px 0;
+    position: relative;
+}
+.pweb-radio-option-group:hover,
+.pweb-radio-option-group.pweb-radio-option-active {
+    opacity: 1;
+    filter: alpha(opacity=1);  
+}
+.pweb-radio-option-group .pweb-radio-option-text {
+    padding-bottom: 7px;
+}
+.pweb-radio-option-group .pweb-radio-option-img {
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display: inline-block;   
+    min-height: 120px;
+    min-width: 160px;    
+}
+.pweb-radio-option-group input {
+    position: absolute;
+    left: 3px;
+    bottom: 75px;
+}
+.pweb-copy-code-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+.pweb-radio-option-img.pweb-handler-button {
+    background-image: url("../images/admin/toggler-button.png");
+}
+.pweb-radio-option-img.pweb-handler-tab {
+    background-image: url("../images/admin/toggler-tab.png");
+}
+.pweb-radio-option-img.pweb-handler-static {
+    background-image: url("../images/admin/static.png");
+}
+.pweb-radio-option-img.pweb-handler-hidden {
+    background-image: url("../images/admin/toggler-hidden.png");
+}
+.pweb-radio-option-img.pweb-handler-bottombar {
+    background-image: url("../images/admin/bottombar.png");
+}
+
+.pweb-radio-option-img.pweb-effect-slide-in {
+    background-image: url("../images/admin/slidebox-slide.png");
+}
+.pweb-radio-option-img.pweb-effect-slide-in-full {
+    background-image: url("../images/admin/slidebox-slide-full.png");
+}
+.pweb-radio-option-img.pweb-effect-fade {
+    background-image: url("../images/admin/modal-fade.png");
+}
+.pweb-radio-option-img.pweb-effect-rotate {
+    background-image: url("../images/admin/modal-rotate.png");
+}
+.pweb-radio-option-img.pweb-effect-square {
+    background-image: url("../images/admin/modal-scale.png");
+}
+.pweb-radio-option-img.pweb-effect-smooth {
+    background-image: url("../images/admin/modal-enlarge.png");
+}
+.pweb-radio-option-img.pweb-effect-slide-down {
+    background-image: url("../images/admin/accordion-slide-down.png");
+}
+.pweb-radio-option-img.pweb-effect-static-none {
+    background-image: url("../images/admin/static.png");
+}
+.pweb-radio-option-img.pweb-effect-static-bottombar {
+    background-image: url("../images/admin/bottombar.png");
+}
+.pweb-button-toggler .icon-chevron-up {
+    display: none;
+}
+.pweb-button-toggler .icon-chevron-down {
+    display: inline-block;
+}
+.pweb-button-toggler.pweb-button-active .icon-chevron-up {
+    display: inline-block;
+}
+.pweb-button-toggler.pweb-button-active .icon-chevron-down {
+    display: none;
+}
+.pweb-hidden {
+    display: none !important;
+}
+#tips_container div {
+    line-height: 23px;
+    margin-bottom: 2px;
+}
+#tips_container div.pweb-tip-group {
+    margin-bottom: 15px;
+}
+/* end - location and effects images */
+
+/* content configuration */
+#pweb_content_options {
+    margin-left: 0;
+}
+.pweb-btn-content-wrapper {
+    float: left;
+    width: 247px;
+    height: 145px;
+    margin: 0 12px 17px 0;
+    padding-top: 12px;
+    position: relative;
+}
+.pweb-btn-content-wrapper.active {
+    //background-color: #fbb031;//#5ebc5e;
+    border-radius: 3px;
+    border: 1px solid #f89406;
+    height: 143px;
+    background-color: #faa732;
+    *background-color: #f89406;
+    background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+    background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+    background-image: -o-linear-gradient(top, #fbb450, #f89406);
+    background-image: linear-gradient(to bottom, #fbb450, #f89406);
+    background-repeat: repeat-x;
+    border-color: #f89406 #f89406 #ad6704;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);    
+}
+.mark-wrapper {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.mark-wrapper span {
+    display: inline-block;
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 0 0 0 8px;
+    border-radius: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.mark-wrapper span span {
+    padding: 0 5px;
+    margin-left: 4px;
+}
+.mark-wrapper .mark-new span {
+    background-color: #ff2121;    
+}
+.mark-wrapper .mark-popular span {
+    background-color: #00a500;  
+}
+.pweb-btn-content-wrapper-in {
+    padding: 8px;
+    margin-bottom: 1px;
+}
+.pweb-btn-content-wrapper:hover,
+.pweb-btn-content-wrapper.active {
+}
+.pweb-btn-content-wrapper.active .pweb-btn-content-wrapper-in {
+    //border: 1px solid #1a3a69;
+    //border-radius: 4px;
+    padding: 6px 6px 6px 8px;
+}
+.pweb-btn-large {
+    width: 229px;
+    height: 100px;
+}
+.pweb-button-content {
+    color: #fff;
+    border: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 3px 6px #888;
+    background: #1a3a69; /* Old browsers */
+    background: -moz-linear-gradient(left,  #1a3a69 0%, #18497b 35%, #175489 50%, #18497b 65%, #1a3a69 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1a3a69), color-stop(35%,#18497b), color-stop(50%,#175489), color-stop(65%,#18497b), color-stop(100%,#1a3a69)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #1a3a69 0%,#18497b 35%,#175489 50%,#18497b 65%,#1a3a69 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #1a3a69 0%,#18497b 35%,#175489 50%,#18497b 65%,#1a3a69 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #1a3a69 0%,#18497b 35%,#175489 50%,#18497b 65%,#1a3a69 100%); /* IE10+ */
+    background: linear-gradient(to right,  #1a3a69 0%,#18497b 35%,#175489 50%,#18497b 65%,#1a3a69 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a3a69', endColorstr='#1a3a69',GradientType=1 ); /* IE6-9 */
+}
+.pweb-button-content img {
+    width: 229px;
+    height: 100px;
+    margin: 0;
+    border: 0;  
+}
+.pweb-button-content:hover, 
+.pweb-btn-content-wrapper.active .pweb-button-content {
+    box-shadow: 0 1px 2px #888;
+    border-radius: 1px;
+}
+.pweb-btn-content-wrapper.not-selectable .pweb-button-content { 
+    cursor: default;
+}
+.pweb-btn-content-wrapper.not-selectable:hover .pweb-button-content {  
+    box-shadow: 0 3px 6px #888;    
+}
+.pweb-container-buy-all {
+    margin-left: -10px;
+    padding-top: 30px;
+}
+/* end - content configuration */
+
+/* theme configuration */
+.pweb-theme {
+    
+}
+.pweb-theme-badge-free {
+    background-color: #009E0A;
+    position: absolute;
+    top: 15px;
+    right: -45px;
+    width: 150px;
+    padding: 2px 0 2px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -webkit-transform:rotate(45deg); /* Safari and Chrome */    
+}
+.pweb-theme-image {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.pweb-theme-image img {
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pweb-theme-active-info-image img {
+    max-width: 100%;
+}
+.pweb-theme-active-info-image, .pweb-theme-active--info-caption {
+    float: left;
+}
+.pweb-theme-active-info-image {
+    padding-right: 20px;
+}
+.theme-cfg-btn-container button {
+    margin: -49px 0 0 270px;
+}
+
+@media (max-width: 568px) {
+    .pweb-theme-active-info-image {
+        padding-right: 0;
+    }    
+    .theme-cfg-btn-container,
+    #pweb_themes_advanced_options .pweb-container {
+        text-align: center;
+    }
+    .theme-cfg-btn-container button {
+        margin: 0;
+    }
+}
+
+/* end - theme configuration */
+
+/* general */
+.pweb-btn-medium {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    font-weight: bold;
+    font-size: 14px !important;
+}
+.pweb-highlight-grey {
+    background-color: #ebebeb;
+}
+.pweb-container {
+    clear: both;
+}
+.pweb-container h4 {
+    text-align: center;
+}
+.pweb-margin-b-10 {
+    margin-bottom: 10px;
+}
+.pweb-margin-t-10 {
+    margin-top: 10px;
+}
+.pweb-margin-l-r-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pweb-padding-10 {
+    padding: 10px;
+}
+.pweb-padding-10 h4 {
+    margin-top: 0;
+}
+.pweb-advanced-options-content {
+    padding-top: 10px;
+}
+#pweb-layouts-coverflow-control-prev,
+#pweb-layouts-coverflow-control-next {
+    width: 100px;
+}
+.pweb-text-danger {
+    color: #aa0000;
+}
+/* end - general */
+
+/* J!2.5 */
+/* menu icons */
+ul#menu [class^="icon-"],
+ul#menu [class*=" icon-"] {
+    width: auto;
+    height: auto;
+}

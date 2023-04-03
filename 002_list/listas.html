@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/nerd.ico" type="text/x-icon">
+    <title>Trabalhando com listas</title>
+</head>
+<body>
+    <!-- LISTAS -->
+    <!-- Existem três tipos de listas HTML -->
+    <!-- LISTAS NÃO ORDENADAS <ul> - marcadores -->
+    <h2>Listas não Ordenadas</h2>
+    <ul>
+        <li> 1º Item </li> <!-- Item de lista-->
+        <li> 2º Item </li> 
+        <li> 3º Item </li> 
+    </ul>
+
+    <ul>
+        <li>Brasil</li>
+        <li>Argentina</li>
+        <li>Marrocos</li>
+    </ul>
+
+    <!-- TIPOS MARCADORES: https://www.w3schools.com/html/html_lists_unordered.asp -->
+
+    <ul type="square"> <!-- disc circle square -->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <ul style="list-style-type: square;">
+        <li>Pães</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Carne</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <ul style="list-style-type: circle;">
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <ul style="list-style-type: none">
+        <li>Brasilia</li>
+        <li>Buenos Aires</li>
+        <li>Lisboa</li>
+        <li>Amsterdã</li>
+        <li>Bandar Seri Begawan</li>
+    </ul>
+
+    <!-- lista não ordenada - MENU -->
+    <div style="background-color:darkkhaki; width:50%; border:1px solid #000;">
+        <ul style="list-style-type: none;">
+            <li>
+                <a href="../00_intro/index.html">Principal</a>
+            </li>
+            <li>Galeria de Fotos</li>
+            <li>Videos</li>
+            <li>Noticias</li>
+            <li>Depoimentos</li>
+        </ul>
+    </div>
+        
+
+    <!-- LISTAS ORDENADAS <ol> - sequência numérica -->
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li> 1º Item </li> <!-- Item de lista -->
+        <li> 2º Item </li>
+        <li> 3º Item </li>
+    </ol>
+
+    <ol>
+        <li>Onix Plus</li>
+        <li>Colbalt</li>
+        <li>Uno Mille</li>
+        <li>Corolla</li>
+    </ol>
+
+    <ol type="i">
+        <li>Tocantins</li>
+        <li>Maranhão</li>
+        <li>Minas Gerais</li>
+        <li>Goiás</li>
+        <li>Mato Grosso</li>
+    </ol>
+
+    <!-- Listas aninhadas (uma lista dentro da outra) e mistas -->
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <ol type="A">
+        <li>Brasil
+            <ul>
+                <li>Brasilia</li>
+            </ul>
+        </li>
+        <li>Argentina</li>
+        <li>Portugal</li>
+        <li>Holanda</li>
+        <li>Brunei</li>
+    </ol>
+
+    <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+
+    <h1> Exemplo de listas aninhadas </h1>
+    <h2> Continentes </h2>
+    <ul>
+        <li>Europa
+            <ul>
+                <li> Portugual </li>
+                <li> França </li>
+                <li> Alemanha </li>
+            </ul>
+        </li>
+        <li>Ásia
+            <ul >
+                <li> Japão </li>
+                <li> China 
+                    <ol>
+                        <li>Pequin</li>
+                    </ol>
+                </li>
+                <li> Índia </li>
+                <!--aqui os outros paises e capital-->
+            </ul>
+        </li>
+        <!--aqui outro continente-->
+    </ul>
+
+    
+    <ol style="list-style-type: lower-roman;">
+        <li>Fiat
+            <ol>
+                <li>
+                    <a href="https://cronos.fiat.com.br/monte.html" target="_blank" style="text-decoration: none;">Chronos</a>
+                </li>
+                <li>Uno Mille</li>
+                <li>Estrada</li>
+            </ol>
+        </li>
+        <li>Chevrolet
+            <ol>
+                <li>Cobalt</li>
+                <li>Onix</li>
+                <li>S10</li>
+            </ol>
+        </li>
+        <li>Toyota
+            <ul>
+                <li>Corolla</li>
+                <li>Yaris</li>
+                <li>Hilux</li>
+            </ul>
+        </li>
+        <li>Volkswagem
+            <ul>
+                <li>Gol</li>
+                <li>Virtus</li>
+                <li>Nivus</li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <!-- LISTAS DE DESCRIÇÃO/DEFINIÇÃO - formadas por termos ou nomes e suas respectivas descrições -->
+    <h2>Lista de Definições</h2>
+    <dl>
+        <dt>Item de lista</dt>
+        <dd>Descrição do respectivo item de lista</dd>
+
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação para a criação de conteúdo de um site</dd>
+
+        <dt>CSS</dt>
+        <dd>Folha de estilo em cascata para definição do design de um site</dd>
+
+        <dt>Javascrip</dt>
+        <dd>Linguagem de programação (script) para estabelecer a interatividade em um site</dd>
+    </dl>
+        
+    <dl>
+        <dt> Item 1 da lista</dt> <!-- define o item da lista -->
+        <dd> Descrição do item 1 da lista</dd> <!-- define a descrição do item da lista -->
+
+        <dt> Item 2 da lista</dt> 
+        <dd> Descrição do item 2 da lista</dd> 
+
+        <dt> Item 3 da lista</dt> 
+        <dd> Descrição do item 3 da lista</dd> 
+
+        <dt> Item 4 da lista</dt> 
+        <dd> Descrição do item 4 da lista</dd>
+        
+    </dl>
+
+    <dl >
+        <dt > Lógica de Programação </dt >
+        <dd >
+            Conhecimentos em Lógica de Programação é o pré-requisito fundamental para que uma pessoa consiga aprender qualquer Linguagem de Programação.
+        </dd >
+        <dt > Desenvolvimento Web com HTML , CSS e JavaScript </dt >
+        <dd >
+            Para quem deseja atuar no mercado de desenvolvimento, atualmente praticamente todos os sistemas corporativos possuem interfaces web.
+        </dd >
+        <dt > SQL e Modelo Relacional </dt >
+        <dd >
+            Como as aplicações corporativas necessitam armazenar dados é fundamental que os desenvolvedores possuam conhecimentos sobre persistência de dados.
+        </dd >
+    </dl >
+
+
+</body>
+</html>

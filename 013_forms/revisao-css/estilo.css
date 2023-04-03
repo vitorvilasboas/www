@@ -1,0 +1,55 @@
+body{ font-family: 'Monoton', cursive; }
+
+.linha{
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px 0;
+    width: 960px;  
+}
+
+.coluna{ float: left; padding: 0 10px; }
+.col1{ width: 60px;}
+.col2{ width: 140px;}
+.col3{ width: 220px;}
+.col4{ width: 300px;}
+.col5{ width: 380px;}
+.col6{ width: 460px;}
+.col7{ width: 540px;}
+.col8{ width: 620px;}
+.col9{ width: 700px;}
+.col10{ width: 780px;}
+.col11{ width: 860px;}
+.col12{ width: 940px;}
+
+.tabela_alunos{ border: 1px solid #0033ff; }
+
+.tabela_alunos td{
+    border: 1px solid #0033ff;
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabela_alunos .linha1{
+    background: #33ff00;
+    font-weight: bold;
+}
+
+.form_inscricao label{
+    display: block;
+    padding: 5px 0;
+}
+
+.form_inscricao .area_texto{
+    background: #dddfdc;
+    color: #0033ff;
+    display: block;
+}
+
+.textos img{
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+    border: 2px solid #e223d4;
+}

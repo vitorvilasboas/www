@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3.3//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>AS 002026 Free</name>
+	<creationDate>2011-04-26</creationDate>
+	<updateDate>2016-11-17</updateDate>
+	<version>3.3.0</version>
+	<author>AS Designing</author>
+    <authorUrl>http://www.asdesigning.com</authorUrl>
+    <copyright>AS Designing</copyright>
+    <license>GNU/GPL</license>
+	<description>
+	
+	<![CDATA[
+
+			<img src="../templates/as002026free/template_thumbnail.png" align="left" class="template_thumbnail" 
+					style="margin: 10px 30px 10px 0px; display: none;" />
+					
+			<h1><span  style="padding-top: 10px; display: block">AS Template 002026 - Free Version for Joomla! 3</span></h1>
+			
+			<br /><a href="http://www.astemplates.com/joomla-template-documentation/59-002026" target="_blank">Click here</a>  to see the template documentation.
+			<br />Check our <a href="http://blog.astemplates.com/category/joomla-tutorial/" target="_blank">Joomla Tutorial</a>.<br /><br />
+
+			<span style="color:orange; font-size:16px ">
+			Free Version is limited and may not include all configuration parameters and module positions.<br /><br />
+			</span>
+			 
+			<a href="http://www.astemplates.com/joomla-template-details/59-002026" target="_blank">
+			<b style="color:red;  font-size:18px">DOWNLOAD full free package from here:</b></a><br />
+			<a href="http://www.astemplates.com/joomla-template-details/59-002026" target="_blank">http://www.astemplates.com/joomla-template-details/59-002026</a>
+			<br /><br /><br /><br />
+
+			<hr />
+			<br />
+			<h3>Popular AS Templates:</h3><br />
+			    <a href="http://www.astemplates.com/joomla-template-details/436-002085" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/436/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/238-002066" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/238/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/445-002090" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/445/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/327-002070" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/327/template.thumbnail.png">
+				</a>
+				<br /><br />
+				
+			    <a href="http://www.astemplates.com/joomla-template-details/212-002057" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/212/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/228-002063" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/228/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/550-002097" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/550/template.thumbnail.png">
+				</a>
+			    <a href="http://www.astemplates.com/joomla-template-details/582-002099" target="_blank" style="margin: 10px 20px 20px 0px;">
+				<img src="http://www.astemplates.com/content/templates/582/template.thumbnail.png">
+				</a>
+			<br /><br />]]>
+	</description>	
+	
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>js</folder>
+		<folder>language</folder>		
+		<folder>less</folder>
+
+		<filename>component.php</filename>
+		<filename>fonts.php</filename>		
+		<filename>index.php</filename>
+		<filename>params.php</filename>
+		<filename>styles.php</filename>		
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_as002026free.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_as002026free.sys.ini</language>
+	</languages>
+    
+	<positions>
+		<position>as-position-1</position>
+		<position>as-position-2</position>
+		<position>as-position-3</position>
+		<position>as-position-5</position>
+		<position>as-position-6</position>
+		<position>as-position-7</position>
+
+		<position>as-position-10</position>
+		<position>as-position-11</position>		
+		
+		<position>as-position-20</position>
+		<position>as-position-21</position>
+		<position>as-position-22</position>
+		<position>as-position-23</position>
+		<position>as-position-24</position>		
+		<position>as-position-25</position>				
+		
+		<position>as-position-15</position>
+		<position>as-position-16</position>		
+
+		<position>as-position-30</position>
+		<position>as-position-31</position>		
+		<position>as-position-35</position>
+		
+		<position>modal</position>
+		<position>debug</position>
+	</positions>
+  
+	<config>
+		<fields name="params">
+			<fieldset name="general" label="TPL_FIELDSET_GENERAL">
+				<field type="spacer" label="&lt;link rel='stylesheet' href='../templates/as002026free/css/tmpl.admin.css' type='text/css' /&gt;" />
+
+				<field type="spacer" label="&lt;script src='../templates/as002026free/js/jscolors/jscolor.js'
+				type='text/javascript'&gt;&lt;/script&gt;" />
+				
+				<field name="body_font_family" 
+					type="list" 
+					default="Tahoma, Geneva, sans-serif, Arial" 
+					label="TPL_BODY_FONT_FAMILY_LABEL" 
+					description="TPL_BODY_FONT_FAMILY_DESC">
+					<option value="Tahoma, Geneva, sans-serif, Arial">Tahoma, Geneva, sans-serif</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">Georgia, Times New Roman</option>
+					<option value="'Courier New', Courier, monospace">Courier New, Courier</option>
+					<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+					<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">Trebuchet MS, Arial, Helvetica</option>
+					<option value="'Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+					<option value="'Times New Roman', Times, serif">Times New Roman, Times</option>
+					<option value="'MS Serif', 'New York', serif">MS Serif, New York, serif</option>
+					<option value="'Comic Sans MS', cursive">Comic Sans MS, cursive</option>
+					<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>	
+					<option value="ABeeZee">Google:ABeeZee</option>
+					<option value="Acme">Google:Acme</option>
+					<option value="Advent Pro">Google:Advent Pro</option>
+					<option value="Arimo">Google:Arimo</option>
+					<option value="Arizonia">Google:Arizonia</option>
+					<option value="Arvo">Google:Arvo</option>					
+					<option value="Average">Google:Average</option>
+					<option value="BenchNine">Google:BenchNine</option>
+					<option value="Carme">Google:Carme</option>
+					<option value="Comfortaa">Google:Comfortaa</option>
+					<option value="Convergence">Google:Convergence</option>
+					<option value="Cuprum">Google:Cuprum</option>
+					<option value="Droid Sans">Google:Droid Sans</option>
+					<option value="Droid Serif">Google:Droid Serif</option>
+					<option value="Exo">Google:Exo</option>
+					<option value="Felipa">Google:Felipa</option>
+					<option value="Fredoka One">Google:Fredoka One</option>						
+					<option value="Hammersmith One">Google:Hammersmith One</option>
+					<option value="Homenaje">Google:Homenaje</option>
+					<option value="Jockey One">Google:Jockey One</option>
+					<option value="Josefin Slab">Google:Josefin Slab</option>
+					<option value="Jura">Google:Jura</option>
+					<option value="Lato">Google:Lato</option>
+					<option value="Libre Baskerville">Google:Libre Baskerville</option>
+					<option value="Lora">Google:Lobster</option>
+					<option value="Lora">Google:Lobster Two</option>
+					<option value="Lora">Google:Lora</option>														
+					<option value="Macondo">Google:Macondo</option>
+					<option value="Marmelad">Google:Marmelad</option>
+					<option value="Michroma">Google:Michroma</option>
+					<option value="Montserrat">Google:Montserrat</option>
+					<option value="Monsieur La Doulaise">Google:Monsieur La Doulaise</option>						
+					<option value="Mr Bedfort">Google:Mr Bedfort</option>
+					<option value="Muli">Google:Muli</option>
+					<option value="Numans">Google:Numans</option>
+					<option value="Open Sans">Google:Open Sans</option>
+					<option value="Open Sans Condensed">Google:Open Sans Condensed</option>
+					<option value="Oswald">Google:Oswald</option>
+					<option value="Oxygen">Google:Oxygen</option>
+					<option value="Parisienne">Google:Parisienne</option>
+					<option value="Pontano Sans">Google:Pontano Sans</option>						
+					<option value="PT Sans">Google:PT Sans</option>	
+					<option value="PT Serif">Google:PT Serif</option>												
+					<option value="Prosto One">Google:Prosto One</option>
+					<option value="Questrial">Google:Questrial</option>
+					<option value="Raleway">Google:Raleway</option>
+					<option value="Roboto">Google:Roboto</option>
+					<option value="Roboto Condensed">Google:Roboto Condensed</option>
+					<option value="Roboto Slab">Google:Roboto Slab</option>										
+					<option value="Rouge Script">Google:Rouge Script</option>						
+					<option value="Russo One">Google:Russo One</option>
+					<option value="Sacramento">Google:Sacramento</option>
+					<option value="Salsa">Google:Salsa</option>						
+					<option value="Sail">Google:Sail</option>												
+					<option value="Sevillana">Google:Sevillana</option>						
+					<option value="Signika">Google:Signika</option>
+					<option value="Six Caps">Google:Six Caps</option>
+					<option value="Source Sans Pro">Google:Source Sans Pro</option>					
+					<option value="Tangerine">Google:Tangerine</option>												
+					<option value="Tulpen One">Google:Tulpen One</option>
+					<option value="Ubuntu">Google:Ubuntu</option>												
+				</field>
+				<field 
+					name="body_font_size" 
+					type="text" 
+					default="12" 
+					label="TPL_BODY_FONT_SIZE_LABEL" 
+					description="TPL_BODY_FONT_SIZE_DESC">
+				</field>
+				<field name="body_font_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="TPL_BODY_FONT_COLOR_LABEL" 
+					description="TPL_BODY_FONT_COLOR_DESC">
+				</field>					
+				<field type="spacer" label=" " />
+								
+				<field name="hfont_family" 
+					type="list" 
+					default="Open Sans" 
+					label="TPL_HFONT_FAMILY_LABEL" 
+					description="TPL_HFONT_FAMILY_DESC">
+					<option value="Tahoma, Geneva, sans-serif, Arial">Tahoma, Geneva, sans-serif</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">Georgia, Times New Roman</option>
+					<option value="'Courier New', Courier, monospace">Courier New, Courier</option>
+					<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+					<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">Trebuchet MS, Arial, Helvetica</option>
+					<option value="'Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+					<option value="'Times New Roman', Times, serif">Times New Roman, Times</option>
+					<option value="'MS Serif', 'New York', serif">MS Serif, New York, serif</option>
+					<option value="'Comic Sans MS', cursive">Comic Sans MS, cursive</option>
+					<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>	
+					<option value="ABeeZee">Google:ABeeZee</option>
+					<option value="Acme">Google:Acme</option>
+					<option value="Advent Pro">Google:Advent Pro</option>
+					<option value="Arimo">Google:Arimo</option>
+					<option value="Arizonia">Google:Arizonia</option>
+					<option value="Arvo">Google:Arvo</option>					
+					<option value="Average">Google:Average</option>
+					<option value="BenchNine">Google:BenchNine</option>
+					<option value="Carme">Google:Carme</option>
+					<option value="Comfortaa">Google:Comfortaa</option>
+					<option value="Convergence">Google:Convergence</option>
+					<option value="Cuprum">Google:Cuprum</option>
+					<option value="Droid Sans">Google:Droid Sans</option>
+					<option value="Droid Serif">Google:Droid Serif</option>
+					<option value="Exo">Google:Exo</option>
+					<option value="Felipa">Google:Felipa</option>
+					<option value="Fredoka One">Google:Fredoka One</option>						
+					<option value="Hammersmith One">Google:Hammersmith One</option>
+					<option value="Homenaje">Google:Homenaje</option>
+					<option value="Jockey One">Google:Jockey One</option>
+					<option value="Josefin Slab">Google:Josefin Slab</option>
+					<option value="Jura">Google:Jura</option>
+					<option value="Lato">Google:Lato</option>
+					<option value="Libre Baskerville">Google:Libre Baskerville</option>
+					<option value="Lora">Google:Lobster</option>
+					<option value="Lora">Google:Lobster Two</option>
+					<option value="Lora">Google:Lora</option>														
+					<option value="Macondo">Google:Macondo</option>
+					<option value="Marmelad">Google:Marmelad</option>
+					<option value="Michroma">Google:Michroma</option>
+					<option value="Montserrat">Google:Montserrat</option>
+					<option value="Monsieur La Doulaise">Google:Monsieur La Doulaise</option>						
+					<option value="Mr Bedfort">Google:Mr Bedfort</option>
+					<option value="Muli">Google:Muli</option>
+					<option value="Numans">Google:Numans</option>
+					<option value="Open Sans">Google:Open Sans</option>
+					<option value="Open Sans Condensed">Google:Open Sans Condensed</option>
+					<option value="Oswald">Google:Oswald</option>
+					<option value="Oxygen">Google:Oxygen</option>
+					<option value="Parisienne">Google:Parisienne</option>
+					<option value="Pontano Sans">Google:Pontano Sans</option>						
+					<option value="PT Sans">Google:PT Sans</option>	
+					<option value="PT Serif">Google:PT Serif</option>												
+					<option value="Prosto One">Google:Prosto One</option>
+					<option value="Questrial">Google:Questrial</option>
+					<option value="Raleway">Google:Raleway</option>
+					<option value="Roboto">Google:Roboto</option>
+					<option value="Roboto Condensed">Google:Roboto Condensed</option>
+					<option value="Roboto Slab">Google:Roboto Slab</option>										
+					<option value="Rouge Script">Google:Rouge Script</option>						
+					<option value="Russo One">Google:Russo One</option>
+					<option value="Sacramento">Google:Sacramento</option>
+					<option value="Salsa">Google:Salsa</option>						
+					<option value="Sail">Google:Sail</option>												
+					<option value="Sevillana">Google:Sevillana</option>						
+					<option value="Signika">Google:Signika</option>
+					<option value="Six Caps">Google:Six Caps</option>
+					<option value="Source Sans Pro">Google:Source Sans Pro</option>					
+					<option value="Tangerine">Google:Tangerine</option>												
+					<option value="Tulpen One">Google:Tulpen One</option>
+					<option value="Ubuntu">Google:Ubuntu</option>																		
+				</field>
+				<field 
+					name="h1_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_H1_FONT_SIZE_LABEL" 
+					description="TPL_H1 FONT_SIZE_DESC">
+				</field>								
+				<field 
+					name="h2_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_H2_FONT_SIZE_LABEL" 
+					description="TPL_H2 FONT_SIZE_DESC">
+				</field>								
+				<field 
+					name="h3_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_H3_FONT_SIZE_LABEL" 
+					description="TPL_H3 FONT_SIZE_DESC">
+				</field>								
+				<field 
+					name="h4_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_H4_FONT_SIZE_LABEL" 
+					description="TPL_H4 FONT_SIZE_DESC">
+				</field>								
+				<field 
+					name="h5_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_H5_FONT_SIZE_LABEL" 
+					description="TPL_H5 FONT_SIZE_DESC">
+				</field>								
+				<field type="spacer" label=" " />	
+				
+				<field name="tmpl_style" 
+					type="hidden" 
+					default="style.default.css" 
+					label="Template Styles" 
+					description="Template Styles">
+						<option value="style.default.css">Default</option>																		
+				</field>
+				<field type="spacer" label=" " />							
+			</fieldset>
+			
+			<fieldset name="logo" label="TPL_FIELDSET_LOGO">
+				<field type="spacer" label=" " />
+								
+				<field name="logo_size"
+					type="integer"
+					first="1"
+					last="12"
+					step="1"
+					default="4"
+					label="TPL_LOGO_SIZE_LABEL"
+					description="TPL_LOGO_SIZE_DESC">
+				</field>				
+				<field name="logo_type"
+					type="radio"
+					default="1"
+					label="TPL_LOGO_TYPE_LABEL"
+					description="TPL_LOGO_TYPE_DESC">
+						<option value="1">Image</option>
+						<option value="0">Text</option>
+				</field>
+				<field type="spacer" label=" " />	
+								
+				<field name="logo_img" 
+					type="media" 
+					default=""
+					label="TPL_LOGO_IMG_LABEL"
+					description="TPL_LOGO_IMG_DESC" >
+				</field>
+				<field type="spacer" label=" " />
+				
+				<field name="logo_txt" 
+					type="text" 
+					default="" 
+					label="TPL_LOGO_TEXT_LABEL" 
+					description="TPL_LOGO_TEXT_DESC">
+				</field>
+				<field name="logo_font_family" 
+					type="list" 
+					default="Tangerine:700" 
+					label="TPL_LOGO_FONT_FAMILY_LABEL" 
+					description="TPL_LOGO_FONT_FAMILY_DESC">
+					<option value="Tahoma, Geneva, sans-serif, Arial">Tahoma, Geneva, sans-serif</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">Georgia, Times New Roman</option>
+					<option value="'Courier New', Courier, monospace">Courier New, Courier</option>
+					<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+					<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">Trebuchet MS, Arial, Helvetica</option>
+					<option value="'Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+					<option value="'Times New Roman', Times, serif">Times New Roman, Times</option>
+					<option value="'MS Serif', 'New York', serif">MS Serif, New York, serif</option>
+					<option value="'Comic Sans MS', cursive">Comic Sans MS, cursive</option>
+					<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>	
+					<option value="ABeeZee">Google:ABeeZee</option>
+					<option value="Acme">Google:Acme</option>
+					<option value="Advent Pro">Google:Advent Pro</option>
+					<option value="Arimo">Google:Arimo</option>
+					<option value="Arizonia">Google:Arizonia</option>
+					<option value="Arvo">Google:Arvo</option>					
+					<option value="Average">Google:Average</option>
+					<option value="BenchNine">Google:BenchNine</option>
+					<option value="Carme">Google:Carme</option>
+					<option value="Comfortaa">Google:Comfortaa</option>
+					<option value="Convergence">Google:Convergence</option>
+					<option value="Cuprum">Google:Cuprum</option>
+					<option value="Droid Sans">Google:Droid Sans</option>
+					<option value="Droid Serif">Google:Droid Serif</option>
+					<option value="Exo">Google:Exo</option>
+					<option value="Felipa">Google:Felipa</option>
+					<option value="Fredoka One">Google:Fredoka One</option>						
+					<option value="Hammersmith One">Google:Hammersmith One</option>
+					<option value="Homenaje">Google:Homenaje</option>
+					<option value="Jockey One">Google:Jockey One</option>
+					<option value="Josefin Slab">Google:Josefin Slab</option>
+					<option value="Jura">Google:Jura</option>
+					<option value="Lato">Google:Lato</option>
+					<option value="Libre Baskerville">Google:Libre Baskerville</option>
+					<option value="Lora">Google:Lobster</option>
+					<option value="Lora">Google:Lobster Two</option>
+					<option value="Lora">Google:Lora</option>														
+					<option value="Macondo">Google:Macondo</option>
+					<option value="Marmelad">Google:Marmelad</option>
+					<option value="Michroma">Google:Michroma</option>
+					<option value="Montserrat">Google:Montserrat</option>
+					<option value="Monsieur La Doulaise">Google:Monsieur La Doulaise</option>						
+					<option value="Mr Bedfort">Google:Mr Bedfort</option>
+					<option value="Muli">Google:Muli</option>
+					<option value="Numans">Google:Numans</option>
+					<option value="Open Sans">Google:Open Sans</option>
+					<option value="Open Sans Condensed">Google:Open Sans Condensed</option>
+					<option value="Oswald">Google:Oswald</option>
+					<option value="Oxygen">Google:Oxygen</option>
+					<option value="Parisienne">Google:Parisienne</option>
+					<option value="Pontano Sans">Google:Pontano Sans</option>						
+					<option value="PT Sans">Google:PT Sans</option>	
+					<option value="PT Serif">Google:PT Serif</option>												
+					<option value="Prosto One">Google:Prosto One</option>
+					<option value="Questrial">Google:Questrial</option>
+					<option value="Raleway">Google:Raleway</option>
+					<option value="Roboto">Google:Roboto</option>
+					<option value="Roboto Condensed">Google:Roboto Condensed</option>
+					<option value="Roboto Slab">Google:Roboto Slab</option>										
+					<option value="Rouge Script">Google:Rouge Script</option>						
+					<option value="Russo One">Google:Russo One</option>
+					<option value="Sacramento">Google:Sacramento</option>
+					<option value="Salsa">Google:Salsa</option>						
+					<option value="Sail">Google:Sail</option>												
+					<option value="Sevillana">Google:Sevillana</option>						
+					<option value="Signika">Google:Signika</option>
+					<option value="Six Caps">Google:Six Caps</option>
+					<option value="Source Sans Pro">Google:Source Sans Pro</option>					
+					<option value="Tangerine">Google:Tangerine</option>												
+					<option value="Tulpen One">Google:Tulpen One</option>
+					<option value="Ubuntu">Google:Ubuntu</option>												
+				</field>
+				<field 
+					name="logo_font_size" 
+					type="text" 
+					default="" 
+					label="TPL_LOGO_FONT_SIZE_LABEL" 
+					description="TPL_LOGO_FONT_SIZE_DESC">
+				</field>	
+				<field name="logo_font_style" 
+					type="list" 
+					default="normal" 
+					label="TPL_LOGO_FONT_STYLE_LABEL" 
+					description="TPL_LOGO_FONT_STYLE_DESC">
+						<option value="normal">Normal</option>
+						<option value="italic">Italic</option>
+				</field>
+				<field name="logo_font_weight" 
+					type="list" 
+					default="normal" 
+					label="TPL_LOGO_FONT_WEIGHT_LABEL" 
+					description="TPL_LOGO_FONT_WEIGHT_DESC">
+						<option value="normal">Normal</option>
+						<option value="bold">Bold</option>
+				</field>
+				<field name="logo_font_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="TPL_LOGO_FONT_COLOR_LABEL" 
+					description="TPL_LOGO_FONT_COLOR_DESC">
+				</field>
+				<field type="spacer" label=" " />
+												
+				<field name="slogan_txt" 
+					type="text"
+					default=""
+					label="TPL_SLOGAN_TXT_LABEL"
+					description="TPL_SLOGAN_TXT_DESC">
+				</field>
+				<field name="slogan_font_family" 
+					type="list" 
+					default="Arial, Helvetica, sans-serif" 
+					label="TPL_SLOGAN_FONT_FAMILY_LABEL" 
+					description="TPL_SLOGAN_FONT_FAMILY_DESC">
+					<option value="Tahoma, Geneva, sans-serif, Arial">Tahoma, Geneva, sans-serif</option>
+					<option value="Georgia, 'Times New Roman', Times, serif">Georgia, Times New Roman</option>
+					<option value="'Courier New', Courier, monospace">Courier New, Courier</option>
+					<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+					<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">Trebuchet MS, Arial, Helvetica</option>
+					<option value="'Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+					<option value="'Times New Roman', Times, serif">Times New Roman, Times</option>
+					<option value="'MS Serif', 'New York', serif">MS Serif, New York, serif</option>
+					<option value="'Comic Sans MS', cursive">Comic Sans MS, cursive</option>
+					<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>	
+					<option value="ABeeZee">Google:ABeeZee</option>
+					<option value="Acme">Google:Acme</option>
+					<option value="Advent Pro">Google:Advent Pro</option>
+					<option value="Arimo">Google:Arimo</option>
+					<option value="Arizonia">Google:Arizonia</option>
+					<option value="Arvo">Google:Arvo</option>					
+					<option value="Average">Google:Average</option>
+					<option value="BenchNine">Google:BenchNine</option>
+					<option value="Carme">Google:Carme</option>
+					<option value="Comfortaa">Google:Comfortaa</option>
+					<option value="Convergence">Google:Convergence</option>
+					<option value="Cuprum">Google:Cuprum</option>
+					<option value="Droid Sans">Google:Droid Sans</option>
+					<option value="Droid Serif">Google:Droid Serif</option>
+					<option value="Exo">Google:Exo</option>
+					<option value="Felipa">Google:Felipa</option>
+					<option value="Fredoka One">Google:Fredoka One</option>						
+					<option value="Hammersmith One">Google:Hammersmith One</option>
+					<option value="Homenaje">Google:Homenaje</option>
+					<option value="Jockey One">Google:Jockey One</option>
+					<option value="Josefin Slab">Google:Josefin Slab</option>
+					<option value="Jura">Google:Jura</option>
+					<option value="Lato">Google:Lato</option>
+					<option value="Libre Baskerville">Google:Libre Baskerville</option>
+					<option value="Lora">Google:Lobster</option>
+					<option value="Lora">Google:Lobster Two</option>
+					<option value="Lora">Google:Lora</option>														
+					<option value="Macondo">Google:Macondo</option>
+					<option value="Marmelad">Google:Marmelad</option>
+					<option value="Michroma">Google:Michroma</option>
+					<option value="Montserrat">Google:Montserrat</option>
+					<option value="Monsieur La Doulaise">Google:Monsieur La Doulaise</option>						
+					<option value="Mr Bedfort">Google:Mr Bedfort</option>
+					<option value="Muli">Google:Muli</option>
+					<option value="Numans">Google:Numans</option>
+					<option value="Open Sans">Google:Open Sans</option>
+					<option value="Open Sans Condensed">Google:Open Sans Condensed</option>
+					<option value="Oswald">Google:Oswald</option>
+					<option value="Oxygen">Google:Oxygen</option>
+					<option value="Parisienne">Google:Parisienne</option>
+					<option value="Pontano Sans">Google:Pontano Sans</option>						
+					<option value="PT Sans">Google:PT Sans</option>	
+					<option value="PT Serif">Google:PT Serif</option>												
+					<option value="Prosto One">Google:Prosto One</option>
+					<option value="Questrial">Google:Questrial</option>
+					<option value="Raleway">Google:Raleway</option>
+					<option value="Roboto">Google:Roboto</option>
+					<option value="Roboto Condensed">Google:Roboto Condensed</option>
+					<option value="Roboto Slab">Google:Roboto Slab</option>										
+					<option value="Rouge Script">Google:Rouge Script</option>						
+					<option value="Russo One">Google:Russo One</option>
+					<option value="Sacramento">Google:Sacramento</option>
+					<option value="Salsa">Google:Salsa</option>						
+					<option value="Sail">Google:Sail</option>												
+					<option value="Sevillana">Google:Sevillana</option>						
+					<option value="Signika">Google:Signika</option>
+					<option value="Six Caps">Google:Six Caps</option>
+					<option value="Source Sans Pro">Google:Source Sans Pro</option>					
+					<option value="Tangerine">Google:Tangerine</option>												
+					<option value="Tulpen One">Google:Tulpen One</option>
+					<option value="Ubuntu">Google:Ubuntu</option>												
+				</field>
+				<field 
+					name="slogan_font_size" 
+					type="text" 
+					default="12" 
+					label="TPL_SLOGAN_FONT_SIZE_LABEL" 
+					description="TPL_SLOGAN_FONT_SIZE_DESC">
+				</field>	
+				<field name="slogan_font_style" 
+					type="list" 
+					default="normal" 
+					label="TPL_SLOGAN_FONT_STYLE_LABEL" 
+					description="TPL_SLOGAN_FONT_STYLE_DESC">
+						<option value="normal">Normal</option>
+						<option value="italic">Italic</option>
+				</field>
+				<field name="slogan_font_weight" 
+					type="list" 
+					default="normal" 
+					label="TPL_SLOGAN_FONT_WEIGHT_LABEL" 
+					description="TPL_SLOGAN_FONT_WEIGHT_DESC">
+						<option value="normal">Normal</option>
+						<option value="bold">Bold</option>
+				</field>
+				<field name="slogan_font_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="TPL_SLOGAN_FONT_COLOR_LABEL" 
+					description="TPL_SLOGAN_FONT_COLOR_DESC">
+				</field>
+			</fieldset>
+			
+			<fieldset name="grid" label="TPL_FIELDSET_SIDEBARS">
+				<field type="spacer" label=" " />
+				
+				<field name="aside_left_width" 
+					type="integer" 
+					first="1" 
+					last="12" 
+					step="1"
+					default="4" 
+					label="TPL_ASIDE_LEFT_WIDTH_LABEL" 
+					description="TPL_ASIDE_LEFT_WIDTH_DESC">
+				</field>				    
+				<field name="aside_right_width" 
+					type="integer" 
+					first="1" 
+					last="12" 
+					step="1"
+					default="3" 
+					label="TPL_ASIDE_RIGHT_WIDTH_LABEL" 
+					description="TPL_ASIDE_RIGHT_WIDTH_DESC">
+				</field>
+			</fieldset>
+			
+			<fieldset name="features" label="TPL_FIELDSET_FEATURES">
+				<field type="spacer" label=" " />
+				
+				<field name="feature_responsive"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="TPL_FEATURE_REPONSIVE_LABEL"
+					description="TPL_FEATURE_REPONSIVE_DESC">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field type="spacer" label=" " />
+								
+				<field name="feature_totop"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="TPL_FEATURE_TOTOP_LABEL"
+					description="TPL_FEATURE_TOTOP_DESC">
+						<option value="1">JSHOW</option>
+						<option value="0">JHIDE</option>
+				</field>
+				<field name="feature_totop_text"
+					type="text"
+					default=""
+					label="TPL_FEATURE_TOTOP_TEXT_LABEL"
+					description="TPL_FEATURE_TOTOP_TEXT_DESC">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

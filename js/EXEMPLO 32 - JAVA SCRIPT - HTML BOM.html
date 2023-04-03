@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript BOM - Browser Object Model</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+
+	<p id="Mostrar_Tamanho"></p> <!-- Vamos mostrar o tamanho da janela do navegador --> 
+
+	<script type="text/javascript">
+		//Versão mais atual de navegadores ou versão mais antiga de navegadoes ou versão ainda mais antiga de navegadores
+		// Coletando largura e altura da janela do navegador
+		var largura = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var altura = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		
+		x = document.getElementById("Mostrar_Tamanho");
+		x.innerHTML = "Browser Window: largura = " + largura + " px e altura = " + altura + " px";	
+	</script>
+
+	<!-- Função window.close fecha a janela, porém não funciona em todos os navegadores por questão de segurança-->
+	<button onclick="window.close();">Fechar</button>
+
+	</body>
+</html>

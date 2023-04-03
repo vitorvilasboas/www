@@ -1,0 +1,185 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 960px) {
+
+    body {
+        background-size: auto;
+        background: rgba(229, 246, 250, .8);
+    }
+
+    header {
+        background-color: khaki;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+
+    header {
+        position: relative;
+        overflow: visible;
+        padding: 1%;
+        margin: 1%;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 4vw;
+        /* */
+        line-height: 2em;
+    }
+
+    header .logo {
+        display: block;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    header .menu {
+        position: relative;
+        text-align: center;
+        transform: translateY(0);
+    }
+
+    header .menu li {
+        display: block;
+        margin: 1.2vw 0;
+        background-color: #F9F9F9;
+        width: 20vw;
+        padding: 2%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header .menu a {
+        text-decoration: none;
+    }
+
+
+}
+
+@media all and (max-width: 740px) {
+
+    aside nav li {
+        float: none;
+        width: 90%;
+        font-size: 2vw;
+    }
+
+    aside nav a {
+        padding: 5%;
+    }
+
+    aside iframe {
+        max-height: 15vw;
+    }
+
+    .noticias article {
+        clear: both;
+        float: none;
+        width: auto;
+        position: relative;
+    }
+
+    .noticias article h2 {
+        position: relative;
+        float: right;
+        right: 9%;
+    }
+
+    .noticias article img {
+        max-width: 50%;
+        float: left;
+
+    }
+
+    .noticias article p {
+        clear: right;
+        margin: 0 1%;
+        max-width: 48%;
+        display: inline;
+        float: right;
+        font-size: 1.5vw;
+    }
+
+    .noticias article a {
+        margin: 1% 1%;
+        float: left;
+        font-size: 1.5vw;
+    }
+
+    footer {
+        clear: both;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    .container {
+        position: relative;
+    }
+
+    aside {
+        position: absolute;
+        z-index: 0;
+        float: left;
+        min-height: 50vw;
+    }
+
+    main {
+        position: relative;
+        max-width: 100%;
+        top: 54vw;
+        z-index: 1;
+    }
+
+    .noticias article h2 {
+        right: 23%;
+    }
+
+    .noticias article img {
+        min-height: 20vw;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0px;
+        top: 55vw;
+    }
+
+}
+
+
+/* 
+@media all and (max-width: 320px) {
+    aside nav li {float: none; width: auto;}
+}
+
+@media all and (max-width: 700px){
+    body {font-size: 50px; color: green;}
+}
+*/
+
+/* SOBREPOSIÇÃO
+@media all and (min-width: 500px) {
+    body {background: blue;}
+}
+@media all and (min-width:700px) {
+    body {background: red;}
+}
+*/
+
+/* EMPILHAMENTO
+@media all and (min-width:500px) and (max-width:699px) {
+    body{background: green; }
+}
+@media all and (min-width:700px) {
+    body {background: yellow;}
+}
+*/
+
+/* 
+@media screen and (orientation:landscape){
+    p {font-size: 10em;}
+}
+*/

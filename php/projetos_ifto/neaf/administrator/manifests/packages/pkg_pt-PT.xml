@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.7" method="upgrade">
+	<name>Portuguese (pt-PT) Language Pack</name>
+	<packagename>pt-PT</packagename>
+	<version>3.7.0.1</version>
+	<creationDate>2017-04-26</creationDate>
+	<author>Comunidade JoomlaPortugal</author>
+	<authorEmail>comunidadejoomlapt@gmail.com</authorEmail>
+	<authorUrl>www.joomlaportugal.org</authorUrl>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<url>https://github.com/joomla/joomla-cms</url>
+	<packager>Joomla! Project</packager>
+	<packagerurl>www.joomla.org</packagerurl>
+	<description><![CDATA[<div style="text-align:left;">
+ <h2>Idioma português de Portugal para Joomla 3</h2>
+ <p>Este pacote de idioma é uma produção da <a href="http://www.joomlaportugal.org" target="_blank" title="Comunidade JoomlaPortugal">Comunidade JoomlaPortugal</a></p>
+ <p>Colabore e corrija erros da tradução: <a href="https://crowdin.com/project/joomla-cms" target="_blank" title="Tradução via Crowdin">Tradução em linha - Sistema Crowdin</a></p>
+ <p> </p>
+ <h2>Joomla! full portuguese (Portugal) language pack</h2>
+ <p>Please report bugs or issues at <a href="https://www.facebook.com/groups/joomlaPT/" target="_blank">Joomla Portugal Facebook group</a>.</p>
+ <p>Translated by <a href="http://www.joomlapt.com" target="_blank" title="Comunidade JoomlaPortugal">JoomlaPortugal Community</a> using Crowdin system.</p>
+</div>]]></description>
+	<blockChildUninstall>true</blockChildUninstall>
+	<files>
+		<folder type="language" client="site" id="pt-PT">site_pt-PT</folder>
+		<folder type="language" client="administrator" id="pt-PT">admin_pt-PT</folder>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Accredited Joomla! Translations">https://update.joomla.org/language/translationlist_3.xml</server>
+	</updateservers>
+</extension>

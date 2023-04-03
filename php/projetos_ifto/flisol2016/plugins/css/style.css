@@ -1,0 +1,9 @@
+/* CSS Document */
+*{margin:0; padding:0; border:0;}
+
+#conteudo{width:450px; height:auto; margin:auto; padding-top:50px;}
+#conteudo .titulo{width:auto; height:auto; float:left; margin:0 0 15px 0; font:12px Verdana, Arial, Helvetica, sans-serif; color:#333; font-weight:bold;}
+#conteudo .div{width:450px; height:auto; float:left; padding:10px 0 0 0; background:#E8E8FF;}
+#conteudo .div .time{width:400px; height:auto; float:left; margin:0 0 15px 17px;}
+#conteudo .div .time .select{width:130px; height:auto; float:left; padding:8px 5px; margin:0 10px 0 0; border:1px solid #DDD; font:12px Verdana, Arial, Helvetica, sans-serif; color:#333; outline:none;}
+#conteudo .div .time .btn{width:auto; height:auto; float:left; padding:8px 12px; margin:2px 0 0 0; background:#090; font:12px Verdana, Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Window Timing Events</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+		
+			function Test1()
+			{ // Executará a função indefinidamente, aguardando intervalo de tempo iguais
+			  // 2000 milisegundos = 2 segundos
+				setInterval(function () {alert("Fique apertando e reclamando !! ")}, 2000);
+			}
+			
+			function Test2()
+			{ // Executará uma função uma vez, após determinado tempo de espera
+			  // 5000 milisegundos = 5 segundos
+				setTimeout(function () {alert("Acho que a moça da farmácia está a fim de mim. Fui colocar créditos no celular e ela pediu meu número")}, 5000);
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+
+		<button onclick="Test1()">Alert Box executará a cada 2 segundos</button>
+		
+		<br>
+		<br>
+		
+		<button onclick="Test2()">Alert Box executará uma vez depois de 5 segundos</button>
+		
+		<br>
+		<br>
+		
+		<p id="relogio"></p>
+		
+		<script type="text/javascript">
+		
+			// Coletar hora atualizada do relogio a cada 1 segundo
+			// 1000 milisegundos = 1 segundo
+			var hora_atualizada = setInterval(function (){Hora_atual()}, 1000);
+			
+			function Hora_atual()
+			{
+				var d = new Date(); // Coletando a hora e data do computador
+				var t = d.toLocaleTimeString(); // Coletando apenas a hora local do computador
+				document.getElementById("relogio").innerHTML = t;
+			}
+		
+		</script>
+
+	</body>
+</html>

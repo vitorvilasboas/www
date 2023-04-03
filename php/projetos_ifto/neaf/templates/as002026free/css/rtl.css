@@ -1,0 +1,70 @@
+
+/**************************************************************************************/
+/*
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: GNU/GPL
+/*
+/**************************************************************************************/
+
+li
+{
+    list-style-image: url("../images/li.style.default.rtl.png");
+}
+
+#header-bottom-row .moduletable ul li,
+.page-item ul li,
+#footer-row ul li 
+{
+    list-style-image: url("../images/li.style.flower.rtl.png");
+}
+
+.categories-module li,
+.archive-module li,
+.moduletable ul li,
+.moduletable ul.item-list li
+{
+	background: url('../images/styles/default/li.style.rtl.png');
+}
+
+.moduletable.social ul.nav 
+{
+    text-align: right;
+}
+
+.thumbnails > li 
+{
+    margin-right: 0px;
+}
+
+#footer .social 
+{
+    text-align: right;
+}
+
+#copyright-menu li 
+{
+    float: left;
+}
+
+[class*="span"] 
+{
+    float: right;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.row-fluid .span6 
+{
+    width: 48.9%;
+}
+
+.row-fluid .span5 
+{
+    width: 40%;
+}
+
+.row-fluid .span4 
+{
+    width: 31.9%;
+}

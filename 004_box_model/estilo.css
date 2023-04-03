@@ -1,0 +1,42 @@
+* {
+    margin: 0; 
+    padding: 0;
+} /* reset de margin e padding em todos os elementos */
+
+body{
+    margin: 0 auto;
+    width: 80%;
+    background-image: url("../imagens/element5-digital.jpg");
+}
+
+h1 {
+    background-color: #cc9; /* cor do fundo */
+    border: 5px solid #f00; /* borda (4 lados da box) */
+    padding: 0px 10px 0px 10px; /* espaçamento interno (4 lados da box) */
+    margin: 10px 5px 0 5px; /* margem - espaçamento externo (4 lados da box) */
+    height: 100px;
+    line-height: 100px;
+}
+
+h3 {
+    background-color: #fc9; 
+    border:20px solid #039; /* dotted dashed solid double groove ridge inset outset */
+    padding: 15px;
+}
+
+.caixa1 {
+    background-color: #ff9; 
+    border: 50px solid #f0f; 
+    padding: 50px;
+    text-align: justify; /*alinhamento horizontal da esquerda à direita da box*/
+    font-size: 15pt;
+    font-family: monospace;
+}
+
+.caixa2 {
+    background-color: #cff; 
+    border: 2px solid #039; 
+    padding: 10px; 
+    text-align: justify;
+    font-size: large;
+}

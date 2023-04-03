@@ -1,0 +1,39 @@
+/**************************************************************************************/
+/*
+/*		Designed by 'AS Designing'
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: GNU/GPL
+/*
+/**************************************************************************************/
+
+fieldset.panelform label, 
+fieldset.panelform div.paramrow label, 
+fieldset.panelform span.faux-label,
+.control-group .control-label
+{ 
+	max-width: 340px; 
+	min-width: 240px; 
+	padding: 0 5px 0 0;
+} 
+
+fieldset.panelform label b
+{
+	color: #025A8D;
+}
+
+.asnote
+{
+	color: #F29021;
+	font-style: italic;
+}
+
+img.template_thumbnail
+{
+	display: block !important;	
+}
+
+#style-form .disabled
+{
+	opacity: 1;
+}

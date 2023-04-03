@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html> <!-- Informa ao navegar que a versão do HTML É A 5 -->
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Formulário de Curriculos </title>       
+    </head>
+
+    <body>
+
+        <!-- Os formulários são utéis, para que os usuários possam enviar informações
+             para os sites, servidores web etc -->
+
+        <!-- Este comando cria um formulário de interação -->
+        <form name="formulario_de_curriculo" action="index2.php" method="post" enctype="multipart/form-data"> 
+            <!-- name: Cria um nome de identificação para o formulário -->
+            <!-- action: indica para qual lugar os dados do formulário serão enviados
+                         se o action estiver vazio a execução da ação será na mesma pagina -->
+            <!-- method: indica a forma de envio do formulário, seja por post ou get -->
+            <!-- enctype: indica que os dados do formulário contem imagens e texto -->
+
+            <h3>Dados Pessoais</h3>
+            <!-- label: define um rótulo ao campo do formulário, para que o usuário
+             saiba que tipo de informação se deve colocar naquele campo do formulário -->       
+            <label>
+                CPF:<input type="text" 
+                           size="11" 
+                           placeholder="___.___.___-__" 
+                           pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" 
+                           title="Digite um CPF no formato: xxx.xxx.xxx-xx"
+                           required> 
+                <!-- size: Define o tamanho do campo -->
+                <!-- type="text": Define que o campo deve ser preenchido com texto  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+                <!-- pattern: Aplica a expressão regular do CPF para validar a digitação do usuário-->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Nome: <input type="text" size="50" placeholder="Digite seu nome aqui"> 
+                <!-- size: Define o tamanho do campo -->
+                <!-- type="text": Define que o campo deve ser preenchido com texto  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Sobrenome: <input type="text" size="50" placeholder="Digite seu nome aqui"> 
+                <!-- size: Define o tamanho do campo -->
+                <!-- type="text": Define que o campo deve ser preenchido com texto  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label for="sexo"> Sexo: </label>
+
+            <select id="sexo">
+                <option value="-1"> Escolha uma opção &nbsp</option>
+                <option value="masculino"> Masculino &nbsp</option>
+                <option value="feminino"> Feminino &nbsp</option>
+            </select>
+            <!-- &nbsp: acrescente um pequeno espaço após a ultima palavra da opção-->
+            <!-- selected="selected": Define um option como escolha padrão -->
+            <!-- disabled="disabled": Desabilita alguma opção -->
+            <!-- multiple="multiple": Permite escolher mais de uma opção-->
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label for="estadocivil"> Estado Civil: </label>
+
+            <select id="estadocivil">
+                <option value="-1"> Escolha uma opção &nbsp</option>
+                <option value="solteiro"> Solteiro &nbsp</option>
+                <option value="casado"> Casado &nbsp</option>
+                <option value="viuvo"> Viúvo(a) &nbsp</option>
+                <option value="divorciado"> Divorciado(a) &nbsp</option>
+            </select>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label for="deficiencia"> Possui algum tipo de Deficiência: </label>
+
+            <select id="deficiencia">
+                <option value="-1"> Escolha uma opção &nbsp</option>
+                <option value="deficienciasim"> Sim &nbsp</option>
+                <option value="deficiencianao"> Não &nbsp</option>
+            </select>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Em caso de sim, qual é a deficiência: <input type="text" size="50" placeholder="Digite aqui"> 
+                <!-- size: Define o tamanho do campo -->
+                <!-- type="text": Define que o campo deve ser preenchido com texto  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label for="cnh"> Possui carteira de Habilitação: </label>
+            <select id="cnh">
+                <option value="-1"> Escolha uma opção &nbsp</option>
+                <option value="cnhsim"> Sim &nbsp</option>
+                <option value="cnhnao"> Não &nbsp</option>
+            </select>
+
+            <label>
+                Validade da CNH:<input type="text" 
+                                       size="11" 
+                                       placeholder="__/__/____" 
+                                       pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" 
+                                       title="Digite uma data no formato: XX/XX/XXXX"> 
+
+            </label>
+
+            <h3>Endereço</h3>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <input type="reset" value="Limpar formulário, foi preenchido incorretamente">
+            <!-- type="reset":  Cria um botão que limpa o formulário  -->
+            <!-- value:  É o que está escrito dentro do botão  -->
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <input type="submit" value="Enviar formulario para o servidor PHP">
+            <!-- type="submit":  Cria um botão que envia os dados para o servidor  -->
+            <!-- value:  É o que está escrito dentro do botão  -->
+
+
+
+        </form>
+
+    </body>
+
+</html>
+

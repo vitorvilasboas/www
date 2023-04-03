@@ -1,0 +1,104 @@
+* {
+    margin: 0; 
+    padding: 0;
+} /*Aplicando um reset de margin e padding em todos os elementos*/
+
+body{
+    margin: 0 auto;
+    width: 80%; /* flexível */
+}
+
+h2{
+    color: brown;
+}
+
+table,
+td,
+th,
+tfoot {
+    border: 1px solid #000;
+    padding: 5px;
+    margin: 10px;
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+
+
+th {
+    background-color: #999;
+}
+
+.tabela{
+    width: 100%;
+    border-right: 0; /* Zerando border para evitar duplicação de borda */
+    border-left: 0; 
+    border-bottom: 0;
+    border-top: 0;
+    border: 2px solid rgb(100, 45, 68);
+    border-collapse: collapse;
+}
+
+.coluna1 {
+    background-color: yellow;
+}
+
+.coluna2 {
+    background-color: rgb(100, 200, 100);
+}
+
+.tabela caption{
+    background: #005789;
+    font-family: 'Trebuchet MS';
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px;
+}
+
+.tabela td{
+    text-align: center;
+    border: 2px solid rgb(100, 45, 68);
+}
+
+.tabela th{
+    border: 2px solid rgb(100, 45, 68);
+}
+
+.tabela img{
+    width: 10px;
+    height: 10px;
+}
+
+.tabela tfoot{
+    font-weight: bold;
+    background-color: burlywood;
+    font-size: 10pt;
+}
+
+.tabela thead{
+    color: white;
+    background-color: navy;
+}
+
+table a{
+    text-decoration: none;
+    color: #FFF;
+    padding: 2px 6px;
+    border: 1px outset #F30;
+    background: #F60;
+    font: bold small-caps 12px arial, helvetiva, sans-serif;
+}
+
+/* Eventos */
+
+table a:hover {
+    border: 2px inset #F00;
+    background: #5b5958;
+    text-decoration: none;
+}
+
+table tr:hover, 
+table th:hover {
+    background: rgb(195, 215, 228);
+}

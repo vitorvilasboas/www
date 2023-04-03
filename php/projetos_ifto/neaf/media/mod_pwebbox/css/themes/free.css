@@ -1,0 +1,82 @@
+/**
+ * @package     pwebbox
+ * @version 	2.0.0
+ *
+ * @copyright   Copyright (C) 2015 Perfect Web. All rights reserved. http://www.perfect-web.co
+ * @license     GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+/* Form background */
+.pweb-theme-free.pwebbox-box .pwebbox-container,
+.pweb-theme-free.ui-effects-transfer.pweb-genie {
+	background-color: #FFF;
+}
+.pweb-theme-free.pweb-slidebox .pwebbox-container {
+	border: 1px solid #bbb;
+	border-color: rgba(0,0,0,0.2);
+	background-color: rgba(255,255,255, 0.9);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Text */
+.pweb-theme-free.pwebbox-box .pwebbox-container form label {
+	color: #666;
+}
+
+/* Fields */
+.pweb-theme-free.pwebbox-box .pwebbox-container form input, 
+.pweb-theme-free.pwebbox-box .pwebbox-container form select, 
+.pweb-theme-free.pwebbox-box .pwebbox-container form textarea {
+	color: #666;
+	border-color: #999;
+}
+
+/* Fields active */
+.pweb-theme-free.pwebbox-box .pwebbox-container form input:focus, 
+.pweb-theme-free.pwebbox-box .pwebbox-container form select:focus, 
+.pweb-theme-free.pwebbox-box .pwebbox-container form textarea:focus {
+	color: #333 !important;
+    border-color: #000 !important;
+}
+
+/* Links */
+.pweb-theme-free.pwebbox-box .pwebbox-container form a,
+.pweb-theme-free.pwebbox-box .pweb-button-close {
+    color: #000;
+	text-decoration: underline;
+}
+.pweb-theme-free.pwebbox-box .pwebbox-container form a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.pweb-theme-free.pwebbox-box .pwebbox-container form button,
+.pweb-theme-free.pwebbox-box .pwebbox-container form .btn {
+	color: #fff;
+	border: 1px solid #000;
+	background: #333;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+/* Buttons hover */
+.pweb-theme-free.pwebbox-box .pwebbox-container form button:hover,
+.pweb-theme-free.pwebbox-box .pwebbox-container form .btn:hover {
+	background-color: #000;
+}
+
+/* Toggler tab */
+.pwebbox_toggler.pweb-theme-free {
+	color: #fff;
+	border: 1px solid #000;
+	background: #333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+/* Toggler tab hover and opened */
+.pwebbox_toggler.pweb-theme-free:hover,
+.pwebbox_toggler.pweb-theme-free.pweb-opened {
+	background-color: #222;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript JSON - JavaScript Object Notation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+			 
+		<h3>Testando a sintaxe do JSON no JavaScript</h3>
+		
+		<p>Velho carro: <span id="carro_velho"></span></p>
+		<p>Novo carro: <span id="carro_novo"></span></p>
+		
+		<script type="text/javascript">
+			
+			var funcionarios = [
+				{"automovel":"VW", "modelo":"Golf"},
+				{"automovel":"Porsche", "modelo":"911"},
+				{"automovel":"Ferrari", "modelo":"F50"},
+				{"automovel":"Audi", "modelo":"A8"}
+			];
+			
+			document.getElementById("carro_velho").innerHTML = funcionarios[3].automovel + " " + funcionarios[3].modelo;
+			
+			funcionarios[3].automovel = "BMW";
+			funcionarios[3].modelo = "540i";
+			
+			document.getElementById("carro_novo").innerHTML = funcionarios[3].automovel + " " + funcionarios[3].modelo;
+			
+		</script>
+
+	</body>
+</html>

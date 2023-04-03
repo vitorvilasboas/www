@@ -1,0 +1,98 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    background-color: lightsteelblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.topo {
+    background-color: lightsteelblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: darkred;
+    /* font: bold 18px Tahoma, Geneva, sans-serif; */
+}
+
+.menu{
+    background-color: burlywood;
+    float: left;
+    padding: 50px;
+}
+
+#conteudo { /* #ID */
+    float: left; 
+    width: 50%;
+    padding: 50px;
+    text-align: justify;
+    text-indent: 20px; /* Recua a 1 linha do paragrafo */
+    text-decoration: underline; /* Realiza uma decoração no texto */
+    letter-spacing: 5px; /* espaço entre letras */
+    word-spacing: 10px; /* espaço entre palavras */
+    text-transform: capitalize; /* Realiza transformações no texto */
+}
+
+.parag1 {
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal; /* estilo da fonte */
+    font-variant: normal; 
+    font-weight: bold;
+    font-size: 11px;
+    font: bold italic small-caps 16px/28px Verdana, Geneva, sans-serif; /* tudo junto */
+}
+
+.parag2 {
+    padding-top: 5px;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
+
+img {
+    padding: 5px;
+    border: 2px solid #f0f;
+    width: 50%;
+}
+
+.topo img {
+    float: right;
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    border: 0px;
+}
+
+h2 {
+    color: lightblue;
+    text-align: center;
+    font-size: 20pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.menu h2{
+    color: red; 
+    font-size: 10pt;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: 100; 
+}
+
+h3 {
+    color: chocolate;
+}
+
+h4 {
+    background-color: crimson;
+    font-size: 50px;
+}
+
+p{
+    color: darkgoldenrod;
+    background-color: aquamarine;
+}
+
+#conteudo p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em; 
+}

@@ -1,0 +1,24 @@
+#geral{
+    width:842px; 
+    height: 595px; 
+    border: 1px solid #069;
+    
+    
+    }
+#geral img{
+    width: 842px;
+    height: 595px;
+    float:left;
+    overflow:hidden;
+        
+    }
+#texto{
+    float: left;
+    font: 20px verdana,Arial,fantasy;
+    margin: -460px;
+    padding: 0 486px 43px 582px;
+    text-align: justify;
+        
+    
+}
+

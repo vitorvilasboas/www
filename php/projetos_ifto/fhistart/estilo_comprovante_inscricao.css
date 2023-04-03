@@ -1,0 +1,153 @@
+
+
+*{
+    /*margin:0;
+    padding: 0;*/
+}
+
+#total{
+    margin-top: 0px;
+    width: 1000px;
+}
+#topo1{
+    background: url(imagens/certificado/topo1.png)repeat-x;
+    height: 30px;
+}
+#topo2{
+    height: 120px;
+    
+}
+#logo1{
+    margin: 75px 10px 10px 10px;
+    padding:  5px;
+    width: 235px;
+    height: 131px;
+    position: absolute;
+    
+}
+#instituicao{   
+    margin: 75px 10px 10px 200px;
+    padding: 5px;
+    width: 700px;
+    height:66px;
+    position: absolute;
+
+}
+#instituicao p{
+    margin: 1px;
+    font-size: 14px;
+    text-align: center;
+    padding: 1px;
+}
+#logo2{
+    margin: 75px 10px 10px 0px;
+    padding: 5px;
+    width: 230px;
+    height:131px;
+    position:absolute;
+
+}
+#nomeevento{
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+    text-align: center;
+    height: 19px;
+    padding: 10px;
+}
+#cert{
+    font-size: 24px;
+    color:#009933;
+    font-weight: bold;
+    text-align: center;
+    height:19px;
+    padding: 10px;
+}
+
+#conteudo_certificado{
+    /*height:300px;*/
+    font-size: 21px; 
+    text-align: justify;
+    /*margin: 330px 50px 10px 40px;*/
+    padding: 10px;
+    /*position: absolute;*/
+}
+#conteudo_certificado p{
+    word-wrap: break-word;
+}
+#assinaturas{
+    background: url(imagens/certificado/assinaturas.png)no-repeat;
+    width: 1000px;
+    height:66px;
+    padding: 0px;
+   /* margin: 550px 66px 10px 66px;
+    position: absolute; */
+}
+#patrocinadores{
+    background: url(imagens/certificado/patrocinadores.png)no-repeat;
+    width: 1000px;
+    height:130px; 
+    /*margin: 630px 66px 10px 66px;*/
+    padding: 0px;
+    /*position: absolute;*/
+}
+
+#conteudo_certificado .titulo1{
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;  
+    font-weight:bold;
+    color:#0066cc; 
+    padding:5px; 
+    background:#ffffff;
+    border-bottom: 2px solid #bb404d;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+#conteudo_certificado .titulo2{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;font-weight: bold;  color: #006699;text-align: justify; padding: 10px}
+#conteudo_certificado .titulo3{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-weight: bold;  color: #006699;padding: 2px 0 10px 20px;}
+
+#conteudo_certificado .tabelas{width: 900px;  border-collapse:collapse; padding: 3px;}
+#conteudo_certificado .tabelas tr td {  border: 1px solid #000000;}
+#conteudo_certificado .tabelas tr th {  border: 1px solid #000000;}
+#conteudo_certificado .tabelas  td {padding: 3px;}
+#conteudo_certificado .tabelas  th {padding: 3px;}
+
+#conteudo_certificado .tdespaco{background:#b5c4cf; width:700px;margin: 0px;font-size: 5px;color:#b5c4cf; }
+
+#conteudo_certificado .tdGERAL{background: #ffffff; text-align: center; padding: 2px;}
+#conteudo_certificado .td70{background: #ffffff; color:#006699; width: 70px; padding: 2px;}
+#conteudo_certificado .td100{background:#ffffff; color:#006699; width: 100px; padding: 2px;}
+#conteudo_certificado .td150{background:#ffffff; color:#006699; width: 150px;padding: 2px;}
+#conteudo_certificado .td200{background:#ffffff; color:#006699; width: 200px; padding: 2px;}
+#conteudo_certificado .td300{background:#ffffff; color:#006699; width: 300px; padding: 2px;}
+#conteudo_certificado .td400{background:#ffffff; color:#006699; width: 400px; padding: 2px;}
+#conteudo_certificado .td500{background:#ffffff; color:#006699; width: 500px;padding: 2px;}
+#conteudo_certificado .td600{background:#ffffff; color:#006699; width: 600px; padding: 2px;}
+#conteudo_certificado .td700{background:#ffffff; color:#006699; width: 700px; padding: 2px;}
+#conteudo_certificado .td800{background:#ffffff; color:#006699; width: 800px; padding: 2px;text-align: justify;}
+
+#conteudo_certificado .th70t{background:#ffffff; color:#006699; width: 70px; text-align: right; font-weight: bold; }
+#conteudo_certificado .th100t{background:#ffffff; color:#006699; width: 100px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th130t{background:#ffffff; color:#006699; width: 130px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th120t{background:#ffffff; color:#006699; width: 120px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th176t{background:#ffffff; color:#006699; width: 176px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th200t{background:#ffffff; color:#006699; width: 200px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th276t{background:#ffffff; color:#006699; width: 276px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th300t{background:#ffffff; color:#006699; width: 300px; text-align: right; font-weight: bold;}
+#conteudo_certificado .th600t{background:#ffffff; color:#006699; width: 600px; text-align: right; font-weight: bold;}
+
+#conteudo_certificado .th40tv{background:#6A891F; color:#ffffff; width: 40px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th50tv{background:#6A891F; color:#ffffff; width: 50px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th70tv{background:#6A891F; color:#ffffff; width: 70px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th75tv{background:#6A891F; color:#ffffff; width: 75px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th80tv{background:#6A891F; color:#ffffff; width: 80px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th90tv{background:#6A891F; color:#ffffff; width: 90px; text-align: center; font-weight: bold; }
+#conteudo_certificado .th100tv{background:#6A891F; color:#ffffff; width: 100px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th130tv{background:#6A891F; color:#ffffff; width: 130px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th120tv{background:#6A891F; color:#ffffff; width: 120px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th110tv{background:#6A891F; color:#ffffff; width: 110px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th176tv{background:#6A891F; color:#ffffff; width: 176px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th200tv{background:#6A891F; color:#ffffff; width: 200px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th276tv{background:#6A891F; color:#ffffff; width: 276px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th300tv{background:#6A891F; color:#ffffff; width: 300px; text-align: center; font-weight: bold;}
+#conteudo_certificado .th400tv{background:#6A891F; color:#ffffff; width: 400px; text-align: center; font-weight: bold;}

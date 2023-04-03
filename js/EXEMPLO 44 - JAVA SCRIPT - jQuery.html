@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery - JavaScript</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<!-- Link para a biblioteca do google -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+		
+			$(document).ready(function () {
+			
+				$("#buttonFadeIn").click(function () {
+					$("#div1").fadeIn();
+					$("#div2").fadeIn("slow");
+					$("#div3").fadeIn(3000);
+				});
+				
+				$("#buttonFadeOut").click(function () {
+					$("#div1").fadeOut();
+					$("#div2").fadeOut("slow");
+					$("#div3").fadeOut(5000);
+				});
+			
+			});
+		
+		</script>
+		
+	</head>
+	<body>
+
+		<button id="buttonFadeIn" name="buttonFadeIn">Click to fade in</button>
+		
+		<br><br>
+		
+		<button id="buttonFadeOut" name="buttonFadeOut">Click to fade out</button>
+		
+		<br><br>
+		
+		<!-- Criando tres caixas que receberão o fade in (aparecimento e desaparecimento gradual) --> 
+		<div id="div1" style="width:80px; height:80px; display:none; background-color:red;"></div><br>
+		<div id="div2" style="width:80px; height:80px; display:none; background-color:green;"></div><br>
+		<div id="div3" style="width:80px; height:80px; display:none; background-color:blue"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.7" client="administrator" type="language" method="upgrade">
+	<name>Portuguese (pt-PT)</name>
+	<tag>pt-PT</tag>
+	<version>3.7.0.1</version>
+	<creationDate>2017-04-26</creationDate>
+	<author>Comunidade JoomlaPortugal</author>
+	<authorEmail>comunidadejoomlapt@gmail.com</authorEmail>
+	<authorUrl>www.joomlaportugal.org</authorUrl>
+	<copyright>Direitos de Autor (C) 2005 - 2017 Open Source Matters. Todos os direitos reservados.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>Português de Portugal (pt-PT). Idioma de interface de administração para Joomla 3.x</description>
+	<files>
+		<folder>/</folder>
+ 		<filename file="meta">install.xml</filename>
+	</files>
+	<params />
+</extension>

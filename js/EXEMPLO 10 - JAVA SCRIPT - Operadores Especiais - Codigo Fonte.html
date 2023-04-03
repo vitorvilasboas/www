@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JavaScript Operadores Especiais</title>
+	</head>
+
+	<body>
+	
+		<p><h3> Operador Trinario </h3>
+			Se X for igual a y então o código imprime 110, senão o código imprime 100 <br>
+			x = 12; y = 15 <br>
+			operação  => (x == y) ? "110,00" : "100,00" <br>
+			resultado => 
+			<script type="text/javascript">
+				var x = 12;
+				var y = 15;
+				var out = (x == y) ? "110,00" : "100,00";
+				document.write(out);
+			</script>	
+		</p>
+	
+		<p>
+			<script type="text/javascript">
+				var i = 0;
+				var k = 0;
+				var j = 15;
+				for(i = 0; i <= 10; i++, j++) // Operador virgula permite incrementar duas variaveis
+					{
+						k = i + j;
+					}
+				document.write("k = " + k);
+			</script>
+		</p>
+
+	</body>
+
+</html>

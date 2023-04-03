@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- FACIL -->
+
+<html>
+	<head>
+		<title> Atividade de Java Script</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+		<!-- Funções do JavaScript -->
+		<script type="text/javascript">
+			
+			function coletar_dados()
+			{
+										
+				// Coletando os valores do formulario
+				var valor = parseInt(document.getElementById('valor').value);
+												
+				//invocando a função que calcula o indice de poluição
+				Testa_Switch(valor);
+			}
+
+			// Função que utiliza o switch
+			function Testa_Switch(valor)
+			{
+				var resultado;
+				switch(valor)
+				{
+					case 0:
+						resultado = 0;
+						break;
+					case 1:
+						resultado = 1;
+						break;
+					case 2:
+						resultado = 2;
+						break;
+					case 3:
+						resultado = 3;
+						break;
+					case 4:
+						resultado = 4;
+						break
+					default:
+						resultado = "nenhum";
+						break;
+				}				
+					
+				alert("o resultado é: " + resultado);
+				return resultado;
+			}
+		
+		</script>
+	
+	</head>
+	
+	<body>
+		<h3> Informe o valor a ser testado pelo switch </h3>
+		
+		<form id="formulario"> <!-- Formulario de coleta de dados -->
+			Valor: <input type="number" id="valor"/>	<br/>
+									
+			<!-- Aguardando o usuario clicar no botão calcular resultado e assim que o usuario clicar,
+     			ele invoca a função `coletar_dados` -->
+				
+			  <button onclick="coletar_dados()">Calcular resultado</button>
+				
+		</form>
+		
+		
+			
+	</body>
+</html>

@@ -1,0 +1,244 @@
+/* If you edit this file, your modifications will be overwritten during the next upgrade.
+Copy this stylesheet with a different name, edit it, and finally
+select your own custom css in "Advanced Options" of your forms */
+
+/* Form framework */
+div#nexevocontainer<?php echo $uid ?>
+{
+}
+
+/* Form title */
+div#nexevocontainer<?php echo $uid ?> .nexevocontainer h2
+{
+}
+
+/* Twitter bootstrap alert boxes (message area) */
+div#nexevocontainer<?php echo $uid ?> .alert
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert h4
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert .close
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert-success
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert-info
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert-warning
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .alert-error
+{
+}
+
+/* List within the message area at the top of the form */
+div#nexevocontainer<?php echo $uid ?> ul.nexevo_messages
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> ul.nexevo_messages > li
+{
+}
+
+/* buttons */
+div#nexevocontainer<?php echo $uid ?> .btn
+{
+}
+
+/* Files list */
+div#nexevocontainer<?php echo $uid ?> .qq-upload-file,
+div#nexevocontainer<?php echo $uid ?> .qq-upload-spinner,
+div#nexevocontainer<?php echo $uid ?> .qq-upload-size,
+div#nexevocontainer<?php echo $uid ?> .qq-upload-cancel,
+div#nexevocontainer<?php echo $uid ?> .qq-upload-failed-text
+{
+}
+
+/* Upload button */
+div#nexevocontainer<?php echo $uid ?> .qq-upload-button span
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .control-group
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .control-group .checkbox
+{
+}
+
+/* input / textarea */
+/* background color */
+div#nexevocontainer<?php echo $uid ?> .nexevo_form input[type="text"],
+div#nexevocontainer<?php echo $uid ?> .nexevo_form textarea
+{
+}
+
+/* Background highlight when hover or selected */
+div#nexevocontainer<?php echo $uid ?> .nexevo_form input[type="text"]:hover,
+div#nexevocontainer<?php echo $uid ?> .nexevo_form textarea:hover,
+div#nexevocontainer<?php echo $uid ?> .nexevo_form input[type="text"]:focus,
+div#nexevocontainer<?php echo $uid ?> .nexevo_form textarea:focus
+{
+}
+
+/* Border of fields except Select boxes */
+div#nexevocontainer<?php echo $uid ?> textarea,
+div#nexevocontainer<?php echo $uid ?> input[type="text"],
+div#nexevocontainer<?php echo $uid ?> input[type="password"],
+div#nexevocontainer<?php echo $uid ?> input[type="datetime"],
+div#nexevocontainer<?php echo $uid ?> input[type="datetime-local"],
+div#nexevocontainer<?php echo $uid ?> input[type="date"],
+div#nexevocontainer<?php echo $uid ?> input[type="month"],
+div#nexevocontainer<?php echo $uid ?> input[type="time"],
+div#nexevocontainer<?php echo $uid ?> input[type="week"],
+div#nexevocontainer<?php echo $uid ?> input[type="number"],
+div#nexevocontainer<?php echo $uid ?> input[type="email"],
+div#nexevocontainer<?php echo $uid ?> input[type="url"],
+div#nexevocontainer<?php echo $uid ?> input[type="search"],
+div#nexevocontainer<?php echo $uid ?> input[type="tel"],
+div#nexevocontainer<?php echo $uid ?> input[type="color"]
+{
+}
+
+/* Green font */
+div#nexevocontainer<?php echo $uid ?> .control-group.success > label,
+div#nexevocontainer<?php echo $uid ?> .control-group.success .checkbox,
+div#nexevocontainer<?php echo $uid ?> .control-group.success .radio,
+div#nexevocontainer<?php echo $uid ?> .control-group.success input,
+div#nexevocontainer<?php echo $uid ?> .control-group.success select,
+div#nexevocontainer<?php echo $uid ?> .control-group.success textarea,
+div#nexevocontainer<?php echo $uid ?> .control-group.success a.chzn-single /* Add the chosen as well */
+{
+}
+
+/* Green border */
+div#nexevocontainer<?php echo $uid ?> .control-group.success input,
+div#nexevocontainer<?php echo $uid ?> .control-group.success select,
+div#nexevocontainer<?php echo $uid ?> .control-group.success textarea,
+div#nexevocontainer<?php echo $uid ?> .control-group.success a.chzn-single /* Add the chosen as well */
+{
+}
+
+/* Red font */
+div#nexevocontainer<?php echo $uid ?> .control-group.error > label,
+div#nexevocontainer<?php echo $uid ?> .control-group.error .checkbox,
+div#nexevocontainer<?php echo $uid ?> .control-group.error .radio,
+div#nexevocontainer<?php echo $uid ?> .control-group.error input,
+div#nexevocontainer<?php echo $uid ?> .control-group.error select,
+div#nexevocontainer<?php echo $uid ?> .control-group.error textarea,
+div#nexevocontainer<?php echo $uid ?> .control-group.error a.chzn-single /* Add the chosen as well */
+{
+}
+
+/* Red border */
+div#nexevocontainer<?php echo $uid ?> .control-group.error input,
+div#nexevocontainer<?php echo $uid ?> .control-group.error select,
+div#nexevocontainer<?php echo $uid ?> .control-group.error textarea,
+div#nexevocontainer<?php echo $uid ?> .control-group.error a.chzn-single /* Add the chosen as well */
+{
+}
+
+/* Blue border when focused */
+div#nexevocontainer<?php echo $uid ?> textarea:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="text"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="password"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="datetime"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="datetime-local"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="date"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="month"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="time"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="week"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="number"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="email"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="url"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="search"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="tel"]:focus,
+div#nexevocontainer<?php echo $uid ?> input[type="color"]:focus
+{
+}
+
+/* Dark red when invalid fields are focused */
+div#nexevocontainer<?php echo $uid ?> .control-group.error input:focus,
+div#nexevocontainer<?php echo $uid ?> .control-group.error select:focus,
+div#nexevocontainer<?php echo $uid ?> .control-group.error textarea:focus
+{
+}
+
+/* Dark green when valid fields are focused */
+div#nexevocontainer<?php echo $uid ?> .control-group.success input:focus,
+div#nexevocontainer<?php echo $uid ?> .control-group.success select:focus,
+div#nexevocontainer<?php echo $uid ?> .control-group.success textarea:focus
+{
+}
+
+/* Help text under some fields */
+div#nexevocontainer<?php echo $uid ?> span.help-block
+{
+}
+
+/* Built-in captcha */
+div#nexevocontainer<?php echo $uid ?> .ncaptchafieldcontainer
+{
+}
+
+/* Built-in captcha input box */
+div#nexevocontainer<?php echo $uid ?> .ncaptchainputcontainer
+{
+}
+
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .ncaptchainputcontainer
+{
+}
+
+/* Built-in captcha reload button */
+div#nexevocontainer<?php echo $uid ?> .ncaptcha-reload-container
+{
+}
+
+/* Built-in captcha main image */
+div#nexevocontainer<?php echo $uid ?> .nexevo_captcha_img
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> span.qq-upload-size
+{
+}
+
+/* Attached files list */
+div#nexevocontainer<?php echo $uid ?> ul.qq-upload-list > li
+{
+}
+
+/* Attached files icons */
+div#nexevocontainer<?php echo $uid ?> .qq-upload-file
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .qq-upload-failed-text
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .qq-upload-success-text
+{
+}
+
+.nexevo_error_message
+{
+}
+
+/* Send a copy to myself checkbox */
+div#nexevocontainer<?php echo $uid ?> .nexevo_copy_to_sender
+{
+}
+

@@ -1,0 +1,93 @@
+html,body
+{
+    outline-style: none;
+    outline:none;
+    padding:0px;
+    margin:0px;
+}
+
+body
+{
+    margin:0px;
+    padding:0px;
+    font:13px verdana,tahoma,sans-serif;
+    background-color: #fafafa;
+}
+
+#wrap
+{
+	margin:0 auto;
+	width:80%;
+}
+
+/* INICIO STYLE VALIDATE PLUGIN */
+.hide
+{
+    display:none;
+}
+.validate
+{
+    margin-left:100px;
+}
+.validate input[type="text"] , .validate input[type="password"]
+{
+    border:1px solid #7A9CBC; /* BORDA */
+    -moz-box-shadow: 0 0 3px #138AE7; /* BORDA */
+    -webkit-box-shadow: 0 0 3px #138AE7;/* BORDA */
+    box-shadow: 0 0 3px #138AE7;  /* BORDA */
+    border-radius:4px;  
+    -moz-border-radius:4px;
+    padding:7px;
+    min-width: 300px; /* COMPRIMENTO DO CAMPO INPUT */
+    color:#333;
+    margin-bottom:5px; 
+}
+.validate select
+{
+    border:1px solid #7A9CBC; /* BORDA */
+    -moz-box-shadow: 0 0 3px #138AE7; /* BORDA */
+    -webkit-box-shadow: 0 0 3px #138AE7;/* BORDA */
+    box-shadow: 0 0 3px #138AE7;  /* BORDA */
+    border-radius:4px;  
+    -moz-border-radius:4px;
+    padding:7px;
+    min-width: 317px; /* COMPRIMENTO DO CAMPO INPUT */
+    color:#333;
+    margin-bottom:10px; 
+}
+
+.validate label
+{
+    display: block;
+    padding:6px;
+    padding-left:0px;
+    margin-top:8px; 
+    color:#666;
+}
+.validate .invalid
+{
+    border:1px solid red;
+    -moz-box-shadow: 0 0 3px red;
+    -webkit-box-shadow: 0 0 3px red;
+    box-shadow: 0 0 3px red;  
+    border-radius:4px; 
+    -moz-border-radius:4px;
+    background: url(../images/error.png) no-repeat right;
+    position: relative;
+}
+.validate .valid
+{
+    background: url(../images/success.png) no-repeat right;  
+}
+
+.validate p span
+{
+    color:red;
+    display: none;
+    font-size: 11px;    
+    position: relative;
+    top:25px;
+    left:-325px;
+}
+
+/* FIM STYLE VALIDATE PLUGIN */

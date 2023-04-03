@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Window Popup Boxes</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+		
+			function Alert_Box()
+			{
+				alert("Exemplo do Alert Box: Ainda bem que não nascemos na Grécia! Por quê? Porque nós não sabemos falar grego.");
+			}
+			
+			function Confirm_Box()
+			{
+				var resultado;
+				var escolha = confirm("Será que todo esse azar no amor que estou tendo, é porque eu não repassava aquelas correntes no Orkut?");
+				
+				if(escolha == true)
+				{
+					resultado = "Você pressionou OK, concordando que seu azar no amor, se deve por não participar das correntes do Orkut!";
+				}
+				else
+				{
+					resultado = "Você pressionou Cancel, e credita seu azar no amor, para uma outra causa de sua vida! Qual será ?";
+				}
+				
+				document.getElementById("mostrar").innerHTML = resultado;
+			}
+			
+			function Prompt_Box()
+			{
+				var resultado;
+				
+				var escolha = prompt("Certezas da vida: a morte, show do Roberto Carlos no fim do ano e o Vasco rebaixado mais uma vez.","Digite a informação aqui");
+				
+				if(escolha != null)
+				{
+					resultado = "Você digitou o seguinte: " + escolha;
+					document.getElementById("mostrar2").innerHTML = resultado;
+				}
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+
+		<button onclick="Alert_Box()">Alert Box</button>
+		
+		<br>
+		<br>
+		
+		<button onclick="Confirm_Box()">Confirm Box</button>
+		
+		<!-- Local onde será exibido o conteudo do confirm box-->
+		<p id="mostrar"></p>
+		
+		<br>
+		
+		<button onclick="Prompt_Box()">Prompt Box</button>
+		<p id="mostrar2"></p>
+
+	</body>
+</html>

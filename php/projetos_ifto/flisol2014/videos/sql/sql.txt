@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS `administracao` (
+  `id` int(11) NOT NULL auto_increment,
+  `nome` varchar(500) default NULL,
+  `senha` varchar(500) default NULL,
+  `email` varchar(500) default NULL,
+  `status` varchar(15) default NULL,
+  `data` varchar(500) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Extraindo dados da tabela `administracao`
+--
+
+INSERT INTO `administracao` (`id`, `nome`, `senha`, `email`, `status`, `data`) VALUES
+(1, 'lucas de souza rou&ccedil;as', 'admin', 'lucas_ita_2008@hotmail.com', 'ON', '11/11/2008');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `video`
+--
+
+CREATE TABLE IF NOT EXISTS `video` (
+  `id` int(11) NOT NULL auto_increment,
+  `nome_youtube` varchar(500) default NULL,
+  `url_youtube` varchar(500) default NULL,
+  `status_youtube` varchar(15) default NULL,
+  `data_youtube` varchar(500) default NULL,
+  `texto_youtube` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Extraindo dados da tabela `video`
+--
+
+INSERT INTO `video` (`id`, `nome_youtube`, `url_youtube`, `status_youtube`, `data_youtube`, `texto_youtube`) VALUES
+(5, 'Jô Soares - Piada do Gênio', 'H7sVDg1sc-k', 'ON', '17/05/2008', 'Adicionado em: 17 de maio de 2007');

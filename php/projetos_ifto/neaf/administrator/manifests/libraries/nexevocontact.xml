@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="3.0" method="upgrade">
+	<name>Nexevo Contact</name>
+	<creationDate>12 Nov 2015</creationDate>
+	<author>Nexevo Technologies</author>
+	<authorEmail>info@nexevo.in</authorEmail>
+	<authorUrl>http://www.nexevo.in</authorUrl>
+	<copyright>Nexevo Technologies</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.1</version>
+	<libraryname>nexevocontact</libraryname>
+
+	<files>
+		<folder>loader</folder>
+		<filename>index.html</filename>
+	</files>
+
+</extension>

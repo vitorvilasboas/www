@@ -1,0 +1,117 @@
+body h1{
+    font-family: 'Lobster', cursive;
+}
+
+.topo{
+    
+}
+
+.conteudo{
+    
+}
+
+.linha{
+    width: 960px; /*largura total da página*/
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px 0 5px 0; /* padding: 5px 0; */
+}
+
+.coluna{
+    float: left; /* flutuação do componente à esquerda */
+    padding: 0 10px 0 10px;
+    height: 200px;
+}
+
+.coluna1{
+    width: 60px; 
+}
+.coluna2{
+    width: 140px;
+}
+.coluna3{
+    width: 220px;
+}
+.coluna4{
+    width: 300px;
+}
+.coluna5{
+    width: 380px;
+}
+.coluna6{
+    width: 460px;
+}
+.coluna7{
+    width: 540px;
+}
+.coluna8{
+    width: 620px;
+}
+.coluna9{
+    width: 700px;
+}
+.coluna10{
+    width: 780px;
+}
+.coluna11{
+    width: 860px;
+}
+.coluna12{
+    width: 940px;
+}
+
+.img_esquerda{
+    border: 3px solid #040404;
+}
+
+.img_direita{
+    border: 3px solid pink;
+}
+
+.topo img{
+    max-width: 220px;
+    min-width: 110px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.topo h1{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.topo p{
+    text-align: right;
+    font-family: 'Pacifico', cursive;
+    font-size: 1em;
+}
+
+.formulario{
+    width: 30%;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    padding: 0 0 0 30px;
+}
+
+.conteudo form{
+    padding: 10px 0;
+}
+
+.cmp_usu, .cmp_senha{
+    display: block;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.conteudo label{
+    display: box;
+}
+
+.rodape{
+    background: #d9b363;
+    height: 150px;
+    padding-top: 50px;
+    text-align: center;
+    color: green;
+}

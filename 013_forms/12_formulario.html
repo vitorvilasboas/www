@@ -1,0 +1,99 @@
+
+<!DOCTYPE html> <!-- Informa ao navegar que a versão do HTML É A 5 -->
+
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8">
+        <title> Formatação de formularios </title>
+
+        <link rel="stylesheet" href="12_formulario.css"/> 
+
+    </head>
+    <body>
+        <h2> Formatação de Formularios</h2>
+        <br><br>
+
+        <form name="contato" action="" method="post" enctype="">
+            <fieldset>
+                <legend> Envie seu contato:</legend>
+                
+                <label>
+                    <span> * Nome:</span>
+                    <input type="text" name="nome" placeholder="Informe seu nome aqui"
+                           onclick="this.style.background='#F5F5F5'"
+                           onblur="
+                               if(this.value==''){
+                                   this.style.background='#FFA6A6'
+                               }"
+                               onchange="
+                           if(this.value!=''){
+                                   this.style.background='#97FFB1'
+                               }"
+                           onmouseover="this.style.borderColor='#97FFB1'"
+                           onmouseout="this.style.borderColor='#999'"
+                           required/>
+                </label> 
+                
+                <label>
+                    <span> * E-mail:</span>
+                    <input type="text" name="email" placeholder="Informe seu email aqui"
+                           onclick="this.style.background='#F5F5F5'"
+                           onblur="
+                               if(this.value==''){
+                                   this.style.background='#FFA6A6'
+                               }"
+                               onchange="
+                           if(this.value!=''){
+                                   this.style.background='#97FFB1'
+                               }"
+                           onmouseover="this.style.borderColor='#97FFB1'"
+                           onmouseout="this.style.borderColor='#999'"
+                           required/>
+                </label>
+                
+                <!-- onclick="this.className='click'"
+                     permite criar uma class de nome click, que pode ser utilizada 
+                     para estilização no CSS -->
+                
+                <label>
+                    <span> * Classe:</span>
+                    <input type="text" name="classe" placeholder="Informe sua classe aqui"
+                           onclick="this.style.background='#F5F5F5'"
+                           onblur="
+                               if(this.value==''){
+                                   this.style.background='#FFA6A6'
+                               }"
+                           onchange="
+                           if(this.value!=''){
+                                   this.style.background='#97FFB1'
+                               }"
+                           onmouseover="this.style.borderColor='#97FFB1'"
+                           onmouseout="this.style.borderColor='#999'"
+                           required/>
+                </label>
+                
+                <label>
+                    <span> Imagem: </span>
+                    <input type="file" name="imagem" class="file"
+                           onmouseover="this.style.borderColor='#97FFB1'"
+                           onmouseout="this.style.borderColor='#999'"/>
+                </label>
+                <br><br>
+                
+                <input type="reset" name="limpar" value="Limpar" class="btn">
+                <input type="submit" name="enviar" value="Enviar" class="btn">
+                
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

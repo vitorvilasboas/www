@@ -1,0 +1,545 @@
+// Core variables and mixins
+@import "variables.less"; // Custom for this template
+@import "../../../media/jui/less/mixins.less";
+
+img{max-width: 100%;}
+a:focus{outline: none;}
+a.selected{color:@linkColorHover;}
+a:hover{text-decoration: none;}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -180px;
+}
+
+#push, #footer-wrapper {
+height: 180px;
+}
+
+
+
+/*=================================================================*/
+/*======================= MODULE STYLES ===========================*/
+/*=================================================================*/
+
+  /*== Search ==*/
+
+  .mod-search__aside{
+    .mod-search_searchword{
+      width: 100%;
+    }
+  }
+
+  /*== Login ==*/
+
+  .mod-login__aside{
+    .mod-login_username, .mod-login_passwd{
+      width: 100%;
+    }
+  }
+
+  .mod-login_submit{
+    margin: 9px 0;
+  }
+
+  #form-login-remember label{margin-bottom: 20px;}
+
+  /*Finder*/
+  #mod-finder-searchword{
+    .border-radius(0px);
+    margin-bottom: 4px;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+  }
+
+/*======================= MODULE ITEM WIDTH =======================*/
+
+.fluidcol(@num){
+  width: (100% - (@num - 1) * @fluidGridGutterWidth) / @num; 
+}
+
+.row-fluid {
+  [class*="itemSpan"] {
+      -moz-box-sizing: border-box;
+      display: block;
+      float: left;
+      margin-left: @fluidGridGutterWidth;
+      min-height: 30px;
+      width: 100%;
+  }
+  [class*="itemSpan"]:first-child {
+      margin-left: 0;
+  }
+
+  .itemSpan1{  .fluidcol(1);}
+  .itemSpan2{  .fluidcol(2);}
+  .itemSpan3{  .fluidcol(3);}
+  .itemSpan4{  .fluidcol(4);}
+  .itemSpan5{  .fluidcol(5);}
+  .itemSpan6{  .fluidcol(6);}
+  .itemSpan7{  .fluidcol(7);}
+  .itemSpan8{  .fluidcol(8);}
+  .itemSpan9{  .fluidcol(9);}
+  .itemSpan10{ .fluidcol(10);}
+  .itemSpan11{ .fluidcol(11);}
+  .itemSpan12{ .fluidcol(12);}
+}
+
+
+/*======================= MODAL WINDOW =======================*/
+
+.modalClose{margin: 14px;}
+div.modal.fade.in.loginPopup{width: 260px; margin: -130px 0 0 -260px/2; top: 50%; left: 50%;}
+.login-greeting{margin: 0 0 9px 0;}
+.input-modal{width: 146px;}
+div.modal.fade{z-index: -500;}
+div.modal.fade.in{z-index: 1100;}
+
+
+/*======================= SOCIAL MEDIA =======================*/
+
+.mod-menu__social{
+  position: relative;
+  z-index: 50;
+}
+
+.social {
+  text-align: right;
+  width: 70px;
+  position: absolute;
+  margin: 0;
+  top: 23px;
+  left: -28px;
+  li{
+    display: inline;
+    a{
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0px;
+      text-indent: -999px;
+      &:hover{
+          background-color: none;
+      }
+    }
+  }
+}
+
+.twitter{
+  background: url(../images/social/twitter.png);
+}
+.facebook{
+  background: url(../images/social/facebook.png);
+}
+.feed{
+  background: url(../images/social/feed.png);
+}
+.youtube{
+  background: url(../images/social/youtube.png);
+}
+.vimeo{
+  background: url(../images/social/vimeo.png);
+}
+
+
+
+/*=================================================================*/
+/*======================= COMPONENT STYLES ========================*/
+/*=================================================================*/
+
+/*Forms*/
+
+input, textarea {
+  width: 220px;
+}
+
+textarea{resize: none;}
+
+select, 
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input{
+  .box-sizing(border-box);
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"]{
+  line-height: 1 !important;
+  padding: 7px 6px 6px !important;
+   height: auto !important;
+}
+
+
+.checkbox-radio-wrap__inline{
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: top;
+  input[type="radio"], input[type="checkbox"] {
+    margin: -2px 0 0 0;
+  }
+}
+
+.page-registration, .page-remind, .page-reset, .page-login, .page-login, .page-profile__edit{
+    form{
+      label{
+        display: inline-block;
+      }
+    }
+  }
+
+textarea.invalid{
+  border: 1px solid #9D261D;
+}
+
+.form-vertical{
+  label{display: inline-block;}
+}
+
+
+
+/*======================= Archived Articles ===================*/
+
+.filter-search.alert{padding: 8px 21px;}
+
+/*======================= Search & Smart Search ========================*/
+
+ul#finder-filter-select-dates {
+  li.filter-date {
+    margin-bottom: 4px;
+    margin-right: 4px;
+    select.filter-date-operator{
+      margin-bottom: 9px;
+    }
+  }
+}
+
+#searchForm{
+  fieldset{
+    margin-bottom: 20px;
+    label{
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+  .form-limit{
+    label{float: left;}
+    select{float: right; position: relative; top: -4px;}
+    p{overflow: hidden;  clear: both;}
+  }
+}
+
+dl.search-results{
+  margin-bottom: 30px;
+  dt{margin-top: 20px;}
+}
+
+.navbar-form .btn, .navbar-form .btn-group {
+  margin-top: 5px;
+}
+
+
+/*======================= Gallery Page ========================*/
+
+
+.page-gallery, .page-item__gallery{
+  a.zoom{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    span.zoom-bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      .opacity(0);
+    }
+    span.zoom-icon{
+      background: url(../images/zoom.png) left top no-repeat;
+      display: block;
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      margin: -18px 0 0 -18px; 
+    }
+  }
+  .item_icons{
+    margin-bottom: 9px;
+  }
+}
+
+ul.singleColumn{
+  margin: 0;
+  >.item{
+    list-style: none;
+    width: 100%;
+  }
+}
+
+.view-article{
+  #prevArrow, 
+  #nextArrow{
+    display: none;
+  }
+}
+
+
+  /* Start: Recommended Isotope styles */
+  /**** Isotope Filtering ****/
+
+  .isotope-item {
+    z-index: 2;
+  }
+
+  .isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /**** Isotope CSS3 transitions ****/
+
+  .isotope,
+  .isotope .isotope-item {
+    -webkit-transition-duration: 0.8s;
+       -moz-transition-duration: 0.8s;
+        -ms-transition-duration: 0.8s;
+         -o-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+  }
+  .isotope {
+    -webkit-transition-property: height, width;
+       -moz-transition-property: height, width;
+        -ms-transition-property: height, width;
+         -o-transition-property: height, width;
+            transition-property: height, width;
+  }
+  .isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+       -moz-transition-property:    -moz-transform, opacity;
+        -ms-transition-property:     -ms-transform, opacity;
+         -o-transition-property:         top, left, opacity;
+            transition-property:         transform, opacity;
+  }
+
+  /**** disabling Isotope CSS3 transitions ****/
+
+  .isotope.no-transition,
+  .isotope.no-transition .isotope-item,
+  .isotope .isotope-item.no-transition {
+    -webkit-transition-duration: 0s;
+       -moz-transition-duration: 0s;
+        -ms-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+
+  /* End: Recommended Isotope styles */
+
+  ul#filters{
+    li{
+      display: inline-block;
+      vertical-align: top;
+      margin: 9px 9px 0 0;
+    }
+  }
+
+  #isotopeContainer{padding-top: 8px;}
+
+  .page-gallery_img{
+    margin-left: 0;
+  }
+
+  .category_children{
+    .category_child{
+      margin-bottom: 20px;
+    }
+  }
+
+
+/*======================= Archives Page ========================*/
+
+  .page-archive_filters{
+    .filter-search.alert{
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+    select{
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    button{
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+  }
+
+/*======================= Contacts Page ========================*/
+
+
+  #jform_contact_message{
+    resize:none;
+    width: 100%;
+    height: 158px;
+  }
+  #contact-form{
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+  .phone-num{display: inline-block;}
+
+  #jform_contact_name, #jform_contact_email, #jform_contact_emailmsg{
+    width: 100%;
+  }
+
+  .contact_email-copy, .contact_vcard{
+    margin: 0 @inputHeight/2;
+    height: @inputHeight;
+    line-height: @inputHeight;
+    display: inline-block;
+  }
+
+  .contact_vcard{
+     margin: 0;
+  }
+
+  .contact_details{
+    .icons-marker{
+      display: block;
+      width: 16px;
+      margin-right: 12px;
+      float: left;
+    }
+  }
+
+  .contact_address{
+    overflow: hidden;
+  }
+
+  #contact_map{
+    margin-bottom: @baseLineHeight;
+    border:1px solid darken(@bodyBackground, 15%);
+    height: 358px;
+    >div{
+      height: 100%;
+    }
+
+  }
+
+
+/*======================= User Pages ========================*/
+
+.page-login{
+  form{
+    .control-group{margin: 0;}
+  }
+}
+
+
+/*======================= CAPTION FIXES =======================*/
+
+.img_caption{
+  text-align: center!important;
+  &.left{
+    float: left;
+    margin-right: 1em;
+    p{
+      clear: left;
+      text-align: center;
+    }
+  }
+  &.right{
+    float: right;
+    margin-left: 1em;
+    p{
+      clear: right;
+      text-align: center;
+    }
+  }
+  &.none{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/*======================= 404 PAGE =======================*/
+
+.error-container{}
+.errorBox{background: none;  text-align:left;}
+
+/*======================= OFFLINE PAGE =======================*/
+
+.offlineBox{}
+
+
+/*======================= SCROLL TO TOP =======================*/
+
+#back-top {position: fixed;  bottom: 90px; right: 20px; z-index: 60}
+
+#back-top a {
+  width: 46px;
+  display: block;
+  text-align: center;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  font-family: @baseFontFamily;
+  text-transform: none;
+  text-decoration: none;
+  color: @textColor;
+
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {color: @linkColorHover;}
+
+/* arrow icon (span tag) */
+#back-top span {
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin-bottom: 7px;
+  background: #ddd url(../images/up-arrow.png) no-repeat center center;
+
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover span {}

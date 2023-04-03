@@ -1,0 +1,61 @@
+
+/*
+DOCUMENTO DE ESTILO VISUAL
+CRIADO EM : data
+Author     : nome
+*/
+
+*{margin: 0; padding: 0;} /*Aplicando um reset de margin e padding em todos os elementos*/
+
+.btn{
+    width: 100px;
+    border: 1px outset #999;
+    padding: 5px;
+    font: bold small-caps 14px sans-serif;
+    cursor: pointer; /* Altera o formato do cursor*/
+}
+
+.btn:hover{
+    border: 1px inset #666;
+    background: #999;
+}
+
+input{
+    padding: 8px;
+    background: #CCC;
+    border: 1px solid #999;
+    color: #333;
+    width: 470px;
+}
+
+span{
+   display: block;
+   font: bold 12px sans-serif;
+   margin-bottom: 5px;
+}
+
+label{
+    padding: 5px;
+    background: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+legend{
+    font: bold small-caps 16px sans-serif;
+}
+
+fieldset{
+    border: 0;
+    padding: 15px 0;
+}
+
+form{
+   width: 500px;
+   padding: 10px;
+   background: #333;
+   font: 14px sans-serif;
+   color: #FFF;
+   margin: 10px;
+}
+

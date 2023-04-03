@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mootools - JavaScript</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<style type="text/css">
+			#accordion
+			{
+				margin: 20px 0 0;
+				max-width: 600px;
+			}
+			
+			#accordion h2
+			{
+				background:#145145;
+				color:white;
+				cursor:pointer;
+				font: 12px Helvetica, Arial, sans-serif;
+				line-height: 16px;
+				margin: 0 0 4px 0;
+				padding: 3px 5px 1px;
+			}
+			
+			#accordion .content
+			{
+				background-color:#DDDDDD;
+			}
+			
+			#accordion .content p
+			{
+				margin: 0.5em 0;
+				padding: 0 6px 8px 6px;
+			}	
+		</style>
+		
+		<!-- Adicionando a biblioteca mootools -->
+		<script type="text/javascript" src="mootools-core-1.4-full.js"></script>
+		<script type="text/javascript" src="mootools-more-1.4-full.js"></script>
+		
+		<script type="text/javascript">
+			window.addEvent('domready', function(){
+				new Fx.Accordion($('accordion'), '#accordion h2','#accordion .content');
+			});
+		</script>
+		
+	</head>
+	<body>
+
+		<div id="accordion">
+		
+			<h2>Quem é você?</h2>
+			<div class="content">
+				<p>Você é um programandor e nonono nonoon onoon onoo nonono onono nonono nonono nono on ononono nononon nonono.</p>
+				<p>Nononono ononono nonoon ononoon ononon onono nonoono nononoo nononono nonono nonono nnoononon ononoon noonon onono nonono nonono nononono onon onono nonon ononon.</p>
+			</div>
+			
+			<h2>O que é IFMA ?</h2>
+			<div class="content">
+				<p>Ifma é uma boa escola e nononoo nonoon oononono noono nonono nononon onono nonono nonono nonono nnoononon onono nnon.</p>
+				<p>Nononono ononono nonoon ononoon ononon onono nonoono nononoo nononono nonono nonono nnoononon ononoon noonon onono nonono nonono nononono onon onono nonon ononon.</p>
+			</div>
+			
+			<h2>O que é Mootools?</h2>
+			<div class="content">
+				<p>O Mootools é voltado para o desenvolvedor com conhecimentos intermediários e avançados em JavaScript e permite
+				escrever códigos mais poderosos e flexíveis com elegância, além disso, o Mootools é um framework bem documentado e 
+				com uma API coerente que vem de encontro aos anseios dos desenvolvedores mais experientes </p>
+			</div>
+		
+		</div>
+
+	</body>
+</html>

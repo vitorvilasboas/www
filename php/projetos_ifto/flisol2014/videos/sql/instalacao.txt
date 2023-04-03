@@ -1,0 +1,15 @@
+editar o arquivo :
+
+bd/videos.php
+
+e cria um banco de dados...
+e jogue todos os arquivo no diretorio do seu site
+
+ops: eu testei apenas em php 5
+
+=)
+
+
+www.ldeveloper.com
+lucas@ldeveloper.com
+lucas_ita_2008@hotmail.com

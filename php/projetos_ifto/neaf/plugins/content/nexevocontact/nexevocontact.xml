@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" method="upgrade" group="content">
+	<name>plg_content_Nexevocontact</name>
+	<creationDate>12 Nov 2015</creationDate>
+	<author>Nexevo Technologies</author>
+	<authorUrl>http://www.nexevo.in/</authorUrl>
+	<authorEmail>info@nexevo.in</authorEmail>
+	<copyright>Nexevo Technologies</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.1</version>
+	<description>PLG_NEXEVOCONTACT_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="nexevocontact">nexevocontact.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>sql</folder>
+	</files>
+
+	<install>
+		<sql><file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file></sql>
+	</install>
+
+</extension>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Revisão para Prova</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Roboto" >
+    </head>
+    <body>
+        <div class="linha">
+            <div class="coluna col12">
+                <div class="textos">
+                    <img src="ideia.jpg" alt="imagem" />
+                    <font>texto</font>
+                </div>
+            </div>
+        </div> 
+        <div class="linha">
+            <div class="coluna col4">
+                <ul>
+                    <li>Bruna</li>
+                    <li>José</li>
+                    <li>Adriana</li>
+                    <li>Erica</li>
+                </ul>
+                <ol>
+                    <li>Bruna</li>
+                    <li>José
+                        <ul>
+                            <li>Maria</li>
+                            <li>Silva</li>
+                            <li>Nepomuceno</li>
+                        </ul>
+                    </li>
+                    <li>Adriana</li>
+                    <li>Erica</li>
+                </ol>
+            </div>
+            <div class="coluna col5">
+                <table class="tabela_alunos" >
+                    <tr class="linha1">
+                        <td>coluna 1</td>
+                        <td>coluna 2</td>
+                        <td>coluna 3</td>
+                    </tr>
+                    <tr class="linha2">
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr class="linha3">
+                        <td>31</td>
+                        <td>32</td>
+                        <td>33</td>
+                    </tr>
+                    <tr class="linha4">
+                        <td>41</td>
+                        <td rowspan="2">42</td>
+                        <td>43</td>
+                    </tr>
+                    <tr class="linha5">
+                        <td>51</td>
+                        <td>53</td>
+                    </tr>                    
+                </table>
+            </div>
+            <div class="coluna col3">
+                2ª linha - 3ª coluna
+            </div>
+        </div>
+        <div class="linha">
+            <div class="coluna col12">
+                <form class="form_inscricao">
+                    <label for="cmp_nome">Nome:
+                        <input type="text" name="cmp_nome" value="vitor" placeholder="Informe seu nome" required />
+                    </label>
+                    <label for="cmp_email">Email:
+                        <input type="text" name="cmp_email" placeholder="Informe seu email" required />
+                    </label>
+                    <label>Mensagem:
+                        <textarea name="cmp_mensagem" cols="30" rows="10" class="area_texto" required></textarea>
+                    </label>
+                    <label>Escolaridade:
+                        <select>
+                            <option value="">Selecione...</option>
+                            <option value="fundamental">Ensino Fundamental completo</option>
+                            <option value="medio">Ensino Médio completo</option>
+                            <option selected value="tecnico" >Ensino Técnico completo</option>
+                            <option value="superior">Ensino Superior completo</option>
+                            <option value="pos-graduacao">Pós-graduação completa</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input type="submit" name="btn_enviar" value="Enviar" />
+                    </label>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

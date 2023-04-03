@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Window.Screen e Window.Location</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+		
+			function Mostrar_Informacoes()
+			{
+				var largura_da_tela = screen.availWidth; // a propriedade availWidth retornara a largura da tela em pixels
+				var altura_da_tela = screen.availHeight; // a propriedade availHeight retornara a altura da tela em pixels
+				document.getElementById("largura_da_tela").innerHTML = largura_da_tela; // Inserindo largura no objeto com id=largura_da_tela
+				document.getElementById("altura_da_tela").innerHTML = altura_da_tela; // Inserindo altura no objeto com id=altura_da_tela
+			}
+			
+			function mostrar_URL()
+			{
+				var URL_atual = location.href; // Coletando URL atual do site
+				document.getElementById("minha_URL").innerHTML = URL_atual;// Inserindo URL atual no objeto com 
+			}
+			
+			function novo_site()
+			{
+				window.location.assign("http://www.globo.com"); // Vai fazer com que o usuario vá par a outro site
+			}
+			
+		
+		</script>
+		
+	</head>
+	<body>
+
+		<p id="largura_da_tela"></p>
+		<p id="altura_da_tela"></p>
+		<button onclick="Mostrar_Informacoes()">Mostrar informações da tela</button>
+
+		<br>
+
+		<p id="minha_URL"></p>
+		<button onclick="mostrar_URL()">Mostrar URL</button>
+
+		<br>
+		<br>
+
+		<button onclick="novo_site()">Carregar site da globo</button>
+
+
+	</body>
+</html>

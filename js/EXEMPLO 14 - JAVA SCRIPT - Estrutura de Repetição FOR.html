@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test Loop FOR</title>
+	
+	<script type="text/javascript">
+		function testFor()
+		{
+			var varout = "";
+			
+			for(var i = 0; i < 5; i++)
+			{
+				varout = varout + "The number is " + i + "<br>";
+			}
+			
+			document.getElementById("out").innerHTML = varout;
+		}		
+		
+		function testFor2()
+		{
+			var result = 0;
+			
+			for(var i = 0; i <= 100; i = i + 2)
+			{
+				result = result + i;
+			}
+			
+			document.getElementById("out2").innerHTML = result;
+		}
+	</script>
+	
+</head>
+<body>
+
+	<p><button onclick="testFor()">Click Here To Test Loop FOR</button></p>
+	
+	<p><span id="out" name="out">Result is here!</span></p>
+	
+	<br>
+	
+	<p><button onclick="testFor2()">Click Here To Test 2 of Loop FOR</button></p>
+	
+	<p><span id="out2" name="out2">Result is here!</span></p>
+
+</body>
+</html>

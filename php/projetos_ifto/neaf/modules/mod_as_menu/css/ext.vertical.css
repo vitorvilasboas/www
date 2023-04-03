@@ -1,0 +1,40 @@
+/*******************************************************************************************/
+/*
+/*        Designed by 'AS Designing'
+/*        Web: http://www.asdesigning.com
+/*        Web: http://www.astemplates.com
+/*        License: GNU/GPL
+/*
+/*******************************************************************************************/
+
+.as-vertical,
+.as-vertical li
+{
+	width: 10em;
+}
+
+.as-vertical li:hover ul,
+.as-vertical li.asHover ul
+{
+	left: 10em;
+	top: 0;
+}
+
+.as-vertical .as-sub-indicator
+{
+	background-position: -10px 0;
+}
+
+.as-vertical a > .as-sub-indicator
+{
+	background-position: 0 0;
+}
+
+.as-vertical a:focus > .as-sub-indicator,
+.as-vertical a:hover > .as-sub-indicator,
+.as-vertical a:active > .as-sub-indicator,
+.as-vertical li:hover > a > .as-sub-indicator,
+.as-vertical li.asHover > a > .as-sub-indicator
+{
+	background-position: -10px 0;
+}

@@ -1,0 +1,378 @@
+/**		Joomal 2.5 and 3.X 		**/
+
+
+.tab-content .row-fluid .span0, .tab-content .row-fluid .span3, .tab-content .row-fluid .span6, .tab-content .row-fluid .span9, .tab-content .row-fluid .span12 {
+width:95%;
+}
+
+.tab-content .form-vertical {
+background: #f0f0f0;
+border:2px solid #ddd;
+margin-top:40px;
+padding:20px;
+}
+
+#general > div > .span9 {
+text-align:center;
+}
+
+#general h3 {
+font-size:34px;
+}
+
+#general .info-labels {
+display:none;
+}
+
+.info-labels + div {
+background: none repeat scroll 0 0 #fff;
+color: #000000;
+font-size: 20px;
+line-height:27px;
+font-weight: normal;
+margin: 15px 0 30px;
+padding: 15px 10px 10px 20px;
+}
+
+
+.control-group label {
+width:250px;
+}
+
+span.spacer {
+display:block;
+clear:both;
+margin: 0 0 20px -10px;
+padding-top:20px;
+width:900px;
+}
+
+span.spacer label {
+background : #1A3867;
+padding: 12px 20px;
+color:#fff;
+font-size:20px;
+}
+
+.control-group span.spacer label,
+fieldset.panelform span.spacer label {
+width:auto;
+float:none;
+max-width:none;
+}
+
+@media screen and (max-width: 979px) {
+
+	span.spacer {
+	width:700px;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	span.spacer {
+	width:500px;
+	}
+
+}
+
+@media screen and (max-width: 568px) {
+
+	span.spacer {
+	width:auto;
+	}
+
+}
+
+
+.row-fluid [class*="span"]:first-child {
+margin-left: 15px;
+}
+.row-fluid [class*="span"]:first-child {
+margin-left: 15px;
+}
+.row-fluid [class*="span"] {
+margin-left: 15px;
+}
+
+
+.panel, .accordion-group {
+background: #ddd;
+background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1');
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border-radius: 2px 2px 2px 2px;
+-moz-box-shadow: 1px 1px 2px #ddd;
+-webkit-box-shadow: 1px 1px 2px #ddd;
+border-box-shadow: 1px 1px 2px #ddd;
+border: 1px solid #ccc;
+padding: 6px 10px;		
+color: #444;		
+text-decoration: none;
+}
+
+.form-horizontal .control-label {
+width: auto;
+}
+
+fieldset.panelform label, fieldset.panelform div.paramrow label, fieldset.panelform span.faux-label {			/**		Joomla 2.5			**/
+min-width: 200px;
+}
+
+.pane-sliders .title {
+padding: 4px;
+}
+
+.pane-sliders .panel h3 {
+border-bottom:none;
+}
+
+.pane-sliders .panel h3.pane-toggler-down {
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom: 2px dotted #d9d9d9 ;
+}
+
+.accordion-inner {
+border-top: 2px dotted #d9d9d9 ;
+padding-top:24px;
+}
+
+.panelform a {
+color:#828627;
+}
+
+table.admintable td.paramlist_key {
+font-weight:normal;text-transform:uppercase;
+text-align:left;
+}
+
+table.admintable td.paramlist_value label {
+text-transform:none;
+}
+
+table.admintable td.key, table.admintable td.paramlist_key,.pane-sliders .content,.pane-sliders .panel h3, div.panel fieldset {
+background:none;
+}
+
+div.panel fieldset {
+margin-bottom:0;
+padding-bottom:0;
+}
+
+table.admintable td.key, table.admintable td.paramlist_key {
+border:none;
+}
+
+form label, form span.faux-label {
+color:#394a12;
+}
+
+.panelform input, .panelform select {
+padding:5px;
+border-radius:3px;
+}
+
+.panelform input[type="radio"] {
+margin: 7px 12px 0 0;
+clear:both;
+}
+
+#jform_params_target {
+width: 110px;
+}
+
+.pane-toggler-down span {
+padding: 7px 0px 7px 40px;
+padding-left:30px!important;
+font-size: 15px;
+font-weight:normal;
+color:#ec6104;
+}
+
+.pane-toggler span {
+padding: 7px 0px 7px 40px;
+padding-left:30px!important;
+font-size: 15px;
+font-weight:normal;
+color:#394a12;
+}
+
+.pane-toggler span:hover {
+color:#146295;
+}
+
+.button2-left {
+margin : 5px 5px 0 5px ;
+}
+
+.panelform a {
+color: #555;
+}
+
+.panelform a:hover {
+color: #ec6104;
+}
+
+.adminformlist .fltlft span {
+display: inline-block;
+margin: 9px 0 0 9px;
+}
+
+/** 		Hide the outline 	**/
+
+*:hover, *:active, *:focus, input:focus, textarea:focus {
+outline:none !important;
+}
+
+
+/**			General Fonts 			**/
+
+#jform_params_font_website_title, #jform_params_font_website_title option,
+#jform_params_font_top_slogan, #jform_params_font_top_slogan option,
+#jform_params_font_bottom_slogan, #jform_params_font_bottom_slogan option,
+#jform_params_font_menu, #jform_params_font_menu option,
+#jform_params_font_h1, #jform_params_font_h1 option,
+#jform_params_font_h2, #jform_params_font_h2 option,
+#jform_params_font_content, #jform_params_font_content option,
+[id*="jform_params_font_"] a, [id*="jform_params_font_"] li {
+font-size:16px;
+height:40px !important;
+line-height:40px !important;
+padding:7px;
+}
+
+[id*="jform_params_font_"] .chzn-single div b {
+background-position: 0 10px;
+}
+
+[id*="jform_params_font_"] .chzn-single span[content="Italianno"] {
+font-family : Italianno, cursive;
+}
+
+[id*="jform_params_font_"] li[class*="result-selected"] {
+color : red;
+}
+
+/**			Fonts 				**/
+
+option[value="Abel"], [id*="jform_params_font_"] li[data-option-array-index="0"] {
+font-family : Abel, sans-serif;
+}
+option[value="Arial"], [id*="jform_params_font_"] li[data-option-array-index="1"] {
+font-family : Arial, sans-serif;
+}
+option[value="Arizonia"], [id*="jform_params_font_"] li[data-option-array-index="2"] {
+font-family : Arizonia, cursive;
+font-size:25px;
+}
+option[value="Berkshire+Swash"], [id*="jform_params_font_"] li[data-option-array-index="3"] {
+font-family : 'Berkshire Swash', cursive;
+}
+option[value="Comfortaa"], [id*="jform_params_font_"] li[data-option-array-index="4"] {
+font-family : Comfortaa, sans-serif;
+}
+option[value="Cookie"], [id*="jform_params_font_"] li[data-option-array-index="5"] {
+font-family : Cookie, cursive;
+font-size:26px;
+}
+option[value="Dosis"], [id*="jform_params_font_"] li[data-option-array-index="6"] {
+font-family : Dosis, sans-serif;
+}
+option[value="Droid+Sans"], [id*="jform_params_font_"] li[data-option-array-index="7"] {
+font-family : 'Droid Sans', sans-serif;
+}
+option[value="Francois+One"], [id*="jform_params_font_"] li[data-option-array-index="8"] {
+font-family : 'Francois One', sans-serif;
+}
+option[value="Georgia"], [id*="jform_params_font_"] li[data-option-array-index="9"] {
+font-family : Georgia, sans-serif;
+}
+option[value="Gruppo"], [id*="jform_params_font_"] li[data-option-array-index="10"] {
+font-family : 'Gruppo', cursive;
+}
+option[value="Helvetica"], [id*="jform_params_font_"] li[data-option-array-index="11"] {
+font-family : Helvetica, sans-serif;
+}
+option[value="Italianno"], [id*="jform_params_font_"] li[data-option-array-index="12"] {
+font-family : Italianno, cursive;
+font-size:28px;
+}
+option[value="Lato"], [id*="jform_params_font_"] li[data-option-array-index="13"] {
+font-family : Lato, sans-serif;
+}
+option[value="Lobster"], [id*="jform_params_font_"] li[data-option-array-index="14"] {
+font-family : Lobster, sans-serif;
+}
+option[value="Lora"], [id*="jform_params_font_"] li[data-option-array-index="15"] {
+font-family : Lora, sans-serif;
+}
+option[value="Montserrat"], [id*="jform_params_font_"] li[data-option-array-index="16"] {
+font-family : Montserrat, sans-serif;
+}
+option[value="Montserrat:700"], [id*="jform_params_font_"] li[data-option-array-index="17"] {
+font-family : Montserrat, sans-serif;
+}
+option[value="Oleo+Script"], [id*="jform_params_font_"] li[data-option-array-index="18"] {
+font-family : 'Oleo Script', sans-serif;
+}
+option[value="Open+Sans+Condensed:300"], [id*="jform_params_font_"] li[data-option-array-index="19"] {
+font-family : 'Open Sans Condensed', sans-serif;
+}
+option[value="Open+Sans"], [id*="jform_params_font_"] li[data-option-array-index="20"] {
+font-family : 'Open Sans', sans-serif;
+}
+option[value="Oswald"], [id*="jform_params_font_"] li[data-option-array-index="21"] {
+font-family : Oswald, sans-serif;
+}
+option[value="Oxygen"], [id*="jform_params_font_"] li[data-option-array-index="22"] {
+font-family : Oxygen, sans-serif;
+}
+option[value="Playball"], [id*="jform_params_font_"] li[data-option-array-index="23"] {
+font-family : 'Playball', cursive;
+}
+option[value="PT+Sans+Narrow"], [id*="jform_params_font_"] li[data-option-array-index="24"] {
+font-family : 'PT Sans Narrow', sans-serif;
+}
+option[value="PT+Sans"], [id*="jform_params_font_"] li[data-option-array-index="25"] {
+font-family : 'PT Sans', sans-serif;
+}
+option[value="Prosto+One"], [id*="jform_params_font_"] li[data-option-array-index="26"] {
+font-family : 'Prosto One', cursive;
+}
+option[value="Quicksand"], [id*="jform_params_font_"] li[data-option-array-index="27"] {
+font-family : 'Quicksand', sans-serif;
+}
+option[value="Roboto+Condensed"], [id*="jform_params_font_"] li[data-option-array-index="28"] {
+font-family : 'Roboto Condensed', sans-serif;
+}
+option[value="Roboto"], [id*="jform_params_font_"] li[data-option-array-index="29"] {
+font-family : Roboto, sans-serif;
+}
+option[value="Rokkitt:400,700"], [id*="jform_params_font_"] li[data-option-array-index="30"] {
+font-family : Rokkitt, sans-serif;
+}
+option[value="Share"], [id*="jform_params_font_"] li[data-option-array-index="31"] {
+font-family : Share, cursive;
+}
+option[value="Source+Sans+Pro"], [id*="jform_params_font_"] li[data-option-array-index="32"] {
+font-family : 'Source Sans Pro', sans-serif;
+}
+option[value="Times New Roman"], [id*="jform_params_font_"] li[data-option-array-index="33"] {
+font-family : Times new roman, sans-serif;
+}
+option[value="Trebuchet ms"], [id*="jform_params_font_"] li[data-option-array-index="34"] {
+font-family : Trebuchet ms, sans-serif;
+}
+option[value="Ubuntu+Condensed"], [id*="jform_params_font_"] li[data-option-array-index="35"] {
+font-family : 'Ubuntu Condensed', sans-serif;
+}
+option[value="Ubuntu"], [id*="jform_params_font_"] li[data-option-array-index="36"] {
+font-family : Ubuntu, sans-serif;
+}
+option[value="Verdana"], [id*="jform_params_font_"] li[data-option-array-index="37"] {
+font-family : Verdana, sans-serif;
+}

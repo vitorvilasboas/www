@@ -1,0 +1,580 @@
+/* Fixes a bug affecting both twitter bootstrap 2.1 and Joomla Protostar 1.0 template which is derived from bootstrap */
+.control-group.error .checkbox, .control-group.error .radio,
+.control-group.success .checkbox, .control-group.success .radio
+{
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* Alert boxes */
+div#nexevocontainer<?php echo $uid ?> div.alert ul
+{
+	list-style-type: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> div.alert li
+{
+	background: none; /* Fixes issues with some templates */
+}
+
+/* Mandatory field marker, Invalid value in field */
+div#nexevocontainer<?php echo $uid ?> .required, div#nexevocontainer<?php echo $uid ?> .asterisk
+{
+	color: #e52626;
+	/* font-weight: bold; */
+	font-size:20px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .required:after, div#nexevocontainer<?php echo $uid ?> .asterisk:after
+{
+	content: "*";
+}
+
+/* Input boxes and textareas */
+div#nexevocontainer<?php echo $uid ?> input[type="text"],
+div#nexevocontainer<?php echo $uid ?> textarea
+{
+	padding: 4px 5px;
+}
+
+/* Captcha reload button */
+div#nexevocontainer<?php echo $uid ?> div.ncaptcha-reload-container img
+{
+	cursor: pointer;
+}
+
+/* Upload button */
+div#nexevocontainer<?php echo $uid ?> .qq-upload-button-caption
+{
+	vertical-align: top; /* Fixes an issue with ie7 */
+}
+
+div#nexevocontainer<?php echo $uid ?> .qq-upload-button-hover
+{
+}
+
+div#nexevocontainer<?php echo $uid ?> .qq-upload-button-focus
+{
+	outline: 1px dotted black;
+}
+
+/* Upload list */
+div#nexevocontainer<?php echo $uid ?> ul.qq-upload-list
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> ul.qq-upload-list > li
+{
+	list-style: none;
+	/* Fox { */
+	background: none; /* Some templates use background as list style */
+	padding: 0; /* In those cases they usually set a left/right padding */
+	/* } */
+}
+
+div#nexevocontainer<?php echo $uid ?> .qq-upload-list span
+{
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0 20px;
+	background-repeat: no-repeat;
+	background-position: <?php echo $left ?> center;
+	/* Redundant defaults
+	background-color: transparent;
+	background-attachment:scroll; */
+}
+
+/* Hide Successful and failure messages while uploading  */
+div#nexevocontainer<?php echo $uid ?> li span.qq-upload-failed-text,
+div#nexevocontainer<?php echo $uid ?> li span.qq-upload-success-text
+{
+	display: none;
+}
+
+/* Display again Success message when upload is successful and vice versa */
+div#nexevocontainer<?php echo $uid ?> li.qq-upload-fail span.qq-upload-failed-text,
+div#nexevocontainer<?php echo $uid ?> li.qq-upload-success span.qq-upload-success-text
+{
+	display: inline-block;
+}
+
+/* Spinner while uploading */
+div#nexevocontainer<?php echo $uid ?> span.qq-upload-spinner
+{
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/loading.gif");
+	width: 15px;
+	height: 15px;
+	vertical-align: text-bottom;
+	padding: 0;
+	margin: 0;
+}
+
+/* Help text under some fields */
+div#nexevocontainer<?php echo $uid ?> span.help-block
+{
+	display: block;
+}
+
+/* Built-in captcha */
+div#nexevocontainer<?php echo $uid ?> .ncaptchafieldcontainer img
+{
+	max-width: none; /* Fixes a IE 8 issue related to some templates where img have max-width:100% */
+}
+
+/* Built-in captcha input box */
+div#nexevocontainer<?php echo $uid ?> .ncaptchainputcontainer
+{
+	float: <?php echo $left ?>;
+}
+
+/* Chosen select box customizations */
+
+/* Moves the arrow on the left side */
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single div
+{
+	right: auto; /* Restores the default for right property */
+	left: 0; /* Left align */
+}
+
+/* Downward arrow */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single div b
+{
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 0 0 !important;
+}
+
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single div b
+{
+	background-position: -2px 1px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single div
+{
+	width: 26px;
+}
+
+/* Upward arrow */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-active .chzn-single-with-drop div b
+{
+	background-position: -28px 1px;
+}
+
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-active .chzn-single-with-drop div b
+{
+	background-position: -30px 1px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #ffffff), color-stop(100%, #eeeeee));
+	background-image: -webkit-linear-gradient(top, #ffffff 20%, #eeeeee 100%);
+	background-image: -moz-linear-gradient(top, #ffffff 20%, #eeeeee 100%);
+	background-image: -o-linear-gradient(top, #ffffff 20%, #eeeeee 100%);
+	background-image: -ms-linear-gradient(top, #ffffff 20%, #eeeeee 100%);
+	background-image: linear-gradient(top, #ffffff 20%, #eeeeee 100%);
+	/* Set the same width than the inputs */
+	width: <?php $w = $this->Params->get("dropdown__width", (object)array("text" => "270", "select" => "px")); echo $w->text . $w->select; ?>;
+	padding: 0 5px;
+}
+
+/* Restores the default value of width to the container assigned by chosen during the construction */
+div#nexevocontainer<?php echo $uid ?> div.chzn-container
+{
+	/* We need this div to be
+	100% when inner elements are measures in %
+	auto in other cases */
+	width: <?php echo ($w->select == "%") ? "100%" : "auto" ?> !important;
+}
+
+/* Sets the same width to the drop-down window */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-drop
+{
+	width: <?php echo $w->text . $w->select; ?> !important;
+	padding: 0 5px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .chzn-container-active .chzn-single-with-drop
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#ffffff', GradientType = 0);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #eeeeee), color-stop(80%, #ffffff));
+	background-image: -webkit-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+	background-image: -moz-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+	background-image: -o-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+	background-image: -ms-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+	background-image: linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+}
+
+/* Search input */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-search input
+{
+	background: #fff url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px;
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, -ms-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") no-repeat 100% -26px, linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+	padding: 4px 20px 4px 5px;
+}
+
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-search input
+{
+	background-position: -45px -26px;
+	padding: 4px 5px 4px 20px;
+}
+
+/* Close button (X) */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single abbr
+{
+	right: 30px;
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") right top no-repeat;
+}
+
+/* Close button (X) hover */
+div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single abbr:hover
+{
+	background-position: right -11px;
+}
+
+/* Close button (X) rtl */
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single abbr
+{
+	right: auto; /* Restores the right default */
+	left: 30px; /* Left align */
+}
+
+/* Close button (X) in Multiple Select layout */
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close
+{
+	background: url("<?php echo $juri_root ?>/media/com_nexevocontact/images/ui.png") right top no-repeat;
+}
+
+/* Moves the arrow on the left side */
+html[dir="rtl"] div#nexevocontainer<?php echo $uid ?> .chzn-container-single .chzn-single div
+{
+	right: auto; /* Restores the right default */
+	left: 0; /* Left align */
+}
+
+/* Asterisks (*name:value) and backslash 9 (name:value\9) are IE hacks made by twitter bootstrap. */
+/* Twitter bootstrap buttons */
+div#nexevocontainer<?php echo $uid ?> .btn
+{
+	display: inline-block;
+	*display: inline;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	*background-color: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	border: 1px solid #bbbbbb;
+	*border: 0;
+	border-color: #c5c5c5;
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+	border-bottom-color: #a2a2a2;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffffff', endColorstr = '#ffe6e6e6', GradientType = 0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* button when mouse hover */
+div#nexevocontainer<?php echo $uid ?> .btn:hover
+{
+	color: #333333;
+	text-decoration: none;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9; /* Buttons in IE7 don't get borders, so darken on hover */
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	-moz-transition: background-position 0.1s linear;
+	-o-transition: background-position 0.1s linear;
+	transition: background-position 0.1s linear;
+}
+
+div#nexevocontainer<?php echo $uid ?> .btn:first-child
+{
+	*margin-left: 0;
+}
+
+div#nexevocontainer<?php echo $uid ?> button.btn,
+div#nexevocontainer<?php echo $uid ?> input[type="submit"].btn
+{
+	*padding-top: 3px;
+	*padding-bottom: 3px;
+}
+
+div#nexevocontainer<?php echo $uid ?> button.btn::-moz-focus-inner,
+div#nexevocontainer<?php echo $uid ?> input[type="submit"].btn::-moz-focus-inner
+{
+	padding: 0;
+	border: 0;
+}
+
+div#nexevocontainer<?php echo $uid ?> label
+{
+	display: block;
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-inline .control-group label
+{
+	display: inline-block;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="radio"],
+div#nexevocontainer<?php echo $uid ?> input[type="checkbox"]
+{
+	margin: 4px 0 0;
+	margin-top: 1px  \9;
+	*margin-top: 0;
+	line-height: normal;
+	cursor: pointer;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="file"],
+div#nexevocontainer<?php echo $uid ?> input[type="image"],
+div#nexevocontainer<?php echo $uid ?> input[type="submit"],
+div#nexevocontainer<?php echo $uid ?> input[type="reset"],
+div#nexevocontainer<?php echo $uid ?> input[type="button"],
+div#nexevocontainer<?php echo $uid ?> input[type="radio"],
+div#nexevocontainer<?php echo $uid ?> input[type="checkbox"]
+{
+	width: auto;
+}
+
+div#nexevocontainer<?php echo $uid ?> select,
+div#nexevocontainer<?php echo $uid ?> textarea,
+div#nexevocontainer<?php echo $uid ?> input[type="text"],
+div#nexevocontainer<?php echo $uid ?> input[type="password"],
+div#nexevocontainer<?php echo $uid ?> input[type="datetime"],
+div#nexevocontainer<?php echo $uid ?> input[type="datetime-local"],
+div#nexevocontainer<?php echo $uid ?> input[type="date"],
+div#nexevocontainer<?php echo $uid ?> input[type="month"],
+div#nexevocontainer<?php echo $uid ?> input[type="time"],
+div#nexevocontainer<?php echo $uid ?> input[type="week"],
+div#nexevocontainer<?php echo $uid ?> input[type="number"],
+div#nexevocontainer<?php echo $uid ?> input[type="email"],
+div#nexevocontainer<?php echo $uid ?> input[type="url"],
+div#nexevocontainer<?php echo $uid ?> input[type="search"],
+div#nexevocontainer<?php echo $uid ?> input[type="tel"],
+div#nexevocontainer<?php echo $uid ?> input[type="color"]
+{
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+div#nexevocontainer<?php echo $uid ?> input,
+div#nexevocontainer<?php echo $uid ?> label.checkbox
+{
+	width: <?php $w = $this->Params->get("text__width", (object)array("text" => "270", "select" => "px")); echo $w->text . $w->select; ?>;
+}
+
+div#nexevocontainer<?php echo $uid ?> textarea
+{
+	width: <?php $w = $this->Params->get("textarea__width", (object)array("text" => "270", "select" => "px")); echo $w->text . $w->select; ?>;
+	height: <?php $h = $this->Params->get("textarea__height", (object)array("text" => "180", "select" => "px")); echo $h->text . $h->select; ?>;
+}
+
+/* form elements based on form type */
+div#nexevocontainer<?php echo $uid ?> .nexevoform-compact .control-group,
+div#nexevocontainer<?php echo $uid ?> .nexevoform-extended .control-group
+{
+	/* can't use overflow:hidden; due to "Chosen" dropdown select boxes. Fallback to float:left alternative, but it needs width:100% */
+	float: <?php echo $left ?>;
+	width:100%;
+	*zoom: 1;
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-inline .control-group
+{
+	display: inline-block;
+}
+
+/* Field labels */
+div#nexevocontainer<?php echo $uid ?> .nexevoform-compact .control-label,
+div#nexevocontainer<?php echo $uid ?> .nexevoform-extended .control-label
+{
+	float: <?php echo $left ?>;
+	width: <?php $w = $this->Params->get("labels__width", (object)array("text" => "230", "select" => "px")); echo $w->text . $w->select; ?>;
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-extended .control-label
+{
+	text-align: <?php echo $left ?>;
+	margin-<?php echo $right ?>: 16px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-compact .control-label
+{
+	text-align: <?php echo $right ?>;
+	margin-<?php echo $right ?>: 16px;
+}
+
+/* Fields container */
+div#nexevocontainer<?php echo $uid ?> .nexevoform-compact .controls,
+div#nexevocontainer<?php echo $uid ?> .nexevoform-extended .controls
+{
+	float: <?php echo $left ?>;
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-centered input,
+div#nexevocontainer<?php echo $uid ?> .nexevoform-centered textarea,
+div#nexevocontainer<?php echo $uid ?> .nexevoform-centered .chzn-container
+{
+	display: block;
+	margin: 0 auto;
+}
+
+/* Checkbox and radio center alignment and text indentation */
+div#nexevocontainer<?php echo $uid ?> .radio,
+div#nexevocontainer<?php echo $uid ?> .checkbox
+{
+	min-height: 20px;
+	padding-<?php echo $left ?>: 20px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .radio input[type="radio"],
+div#nexevocontainer<?php echo $uid ?> .checkbox input[type="checkbox"]
+{
+	float: <?php echo $left ?>;
+	margin-<?php echo $left ?>: -20px;
+}
+
+div#nexevocontainer<?php echo $uid ?> .controls
+{
+	/* Removes the 180px left margin set by bootstrap */
+	margin: 0;
+	/* Fixes dropdown collapse with layout extended in the module, but hurts the view of the component */
+	/*width: 100%;*/
+
+	/*<?php if (!(bool)$this->Params->get("labelsdisplay") && $this->Params->get("form_layout", "extended") == "centered") { ?>*/
+	display: table;
+	float: none;
+	margin: 0 auto;
+	/*<?php } ?>*/
+}
+
+div#nexevocontainer<?php echo $uid ?> .nexevoform-inline .controls
+{
+	display:	inline-block;
+}
+
+/*<?php
+define("WIDTH", 0);
+define("HEIGHT", 1);
+?>*/
+
+/*<?php
+$submitimage = $this->Params->get("submitimage", "-1");
+if ($submitimage != "-1") {
+?>*/
+
+div#nexevocontainer<?php echo $uid ?> button[type="submit"] > span
+{
+	display: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="submit"],
+div#nexevocontainer<?php echo $uid ?> button[type="submit"]
+{
+	border: none;
+	color: transparent;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="submit"]:hover,
+div#nexevocontainer<?php echo $uid ?> button[type="submit"]:hover
+{
+	background-color: transparent;
+	background-position: 0 0;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="submit"],
+div#nexevocontainer<?php echo $uid ?> button[type="submit"]
+{
+
+	/*<?php
+	$submitimage = "/media/com_nexevocontact/images/buttons/submit/" . $submitimage;
+	$size = getimagesize(JPATH_ROOT . $submitimage) or $size = array(0, 0);
+	?>*/
+
+	background-image: url("<?php echo JURI::root(true) . $submitimage ?>");
+	width: <?php echo $size[WIDTH] ?>px;
+	height: <?php echo $size[HEIGHT] ?>px;
+}
+
+/*<?php } ?>*/
+
+/*<?php
+$resetimage = $this->Params->get("resetimage", "-1");
+if ($resetimage != "-1") {
+?>*/
+
+div#nexevocontainer<?php echo $uid ?> button[type="reset"] > span
+{
+	display: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="reset"],
+div#nexevocontainer<?php echo $uid ?> button[type="reset"]
+{
+	border: none;
+	color: transparent;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="reset"]:hover,
+div#nexevocontainer<?php echo $uid ?> button[type="reset"]:hover
+{
+	background-color: transparent;
+	background-position: 0 0;
+}
+
+div#nexevocontainer<?php echo $uid ?> input[type="reset"],
+div#nexevocontainer<?php echo $uid ?> button[type="reset"]
+{
+
+	/*<?php
+	$resetimage = "/media/com_nexevocontact/images/buttons/reset/" . $resetimage;
+	$size = getimagesize(JPATH_ROOT . $resetimage) or $size = array(0, 0);
+	?>*/
+
+	background-image: url("<?php echo JURI::root(true) . $resetimage ?>");
+	width: <?php echo $size[WIDTH] ?>px;
+	height: <?php echo $size[HEIGHT] ?>px;
+}
+
+/*<?php } ?>*/
+

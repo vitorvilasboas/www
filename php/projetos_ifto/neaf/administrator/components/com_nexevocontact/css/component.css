@@ -1,0 +1,396 @@
+.icon-48-foxcontact
+{
+	background-image: url("../../../../media/com_nexevocontact/images/foxcontact-48.jpg");
+	background-position: 0 50%;
+}
+
+.floatleft
+{
+	float: left;
+	margin: 0 16px;
+}
+
+html[dir="rtl"] .floatleft
+{
+	float: right;
+}
+
+/* Enquiries view */
+
+/* unexported row */
+.exported
+{
+	color: #707070;
+}
+
+#adminForm .exported a
+{
+	color: #60b0f0;
+}
+
+.sender>:first-child
+{
+	font-size: 1.1em;
+}
+/* !Enquiries view */
+
+/* fixes a vertical gap between multiselect and other fields */
+.js-stools .chzn-container-multi
+{
+	vertical-align: middle;
+	margin-bottom: 8px;
+}
+
+------------------------------------------------------------------------------*/
+::-moz-selection { background: #fec23d; color: #fff }
+
+::selection { background: #fec23d; color: #fff }
+
+
+#jform-params-tabs-data-lbl,
+
+#jform-params---field1-lbl,
+
+#invisible { display: none; }
+
+span.unit { line-height:34px; }
+
+togglers 
+
+.pane-sliders .panel { 
+    border: none !important;
+    margin-right:10px !important;
+}
+
+#tabs {
+/*     margin-top:-18px!important; */
+} 
+
+div.panel > h3 { 
+    height: 43px; 
+    background: transparent url('../images/icons/cw-panel-bg.png') repeat-x 0 0 !important; 
+    border: 1px solid #d8d8d8; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px; 
+    font: bold 12px/43px Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    margin:2px;
+}
+
+div.panel > h3 a { color: #333; text-shadow: 0 1px 1px #fff; }
+
+div.panel > h3 a:hover,
+
+div.panel h3.pane-toggler-down a { color: #1272A5 }
+
+div.panel h3.pane-toggler-down { border-bottom: 4px solid #011f60 !important }
+
+.pane-toggler span { 
+    background: transparent url('../../../../media/com_nexevocontact/images/cw-panel-arrow.png') no-repeat 7px 50% !important;
+    padding-left: 20px !important;
+    text-align:left !important;
+}
+
+.pane-toggler-down span { 
+    background: transparent url('../../../../media/com_nexevocontact/images/cw-panel-arrow-down.png') no-repeat 7px 50% !important;
+    padding-left: 20px !important;
+    text-align:left !important;
+}
+
+.pane-sliders .content { 
+    margin: 4px auto; 
+    width: 99%; 
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px; 
+}
+
+.panel fieldset.panelform > ul > li > label { 
+    color: #444; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 24px; 
+    padding: 0 20px 0 10px; 
+    text-align: right; 
+    max-width: 30%!important; 
+    min-width: 30%!important; 
+}
+
+input.readonly {
+    padding:0px !important;
+    color: rgb(18, 114, 165) !important;
+}
+.pane-sliders .panel {
+    border: medium none !important;
+}
+
+.pane-sliders .fieldset .imageform{
+    margin-bottom: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 5px;
+    text-align: left;
+}
+/* END Admin Minimum 
+------------------------------------------------------------------------------*/
+
+/* Admin Config Style
+------------------------------------------------------------------------------*/
+.current label, .current span.faux-label{ 
+    color: #444; 
+    font-size: 11px; 
+    font-weight: bold; 
+    padding: 0 20px 0 10px; 
+    text-align: right; 
+}
+
+.current fieldset.radio label { 
+    text-align: left;
+    min-width:20px !important;
+}
+
+.current select {
+    height: auto; 
+    color: #555; 
+    line-height: 24px; 
+    padding: 4px; 
+    font-size:11px; 
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px;
+    margin-bottom:5px !important;
+}
+
+.current input { 
+    height: 16px; 
+    color: #555; 
+    line-height: 16px; 
+    padding: 4px;  
+}
+.spacer label {
+    color: #1272A5;
+    font: bold 12px/30px Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Permissions */
+ul#rules table.group-rules td label {
+    min-width: 0!important;
+}
+/* END Admin Config
+------------------------------------------------------------------------------*/
+
+/* Header Custom Field
+------------------------------------------------------------------------------*/
+.cwclr { 
+    clear:both; 
+    height:0; 
+    line-height:0; 
+    border:none; 
+    float:none; 
+    background:none; 
+    padding:0; 
+    margin:0; 
+}
+.paramHeaderContainer { 
+    clear:both; 
+    padding:0px; 
+    font-weight: normal; 
+    border-bottom: 4px solid #1272A5 !important;
+    width:100%; 
+    margin:12px 0 8px; 
+    font: bold 14px/30px Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+}
+.paramHeaderContent { 
+    color:#1272A5;
+    text-shadow: 0 1px 1px #FFFFFF;
+    padding:2px 2px 2px 15px; }
+
+/* END Header Custom 
+------------------------------------------------------------------------------*/
+
+/* Slider Content Styling
+------------------------------------------------------------------------------*/
+.cw-slider { 
+    padding: 10px; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:13px !important; 
+    font-weight: normal !important; 
+    color: #4d4d4d; 
+    text-align: left;
+}
+
+.cw-slider h1 { 
+    clear:both; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:32px !important;
+    margin:10px 15px; 
+    padding:0px 0px 5px 0px; 
+    color:#333 !important; 
+    font-weight: normal !important;
+    line-height: 30px; 
+    background:none !important;
+}
+
+.cw-slider h3 { 
+    clear:both; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:22px !important;
+    margin:10px 15px; 
+    padding:0px; 
+    color:#333 !important;  
+    font-weight: normal !important;
+    background:none !important;
+}
+.cw-slider h4 {
+    font: bold 14px Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    color: #1272A5;
+    margin:10px 15px; 
+    padding:0px; 
+    background:none !important;
+}
+
+.cw-slider p { margin: 10px 20px }
+
+.cw-slider p a, .cw-slider ul a  { 
+    color: #1272A5; 
+    text-decoration:none; 
+}
+
+.cw-slider p a:hover, .cw-slider ul a:hover  { 
+    color: #419EC9; 
+    text-decoration:none; 
+}
+
+.cw-slider p.info {
+    background: url("../images/icons/cw-info.png") no-repeat scroll 0 0  #EBF5FA; 
+    border-bottom: 1px solid #D2DCE1;
+    border-top: 1px solid #D2DCE1; 
+    padding: 10px;
+}
+
+.cw-slider p.forum a, .cw-slider p.forum em { color:#CE6A23; }
+.cw-slider p.forum a:hover {color:#E2AB53;}
+.cw-slider p.forum {
+    background: url("../images/icons/cw-forum.png") no-repeat scroll 0 0  #FFFAE6; 
+    border-bottom: 1px solid #FAE6BE;
+    border-top: 1px solid #FAE6BE; 
+    padding: 10px;
+}
+
+.cw-slider p.vote a, .cw-slider p.vote em { color:#268413; }
+.cw-slider p.vote a:hover {color:#b0bf7f;}
+.cw-slider p.vote {
+    background: url("../images/icons/cw-vote.png") no-repeat scroll 0 0  #FAFFE6; 
+    border-bottom: 1px solid #DCE6BE;
+    border-top: 1px solid #DCE6BE; 
+    padding: 10px;
+}
+
+.cw-slider p.donate a, .cw-slider p.donate em { color:#A05A2C; }
+.cw-slider p.donate a:hover {color:#D38D5F;}
+.cw-slider p.donate {
+    background: url("../images/icons/cw-coffee.png") no-repeat scroll 0 0 #F6ECE6; 
+    border-bottom: 1px solid #EDD7C9;
+    border-top: 1px solid #EDD7C9;
+    padding: 10px;
+}
+
+.cw-slider p.info, .cw-slider p.forum, .cw-slider p.vote, .cw-slider p.donate {
+    padding-left:40px;
+    line-height: 18px; 
+    margin: 15px 20px; 
+}
+
+.cw-slider p a:hover, .cw-slider ul a:hover  {
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.cw-slider ul li {
+    margin-left:10px;
+    background: transparent url('../images/icons/cw-panel-arrow.png') no-repeat 5px 50% !important;
+    padding-left:20px;
+    list-style: none outside none;
+}
+
+.cw-slider em, .cw-slider strong {
+    color:#1272A5;
+    font-weight: bold;
+}
+
+/* END Slider
+------------------------------------------------------------------------------*/
+
+/* Cpanel Icon Styling 
+------------------------------------------------------------------------------*/
+
+#cpanel img, .cpanel img {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.cpanel div.icon, #cpanel div.icon {
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+.cpanel div.icon a, #cpanel div.icon a {
+    background-color: white;
+    background-position: -30px center;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1) inset, 5px 5px 10px rgba(0, 0, 0, 0.05) inset;
+    display: block;
+    float: left;
+    height: 114px;
+    padding: 5px;
+    text-decoration: none;
+    transition-property: none;
+    vertical-align: middle;
+    width: 108px;
+    color: #011f60 !important;
+    text-shadow: 0 1px 1px #FFFFFF;
+    font: bold 12px Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+}
+
+#cpanel div.icon a:hover, #cpanel div.icon a:focus, #cpanel div.icon a:active, 
+.cpanel div.icon a:hover, .cpanel div.icon a:focus, .cpanel div.icon a:active {
+    background-position: 0 center !important;
+    border-radius: 5px 5px 5px 5px !important;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1) inset, -5px -5px 10px rgba(0, 0, 0, 0.05) inset !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.cpanel div.icon span, #cpanel div.icon span {
+    display: block;
+    text-align: center;
+}
+
+/* Cpanel Layout Styling
+------------------------------------------------------------------------------*/
+#cpanel {}
+.icon-48-cw-cpanel {background-image: url('../images/icons/icon-48-cw-cpanel.png');}
+
+
+/* Search Box 
+------------------------------------------------------------------------------*/
+.cw-filter-search {
+    margin-right:5px;
+    background:white;
+    border:1px solid #CCC;
+    padding:5px;
+    font-size: 1.3em;
+    margin-top: 8px;
+}
+

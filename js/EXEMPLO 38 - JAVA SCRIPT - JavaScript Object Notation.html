@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript JSON - JavaScript Object Notation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+
+		<h3>Como criar o JSON Object no Javascript</h3>
+		
+		<p>
+			Nome: <span id="jname"></span><br>
+			Email: <span id="jemail"></span><br>
+			Site: <span id="jsite"></span><br>
+			Cor Favorita: <span id="jcolor"></span><br>
+			Carro Favorito: <span id="jcar"></span>
+		</p>
+		
+		<script type="text/javascript">
+			var myJSONObject = {
+				"nome":"Iury Gomes de Oliveira",
+				"email":"iury.oliveira@ifma.edu.br",
+				"site":"www.ifma.edu.br",
+				"cor":"Pardo",
+				"carro":"Palio"
+			};
+			
+			document.getElementById("jname").innerHTML = myJSONObject.nome;
+			document.getElementById("jemail").innerHTML = myJSONObject.email;
+			document.getElementById("jsite").innerHTML = myJSONObject.site;
+			document.getElementById("jcolor").innerHTML = myJSONObject.cor;
+			document.getElementById("jcar").innerHTML = myJSONObject.carro;
+		</script>
+
+	</body>
+</html>

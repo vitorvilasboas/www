@@ -1,0 +1,11 @@
+@charset "utf-8";
+.geral {
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 14px;
+	background-color: #DDDDDD;
+	width: 780px;
+}
+.texto {
+	color: #000000;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:14px

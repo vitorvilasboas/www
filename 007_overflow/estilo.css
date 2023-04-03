@@ -1,0 +1,19 @@
+
+/* Overflow: usado quando se tem um conteúdo que extrapola o tamanho do seu container 'pai' */
+
+#container {
+  background-color: #aff;
+  width: 300px;
+  height: 150px;
+  margin: 10px 10px;
+  float: left;
+  overflow: auto; /* padrão: visible */
+  /* overflow-x: hidden; */
+}
+
+img {
+  width: 300px;
+  /* border: 1pt solid black; */
+  /* display: inline; */
+  /* margin: 0px; */
+}

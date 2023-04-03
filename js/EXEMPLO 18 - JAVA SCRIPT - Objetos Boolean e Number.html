@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript objetos boolean e number</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript">
+			
+			function Testa_Valor_Booleano()
+			{                                 // O método Boolean retorna true ou false, dependendo de seu argumento 
+				var valor_booleano = new Boolean("1"); // Criando um objeto com valor booleano
+				var x = valor_booleano.valueOf(); // o método value.Of retornar o valor true ou false do objeto booleano
+				alert("The object is boolean: " + x);
+			}
+			
+			function Valor_Maximo_do_Objeto_Number()
+			{
+				var x = Number.MAX_VALUE; // MAX_VALUE retornar o valor maximo 
+				alert(x);                 // que um objeto number pode armazenar
+			}
+			
+			function Formatar_Numeros()
+			{
+				var num = 3.14159;
+				var n = num.toFixed(2); // toFixed formata um numero com a 
+				alert(n);               // quantidade de digitos informada em seu argumento
+			}
+			
+		</script>
+		
+	</head>
+
+
+	<body>
+		 
+		<p> <button onclick="Testa_Valor_Booleano()">Clique aqui para testar se o valor é booleano</button> </p>
+		
+		<br>
+		
+		<p> <button onclick="Valor_Maximo_do_Objeto_Number()">Clique aqui para descobrir o valor maximo de um objeto number</button> </p>
+		
+		<br>
+		
+		<p> <button onclick="Formatar_Numeros()">Clique aqui para formatar o numero</button> </p>
+	  
+
+	</body>
+</html>

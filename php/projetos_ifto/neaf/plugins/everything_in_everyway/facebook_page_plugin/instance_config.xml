@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fields name="params">
+                <fieldset name="module" addfieldpath="plugins/everything_in_everyway/facebook_page_plugin/form/fields">
+                        <!-- Configuration fields with individual options for each module instance -->
+                        <field
+                                name="href"
+                                type="url"
+                                class="input-xxlarge required"
+                                required="true"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_HREF_LABEL"
+                                validate="url"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_HREF_DESC" />
+                        <field
+                                name="box_type"
+                                type="radio"
+                                default="xfbml"
+                                class="btn-group btn-group-yesno"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_BOX_TYPE_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_BOX_TYPE_DESC"
+                        >
+                                <option value="html5">HTML5</option>
+                                <option value="xfbml">XFBML</option>
+                                <option value="iframe">IFrame</option>
+                        </field>
+                        <field
+                                name="fb_xmlns"
+                                type="pwebxfbmlinfo"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_FB_XMLNS_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_FB_XMLNS_DESC"
+                        />
+                        <field
+                                name="width"
+                                type="text"
+                                default="280"
+                                class="validate-numeric input-mini rquired"
+                                required="true"
+                                maxlength="4"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_WIDTH_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_WIDTH_DESC"
+                        />
+                        <field
+                                name="height"
+                                type="text"
+                                default="220"
+                                class="validate-numeric input-mini rquired"
+                                required="true"
+                                maxlength="4"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_HEIGHT_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_HEIGHT_DESC"
+                        />
+                        <field
+                                name="pretext"
+                                type="textarea"
+                                class="input-xxlarge"
+                                filter="raw"
+                                cols="20"
+                                rows="10"
+                                label="PLG_PWEBBOX_CUSTOMHTML_FIELD_PRETEXT_LABEL"
+                                description="PLG_PWEBBOX_CUSTOMHTML_FIELD_PRETEXT_DESC" />
+                        <field
+                                name="small_header"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_SMALL_HEADER_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_SMALL_HEADER_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="hide_cover"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_HIDE_COVER_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_HIDE_COVER_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="show_facepile"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_FACEPILE_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_FACEPILE_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="show_posts"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_POSTS_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_POSTS_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="show_events"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_EVENTS_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_EVENTS_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="show_messages"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_MESSAGES_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_SHOW_MESSAGES_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="hide_cta"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_HIDE_CTA_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_HIDE_CTA_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+
+                        <field
+                                name="fb_jssdk"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_FB_JSSDK_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_FB_JSSDK_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="fb_appid"
+                                type="text"
+                                class="input-xxlarge"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_FB_APP_ID_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_FB_APP_ID_DESC"
+                        />
+                        <field
+                                name="fb_root"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_FB_ROOT_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_FB_ROOT_DESC"
+                        >
+                                <option value="0">JNo</option>
+                                <option value="1">JYes</option>
+                        </field>
+                        <field
+                                name="track_social"
+                                type="radio"
+                                class="btn-group btn-group-yesno"
+                                default="3"
+                                label="PLG_PWEBBOX_FBLIKE_FIELD_TRACK_SOCIAL_LABEL"
+                                description="PLG_PWEBBOX_FBLIKE_FIELD_TRACK_SOCIAL_DESC">
+                                <option value="0">JDISABLED</option>
+                                <option value="1">PLG_PWEBBOX_FBLIKE_FIELD_TRACK_SOCIAL_TRADITIONAL_VALUE</option>
+                                <option value="2">PLG_PWEBBOX_FBLIKE_FIELD_TRACK_SOCIAL_ASYNCHRONOUS_VALUE</option>
+                                <option value="3">PLG_PWEBBOX_FBLIKE_FIELD_TRACK_SOCIAL_UNIVERSAL_VALUE</option>
+                        </field>
+                </fieldset>
+        </fields>
+</form>

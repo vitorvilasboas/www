@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype - JavaScript Framework</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<script src="EXEMPLO 42.01 - JAVA SCRIPT - Prototype.js"></script>
+	
+	<script type="text/javascript">
+	
+		function test1()
+		{   // O $ substitui o método getElementById
+			var d = $('myDiv');
+			alert(d.innerHTML);
+		}
+		
+		function test2()
+		{   // O $ tbm retorna mais de um div se for necessário
+			var divs = $('myDiv','myOtherDiv');
+			
+			for(i=0; i<divs.length;i++)
+			{
+				alert(divs[i].innerHTML);
+			}
+		}
+		
+		function test3()
+		{    // Coletando o valor do campo com id = userName
+			alert($F('userName'));
+		}
+	
+	</script>
+	
+</head>
+<body>
+
+	<div id="myDiv">
+		<p>Estudos comprovam que você perdeu seu tempo lendo isso.</p>
+	</div>	
+	
+	<div id="myOtherDiv">
+		<p>Quando o aperto é grande, obstáculo nenhum te segura de fazer xixi.</p>
+	</div>
+	
+	<input type="button" value="Call test1()" onclick="test1();"><br>
+	<input type="button" value="Call test2()" onclick="test2();"><br>
+	
+	<hr>
+	
+	<input type="text" id="userName" value="Iury Gomes"><br>
+	<input type="button" value="Test 3" onclick="test3();"><br>
+	
+
+</body>
+</html>

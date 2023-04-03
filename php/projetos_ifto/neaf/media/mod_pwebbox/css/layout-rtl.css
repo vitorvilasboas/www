@@ -1,0 +1,74 @@
+/**
+ * @package     pwebbox
+ * @version 	2.0.0
+ *
+ * @copyright   Copyright (C) 2015 Perfect Web. All rights reserved. http://www.perfect-web.co
+ * @license     GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+.pweb-rtl {
+	direction: rtl;
+}
+
+/* Toggler */
+.pwebbox_toggler {
+	text-align: right;
+}
+
+/* Container */
+.pweb-rtl .pwebbox-container {
+	background-position: right top;
+	text-align: right;
+}
+
+.pweb-rtl .pweb-button-close {
+	right: auto;
+	left: 5px;
+}
+/* Lightbox - close button */
+.pweb-rtl.pweb-modal .pweb-button-close {
+	left: -15px;
+}
+
+.pweb-rtl.pweb-accordion.pweb-accordion-boxed .pweb-arrow {
+	left: auto;
+	right: 25%;
+}
+
+/* Columns */
+.pweb-rtl .pweb-column {
+	float: right;
+	margin-right: 0;
+	margin-left: 3%;
+}
+.pweb-rtl .pweb-column:last-child {
+	margin-left: 0;
+}
+
+/* phone */
+@media (max-width: 480px) 
+{
+	/* disable fields inline */
+	.pweb-rtl.pweb-labels-inline .pwebbox-form .pweb-field {
+		float: none;
+	}
+}
+
+/* phone landscape */
+@media (min-width: 481px) and (max-width: 767px) 
+{
+	/* disable fields inline only in columns */
+	.pweb-rtl.pweb-labels-inline .pwebbox-form .pweb-column .pweb-field {
+		float: none;
+	}
+}
+
+/* tablet and phone */
+@media (min-width: 768px) and (max-width: 979px) 
+{
+	/* disable fields inline only in 4 and 5 columns */
+	.pweb-rtl.pweb-labels-inline .pwebbox-form .pweb-column.pweb-width-25 .pweb-field,
+	.pweb-rtl.pweb-labels-inline .pwebbox-form .pweb-column.pweb-width-20 .pweb-field {
+		float: none;
+	}
+}

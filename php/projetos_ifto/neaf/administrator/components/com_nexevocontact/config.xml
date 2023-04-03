@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/administrator/components/com_nexevocontact/models/fields">
+	<fieldset name="JACTION_ADMIN" label="JACTION_ADMIN">
+		<field type="nenvironment"/>
+	</fieldset>
+
+	<fieldset name="adminemail" label="COM_NEXEVOCONTACT_CONFIG_EMAIL_SITE_OWNER_LBL" description="COM_NEXEVOCONTACT_CONFIG_EMAIL_SITE_OWNER_DSC">
+		<field name="adminemailfrom" type="nexevoemailchooser" label="COM_NEXEVOCONTACT_CONFIG_FROM_LBL" description="COM_NEXEVOCONTACT_CONFIG_FROM_DSC" onchange="EmailChooserChange(this);" onkeyup="EmailChooserChange(this);">
+			<option value="submitter" class="none">COM_NEXEVOCONTACT_SUBMITTER</option>
+			<option value="admin" class="none">COM_NEXEVOCONTACT_ADMIN</option>
+			<option value="custom" class="">COM_NEXEVOCONTACT_CUSTOM_DATA</option>
+		</field>
+		<field name="adminemailreplyto" type="nexevoemailchooser" label="COM_NEXEVOCONTACT_CONFIG_REPLYTO_LBL" description="COM_NEXEVOCONTACT_CONFIG_REPLYTO_DSC" onchange="EmailChooserChange(this);" onkeyup="EmailChooserChange(this);">
+			<option value="submitter" class="none">COM_NEXEVOCONTACT_SUBMITTER</option>
+			<option value="admin" class="none">COM_NEXEVOCONTACT_ADMIN</option>
+			<option value="custom" class="">COM_NEXEVOCONTACT_CUSTOM_DATA</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="submitteremail" label="COM_NEXEVOCONTACT_CONFIG_EMAIL_VISITOR_LBL" description="COM_NEXEVOCONTACT_CONFIG_EMAIL_VISITOR_DSC">
+
+		<field name="submitteremailfrom" type="nexevoemailchooser" label="COM_NEXEVOCONTACT_CONFIG_FROM_LBL" description="COM_NEXEVOCONTACT_CONFIG_FROM_DSC" onchange="EmailChooserChange(this);" onkeyup="EmailChooserChange(this);">
+			<option value="submitter" class="none">COM_NEXEVOCONTACT_SUBMITTER</option>
+			<option value="admin" class="none">COM_NEXEVOCONTACT_ADMIN</option>
+			<option value="custom" class="">COM_NEXEVOCONTACT_CUSTOM_DATA</option>
+		</field>
+		<field name="submitteremailreplyto" type="nexevoemailchooser" label="COM_NEXEVOCONTACT_CONFIG_REPLYTO_LBL" description="COM_NEXEVOCONTACT_CONFIG_REPLYTO_DSC" onchange="EmailChooserChange(this);" onkeyup="EmailChooserChange(this);">
+			<option value="submitter" class="none">COM_NEXEVOCONTACT_SUBMITTER</option>
+			<option value="admin" class="none">COM_NEXEVOCONTACT_ADMIN</option>
+			<option value="custom" class="">COM_NEXEVOCONTACT_CUSTOM_DATA</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="troubleshoot" label="COM_NEXEVOCONTACT_TROUBLESHOOT_LBL" description="COM_NEXEVOCONTACT_TROUBLESHOOT_DSC">
+		<field name="use_dns" type="list" label="COM_NEXEVOCONTACT_ADVANCED_EMAIL_VERIFICATION_LBL" description="COM_NEXEVOCONTACT_EMAIL_DOMAIN_VERIFICATION_DSC">
+			<option value="dns_check">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="resources_loading" type="list" label="COM_NEXEVOCONTACT_RESOURCES_LOADING_LBL" description="COM_NEXEVOCONTACT_RESOURCES_LOADING_DSC" default="1">
+			<option value="Performance">COM_NEXEVOCONTACT_OPTIMIZE_PERFORMANCES</option>
+			<option value="Compatibility">COM_NEXEVOCONTACT_OPTIMIZE_COMPATIBILITY</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" component="com_nexevocontact" section="component">
+			<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC"/>
+			<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC"/>
+		</field>
+	</fieldset>
+
+</config>

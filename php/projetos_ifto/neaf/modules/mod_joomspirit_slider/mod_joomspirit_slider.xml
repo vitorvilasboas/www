@@ -1,0 +1,1837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JoomSpirit Slider</name>
+	<author>JoomSpirit</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright 2016 JoomSpirit</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>contact@template-joomspirit.com</authorEmail>
+	<authorURL>http://www.joomspirit.com</authorURL>
+	<version>2.8</version>
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" name="JoomSpirit Slider">http://www.template-joomspirit.com/update-joomspirit-slider/update-joomspirit-slider.xml</server>
+	</updateservers>
+	<description>     
+    	<![CDATA[ 
+		<link rel="stylesheet" href="../modules/mod_joomspirit_slider/css_admin.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700|Abel|Arizonia|Berkshire+Swash|Cookie|Dosis:400,200,300,500,600,700,800|Droid+Sans:400,700|Francois+One|Gruppo|Playball|Italianno|Lato:400,100,300,400italic,300italic,100italic,700,700italic,900,900italic|Lobster|Lora:400,400italic,700,700italic|Montserrat:400,700|Oleo+Script|Open+Sans+Condensed:300,300italic,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800|Oswald:400,300,700|Oxygen:400,300,700|PT+Sans+Narrow:400,700|PT+Sans:400,400italic,700,700italic|Prosto+One|Quicksand:400,300,700|Roboto+Condensed:400,300,300italic,400italic,700,700italic|Rokkitt:400,700|Share:400,400italic,700,700italic|Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic|Ubuntu+Condensed|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+		This free module allows you to display a responsive slideshow. Read <a href="http://www.template-joomspirit.com/free-extension-joomla/responsive-slideshow" target="_blank">"How to use" here</a>.<br />It's created and distributed by <a href="http://www.template-joomspirit.com" target="_blank"><strong>JoomSpirit</strong></a> : the best place to find a beautiful template.<br /><br /><a href="http://www.template-joomspirit.com" target="_blank"><img src="../modules/mod_joomspirit_slider/joomspirit.jpg" alt="" /></a>
+		]]>
+	</description>
+	
+	<files>
+		<filename>mod_joomspirit_slider.xml</filename>
+		<filename module="mod_joomspirit_slider">mod_joomspirit_slider.php</filename>
+		<filename>helper.php</filename>
+		<filename>css_admin.css</filename>
+		<filename>index.html</filename>
+		<filename>joomspirit.jpg</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+		
+			<fieldset name="general" label="General settings">
+	
+				<field name="load_jquery" type="radio" default="0" label="Enable jQuery 1.10.1 ?" description="Joomla 3.X load already Jquery so I recommend to disable this option to prevent any conflict. Turn on or off included jQuery version 1.10.1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				
+				<field name="pauseOnHover" type="radio" default="true" label="Pause on hover" description="Pause the slideshow when hovering over slider, then resume when no longer hovering">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field name="initDelay" type="text" default="0" label="Initialisation delay" description="Set an initialization delay, in milliseconds "/>				
+
+				<field name="randomize" type="radio" default="false" label="Randomize slide order" description="">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field type="spacer" label="Special effects" />
+				
+				<field name="kenburns" type="radio" default="no-kenburns" label="Kenburn effect (zoom)" description="It's a CSS3 animation : work only in browsers that support CSS3 animations">
+					<option value="kenburns">Yes</option>
+					<option value="no-kenburns">No</option>
+				</field>
+				
+				<field type="spacer" label="Effects on scroll" />
+
+				<field name="rotate_on_scroll" type="radio" default="no-rotate-on-scroll" label="Rotation on scroll" description="It's a jQuery animation with the script Skrollr : the slideshow rotate when you scroll down">
+					<option value="rotate-on-scroll">Yes</option>
+					<option value="no-rotate-on-scroll">No</option>
+				</field>
+				
+				<field name="fade_text_on_scroll" type="radio" default="fade-text-on-scroll" label="Fade text on scroll" description="It's a jQuery animation with the script Skrollr : the text disappear when the slideshow is on the top and you scroll down">
+					<option value="fade-text-on-scroll">Yes</option>
+					<option value="no-fade-text-on-scroll">No</option>
+				</field>
+				
+				<field name="load_skrollr" type="radio" default="true" label="Load Skrollr if you have enabled the previous effects (rotate slideshow or fade text on scroll)" description="Disable this option only if your template load already the script Skrollr.js">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+					
+			</fieldset>
+
+			<fieldset name="height" label="Height of your slideshow">
+				
+				<field type="spacer"  label="For Desktop ( screen width &#62; 980 pixels )" />
+				
+				<field name="height_slideshow_desktop" type="radio" default="fluid" label="Height fluid or fixed" description="If you choose Fluid, the image is never cropped and with the maximum width available. So the height depend of the available width. If you choose Height Fixed, the width is the maximum available in your module position and the height if fixed. So the image will be cropped in height or in width. That depend of the size of your images.">
+					<option value="fluid">Height fluid (image not cropped)</option>
+					<option value="fixed-viewport">Height fixed in % of the viewport (image cropped)</option>
+					<option value="fixed-px">Height fixed in px (image cropped)</option>
+				</field>
+				
+				<field name="height_slideshow_desktop_percentage" type="list" default="60" label="If height fixed in % of viewport" description="">
+					<option value="100">Height fixed = 100% of the viewport</option>
+					<option value="90">Height fixed = 90% of the viewport</option>
+					<option value="80">Height fixed = 80% of the viewport</option>
+					<option value="70">Height fixed = 70% of the viewport</option>
+					<option value="60">Height fixed = 60% of the viewport</option>
+					<option value="50">Height fixed = 50% of the viewport</option>
+					<option value="40">Height fixed = 40% of the viewport</option>
+					<option value="30">Height fixed = 30% of the viewport</option>
+					<option value="20">Height fixed = 20% of the viewport</option>
+					<option value="10">Height fixed = 10% of the viewport</option>
+				</field>
+				
+				<field name="height_slideshow_desktop_px" type="list" default="440" label="If height fixed in pixels" description="">
+					<option value="120">120px</option>
+					<option value="160">160px</option>
+					<option value="200">200px</option>
+					<option value="240">240px</option>
+					<option value="280">280px</option>
+					<option value="320">320px</option>
+					<option value="360">360px</option>
+					<option value="400">400px</option>
+					<option value="440">440px</option>
+					<option value="480">480px</option>
+					<option value="520">520px</option>
+					<option value="560">560px</option>
+					<option value="600">600px</option>
+					<option value="640">640px</option>
+					<option value="680">680px</option>
+					<option value="720">720px</option>
+					<option value="760">760px</option>
+					<option value="800">800px</option>
+					<option value="840">840px</option>
+					<option value="880">880px</option>
+					<option value="920">920px</option>
+				</field>
+				
+				<field type="spacer"  label="For Tablets ( screen width between 980 and 768 pixels )" />
+				
+				<field name="height_slideshow_tablet" type="radio" default="fluid" label="Height fluid or fixed" description="If you choose Fluid, the image is never cropped and with the maximum width available. So the height depend of the available width. If you choose Height Fixed, the width is the maximum available in your module position and the height if fixed. So the image will be cropped in height or in width. That depend of the size of your images.">
+					<option value="fluid">Height fluid (image not cropped)</option>
+					<option value="fixed-viewport">Height fixed in % of the viewport (image cropped)</option>
+					<option value="fixed-px">Height fixed in px (image cropped)</option>
+				</field>
+				
+				<field name="height_slideshow_tablet_percentage" type="list" default="60" label="If height fixed in % of viewport" description="">
+					<option value="100">Height fixed = 100% of the viewport</option>
+					<option value="90">Height fixed = 90% of the viewport</option>
+					<option value="80">Height fixed = 80% of the viewport</option>
+					<option value="70">Height fixed = 70% of the viewport</option>
+					<option value="60">Height fixed = 60% of the viewport</option>
+					<option value="50">Height fixed = 50% of the viewport</option>
+					<option value="40">Height fixed = 40% of the viewport</option>
+					<option value="30">Height fixed = 30% of the viewport</option>
+					<option value="20">Height fixed = 20% of the viewport</option>
+					<option value="10">Height fixed = 10% of the viewport</option>
+				</field>
+				
+				<field name="height_slideshow_tablet_px" type="list" default="440" label="If height fixed in pixels" description="">
+					<option value="120">120px</option>
+					<option value="160">160px</option>
+					<option value="200">200px</option>
+					<option value="240">240px</option>
+					<option value="280">280px</option>
+					<option value="320">320px</option>
+					<option value="360">360px</option>
+					<option value="400">400px</option>
+					<option value="440">440px</option>
+					<option value="480">480px</option>
+					<option value="520">520px</option>
+					<option value="560">560px</option>
+					<option value="600">600px</option>
+					<option value="640">640px</option>
+					<option value="680">680px</option>
+					<option value="720">720px</option>
+					<option value="760">760px</option>
+					<option value="800">800px</option>
+					<option value="840">840px</option>
+					<option value="880">880px</option>
+					<option value="920">920px</option>
+				</field>
+				
+				<field type="spacer"  label="For Phones ( screen width &#60; 768 pixels )" />
+				
+				<field name="height_slideshow_phone" type="radio" default="fluid" label="Height fluid or fixed" description="If you choose Fluid, the image is never cropped and with the maximum width available. So the height depend of the available width. If you choose Height Fixed, the width is the maximum available in your module position and the height if fixed. So the image will be cropped in height or in width. That depend of the size of your images.">
+					<option value="fluid">Height fluid (image not cropped)</option>
+					<option value="fixed-viewport">Height fixed in % of the viewport (image cropped)</option>
+					<option value="fixed-px">Height fixed in px (image cropped)</option>
+				</field>
+				
+				<field name="height_slideshow_phone_percentage" type="list" default="30" label="If height fixed in % of viewport" description="">
+					<option value="100">Height fixed = 100% of the viewport</option>
+					<option value="90">Height fixed = 90% of the viewport</option>
+					<option value="80">Height fixed = 80% of the viewport</option>
+					<option value="70">Height fixed = 70% of the viewport</option>
+					<option value="60">Height fixed = 60% of the viewport</option>
+					<option value="50">Height fixed = 50% of the viewport</option>
+					<option value="40">Height fixed = 40% of the viewport</option>
+					<option value="30">Height fixed = 30% of the viewport</option>
+					<option value="20">Height fixed = 20% of the viewport</option>
+					<option value="10">Height fixed = 10% of the viewport</option>
+				</field>
+				
+				<field name="height_slideshow_phone_px" type="list" default="440" label="If height fixed in pixels" description="">
+					<option value="120">120px</option>
+					<option value="160">160px</option>
+					<option value="200">200px</option>
+					<option value="240">240px</option>
+					<option value="280">280px</option>
+					<option value="320">320px</option>
+					<option value="360">360px</option>
+					<option value="400">400px</option>
+					<option value="440">440px</option>
+					<option value="480">480px</option>
+					<option value="520">520px</option>
+					<option value="560">560px</option>
+					<option value="600">600px</option>
+					<option value="640">640px</option>
+					<option value="680">680px</option>
+					<option value="720">720px</option>
+					<option value="760">760px</option>
+					<option value="800">800px</option>
+					<option value="840">840px</option>
+					<option value="880">880px</option>
+					<option value="920">920px</option>
+				</field>
+				
+			</fieldset>
+
+			<fieldset name="maintheme" label="Slideshow Theme">
+			
+				<field type="spacer" label="Slide theme or Custom theme" />
+			
+				<field name="slide_theme" type="radio" default="false" label="Slideshow theme" description="Slide theme display is ideal for slide transition. Choose Custom theme if you want use the options below.">
+					<option value="true">Slide theme</option>
+					<option value="false">Custom theme</option>
+				</field>
+
+				<field type="spacer" label="Transitions" />	
+				
+				<field name="transition" type="radio" default="fade" label="Transition" description="Choose whether the slider will fade or slide between slides">
+					<option value="slide">Slide</option>
+					<option value="fade">Fade</option>
+				</field>
+				
+				<field name="bg_color" type="text" default="transparent" label="Background color of the slideshow (important for fade transition)" description="Enter 'transparent' or the hexadecimal code color : default : #ffffff "/>				
+			
+				<field name="direction" type="radio" default="horizontal" label="Direction of slide transition" description="">
+					<option value="horizontal">Horizontal</option>
+					<option value="vertical">Vertical</option>
+				</field>				
+
+				<field name="animSpeed" type="text" default="2000" label="Animation speed (ms)" description="Speed of the transition (in ms). Default : 2000" />
+				<field name="pauseTime" type="text" default="6500" label="Pause time (ms)" description="How long each slide is show (in ms). Default : 6500" />
+				
+				<field type="spacer" label="Options of Custom theme" />
+				
+				<field name="shadow_top_image" type="list" default="no" label="Shadow on the top of each image" description="" >
+					<option value="no">No shadow</option>
+					<option value="curve">curve shadow</option>
+					<option value="light">light shadow</option>
+					<option value="normal">normal shadow</option>
+					<option value="dark">dark shadow</option>
+					<option value="darkest">dark ++ shadow</option>
+				</field>
+				
+				<field name="shadow_bottom_image" type="list" default="no" label="Shadow on the bottom of each image" description="" >
+					<option value="no">No shadow</option>
+					<option value="curve">curve shadow</option>
+					<option value="light">light shadow</option>
+					<option value="normal">normal shadow</option>
+					<option value="dark">dark shadow</option>
+					<option value="darkest">dark ++ shadow</option>
+				</field>
+			
+				<field name="theme_shadow" type="list" default="theme-without-shadow" label="Shadow around the slideshow" description="If you choose Large shadow , a margin of 10 pixels will be around the slideshow">
+					<option value="theme-without-shadow">No</option>
+					<option value="theme-shadow-normal">Shadow normal (4px)</option>
+					<option value="theme-shadow-large">Shadow large (15px)</option>
+				</field>
+				
+				<field name="theme_border" type="list" default="00" label="Border around the slideshow" description="">
+					<option value="00">None</option>
+					<option value="01">2 pixels</option>
+					<option value="02">4 pixels</option>
+					<option value="03">7 pixels</option>
+					<option value="04">10 pixels</option>
+				</field>
+				
+				<field name="theme_border_radius" type="list" default="00" label="Border radius around the slideshow" description="">
+					<option value="00">None</option>
+					<option value="01">4 pixels</option>
+					<option value="02">8 pixels</option>
+					<option value="03">12 pixels</option>
+					<option value="04">24 pixels</option>
+				</field>
+
+				<field type="spacer" label="Previous / Next buttons" />
+
+				<field name="directionNav" type="list" default="white-arrow" label="Display prev / next buttons" description="">
+					<option value="white-arrow">Yes white arrow</option>
+					<option value="black-arrow">Yes black arrow</option>				
+					<option value="false">No</option>					
+				</field>
+				
+				<field type="spacer" label="Dots navigation" />
+				
+				<field name="controlNav" type="radio" default="false" label="Control nav" description="Create navigation for paging control of each slide ?">
+					<option value="true">Yes</option>	
+					<option value="false">No</option>
+				</field>
+				
+				<field name="positionNav" type="list" default="bottom" label="Position of control nav" description="">
+					<option value="bottom">Bottom of the slideshow</option>
+					<option value="top">Top of the slideshow</option>
+				</field>
+				
+				<field name="colorNav" type="list" default="light" label="Color of non active button" description="Choose 'dark' on a light background or 'light' on a dark background">
+					<option value="dark">Dark</option>
+					<option value="light">Light</option>
+				</field>
+			
+				<field name="colorNavActive" type="color" default="#98c138" label="Color of active button nav" description="Default : #98c138" />				
+				
+				<field type="spacer" label="Buttons in small screen" />
+					
+				<field name="hide_buttons" type="list" default="500" label="Hide buttons in small screen" description="">
+					<option value="never">Never</option>
+					<option value="980">Hide buttons under 980 pixels</option>
+					<option value="768">Hide buttons under 768 pixels</option>
+					<option value="600">Hide buttons under 600 pixels</option>
+					<option value="500">Hide buttons under 500 pixels</option>
+					<option value="400">Hide buttons under 400 pixels</option>
+					<option value="300">Hide buttons under 300 pixels</option>
+				</field>
+									
+			</fieldset>
+			
+			
+			<fieldset name="size" label="Options for your captions">
+						
+				<field type="spacer" label="Animations" />
+				
+				<field name="anim_text" type="list" default="anim-js-slide anim-js-text" label="Animation for the text" description="">
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Background of your text" />
+								
+				<field name="bg_color_text" type="color" default="#000000" label="Background color of your text" description="Please set the color. Default : #000000 " />
+			
+				<field name="transparency_bg_text" type="list" default="0" label="Transparency of your background text" description="Don't work with IE8- except with full transparency">
+					<option value="1">No transparency</option>
+					<option value="0.95">Transparency +</option>
+					<option value="0.88">Transparency ++</option>
+					<option value="0.79">Transparency +++</option>
+					<option value="0.72">Transparency 4+</option>
+					<option value="0.65">Transparency 5+</option>
+					<option value="0.58">Transparency 6+</option>
+					<option value="0.45">Transparency 7+</option>
+					<option value="0.38">Transparency 8+</option>
+					<option value="0.25">Transparency 9+</option>
+					<option value="0.16">Transparency 10+</option>
+					<option value="0.08">Transparency 11+</option>
+					<option value="0">Transparency 100%</option>
+				</field>
+				
+				<field name="bg_color_text_ie" type="color" default="" label="Optionnal background color specially for IE8-" description="The transparency don't work with IE8-, so you can have a problem of readibility with your background color choice. With this option you can choose a specific background color only for IE8-  " />
+				
+				<field name="bg_caption_shadow" type="list" default="no" label="Shadow around the background text" description="" >
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				
+				<field type="spacer" label="Position of your text" />
+				
+				<field name="position_text" type="list" default="Center" label="Position of your text" description="It's the general position. You can choose a specific position for each image in the Image section" >
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				
+				<field type="spacer" label="Maximum width" />
+				
+				<field name="max_width" type="text" size="6" default="350" label="Maximum width for your text in px" description="Default : 350" />
+				
+				<field type="spacer" label="Options for title and text" />
+				
+				<field name="text_shadow" type="list" default="light" label="Text shadow" description="" >
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				
+				<field type="spacer" label="Title" />
+				
+				<field name="font_title" type="list" default="Oswald" label="Font for your title" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>		
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times new roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_title" type="text" size="20" default="" label="New Google font for your title" description="Copy the code of your Google font. More details in the manual." />
+				
+				<field name="font_size_title" type="text" size="6" default="25px" label="Font size of your title in px or %" description="Default : 20px" />
+				
+				<field name="color_title" type="color" default="#ffffff" size="07" label="Color of your title" />
+				
+				<field type="spacer" label="Text" />
+				
+				<field name="font_text" type="list" default="Oswald" label="Font for your text" description="The font with an * are safe fonts. No need to load an extra font file on your website and support all special characters.">
+					<option value="Abel">Abel</option>
+					<option value="Arial">Arial *</option>
+					<option value="Arizonia">Arizonia</option>
+					<option value="Berkshire+Swash">Berkshire Swash</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="Cookie">Cookie</option>
+					<option value="Dosis">Dosis</option>
+					<option value="Droid+Sans">Droid Sans</option>
+					<option value="Francois+One">Francois One</option>
+					<option value="Georgia">Georgia *</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Helvetica">Helvetica *</option>
+					<option value="Italianno">Italianno</option>
+					<option value="Lato">Lato</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Lora">Lora</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Montserrat:700">Montserrat bold</option>
+					<option value="Oleo+Script">Oleo Script</option>		
+					<option value="Open+Sans+Condensed:300">Open Sans Condensed</option>
+					<option value="Open+Sans">Open Sans</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Oxygen">Oxygen</option>
+					<option value="Playball">Playball</option>
+					<option value="PT+Sans+Narrow">PT Sans Narrow</option>
+					<option value="PT+Sans">PT Sans</option>
+					<option value="Prosto+One">Prosto One</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Roboto+Condensed">Roboto Condensed</option>
+					<option value="Roboto">Roboto</option>
+					<option value="Rokkitt:400,700">Rokkitt bold</option>
+					<option value="Share, cursive">Share</option>
+					<option value="Source+Sans+Pro">Source Sans Pro</option>
+					<option value="Times new roman">Times New Roman *</option>
+					<option value="Trebuchet ms">Trebuchet ms *</option>
+					<option value="Ubuntu+Condensed">Ubuntu Condensed</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Verdana">Verdana *</option>
+				</field>
+
+				<field name="custom_font_text" type="text" size="20" default="" label="New Google font for your text" description="Copy the code of your Google font. More details in the manual." />
+				
+				<field name="font_size_text" type="text" size="6" default="15px" label="Font size of your text in px or %" description="Default : 20px" />
+				
+				<field name="color_text" type="color" default="#eeeeee" size="07" label="Color of your text" />
+				
+				<field type="spacer" label="Links" />
+				
+				<field name="target" type="list" default="_blank" label="Target" description="Choose to open the link in a new browser window or the same window">
+					<option value="_blank">New window</option>
+					<option value="_self">Same window</option>
+				</field>
+				
+				<field name="type_link" type="list" default="link_both" label="Type of links" description="" >
+					<option value="link_image">Link only in the image</option>
+					<option value="link_text">Link only in the text</option>
+					<option value="link_both">Link in the image and the text</option>
+				</field>
+				
+				<field name="read_more" type="text" default="Read more" size="20" label="Text of your Read more link" />
+				
+				<field name="color_read_more" type="color" default="#e88858" size="07" label="Color of the Read more link" description="default : #e88858 "/>
+				
+				<field type="spacer" label="Text in small screen" />
+				
+				<field name="text_under_slideshow" type="list" default="768" label="Text under the slideshow when" description="">
+					<option value="never">Never</option>
+					<option value="980">screen &#60; 980 pixels</option>
+					<option value="768">screen &#60; 768 pixels</option>
+					<option value="600">screen &#60; 600 pixels</option>
+					<option value="500">screen &#60; 500 pixels</option>
+					<option value="400">screen &#60; 400 pixels</option>
+					<option value="300">screen &#60; 300 pixels</option>
+				</field>
+				
+				<field name="hide_text" type="list" default="500" label="Hide text when" description="">
+					<option value="never">Never</option>
+					<option value="980">screen &#60; 980 pixels</option>
+					<option value="768">screen &#60; 768 pixels</option>
+					<option value="600">screen &#60; 600 pixels</option>
+					<option value="500">screen &#60; 500 pixels</option>
+					<option value="400">screen &#60; 400 pixels</option>
+					<option value="300">screen &#60; 300 pixels</option>
+				</field>
+				
+				<field name="bg_color_text_small_screen" type="color" default="#eeeeee" label="Background color of your text if under slideshow" description="" />				
+				
+				<field name="color_text_small_screen" type="color" default="#444444" label="Color of your title and text if under  slideshow" description="" />				
+				
+				<field name="fontsize_title_small_screen" type="integer" first="8" last="30" step="1" default="16" label="Font size of your title if under slideshow (in px)" description="Default : 16" />
+				
+				<field name="fontsize_text_small_screen" type="integer" first="6" last="20" step="1" default="13" label="Font size of your title if under slideshow (in px)" description="Default : 13" />
+				
+			</fieldset>
+			
+			<fieldset name="images" label="Images">
+				
+				<field type="spacer" label="Image 01" />
+				
+				<field name="image1" type="media" directory="stories" label="Image 1"/>
+				<field name="image1alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image1title" type="text" default="" label="Image 1 title" description="Title for the first image" filter="raw"/>
+				<field name="image1cap" type="textarea" default="" label="Image 1 caption" description="Text for the first image" filter="raw"/>
+				<field name="color_title1" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title1" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text1" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text1" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />					
+				<field name="color_read_more1" type="color" size="07" label="Color of the Read more link" />
+				<field name="image1customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow1" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text1" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow1" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width1" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text1" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text1" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 02" />
+				
+				<field name="image2" type="media" directory="stories" label="Image 2"/>
+				<field name="image2alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image2title" type="text" default="" label="Image 2 title" description="Title for the second image" filter="raw"/>
+				<field name="image2cap" type="textarea" default="" label="Image 2 caption" description="Text for the second image" filter="raw"/>
+				<field name="color_title2" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title2" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text2" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text2" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more2" type="color" size="07" label="Color of the Read more link" />
+				<field name="image2customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow2" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text2" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow2" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width2" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text2" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text2" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 03" />
+				
+				<field name="image3" type="media" directory="stories" label="Image 3"/>
+				<field name="image3alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image3title" type="text" default="" label="Image 3 title" description="Title for the third image" filter="raw"/>
+				<field name="image3cap" type="textarea" default="" label="Image 3 caption" description="Text for the third image" filter="raw"/>
+				<field name="color_title3" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title3" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text3" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text3" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more3" type="color" size="07" label="Color of the Read more link" />
+				<field name="image3customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow3" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text3" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow3" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width3" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text3" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text3" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 04" />
+				
+				<field name="image4" type="media" directory="stories" label="Image 4"/>
+				<field name="image4alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image4title" type="text" default="" label="Image 4 title" description="Title for the fourth image" filter="raw"/>
+				<field name="image4cap" type="textarea" default="" label="Image 4 caption" description="Text for the fourth image" filter="raw"/>
+				<field name="color_title4" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title4" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text4" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text4" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more4" type="color" size="07" label="Color of the Read more link" />
+				<field name="image4customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow4" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text4" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow4" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width4" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text4" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text4" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 05" />
+				
+				<field name="image5" type="media" directory="stories" label="Image 5"/>
+				<field name="image5alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image5title" type="text" default="" label="Image 5 title" description="Title for the fifth image" filter="raw"/>
+				<field name="image5cap" type="textarea" default="" label="Image 5 caption" description="Text for the fifth image" filter="raw"/>
+				<field name="color_title5" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title5" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text5" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text5" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more5" type="color" size="07" label="Color of the Read more link" />
+				<field name="image5customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow5" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text5" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow5" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width5" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text5" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text5" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 06" />
+				
+				<field name="image6" type="media" directory="stories" label="Image 6"/>
+				<field name="image6alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image6title" type="text" default="" label="Image 6 title" description="Title for the sixth image" filter="raw"/>
+				<field name="image6cap" type="textarea" default="" label="Image 6 caption" description="Text for the sixth image" filter="raw"/>
+				<field name="color_title6" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title6" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text6" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text6" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more6" type="color" size="07" label="Color of the Read more link" />
+				<field name="image6customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow6" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text6" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow6" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width6" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text6" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text6" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 07" />
+				
+				<field name="image7" type="media" directory="stories" label="Image 7"/>
+				<field name="image7alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image7title" type="text" default="" label="Image 7 title" description="Title for the seventh image" filter="raw"/>
+				<field name="image7cap" type="textarea" default="" label="Image 7 caption" description="Text for the seventh image" filter="raw"/>
+				<field name="color_title7" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title7" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text7" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text7" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more7" type="color" size="07" label="Color of the Read more link" />
+				<field name="image7customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow7" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text7" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow7" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width7" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text7" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text7" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 08" />
+				
+				<field name="image8" type="media" directory="stories" label="Image 8"/>
+				<field name="image8alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image8title" type="text" default="" label="Image 8 title" description="Title for the eighth image" filter="raw"/>
+				<field name="image8cap" type="textarea" default="" label="Image 8 caption" description="Text for the eighth image" filter="raw"/>
+				<field name="color_title8" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title8" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text8" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text8" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more8" type="color" size="07" label="Color of the Read more link" />
+				<field name="image8customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow8" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text8" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow8" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width8" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text8" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text8" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 09" />
+				
+				<field name="image9" type="media" directory="stories" label="Image 9"/>
+				<field name="image9alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image9title" type="text" default="" label="Image 9 title" description="Title for the ninth image" filter="raw"/>
+				<field name="image9cap" type="textarea" default="" label="Image 9 caption" description="Text for the ninth image" filter="raw"/>
+				<field name="color_title9" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title9" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text9" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text9" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more9" type="color" size="07" label="Color of the Read more link" />
+				<field name="image9customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow9" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text9" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow9" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width9" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text9" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text9" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 10" />
+				
+				<field name="image10" type="media" directory="stories" label="Image 10"/>
+				<field name="image10alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image10title" type="text" default="" label="Image 10 title" description="Title for the tenth image" filter="raw"/>
+				<field name="image10cap" type="textarea" default="" label="Image 10 caption" description="Text for the tenth image" filter="raw"/>
+				<field name="color_title10" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title10" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text10" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text10" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more10" type="color" size="07" label="Color of the Read more link" />
+				<field name="image10customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow10" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text10" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow10" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width10" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text10" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text10" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 11" />
+				
+				<field name="image11" type="media" directory="stories" label="Image 11"/>
+				<field name="image11alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image11title" type="text" default="" label="Image 11 title" description="Title for the eleventh image" filter="raw"/>
+				<field name="image11cap" type="textarea" default="" label="Image 11 caption" description="Text for the eleventh image" filter="raw"/>
+				<field name="color_title11" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title11" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text11" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text11" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more11" type="color" size="07" label="Color of the Read more link" />
+				<field name="image11customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow11" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text11" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow11" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width11" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text11" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text11" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 12" />
+				
+				<field name="image12" type="media" directory="stories" label="Image 12"/>
+				<field name="image12alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image12title" type="text" default="" label="Image 12 title" description="Title for the twelfth image" filter="raw"/>
+				<field name="image12cap" type="textarea" default="" label="Image 12 caption" description="Text for the twelfth image" filter="raw"/>
+				<field name="color_title12" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title12" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text12" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text12" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more12" type="color" size="07" label="Color of the Read more link" />
+				<field name="image12customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow12" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text12" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow12" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width12" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text12" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text12" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 13" />
+				
+				<field name="image13" type="media" directory="stories" label="Image 13"/>
+				<field name="image13alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image13title" type="text" default="" label="Image 13 title" description="Title for the thirteenth image" filter="raw"/>
+				<field name="image13cap" type="textarea" default="" label="Image 13 caption" description="Text for the thirteenth image" filter="raw"/>
+				<field name="color_title13" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title13" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text13" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text13" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more13" type="color" size="07" label="Color of the Read more link" />
+				<field name="image13customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow13" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text13" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow13" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width13" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text13" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text13" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 14" />
+				
+				<field name="image14" type="media" directory="stories" label="Image 14"/>
+				<field name="image14alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image14title" type="text" default="" label="Image 14 title" description="Title for the fourteenth image" filter="raw"/>
+				<field name="image14cap" type="textarea" default="" label="Image 14 caption" description="Text for the fourteenth image" filter="raw"/>
+				<field name="color_title14" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title14" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text14" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text14" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more14" type="color" size="07" label="Color of the Read more link" />
+				<field name="image14customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow14" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text14" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow14" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width14" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text14" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text14" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 15" />
+				
+				<field name="image15" type="media" directory="stories" label="Image 15"/>
+				<field name="image15alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image15title" type="text" default="" label="Image 15 title" description="Title for the fiveteenth image" filter="raw"/>
+				<field name="image15cap" type="textarea" default="" label="Image 15 caption" description="Text for the fiveteenth image" filter="raw"/>
+				<field name="color_title15" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title15" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text15" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text15" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more15" type="color" size="07" label="Color of the Read more link" />
+				<field name="image15customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow15" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text15" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow15" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width15" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text15" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text15" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 16" />
+				
+				<field name="image16" type="media" directory="stories" label="Image 16"/>
+				<field name="image16alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image16title" type="text" default="" label="Image 16 title" description="Title for the sixteenth image" filter="raw"/>
+				<field name="image16cap" type="textarea" default="" label="Image 16 caption" description="Text for the sixteenth image" filter="raw"/>
+				<field name="color_title16" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title16" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text16" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text16" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more16" type="color" size="07" label="Color of the Read more link" />
+				<field name="image16customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow16" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text16" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow16" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width16" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text16" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text16" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 17" />
+				
+				<field name="image17" type="media" directory="stories" label="Image 17"/>
+				<field name="image17alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image17title" type="text" default="" label="Image 17 title" description="Title for the seventeenth image" filter="raw"/>
+				<field name="image17cap" type="textarea" default="" label="Image 17 caption" description="Text for the seventeenth image" filter="raw"/>
+				<field name="color_title17" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title17" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text17" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text17" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />
+				<field name="color_read_more17" type="color" size="07" label="Color of the Read more link" />
+				<field name="image17customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow17" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text17" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow17" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width17" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text17" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text17" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 18" />
+				
+				<field name="image18" type="media" directory="stories" label="Image 18"/>
+				<field name="image18alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image18title" type="text" default="" label="Image 18 title" description="Title for the eighteenth image" filter="raw"/>
+				<field name="image18cap" type="textarea" default="" label="Image 18 caption" description="Text for the eighteenth image" filter="raw"/>
+				<field name="color_title18" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title18" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text18" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text18" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more18" type="color" size="07" label="Color of the Read more link" />
+				<field name="image18customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow18" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text18" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow18" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width18" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text18" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text18" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 19" />
+				
+				<field name="image19" type="media" directory="stories" label="Image 19"/>
+				<field name="image19alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image19title" type="text" default="" label="Image 19 title" description="Title for the eleventeenth image" filter="raw"/>
+				<field name="image19cap" type="textarea" default="" label="Image 19 caption" description="Text for the eleventeenth image" filter="raw"/>
+				<field name="color_title19" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title19" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text19" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text19" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more19" type="color" size="07" label="Color of the Read more link" />
+				<field name="image19customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow19" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text19" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow19" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width19" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text19" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text19" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 20" />
+				
+				<field name="image20" type="media" directory="stories" label="Image 20"/>
+				<field name="image20alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image20title" type="text" default="" label="Image 20 title" description="Title for the twentieth image" filter="raw"/>
+				<field name="image20cap" type="textarea" default="" label="Image 20 caption" description="Text for the twentieth image" filter="raw"/>
+				<field name="color_title20" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title20" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text20" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text20" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more20" type="color" size="07" label="Color of the Read more link" />
+				<field name="image20customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow20" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text20" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow20" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width20" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text20" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text20" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 21" />
+				
+				<field name="image21" type="media" directory="stories" label="Image 21"/>
+				<field name="image21alt" type="text" default="" label="Alt text" description="Optionnal text for this image"/>
+				<field name="image21title" type="text" default="" label="Image 21 title" description="Title for the twenty first image" filter="raw"/>
+				<field name="image21cap" type="textarea" default="" label="Image 21 caption" description="Text for the twenty first image" filter="raw"/>
+				<field name="color_title21" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title21" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text21" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text21" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more21" type="color" size="07" label="Color of the Read more link" />
+				<field name="image21customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow21" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text21" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow21" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width21" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text21" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text21" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+				<field type="spacer" label="Image 22" />
+				
+				<field name="image22" type="media" directory="stories" label="Image 22"/>
+				<field name="image22alt" type="text" default="" label="Alt text" description="Optionnal text for$ this image"/>
+				<field name="image22title" type="text" default="" label="Image 22 title" description="Title for the twenty second image" filter="raw"/>
+				<field name="image22cap" type="textarea" default="" label="Image 22 caption" description="Text for the twenty second image" filter="raw"/>
+				<field name="color_title22" type="color" size="07" label="Color of your title" />	
+				<field name="font_size_title22" type="text" size="6" default="" label="Font size of your title in px or %" description="example : 20px or 110% " />
+				<field name="color_text22" type="color" size="07" label="Color of your text" />
+				<field name="font_size_text22" type="text" size="6" default="" label="Font size of your text in px or %" description="example : 20px or 110% " />	
+				<field name="color_read_more22" type="color" size="07" label="Color of the Read more link" />
+				<field name="image22customlink" type="text" default="" label="link for this image" description=""/>
+				<field name="text_shadow22" type="list" default="default" label="Text shadow" description="" >
+					<option value="default">Default</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+				</field>
+				<field name="bg_text22" type="list" default="default" label="Background of your text" description="">
+						<option value="transparent">Transparent</option>
+						<option value="default">Color of your general settings</option>
+				</field>
+				<field name="bg_caption_shadow22" type="list" default="default" label="Shadow around the background text" description="" >
+					<option value="default">General caption settings</option>
+					<option value="no">No</option>
+					<option value="light">Yes, light</option>
+					<option value="dark">Yes, dark</option>
+					<option value="darker">Yes, dark ++</option>
+				</field>
+				<field name="max_width22" type="text" size="6" default="" label="Maximum width for your text in px" description="" />
+				<field name="position_text22" type="list" default="default" label="Position of your text" description="It's a specific position for this image" >
+					<option value="default">Default</option>
+					<option value="Top Left">Top Left</option>
+					<option value="Top">Top center</option>
+					<option value="Top Right">Top Right</option>
+					<option value="Center Left">Center Left</option>
+					<option value="Center">Center</option>
+					<option value="Center Right">Center Right</option>
+					<option value="Bottom Left">Bottom Left</option>
+					<option value="Bottom">Bottom Center</option>
+					<option value="Bottom Right">Bottom Right</option>
+					<option value="Bottom Full-width">Bottom in full width</option>
+				</field>
+				<field name="anim_text22" type="list" default="default" label="Animation for the text" description="">
+					<option value="default">Default</option>
+					<option value="default">Default</option>
+					<option value="anim-js-slide">Slide</option>
+					<option value="anim-js-slide anim-js-text">Slide and text after</option>
+					<option value="anim-js-zoom">Zoom in</option>
+					<option value="anim-js-zoom anim-js-text">Zoom in and text after</option>
+					<option value="anim-js-flip">Flip</option>
+					<option value="anim-js-flip anim-js-text">Flip and text after</option>
+					<option value="anim-js-rotate">Rotate</option>
+					<option value="anim-js-rotate anim-js-text">Rotate and text after</option>
+					<option value="anim-js-rotate-letters anim-js-text">Rotate title letters</option>
+					<option value="no-animation">No animation</option>
+				</field>
+				
+			</fieldset>
+
+			<fieldset name="imagedirectory" label="Image directory">
+				
+				<field type="spacer" label="Use this option if you want display quickly all the images inside a folder without any text" />
+				
+				<field name="imagefolder" type="folderlist" directory="images/" label="Folder" hide_default="true" description="The folder with your images must be in the folder 'Images' of your Joomla website." />
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+
+				<field name="moduleclass_sfx" type="text" label="Module class suffix"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+				<field name="cache" type="list" default="1" label="Caching"
+				description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" 
+				label="Cache time"
+				description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

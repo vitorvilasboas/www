@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html> <!-- Informa ao navegar que a versão do HTML É A 5 -->
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Formulários </title>       
+    </head>
+
+    <body>
+
+        <!-- Os formulários são utéis, para que os usuários possam enviar 
+        informações para os sites, servidores web etc -->
+
+        <!-- Este comando cria um formulário de interação -->
+        <form name="exemplo_de_formulario" action="index2.php" method="post" enctype="multipart/form-data"> 
+            <!-- name: Cria um nome de identificação para o formulário -->
+            <!-- action: indica para qual lugar os dados do formulário serão enviados
+                         se o action estiver vazio a execução da ação será na mesma pagina -->
+            <!-- method: indica a forma de envio do formulário, seja por post ou get -->
+            <!-- enctype: indica que os dados do formulário contem imagens e texto -->
+
+
+            <!-- label: define um rótulo ao campo do formulário, para que o usuário
+             saiba que tipo de informação se deve colocar naquele campo do formulário -->       
+            <label>
+                Nome: <input type="text" size="50" placeholder="Digite seu nome aqui"> 
+                <!-- size: Define o tamanho do campo -->
+                <!-- type="text": Define que o campo deve ser preenchido com texto  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Senha: <input type="password" size="50" placeholder="Digite a senha aqui">
+                <!-- type="password": Define que o campo deve será preenchido com uma senha  -->
+                <!-- placeholder: Coloca uma dica de preenchimento para o usuário -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Marque para receber e-mails: <input type="checkbox">
+                <!-- type="checkbox":  Define que o campo será caixas de 
+                marcação  -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <label>
+                Masculino: <input type="radio" value="1" name="sexo">
+                Feminino: <input type="radio" value="2" name="sexo">
+                <!-- type="radio":  Define que o campo será caixas de seleção  -->
+                <!-- name: É necessário definir o mesmo valor para o campo name
+                           para evitar que o usuário marque duas caixas ao mesmo tempo -->
+            </label>
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <!-- Criação de botões genéricos com ações definidas por Javascript-->
+            <input type="button" name="realizar algo" value="realizar alguma ação no site">
+            <!-- type="button":  Cria um botão no formulário  -->
+            <!-- name="enviar":  Serve para identificar que o formulário foi enviado  -->
+            <!-- value="ENVIAR FORMULÁRIO":  É o que está escrito dentro do botão  -->
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <!-- Criação de botões de upload (subir arquivo do computador para o site)-->
+            <input type="file" name="upload">
+            <!-- type="button":  Cria um botão no formulário  -->
+            <!-- name="enviar":  Serve para identificar que o formulário foi enviado  -->
+            <!-- value="ENVIAR FORMULÁRIO":  É o que está escrito dentro do botão  -->
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <select>
+                <option value="-1"> Selecione uma opção &nbsp</option>
+                <option value="DG"> Direção Geral &nbsp</option>
+                <option value="GE"> Gerência de Ensino &nbsp</option>
+                <option value="CI"> Coordenação de Informática &nbsp</option>
+                <option value="B"> Biblioteca &nbsp</option>
+            </select>
+            <!-- &nbsp: acrescente um pequeno espaço após a ultima palavra da opção-->
+            <!-- selected="selected": Define um option como escolha padrão -->
+            <!-- disabled="disabled": Desabilita alguma opção -->
+            <!-- multiple="multiple": Permite escolher mais de uma opção-->
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <input type="reset" value="limpar formulário preenchido incorretamente">
+            <!-- type="reset":  Cria um botão que limpa o formulário  -->
+            <!-- value:  É o que está escrito dentro do botão  -->
+
+            <br/> <!-- Insere uma quebra de linha -->
+            <br/> <!-- Insere uma quebra de linha -->
+
+            <input type="submit" value="enviar formulario para o servidor">
+            <!-- type="submit":  Cria um botão que envia os dados para o servidor  -->
+            <!-- value:  É o que está escrito dentro do botão  -->
+
+        </form>
+
+    </body>
+
+</html>
+

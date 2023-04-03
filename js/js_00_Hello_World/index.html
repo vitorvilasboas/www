@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			Meu primeiro  Programa JavaScript - Hello World 
+		</title>
+		
+		<!-- codigo java script abaixo -->
+		<!-- lembrando que se pode colocar em qualquer lugar do documento html -->
+		<!-- por uma questão de organização coloca-se as funções javascript dentro da tag head -->
+		<script>
+			function displayHello() <!-- Declaração de função-->
+				{                   <!-- Java Script e Case Sensitive e diferencia maiusculo de minusculo>
+					document.getElementById("demo").innerHTML = "Hello World!!!"
+				}
+		</script>
+	
+	</head>
+	
+	<body>
+		<h1> Meu Primeiro Programa JavaScript - Hello World</h1>
+		
+		<p id="demo"> Aqui fica um paragrafo. </p>
+		
+		<!-- displayHello é o codigo JavaScript, temos aqui um evento onclick
+             ou seja, quando o usuario clicar neste botão, a função displayHello
+			 será chamada -->
+		<button type="button" onclick="displayHello()"> Hello World </button>
+	</body>
+
+</html>

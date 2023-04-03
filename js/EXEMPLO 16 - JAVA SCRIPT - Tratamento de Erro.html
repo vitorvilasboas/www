@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Tratamento de Erros e exceções em Javascript</title>
+		
+		<script type="text/javascript">
+			function Mostrar_Mensagem()
+			{
+				// Todo o codigo que desejamos capturar o erro, fica entre as chaves
+				try
+				{
+					axxxlert("Hello World");
+				}
+				// err será a variavel que guardará a mensagem de erro
+				// Os erros gerados no bloco try serão manipulados no bloco catch
+				// Para criar mensagens de erro customizadas devemos usar o throw
+				// O catch criará uma mensagem de erro padrão, algo já definido pelo navegador
+				catch(erro)
+				{
+					txt = "Houve um erro nesta página.\n\n";
+					txt += "Erro de sintaxe: " + erro.message;
+					alert(txt);
+				}
+				finally // O Finally será executado de qualquer modo
+				{
+					document.getElementById("saida").innerHTML = "Finally...";
+				}
+				/* O bloco catch e finally são opcionais, entretanto para tratar o erro você precisará
+				    usar o bloco catch*/
+				
+			}
+			
+			function Testar_Throw()
+			{
+				try
+				{
+					var x = document.getElementById("entrada").value;
+					if(x == null ) throw "entrada vazia";
+					if(x>10) throw "entrada acima do permitido";
+					if(x<1) throw "entrada abaixo do permitido";
+				}
+				catch(erro)
+				{
+					alert("Error: " + erro);
+				}
+			}
+		
+		</script>
+	</head>
+
+	<body>
+		<p><button onclick="Mostrar_Mensagem()">Clique aqui para testar o Try... Catch... Finally</button></p>
+		<p id="saida"></p>
+		
+		<br>
+		
+		<p>
+			Por favor informe um numero entre 1 e 10: <br>
+			<input id="entrada" type="number"> <br>
+			<button onclick="Testar_Throw()">OK</button>
+		</p>
+	</body>
+
+</html>

@@ -1,0 +1,283 @@
+
+/**************************************************************************************/
+/*
+/*		Designed by 'AS Designing'
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: GNU/GPL
+/*
+/**************************************************************************************/
+
+/**************************************************************************************/
+/**************************************************************************************/
+/*   Elements
+/**************************************************************************************/
+/**************************************************************************************/
+
+a
+{
+	text-decoration: none;
+	color: #595959;
+}
+
+a:hover,
+a.selected
+{
+	color: #6f9e2e;
+}
+
+
+/**************************************************************************************/
+/*   Headings and Titles															  */
+
+
+aside h3.item_title,
+aside h3.item_title a
+{
+	color: #17A6CA;
+}
+
+aside h3.item_title a:hover
+{
+	color: #333333;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small
+{
+	color: #999999;
+}
+
+
+/**************************************************************************************/
+/*   Images																			  */
+
+aside .item_img img
+{
+	border: 1px solid #666;
+}
+
+
+/**************************************************************************************/
+/*   Social																			  */
+
+
+#header-row .social [class*="icon-"],
+#top-row .social [class*="icon-"]
+{
+	background-color: rgba(0,0,0,0) !important;
+	color:  #bbb !important;
+}
+
+#header-row .social [class*="icon-"]:hover,
+#top-row .social [class*="icon-"]:hover
+{
+	color: #6f9e2e !important;
+}
+
+#footer .social [class*="icon-"]:hover
+{
+	background-color: transparent !important;
+}
+
+#footer-row .moduletable.social li a img
+{
+	background-color: #6f9e2e;
+}
+
+#footer-row .moduletable.social li a:hover img
+{
+	background-color: #6f9e2e;	
+}
+
+
+/**************************************************************************************/
+/*   Gallery																		  */
+
+.page-gallery a.zoom span.zoom-bg,
+.page-item__gallery a.zoom span.zoom-bg
+{
+	
+	background-color: #000;	
+}
+
+
+/**************************************************************************************/
+/*   General
+/**************************************************************************************/
+/**************************************************************************************/
+
+/**************************************************************************************/
+/*   Top Header		  																  */
+
+
+#top-header ul li a:hover,
+#top-header ul li a:active
+{
+	background: #6f9e2e !important;
+}
+
+
+/**************************************************************************************/
+/*   Breadcrumb Row		  															  */
+
+
+#breadcrumbs-row a
+{
+	color: #6f9e2e;	
+}
+
+#breadcrumbs-row a:hover
+{
+	color: #000;	
+}
+
+
+/**************************************************************************************/
+/*   Featured Row		  															  */
+
+
+#featured-row .newsflash-title a:hover
+{
+	color: #6f9e2e;
+}
+
+
+/**************************************************************************************/
+/*   Content
+/**************************************************************************************/
+/**************************************************************************************/
+
+
+.page-item__bottom-border .item_fulltext
+{
+	border-bottom: 5px solid #333;
+}
+
+.pager a
+{
+	border: 0px solid #ddd;
+	
+}
+
+
+.item_info_dl dd
+{
+	border-right: 1px solid #B3B3B3;
+}
+
+
+/**************************************************************************************/
+/*   Blog Pages																		  */
+
+
+.page-blog .items-leading,
+.page-blog .items-row
+{
+	border-bottom: 0px solid #666;		
+}
+
+
+/**************************************************************************************/
+/*   Category Pages																	  */
+
+.page-category__testimonials blockquote
+{
+	border-left: 5px solid #dddddd;		
+}
+
+
+/**************************************************************************************/
+/*   Archive Page																	  */
+
+.page-archive .alert-info
+{
+	background-color: #eeeeee;
+	border: 1px solid #eeeeee;
+}
+
+
+/**************************************************************************************/
+/*   Sidebars
+/**************************************************************************************/
+/**************************************************************************************/
+
+
+#aside-row-1-left ul li a
+{
+	color: #6f9e2e;
+}
+
+aside h2,
+aside .module_title,
+.page-gallery .well,
+aside .module_title
+{
+}
+
+
+aside.mod-newsflash-adv .item_published
+{
+    background: none repeat scroll 0 0 #509BD2;	
+}
+
+
+aside .search form
+{
+	border: 1px solid #D4D4D4;	
+	padding: 5px 5px 5px 10px;
+}
+
+
+
+/**************************************************************************************/
+/*   Content Row 5		  															  */
+
+
+#content-row-5 .moduletable.transparent
+{
+	color: #121212;	
+}
+
+
+/**************************************************************************************/
+/*   Footer
+/**************************************************************************************/
+/**************************************************************************************/
+
+
+#footer-row a:hover
+{
+	color: #6f9e2e;
+}
+
+
+#footer-row .footer-row-separator
+{
+	border-top: 3px solid #878787;	
+}
+
+
+#copyright-menu li
+{
+	border-right: 1px solid #bbbbbb;
+}
+
+#copyright-menu li a
+{
+	color: #bbbbbb;
+}
+
+#copyright-menu li a:hover,
+#copyright-menu li.current a,
+#copyright-menu li.active a
+{
+	color: #6f9e2e;
+}
+
+
+

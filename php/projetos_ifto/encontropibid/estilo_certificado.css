@@ -1,0 +1,103 @@
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+#total{
+    margin:-27px;
+    width: 1122px;
+    height:716px;
+}
+#topo1{
+    background: url(imagens/certificado/topo1.png) no-repeat;
+    height: 54px;
+	margin:-7px;
+}
+#topo2{
+    height: 120px;
+    
+}
+#logo1{
+    margin: 75px 10px 10px 10px;
+    padding:  5px;
+    width: 235px;
+    height: 131px;
+    position: absolute;
+    
+}
+#instituicao{   
+    margin: 75px 10px 10px 200px;
+    padding: 5px;
+    width: 700px;
+    height:66px;
+    position: absolute;
+
+}
+#instituicao p{
+    margin: 1px;
+    font-size: 14px;
+    text-align: center;
+    padding: 1px;
+}
+#logo2{
+    margin: 75px 10px 10px 860px;
+    padding: 5px;
+    width: 230px;
+    height:131px;
+    position:absolute;
+
+}
+
+#nomeevento{
+    font-size: 24px;
+    color: #0099ff;
+    font-weight: bold;
+    text-align: center;
+    height:19px;
+    margin: 190px 10px 10px 350px;
+    padding: 10px;
+    position: absolute;
+}
+#cert{
+    font-size: 50px;
+    color:#009933;
+    font-weight: bold;
+    text-align: center;
+    height:50px;
+    margin: 230px 10px 10px 380px;
+    padding: 10px;
+    position: absolute;
+}
+
+#conteudo_certificado{
+    height:300px;
+    width: 1042px;
+    font-size: 20px; 
+    text-align: justify;
+    margin: 330px 50px 10px 40px;
+    padding: 0px;
+    position: absolute;
+}
+#conteudo_certificado p{
+    word-wrap: break-word;
+}
+#assinaturas{
+    background: url(imagens/certificado/assinaturas.png)no-repeat;
+    width: 1000px;
+    height:66px;
+    margin: 550px 66px 10px 66px;
+    padding: 0px;
+    position: absolute;
+}
+#patrocinadores{
+    background: url(imagens/certificado/patrocinadores.png)no-repeat;
+    width: 1000px;
+    height:130px; 
+    margin: 630px 66px 10px 66px;
+    padding: 0px;
+    position: absolute;
+}
+
+

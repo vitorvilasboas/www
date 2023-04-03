@@ -1,0 +1,280 @@
+/*******************************************************************************************/
+/*
+/*        Designed by 'AS Designing'
+/*        Web: http://www.asdesigning.com
+/*        Web: http://www.astemplates.com
+/*        License: GNU/GPL
+/*
+/*******************************************************************************************/
+
+
+.navigation
+{
+	z-index: 50 !important;
+}
+
+#as-menu
+{
+	position: relative;
+	min-height: 74px;	
+}
+
+#as-menu .as-menu,
+#as-menu .as-menu *
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#as-menu ul.as-menu
+{
+	position: relative;
+	line-height: 1.0;
+}
+
+#as-menu ul.as-menu a
+{
+	display: block;
+	position: relative;
+}
+
+#as-menu ul.as-menu li:hover
+{
+	visibility: inherit;
+}
+
+#as-menu ul.as-menu li
+{
+	float: left;
+	position: relative;
+}
+
+#as-menu ul.as-menu > li,
+#as-menu ul.as-menu > li:hover
+{
+	padding: 0;
+	margin: 0;
+	width: 16.66%;
+	text-align: center;
+	list-style:none;
+}
+
+#as-menu ul.as-menu > li > a, #as-menu ul.as-menu > li > span {
+	padding: 0px !important;
+}
+
+#as-menu ul.as-menu > li.active > a,
+#as-menu ul.as-menu > li.asHover > a,
+#as-menu ul.as-menu > li.current > a,
+#as-menu ul.as-menu > li.active > span,
+#as-menu ul.as-menu > li.asHover > span,
+#as-menu ul.as-menu > li.current > span
+{
+	background: none;
+	color: #E08034;
+}
+
+#as-menu ul.as-menu > li.firstItem,
+#as-menu ul.as-menu > li:first-child
+{
+	background: none repeat scroll 0 0 transparent
+}
+
+#as-menu ul.as-menu > li > a,
+#as-menu ul.as-menu > li > span
+{
+	font-size: 18px;
+	line-height: 20px;
+	color: #F7F7F7;
+	background: none;
+	height: 20px;
+	display: block;
+	font-weight: 400;
+	padding: 27px 1em;
+	text-transform: uppercase;
+}
+
+#as-menu ul.as-menu > li > a:hover,
+#as-menu ul.as-menu > li > span:hover
+{
+	background: none;
+	color: #E08034;
+}
+
+#as-menu ul.as-menu > li > a:hover > span,
+#as-menu ul.as-menu > li > span:hover > span
+{
+	background-position: center bottom !important;
+}
+
+#as-menu ul.as-menu > li.deeper > a
+{
+	position: relative;
+}
+
+#as-menu ul.as-menu > li.deeper > a:after
+{
+	display: inline-block;
+	background: url('../images/dd.arrow.png') left top no-repeat;
+	width: 7px;
+	height: 5px;
+	position: relative;
+	left: 12px;
+	top: -4px;
+	content: "";
+}
+
+#as-menu ul.as-menu li:hover > ul,
+#as-menu ul.as-menu li.asHover > ul
+{
+	top: 75px;
+}
+
+#as-menu ul.as-menu ul
+{
+	width: 191px;
+	display: none;	
+}
+
+#as-menu ul.as-menu ul
+{
+	position: absolute;
+	padding: 12px 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;	
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+#as-menu ul.as-menu li:hover ul,
+#as-menu ul.as-menu li.asHover ul
+{
+	left: 0;
+	top: 75px;
+	z-index: 100;
+}
+
+#as-menu ul.as-menu li:hover li ul,
+#as-menu ul.as-menu li.asHover li ul
+{
+	top: -999em;
+}
+
+#as-menu ul.as-menu ul li
+{
+	width: 100%;
+	margin: 0 0 1px 0;
+	list-style: none;	
+}
+
+#as-menu ul.as-menu ul > li.deeper > a:after
+{
+	display: inline-block;
+	background: url('../images/ddr.arrow.png') left top no-repeat;
+	width: 5px;
+	height: 7px;
+	position: relative;
+	left: 15px;
+	top: -2px;
+	content: "";
+}
+
+#as-menu ul.as-menu ul ul
+{
+	left: 187px !important;
+	top: 5px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;		
+}
+
+#as-menu ul.as-menu ul li.firstItem
+{
+	border: none;
+}
+
+#as-menu ul.as-menu ul li a,
+#as-menu ul.as-menu ul li span
+{
+	text-align: center;
+	font-size: 16px;
+	line-height: 20px;
+	color: #464646;
+	background: none;
+	display: block;
+	padding: 0.5em 1em 0.3em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#as-menu ul.as-menu ul li a:hover,
+#as-menu ul.as-menu ul li span:hover,
+#as-menu ul.as-menu ul li.active > a,
+#as-menu ul.as-menu ul li.asHover > a,
+#as-menu ul.as-menu ul li.active > span,
+#as-menu ul.as-menu ul li.asHover > span
+{
+	color: #E08034;
+}
+
+
+#as-menu ul.as-menu li li:hover ul,
+#as-menu ul.as-menu li li.asHover ul
+{
+	left: 10em;
+	top: 0;
+}
+
+#as-menu ul.as-menu li li:hover li ul,
+#as-menu ul.as-menu li li.asHover li ul
+{
+	top: -999em;
+}
+
+#as-menu ul.as-menu li li:hover ul,
+#as-menu ul.as-menu li li.asHover ul
+{
+	top: -1em;
+	left: 191px;
+}
+
+#as-menu ul.as-menu li li li:hover ul,
+#as-menu ul.as-menu li li li.asHover ul
+{
+	top: -1em;
+	left: 191px;
+}
+
+@media (min-width: 768px) 
+{
+	.select-menu
+	{
+		display: none;
+	}
+}
+
+@media (max-width: 767px) 
+{
+	#as-menu
+	{
+		min-height: auto;	
+	}
+	
+	.select-menu
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	#as-menu .as-menu
+	{
+		display: none;
+	}	
+}

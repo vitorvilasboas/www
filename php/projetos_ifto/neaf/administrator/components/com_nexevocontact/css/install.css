@@ -1,0 +1,64 @@
+.install_logo {
+	float: left;
+	margin: 16px;
+}
+
+html[dir="rtl"] .install_logo {
+	float: right;
+}
+
+.install_container {
+	display: table;
+}
+
+.install_row {
+	display: table-row;
+}
+
+.install_icon {
+	display: table-cell;
+	padding: 0 20px;
+	background-repeat: no-repeat;
+	background-position: left 50%;
+	line-height: 18px;
+}
+
+html[dir="rtl"] .install_icon {
+	background-position: right 50%;
+}
+
+
+.install_title {
+	line-height: 60px;
+	display: table-cell;
+}
+
+.install_component {
+	background-image: url("../../../../media/com_nexevocontact/images/component.png");
+}
+
+.install_module {
+	background-image: url("../../../../media/com_nexevocontact/images/module.png");
+}
+
+.install_plugin {
+	background-image: url("../../../../media/com_nexevocontact/images/pluginsmall.png");
+}
+
+.install_library {
+	background-image: url("../../../../media/com_nexevocontact/images/library.png");
+}
+
+.install_language {
+	
+}
+
+.install_success {                                                    
+	font-weight: bold;
+}                                                              
+.install_error {
+	background-image: url("../../../../media/com_nexevocontact/images/cross-small.png");
+	color: #b02020;
+	font-weight: bold;
+}
+

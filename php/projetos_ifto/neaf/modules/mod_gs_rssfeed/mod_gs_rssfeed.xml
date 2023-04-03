@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+  <name>mod_gs_rssfeed</name>
+  <author>GeneticsPro</author>
+  <creationDate>Jun 2016</creationDate>
+  <copyright>Copyright (C) 2007 - 2016 Open Source Matters. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>admin@geneticspro.net</authorEmail>
+  <authorUrl>www.geneticspro.net</authorUrl>
+  <version>1.1</version>
+  <description>MOD_GS_RSSFEED_XML_DESCRIPTION</description>
+  
+  <files>
+    <filename module="mod_gs_rssfeed">mod_gs_rssfeed.php</filename>
+    <folder>images</folder>
+	<folder>tmpl</folder>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+    <filename>mod_gs_rssfeed.xml</filename>
+  </files>
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_gs_rssfeed.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_gs_rssfeed.sys.ini</language>
+	<language tag="ru-RU">ru-RU/ru-RU.mod_gs_rssfeed.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_gs_rssfeed.sys.ini</language>
+	<language tag="uk-UA">uk-UA/uk-UA.mod_gs_rssfeed.ini</language>
+    <language tag="uk-UA">uk-UA/uk-UA.mod_gs_rssfeed.sys.ini</language>
+  </languages>
+  
+  <config>
+    <fields name="params">
+      
+	  <!--MODULE-->
+	  <fieldset name="basic">
+        <!--Feed URL-->
+        <field name="rssurl" type="text" default="" required="true"
+			label="MOD_GS_RSSFEED_FIELD_RSSURL_LABEL"
+			description="MOD_GS_RSSFEED_FIELD_RSSURL_DESC" />
+        <!--Number of elements-->
+        <field name="rssitems" type="text" default="5"
+			class="input-small"
+			label="MOD_GS_RSSFEED_FIELD_ITEMS_LABEL"
+			description="MOD_GS_RSSFEED_FIELD_ITEMS_DESC" />
+		<!--Number of characters-->
+		<field name="countitem" type="text" default="0"
+			class="input-small"
+			label="MOD_GS_RSSFEED_FIELD_COUNTITEM_LABEL"
+			description="MOD_GS_RSSFEED_FIELD_COUNTITEM_DESC" />
+      </fieldset>
+	  
+	  <!--TEMPLATE RSS-->
+	  <fieldset name="TEMPLATE">
+		<!--Tags RSS-->
+		<field name="template_note" type="note" description="MOD_GS_RSSFEED_FIELD_TEMPLATE_NOTE" />
+		<!--Custom template-->
+		<field name="custom_template" type="editor"
+			default="&lt;h4&gt;{title}&lt;/h4&gt;&lt;p&gt;{text}&lt;/p&gt;&lt;p&gt;&lt;small&gt;{author_name} ({author_email})&lt;/small&gt;&lt;/p&gt;&lt;p style=&quot;text-align: right;&quot;&gt;{date_day}.{date_month}.{date_year}&lt;/p&gt;&lt;hr /&gt;"
+			label="MOD_GS_RSSFEED_FIELD_CUSTOM_LABEL"
+			description="MOD_GS_RSSFEED_FIELD_CUSTOM_DESC"
+			filter="raw" buttons="no" />
+	  </fieldset>
+	  
+	  <!--ADVANCED OPTIONS-->
+	  <fieldset name="advanced">
+		<field name="layout" type="modulelayout"
+			label="JFIELD_ALT_LAYOUT_LABEL"
+			description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+		<field name="moduleclass_sfx" type="textarea" rows="3"
+			label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+			description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="cache" type="list" default="1"
+			label="COM_MODULES_FIELD_CACHING_LABEL"
+			description="COM_MODULES_FIELD_CACHING_DESC">
+		  <option value="1">JGLOBAL_USE_GLOBAL</option>
+		  <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache_time" type="text" default="900"
+			label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+			description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+	  </fieldset>
+	  
+    </fields>
+  </config>
+  
+  <!-- UPDATESERVER DEFINITION -->
+  <updateservers>
+	<server type="extension" priority="1" name="gsRSSFeed Update">http://www.geneticspro.net/gs_updates/mod_gs_rssfeed.xml</server>
+  </updateservers>
+</extension>

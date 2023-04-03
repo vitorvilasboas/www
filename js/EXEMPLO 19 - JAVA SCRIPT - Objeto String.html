@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Objeto String </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript">
+			
+			function Testa_String1()
+			{
+				var name = "Tapa na gorduchinha";
+				var character = name[9]; // Pegando a posição nove da string 
+				alert(character);
+			}
+			
+			function Testa_String2()
+			{
+				var name = "Eu";
+				var x = name.length; // Pegando o tamanho da string
+				alert(x);
+			}
+			
+			function Testa_String3()
+			{
+				var str = "Escola Sobreviventes da Cantina do IFMA";
+				var n = str.indexOf("Cantina"); // Retorna a posição em que se iniciar a palavra cantina
+				alert(n);
+			}
+		
+		</script>
+	</head>
+	<body>
+		<p> <button onclick="Testa_String1()">Clique aqui para testar o 1º objeto de string</button> </p>
+		
+		<p>	<button onclick="Testa_String2()">Clique aqui para testar o 2º objeto de string</button> </p>
+		
+		<p>	<button onclick="Testa_String3()">Clique aqui para testar o 3º objeto de string</button> </p>
+	</body>
+	
+</html>

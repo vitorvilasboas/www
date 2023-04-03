@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Objeto Date</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript">
+		
+			function Testa_Data1()
+			{
+				var data_atual = new Date(); // Coletando a data atual do computador
+				alert(data_atual);
+			}
+			
+			function Testa_Data2()
+			{
+				var d = new Date();
+				alert(d.getFullYear()); // Coletando apenas o ano
+			}
+			
+			function Testa_Date3()
+			{
+				var d = new Date();
+				d.setFullYear(2100,6,13); // Setando uma nova data para o objeto date
+				alert(d);
+			}
+		
+		</script>
+	</head>
+	<body>
+		<p>	<button onclick="Testa_Data1()">Clique aqui para testar o 1º objeto de data</button> </p>
+		
+		<p>	<button onclick="Testa_Data2()">Clique aqui para testar o 2º objeto de data</button> </p>
+		
+		<p>	<button onclick="Testa_Data3()">Clique aqui para testar o 3º objeto de data</button> </p>
+
+	</body>
+</html>

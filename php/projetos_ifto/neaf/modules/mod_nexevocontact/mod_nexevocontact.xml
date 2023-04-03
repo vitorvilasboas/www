@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>MOD_NEXEVOCONTACT</name>
+	<creationDate>12 Nov 2015</creationDate>
+	<author>Nexevo Technologies</author>
+	<authorEmail>info@nexevo.in</authorEmail>
+	<authorUrl>http://www.nexevo.in/</authorUrl>
+	<copyright>Nexevo Technologies</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.1</version>
+	<description>MOD_NEXEVOCONTACT_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_nexevocontact">mod_nexevocontact.php</filename>
+		<filename>mod_nexevocontact.inc</filename>
+		<filename>mod_nexevocontact.xml</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+		<folder>tmpl</folder>
+		<folder>helpers</folder>
+	</files>
+
+
+	<languages folder="language">
+	
+		<language tag="en-GB">en-GB/en-GB.mod_nexevocontact.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_nexevocontact.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_nexevocontact.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_nexevocontact.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_nexevocontact.ini</language>
+		<language tag="ms-MY">ms-MY/ms-MY.mod_nexevocontact.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.mod_nexevocontact.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_nexevocontact.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.mod_nexevocontact.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_nexevocontact.ini</language>
+		
+		<language tag="it-IT">it-IT/it-IT.mod_nexevocontact.sys.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_nexevocontact.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_nexevocontact.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_nexevocontact.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_nexevocontact.sys.ini</language>
+		<language tag="ms-MY">ms-MY/ms-MY.mod_nexevocontact.sys.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.mod_nexevocontact.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_nexevocontact.sys.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.mod_nexevocontact.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_nexevocontact.sys.ini</language>
+		
+
+	</languages>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_nexevocontact/models/fields">
+
+			<fieldset name="delivery" label="COM_NEXEVOCONTACT_MESSAGE_DELIVERY_LBL">
+				<field type="nenvironment"/>
+				<field type="ntranschecker"/>
+				<field type="nheader" default="COM_NEXEVOCONTACT_EMAIL_OPTIONS_LBL" />
+				<!-- translate_default="1" doesn't work for the module -->
+				<field name="to_address" type="ntext" size="26" label="COM_NEXEVOCONTACT_EMAIL_TO" description="COM_NEXEVOCONTACT_EMAIL_TO_DSC" wizard="COM_NEXEVOCONTACT_TOADDRESS_DFLT" required="true"/>
+				<field name="cc_address" type="text" size="26" label="COM_NEXEVOCONTACT_EMAIL_CC_LBL" description="COM_NEXEVOCONTACT_EMAIL_CC_DSC"/>
+				<field name="bcc_address" type="text" size="26" label="COM_NEXEVOCONTACT_EMAIL_BCC_LBL" description="COM_NEXEVOCONTACT_EMAIL_BCC_DSC"/>
+				<field name="email_subject" type="ntext" size="26" label="COM_NEXEVOCONTACT_SUBJECT" description="COM_NEXEVOCONTACT_EMAIL_SUBJECT_DSC" wizard="COM_NEXEVOCONTACT_SUBJECT_DFLT"/>
+			</fieldset>
+
+			<fieldset name="fields" label="COM_NEXEVOCONTACT_FIELDS_LBL">
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_PAGE_OPTIONS_LBL"/>
+				<field name="page_subheading" type="ntext" filter="raw" size="26" label="COM_NEXEVOCONTACT_SUBHEADING_LBL" description="COM_NEXEVOCONTACT_SUBHEADING_DSC" wizard="COM_NEXEVOCONTACT_SUBHEADING_DFLT"/>
+				<field type="selext" name="form__width" label="COM_NEXEVOCONTACT_FORM_WIDTH_LBL" description="COM_NEXEVOCONTACT_SIZE" size="4" default="|auto">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="%">COM_NEXEVOCONTACT_PERCENT</option>
+					<option value="auto">COM_NEXEVOCONTACT_AUTOMATIC</option>
+				</field>
+				<field name="customhtml0" type="ntextarea" filter="raw" rows="4" cols="48" label="COM_NEXEVOCONTACT_TEXT_TOP_LBL" description="COM_NEXEVOCONTACT_TEXT_TOP_DSC" wizard="COM_NEXEVOCONTACT_TOPTEXT_DFLT"/>
+				<field name="customhtml0display" type="hidden" default="1"/>
+				<field name="customhtml0order" type="hidden" default="-1000"/>
+				<field name="customhtml1" type="ntextarea" filter="raw" rows="4" cols="48" label="COM_NEXEVOCONTACT_TEXT_BOTTOM_LBL" description="COM_NEXEVOCONTACT_TEXT_BOTTOM_DSC" wizard="COM_NEXEVOCONTACT_BOTTOMTEXT_DFLT"/>
+				<field name="customhtml1display" type="hidden" default="1"/>
+				<field name="customhtml1order" type="hidden" default="1000"/>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_LABELS_LBL"/>
+				<field name="labelsdisplay" type="list" label="COM_NEXEVOCONTACT_LABELS_LAYOUT_LBL" default="0">
+					<option value="1">COM_NEXEVOCONTACT_LABELS_OUTSIDE</option>
+					<option value="0">COM_NEXEVOCONTACT_LABELS_INSIDE</option>
+				</field>
+				<field name="form_layout" type="list" label="COM_NEXEVOCONTACT_FORM_LAYOUT_LBL" description="COM_NEXEVOCONTACT_FORM_LAYOUT_DSC" default="stacked">
+					<option value="compact">COM_NEXEVOCONTACT_COMPACT</option>
+					<option value="extended">COM_NEXEVOCONTACT_EXTENDED</option>
+					<option value="stacked">COM_NEXEVOCONTACT_STACKED</option>
+					<option value="inline">COM_NEXEVOCONTACT_INLINE</option>
+					<option value="centered">COM_NEXEVOCONTACT_CENTERED</option>
+				</field>
+				<field type="selext" name="labels__width" label="COM_NEXEVOCONTACT_LABELS_WIDTH_LBL" description="COM_NEXEVOCONTACT_LABELS_WIDTH_DSC" size="4" default="230|px">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="%">COM_NEXEVOCONTACT_PERCENT</option>
+				</field>
+				<field type="nheader" default="COM_NEXEVOCONTACT_SPECIAL_FIELDS_LBL"/>
+
+				<field name="sender0" type="ntext" size="26" label="COM_NEXEVOCONTACT_NAME_REQUEST_LBL" description="" wizard="COM_NEXEVOCONTACT_YOUR_NAME_DFLT"/>
+				<field name="sender0display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="2">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="sender0order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="1"/>
+				<field type="spacer"/>
+
+				<field name="sender1" type="ntext" size="26" label="COM_NEXEVOCONTACT_ADDRESS_REQUEST_LBL" description="" wizard="COM_NEXEVOCONTACT_YOUR_EMAIL_DFLT"/>
+				<field name="sender1display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="2">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="sender1order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="2"/>
+				<field name="sender1isemail" type="hidden" default="1"/>
+				<field type="spacer"/>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_TEXTFIELDS_LBL"/>
+
+				<field name="text0" type="ntext" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26" wizard="COM_NEXEVOCONTACT_TEXT0_DFLT"/>
+				<field name="text0display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="1">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text0order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="3"/>
+				<field type="spacer"/>
+
+				<field name="text1" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="text1display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text1order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="4"/>
+				<field type="spacer"/>
+
+				<field name="text2" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="text2display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text2order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="5"/>
+				<field type="spacer"/>
+
+				<field name="text3" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="text3display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text3order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="7"/>
+				<field type="spacer"/>
+
+				<field name="text4" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="text4display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text4order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="8"/>
+				<field type="spacer"/>
+
+				<field name="text5" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="text5display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="text5order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="9"/>
+				<field type="spacer"/>
+				<field type="selext" name="text__width" label="COM_NEXEVOCONTACT_WIDTH_LBL" description="COM_NEXEVOCONTACT_SIZE" size="4" default="85|%">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="%">COM_NEXEVOCONTACT_PERCENT</option>
+				</field>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_DROPDOWNFIELDS_LBL"/>
+
+				<field name="dropdown0" type="ntext" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26" wizard="COM_NEXEVOCONTACT_DROPDOWN0_DFLT"/>
+				<field name="dropdown0display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="dropdown0values" type="ntextarea" rows="3" cols="30" label="COM_NEXEVOCONTACT_DROPDOWNITEMS_LBL" description="COM_NEXEVOCONTACT_DROPDOWNITEMS_DSC" wizard="COM_NEXEVOCONTACT_DROPDOWN0V_DFLT"/>
+				<field name="dropdown0order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="10"/>
+				<field type="spacer"/>
+
+				<field name="dropdown1" type="text" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26"/>
+				<field name="dropdown1display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="0">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="dropdown1values" type="textarea" rows="3" cols="30" label="COM_NEXEVOCONTACT_DROPDOWNITEMS_LBL" description="COM_NEXEVOCONTACT_DROPDOWNITEMS_DSC"/>
+				<field name="dropdown1order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="11"/>
+				<field type="spacer"/>
+				<field type="selext" name="dropdown__width" label="COM_NEXEVOCONTACT_WIDTH_LBL" description="COM_NEXEVOCONTACT_SIZE" size="4" default="85|%">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="%">COM_NEXEVOCONTACT_PERCENT</option>
+				</field>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_TEXTAREAFIELD_LBL" description="COM_NEXEVOCONTACT_TEXTAREAFIELD_DSC"/>
+
+				<field name="textarea0" type="ntext" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26" wizard="COM_NEXEVOCONTACT_TEXTAREA0_DFLT"/>
+				<field name="textarea0display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="1">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="textarea0order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="12"/>
+				<field type="spacer"/>
+				<field type="selext" name="textarea__width" label="COM_NEXEVOCONTACT_WIDTH_LBL" description="" size="4" default="85|%">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="%">COM_NEXEVOCONTACT_PERCENT</option>
+				</field>
+				<field type="selext" name="textarea__height" label="COM_NEXEVOCONTACT_HEIGHT_LBL" description="" size="4" default="120|px">
+					<option value="px">COM_NEXEVOCONTACT_PIXELS</option>
+					<option value="auto">COM_NEXEVOCONTACT_AUTOMATIC</option>
+				</field>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_CHECKBOXFIELDS_LBL"/>
+
+				<field name="checkbox0" type="ntext" filter="raw" label="COM_NEXEVOCONTACT_FIELDNAME_LBL" description="COM_NEXEVOCONTACT_FIELDNAME_DSC" size="26" wizard="COM_NEXEVOCONTACT_CHECKBOX0_DFLT"/>
+				<field name="checkbox0display" type="list" label="COM_NEXEVOCONTACT_FIELD_STATE" description="JFIELD_ENABLED_DESC" default="1">
+					<option value="0">JDISABLED</option>
+					<option value="1">JOPTION_OPTIONAL</option>
+					<option value="2">JOPTION_REQUIRED</option>
+				</field>
+				<field name="checkbox0order" type="text" label="JFIELD_ORDERING_LABEL" description="" size="5" default="13"/>
+				<field type="spacer"/>
+				<field type="nheader" default="COM_NEXEVOCONTACT_UPLOAD_LBL" description="" />
+				<field name="uploaddisplay" type="list" label="COM_NEXEVOCONTACT_UPLOAD_ENABLED_LBL" description="COM_NEXEVOCONTACT_UPLOAD_ENABLED_DSC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="uploadmethod" type="list" label="COM_NEXEVOCONTACT_UPLOAD_METHOD_LBL" description="COM_NEXEVOCONTACT_UPLOAD_METHOD_DSC" default="2">
+					<option value="1">COM_NEXEVOCONTACT_UPLOAD_METHOD_LINK</option>
+					<option value="2">COM_NEXEVOCONTACT_UPLOAD_METHOD_ATTACH</option>
+					<option value="3">COM_NEXEVOCONTACT_UPLOAD_METHOD_BOTH</option>
+				</field>
+
+				<field name="upload" type="ntext" filter="raw" label="COM_NEXEVOCONTACT_UPLOAD_FIELD_LBL" description="" wizard="COM_NEXEVOCONTACT_UPLOAD_FIELD_DFLT"/>
+				<field name="uploadmax_file_size" type="text" label="COM_NEXEVOCONTACT_UPLOAD_MAXSIZE_LBL" description="COM_NEXEVOCONTACT_UPLOAD_MAXSIZE_DSC" default="102400" size="5"/>
+
+				<field type="nconditionalwarninglabel" description="" default="COM_NEXEVOCONTACT_FUNCTION_DISABLED"  triggerkey="mimefilter" triggervalue="disabled" triggerdata=""/>
+
+				<field name="upload_filter" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_FILTER_LBL" description="COM_NEXEVOCONTACT_UPLOAD_FILTER_DSC" default="1" triggerkey="mimefilter" triggervalue="disabled" triggerdata="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="spacer" class="text" label="COM_NEXEVOCONTACT_UPLOAD_RULES_LBL" description=""/>
+				<field name="upload_audio" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_AUDIO_LBL" description="COM_NEXEVOCONTACT_UPLOAD_AUDIO_DSC" default="0"  triggerkey="mimefilter" triggervalue="disabled" triggerdata="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="upload_video" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_VIDEO_LBL" description="COM_NEXEVOCONTACT_UPLOAD_VIDEO_DSC" default="0" triggerkey="mimefilter" triggervalue="disabled" triggerdata="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="upload_images" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_IMAGES_LBL" description="COM_NEXEVOCONTACT_UPLOAD_IMAGES_DSC" default="1" triggerkey="mimefilter" triggervalue="disabled" triggerdata="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="upload_documents" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_DOCUMENTS_LBL" description="COM_NEXEVOCONTACT_UPLOAD_DOCUMENTS_DSC" default="1" triggerkey="mimefilter" triggervalue="disabled" triggerdata="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="upload_archives" type="nconditionallist" label="COM_NEXEVOCONTACT_UPLOAD_ARCHIVES_LBL" description="COM_NEXEVOCONTACT_UPLOAD_ARCHIVES_DSC" default="1" triggerkey="mimefilter" triggervalue="disabled" triggerdata="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_SUBMIT_BUTTON_LBL"/>
+				<field name="submittext" type="ntext" size="26" label="COM_NEXEVOCONTACT_SUBMIT_TEXT_LBL" description="COM_NEXEVOCONTACT_SUBMIT_TEXT_DSC" wizard="JSUBMIT"/>
+				<field name="submittype" type="list" label="COM_NEXEVOCONTACT_SUBMIT_TYPE_LBL" description="COM_NEXEVOCONTACT_SUBMIT_TYPE_DSC" default="0">
+					<option value="0">COM_NEXEVOCONTACT_BUTTON</option>
+					<option value="1">COM_NEXEVOCONTACT_INPUT</option>
+				</field>
+				<field type="nheader" default="COM_NEXEVOCONTACT_RESET_BUTTON_LBL"/>
+				<field name="resetbutton" type="radio" default="0" label="COM_NEXEVOCONTACT_ENABLED">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="resettext" type="ntext" size="26" label="COM_NEXEVOCONTACT_SUBMIT_TEXT_LBL" description="COM_NEXEVOCONTACT_SUBMIT_TEXT_DSC" wizard="COM_NEXEVOCONTACT_RESET"/>
+				<field name="resettype" type="list" label="COM_NEXEVOCONTACT_SUBMIT_TYPE_LBL" description="COM_NEXEVOCONTACT_SUBMIT_TYPE_DSC" default="0">
+					<option value="0">COM_NEXEVOCONTACT_BUTTON</option>
+					<option value="1">COM_NEXEVOCONTACT_INPUT</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="events" label="COM_NEXEVOCONTACT_EVENTS_LBL">
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_EVENTS_TEXT_LBL"/>
+				<field name="email_sent_action" type="list" label="COM_NEXEVOCONTACT_THANKYOU_ACTION_LBL" description="COM_NEXEVOCONTACT_THANKYOU_ACTION_DSC" default="0">
+					<option value="0">COM_NEXEVOCONTACT_THANKYOU_ACTION_SHOWMSG</option>
+					<option value="1">COM_NEXEVOCONTACT_THANKYOU_ACTION_REDIRECT</option>
+					<option value="2">COM_NEXEVOCONTACT_THANKYOU_ACTION_REFRESH</option>
+				</field>
+				<field name="email_sent_text" type="ntextarea" filter="raw" rows="4" cols="48" label="COM_NEXEVOCONTACT_THANKYOU_TEXT_LBL" description="COM_NEXEVOCONTACT_THANKYOU_TEXT_DSC" wizard="COM_NEXEVOCONTACT_SENTTEXT_DFLT"/>
+				<field name="email_sent_textdisplay" type="hidden" default="1"/>
+				<field name="email_sent_page" type="menuitem" label="COM_NEXEVOCONTACT_THANKYOU_PAGE_LBL" description="COM_NEXEVOCONTACT_THANKYOU_PAGE_DSC"/>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_EMAIL_COPY_TTL"/>
+				<field name="copy_to_submitter" type="list" label="COM_NEXEVOCONTACT_EMAIL_COPY_LBL" description="COM_NEXEVOCONTACT_EMAIL_COPY_DSC" default="1">
+					<option value="0">COM_NEXEVOCONTACT_NEVER</option>
+					<option value="1">COM_NEXEVOCONTACT_ALWAYS</option>
+					<option value="2">COM_NEXEVOCONTACT_ON_REQUEST</option>
+				</field>
+				<field name="email_copy_subject" type="ntext" size="26" label="COM_NEXEVOCONTACT_EMAIL_SUBJECT_LBL" wizard="COM_NEXEVOCONTACT_EMAIL_COPY_SUBJECT_DFLT"/>
+				<field name="email_copy_text" type="ntextarea" rows="4" cols="48" label="COM_NEXEVOCONTACT_THANKYOU_TEXT_LBL" wizard="COM_NEXEVOCONTACT_SENTTEXT_DFLT"/>
+				<field name="email_copy_summary" type="list" label="COM_NEXEVOCONTACT_EMAIL_COPY_SUMMARY_LBL" description="COM_NEXEVOCONTACT_EMAIL_COPY_SUMMARY_DSC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="security" label="COM_NEXEVOCONTACT_SECURITY_LBL">
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_ANTISPAM_LBL" description="COM_NEXEVOCONTACT_ANTISPAM_DSC" />
+				<field name="spam_check" type="list" label="COM_NEXEVOCONTACT_ANTISPAM_ENABLED_LBL" description="" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="spam_words" type="ntextarea" cols="30" rows="3" label="COM_NEXEVOCONTACT_ANTISPAM_WORDS_LBL" description="COM_NEXEVOCONTACT_ANTISPAM_WORDS_DSC" wizard="COM_NEXEVOCONTACT_SPAMWORDS_DFLT"/>
+
+				<field name="spam_detected_text" type="ntextarea" rows="4" cols="48" filter="raw" label="COM_NEXEVOCONTACT_ANTISPAM_MESSAGE_LBL" description="COM_NEXEVOCONTACT_ANTISPAM_MESSAGE_DSC" wizard="COM_NEXEVOCONTACT_SPAMTEXT_DFLT"/>
+				<field name="spam_detected_textdisplay" type="hidden" default="1"/>
+
+				<field type="nheader" default="COM_NEXEVOCONTACT_STDCAPTCHA_LBL" />
+				<field type="nconditionalwarninglabel" description="" default="COM_NEXEVOCONTACT_FUNCTION_DISABLED" triggerkey="captchadrawer" triggervalue="disabled" triggerdata="http://nexevo.in"/>
+
+				<field name="stdcaptchadisplay" type="nconditionallist" label="COM_NEXEVOCONTACT_STDCAPTCHA_ENABLED_LBL" description="" default="0" triggerkey="captchadrawer" triggervalue="disabled" triggerdata="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="stdcaptcha" type="ntext" label="COM_NEXEVOCONTACT_STDCAPTCHA_FIELD_LBL" description="" wizard="COM_NEXEVOCONTACT_STDCAPTCHA_FIELD_DFLT"/>
+
+				<field name="stdcaptchatype" type="list" label="COM_NEXEVOCONTACT_STDCAPTCHATYPE_LBL" description="" default="0">
+					<option value="0">COM_NEXEVOCONTACT_STDCAPTCHATYPE_STD</option>
+					<option value="1">COM_NEXEVOCONTACT_STDCAPTCHATYPE_MATH</option>
+				</field>
+
+				<field name="stdcaptcha_length" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_CHARS_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_CHARS_DSC" default="5" size="5"/>
+
+				<field name="stdcaptchawidth" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_WIDTH_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_WIDTH_DSC" default="150" size="5"/>
+				<field name="stdcaptchaheight" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_HEIGHT_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_HEIGHT_DSC" default="50" size="5"/>
+
+<!-- 				<field name="stdcaptchafont" type="filelist" label="COM_NEXEVOCONTACT_STDCAPTCHA_FONT_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_FONT_DSC" default="" directory="media/com_nexevocontact/fonts" filter="\.ttf$" exclude="" stripext="" hide_default="true"/>
+				<field name="stdcaptchafontmin" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_MINSIZE_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_MINSIZE_DSC" default="14" size="5"/>
+				<field name="stdcaptchafontmax" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_MAXSIZE_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_MAXSIZE_DSC" default="20" size="5"/>
+				<field name="stdcaptchaangle" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_ANGLE_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_ANGLE_DSC" default="20" size="5"/>
+
+				<field name="stdcaptcha_backgroundcolor" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_BACKGROUND_COLOR_LBL" default="#c0e2eb" size="5"/>
+				<field name="stdcaptcha_textcolor" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_TEXT_COLOR_LBL" default="#000000" size="5"/>
+				<field name="stdcaptcha_disturbcolor" type="text" label="COM_NEXEVOCONTACT_STDCAPTCHA_DISTURB_COLOR_LBL" description="COM_NEXEVOCONTACT_STDCAPTCHA_DISTURB_COLOR_DSC" default="#c8c8c8" size="5"/> -->
+
+			</fieldset>
+			
+
+		</fields>
+	</config>
+</extension>

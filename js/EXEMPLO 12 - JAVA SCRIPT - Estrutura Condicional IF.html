@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Estrutura condicional IF</title>
+	
+		<script type="text/javascript">
+	
+			function testIf()
+			{
+				var x = 9;
+				var y = 10;
+				var result;
+			
+				if(x == y) // Se condição verdadeira, executa o que está na 1º chave
+				{
+					result = "x igual y";
+				}
+				else // Se condição no if acima for falsa, o codigo abaixo será executado
+				{
+					result = "x não é igual y";
+				}
+			
+				document.getElementById("demo").innerHTML = result;
+			}
+	
+		</script>
+	</head>
+
+	<body>
+		<!-- Criando um botão -->
+		<p><button onclick="testIf()">Clique aqui para testar o resultado do IF</button></p>
+		
+		
+		<p><span id="demo" name="demo"> O Resultado fica aqui !</span></p>
+
+	</body>
+
+</html>

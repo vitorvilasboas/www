@@ -1,0 +1,299 @@
+/***************************************************************************************/
+/*
+/*		Author: AS Designing
+/*		Author URI: http://www.asdesigning.com
+/*		Theme URI: http://www.astemplates.com
+/*		
+/*		Note: Design for a width of 480px - Mobile (Landscape)
+/*
+/***************************************************************************************/
+
+@media (max-width: 479px) 
+{
+	#logo a img
+	{
+		width: auto;
+	}
+	
+	#logo a
+	{
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+	
+	#logo span.slogan
+	{
+		display: block !important;
+		text-align: center;
+		clear: both;
+		width: 100%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 0px;
+		left: 0;
+	}
+	
+	#toprow-wrapper
+	{
+		padding: 0px;
+	}
+	
+	#header-row .moduletable.navigation 
+	{
+		margin: 15px 0px 0px;
+		width: 100%;
+	}
+	
+	#header-row .moduletable.navigation #as-menu
+	{
+		min-height: 40px;
+	}
+	
+	#header-row .moduletable.social 
+	{
+    	margin: 10px 0 20px;
+	}
+
+	#slider-row .container
+	{
+		padding: 20px 0 0;
+		margin-bottom: 10px;
+	}
+	
+	#slider-row .moduletable.slider 
+	{
+		margin-bottom: 0px;	
+	}
+	
+	.camera_caption a.readmore
+	{
+		padding: 0px 10px 0px 10px;
+		font-size: 20px;
+		top: 20px;
+	}
+	
+	.camera_caption a.readmore span
+	{
+		display: none !important;
+	}
+		
+	#header-row .mod-search_searchword
+	{
+		width: 175px;
+	}
+	
+	#featured-row .mod-newsflash h2, 
+	#featured-row .mod-newsflash h3, 
+	#featured-row .mod-newsflash h4, 
+	#featured-row .mod-newsflash h5 
+	{
+		text-align: center;
+		font-size: 20px;
+	}
+
+	#featured-row .top .mod-newsflash .item, 
+	#featured-row .top .mod-custom 
+	{
+		padding: 35px;
+	}
+	
+	
+	#content-row-5 .mod-newsflash-adv .item
+	#content-row-6 .mod-newsflash-adv .item
+	{
+		padding: 40px 20px;
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+	
+	.mod-newsflash-adv__links .item__module,
+	#featured-row  .mod-newsflash-adv .item
+	{
+		width: 100% !important;
+		margin: 0 0 20px;
+		float: none;
+	}
+	
+			
+	.img-full__left
+	{
+		float: none !important;
+		margin: 0 0 9px 0 !important;
+		width: 100%;
+	}
+	
+	.page-category.page-category__testimonials .img-intro__left, 
+	.img-intro__left, .img-full__left, .pull-left img, img.left
+	{
+		max-width: 100%;
+		float: none;
+	}
+	
+	.page-registration form input,
+	.page-remind form input,
+	.page-reset form input,
+	.page-login form input,
+	.page-login form input,
+	.page-profile__edit form input,
+	.page-registration form select,
+	.page-remind form select,
+	.page-reset form select,
+	.page-login form select,
+	.page-login form select,
+	.page-profile__edit form select
+	{
+		width: 100%;
+	}
+	
+	.page-registration form label,
+	.page-remind form label,
+	.page-reset form label,
+	.page-login form label,
+	.page-login form label,
+	.page-profile__edit form label
+	{
+		display: inline-block;
+	}
+	
+	.nspArt
+	{
+		width: 100% !important;
+	}
+	
+	.nspArt img.nspImage
+	{
+	}
+	
+	#phocagallery-module-ri .mosaic 
+	{
+    	width: 100% !important;
+	}		
+		
+	.page-category__clients .item_img.img-intro
+	{
+		display: inline-block;
+	}
+	
+	.page-gallery .item_img.img-intro
+	{
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+	
+	.page-gallery .item_img.img-intro img
+	{
+		width: 100%;
+	}
+	
+	.page-gallery .item
+	{
+		text-align: center;
+	}
+	
+	.img-full__left.span5
+	{
+		width: 100%;
+		margin-right: 0;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	
+	.page-blog .item_img.img-intro
+	{
+		float: none;
+		margin: 0 0 20px 0;
+	}
+	
+	.page-blog .item_img.img-intro img
+	{
+		width: 100%;
+	}
+	
+	.page-blog .item_img.img-intro 
+	{
+		width: 97.5%;
+	}
+	
+	.page-blog .category_desc p, 
+	.page-category .category_desc p, 
+	.page-category .items-row 
+	{
+		border-bottom: none;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+		
+	.page-archive_filters select
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.page-category__clients .item
+	{
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	
+	.page-category__clients .item_img
+	{
+		float: none;
+		margin-right: 0px;
+	}
+	
+	#footer .moduletable.span3
+	{
+	}
+	
+	#footer-row ul.social
+	{
+		padding-bottom: 20px;	
+	}
+	
+	#footer-row .footer-row-separator
+	{
+		margin-left: 0px;	
+	}
+	
+	.mod-footer
+	{
+		position: relative;
+		top: 33px;
+	}
+	
+	.mod-search__aside .mod-search_searchword
+	{
+		width: 100%;
+	}
+	
+	mod-login__aside .mod-login_username,
+	.mod-login__aside .mod-login_passwd
+	{
+		width: 100%;
+	}
+
+	#header-row .select-menu 
+	{
+		min-width: 200px !important;
+	}
+	
+	.item_img img, .category_img img, .item_fulltext img, .random-image img
+	{
+		width: 100% !important;
+	}
+	
+	.tp-caption.slider-caption
+	{
+		display: none;
+	}
+
+	#content-row-5 .mod-newsflash-adv .item, #content-row-6 .mod-newsflash-adv .item
+	{
+		width: 100%;
+		padding: 20px 0;
+	}
+}

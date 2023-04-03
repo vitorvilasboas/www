@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>AS Menu</name>
+	<creationDate>2013-02-08</creationDate>
+	<updateDate>2015-03-10</updateDate>
+	<version>2.0.0</version>
+	<author>AS Designing</author>
+    <authorUrl>http://www.asdesigning.com</authorUrl>
+    <copyright>AS Designing - All rights reserved</copyright>
+    <license>GNU/GPL</license>	
+	
+	<description>
+	<![CDATA[
+
+			<img src="../modules/mod_as_menu/extension_thumbnail.png" align="left" style="margin: 0px 10px 10px 0px;" />
+			
+			<h1>AS Menu</h1>
+			The AS Menu module displays a main Joomla! template menu for desktop and mobile devices.<br />
+			
+			<br />Visit our site for more extensions: <a href="http://www.astemplates.com" target="_blank">http://www.astemplates.com</a>.
+			<br /><br />
+			
+			</span>
+			<br /><br />]]>
+	</description>
+
+	<files>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>		
+
+		<filename module="mod_as_menu">mod_as_menu.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_as_menu.xml</filename>
+		<filename>extension_thumbnail.png</filename>				
+	</files>
+
+	<config>
+		<fields name="params">
+		
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+			<!-- Basic Configuration Options ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		
+			<fieldset name="basicoptions" label="Basic Options">
+				<field
+					name="menutype"
+					type="menu"
+					label="Select Menu"
+					description="Select a menu from the list" >
+				</field>
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="Start Level"
+					description="Level to start rendering the menu at. 
+					Setting the start and end levels to the same # and setting 'Show Submenu Items' to yes will only display that single level." >
+						<option value="1">J1</option>
+						<option value="2">J2</option>
+						<option value="3">J3</option>
+						<option value="4">J4</option>
+						<option value="5">J5</option>
+						<option value="6">J6</option>
+						<option value="7">J7</option>
+						<option value="8">J8</option>
+						<option value="9">J9</option>
+						<option value="10">J10</option>
+				</field>
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="End Level"
+					description="Level to stop rendering the menu at. 
+					If you choose 'All', all levels will be shown depending on 'Show Submenu Items' setting." >
+						<option value="0">JALL</option>
+						<option value="1">J1</option>
+						<option value="2">J2</option>
+						<option value="3">J3</option>
+						<option value="4">J4</option>
+						<option value="5">J5</option>
+						<option value="6">J6</option>
+						<option value="7">J7</option>
+						<option value="8">J8</option>
+						<option value="9">J9</option>
+						<option value="10">J10</option>
+				</field>
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="Show Submenu Items"
+					description="Expand the menu and make its submenu items always visible.">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+			<!-- Advanced Configuration Options ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+
+			<fieldset
+				name="advanced" label="Advanced Options">
+				<field
+					name="module_id"
+					type="text"
+					default="1"
+					label="Unique Menu ID"
+					description="An ID attribute to assign to the root UL tag of the menu." >
+				</field>
+				<field
+					name="class_sfx"
+					type="text"
+					label="Menu Class Suffix"
+					description="A suffix to be applied to the CSS class of the menu items." >
+				</field>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					default = "navigation"					
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" >
+				</field>
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" >
+				</field>
+				<field type="spacer" label="&lt;script src='../modules/mod_as_menu/js/jscolors/jscolor.js'
+				                            type='text/javascript'&gt;&lt;/script&gt;" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" >
+				</field>
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+			<!-- Menu Options ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+
+			<fieldset name="menuoptions"  label="Menu Options">
+				<field 
+					name="menu_delay" 
+					type="text" 
+					default="500" 
+					label="Delay" 
+					description="Delay in milliseconds that the mouse can remain outside a submenu without it closing.">
+				</field>										
+				<field 
+					name="menu_speed" 
+					type="text" 
+					default="normal" 
+					label="Animation Speed" 
+					description="Animation speed.">
+				</field>
+				<field type="spacer" label=" " />
+														
+				<field name="bg_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="Background Color" 
+					description="The menu background color">
+				</field>					
+				<field name="gradient_topcolor" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="Gradient Top Color" 
+					description="The menu gradient top background color">
+				</field>
+				<field name="gradient_btmcolor" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="Gradient Bottom Color" 
+					description="The menu gradient bottom background color">
+				</field>
+				<field type="spacer" label=" " />														
+
+				<field name="font_family" 
+					type="list" 
+					default="Arial, Helvetica, sans-serif" 
+					label="Font family" 
+					description="Select your favorite font-family here">
+						<option value="Tahoma, Geneva, sans-serif, Arial">Tahoma, Geneva, sans-serif</option>
+						<option value="Georgia, 'Times New Roman', Times, serif">Georgia, Times New Roman</option>
+						<option value="'Courier New', Courier, monospace">Courier New, Courier</option>
+						<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+						<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">Trebuchet MS, Arial, Helvetica</option>
+						<option value="'Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+						<option value="'Times New Roman', Times, serif">Times New Roman, Times</option>
+						<option value="'MS Serif', 'New York', serif">MS Serif, New York, serif</option>
+						<option value="'Comic Sans MS', cursive">Comic Sans MS, cursive</option>
+						<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>						
+						<option value="ABeeZee">Google:ABeeZee</option>
+						<option value="Acme">Google:Acme</option>
+						<option value="Advent Pro">Google:Advent Pro</option>
+						<option value="Arimo">Google:Arimo</option>
+						<option value="Arizonia">Google:Arizonia</option>						
+						<option value="Average">Google:Average</option>
+						<option value="BenchNine">Google:BenchNine</option>
+						<option value="Carme">Google:Carme</option>
+						<option value="Comfortaa">Google:Comfortaa</option>
+						<option value="Convergence">Google:Convergence</option>
+						<option value="Cuprum">Google:Cuprum</option>
+						<option value="Exo">Google:Exo</option>
+						<option value="Felipa">Google:Felipa</option>
+						<option value="Fjalla One">Google:Fjalla One</option>
+						<option value="Fredoka One">Google:Fredoka One</option>						
+						<option value="Hammersmith One">Google:Hammersmith One</option>
+						<option value="Homenaje">Google:Homenaje</option>
+						<option value="Jockey One">Google:Jockey One</option>
+						<option value="Jura">Google:Jura</option>
+						<option value="Macondo">Google:Macondo</option>
+						<option value="Marmelad">Google:Marmelad</option>
+						<option value="Medula One">Google:Medula One</option>
+						<option value="Michroma">Google:Michroma</option>
+						<option value="Montserrat">Google:Montserrat</option>
+						<option value="Monsieur La Doulaise">Google:Monsieur La Doulaise</option>						
+						<option value="Mr Bedfort">Google:Mr Bedfort</option>
+						<option value="Muli">Google:Muli</option>
+						<option value="Nova Mono">Google:Nova Mono</option>
+						<option value="Nova Square">Google:Nova Square</option>
+						<option value="Numans">Google:Numans</option>
+						<option value="Open Sans">Google:Open Sans</option>
+						<option value="Oxygen">Google:Oxygen</option>
+						<option value="Parisienne">Google:Parisienne</option>
+						<option value="Pathway Gothic One">Google:Pathway Gothic One</option>
+						<option value="Pontano Sans">Google:Pontano Sans</option>						
+						<option value="PT Sans">Google:PT Sans</option>												
+						<option value="Prosto One">Google:Prosto One</option>
+						<option value="Questrial">Google:Questrial</option>
+						<option value="Righteous">Google:Righteous</option>
+						<option value="Russo One">Google:Russo One</option>
+						<option value="Roboto Condensed">Google:Roboto Condensed</option>
+						<option value="Rouge Script">Google:Rouge Script</option>						
+						<option value="Sacramento">Google:Sacramento</option>
+						<option value="Salsa">Google:Salsa</option>						
+						<option value="Sail">Google:Sail</option>												
+						<option value="Sevillana">Google:Sevillana</option>						
+						<option value="Signika">Google:Signika</option>
+						<option value="Six Caps">Google:Six Caps</option>
+						<option value="Squada One">Google:Squada One</option>
+						<option value="Tangerine">Google:Tangerine</option>												
+						<option value="Tulpen One">Google:Tulpen One</option>
+						<option value="Ubuntu">Google:Ubuntu</option>
+						<option value="Wire One">Google:Wire One</option>													
+				</field>
+				<field 
+					name="font_size1" 
+					type="text" 
+					default="18" 
+					label="Font Size (px)" 
+					description="The menu font size.">
+				</field>	
+				<field 
+					name="font_size2" 
+					type="text" 
+					default="16" 
+					label="Submenu Font Size (px)" 
+					description="The submenu font size.">
+				</field>	
+				<field name="font_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="Font Color" 
+					description="The menu font color">
+				</field>
+				<field name="hfont_color" 
+					class="color {required:false}" 
+					type="text" 
+					default="" 
+					label="Hover Font Color" 
+					description="The menu hover font color">
+				</field>
+				<field type="spacer" label=" " />
+				
+				<field 
+					name="submenu_width" 
+					type="text" 
+					default="191" 
+					label="Submenu Width (px)" 
+					description="The submenu width size.">
+				</field>																		
+				<field 
+					name="border_radius" 
+					type="text" 
+					default="5" 
+					label="Border Radius (px)" 
+					description="The menu border radius (not for mobile devices)">
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

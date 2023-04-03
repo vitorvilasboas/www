@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head> <!-- IURY: LEMBRE-SE DE ADICIONAR MAIS COMENTÁRIOS PARA EXPLICAR MELHOR O CÓDIGO --> 
+		<title>JavaScript Cookies</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+		
+			function Armazenar_Cookie()
+			{
+				var nome = prompt("Por favor, digite o seu nome: ", "");
+				var prazo_de_expiracao = 365; // Prazo de expiração do cookie em dias
+				var data_de_expiracao = new Date(); // Coletando data atual do computador
+				data_de_expiracao.setDate(data_de_expiracao.getDate() + prazo_de_expiracao); //Setando o data de expiração do cookie
+				
+				var c_value = escape(nome); 
+				if(prazo_de_expiracao == null)
+				{
+					c_value = escape(nome)+ "";
+				}
+				else
+				{
+					c_value = escape(nome)+ " expira em = " + data_de_expiracao.toUTCString();
+				}
+				
+				document.cookie = "nome= " + c_value; // Criando o cookie
+			}
+			
+			function Ler_Cookie()
+			{
+				var valor_cookie = document.cookie;
+				var cookie_start = valor_cookie.indexOf("nome= ");
+				if(cookie_start == -1)
+				{
+					cookie_start = valor_cookie.indexOf("nome= ");
+				}
+				if(cookie_start == -1)
+				{
+					valor_cookie = null;
+				}
+				else
+				{
+					cookie_start = valor_cookie.indexOf("=", cookie_start)+1;
+					var cookie_end = valor_cookie.indexOf(";", cookie_start);
+					if(cookie_end == -1)
+					{
+						cookie_end = valor_cookie.length;
+					}
+					valor_cookie = unescape(valor_cookie.substring(cookie_start,cookie_end));
+				}
+				alert("O valor armazenado do cookie é: " + valor_cookie);
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+
+		<button onclick="Armazenar_Cookie()">Armazenar o Cookie</button>
+		
+		<br>
+		
+		<button onclick="Ler_Cookie()">Coletar valor do Cookie</button>
+
+	</body>
+</html>

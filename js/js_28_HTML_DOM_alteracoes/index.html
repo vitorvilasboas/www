@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript HTML DOM - Fazendo alterações no HTML</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+			
+			function alterar_frase()
+			{							
+				var frase = document.getElementById("cabeçalho");
+				frase.innerHTML = "Eu não estou nem sentindo os efeitos dessa crise... Sempre fui liso mesmo.";
+			}
+
+			function alterar_foto()
+			{							
+				document.getElementById("minha_imagem").src = "EXEMPLO 28.02 - JAVA SCRIPT - HTML DOM - Fazendo Alterações no HTML.jpg";
+			}
+		</script>
+		
+	</head>
+	<body>
+
+		<h1>HTML DOM - Um simples teste</h1>
+		
+		<script type="text/javascript">
+			document.write(Date());
+		</script>
+		
+		<br>
+		
+		<h3 id="cabeçalho"> Imagina que louco, uma baleia dá um tiro na outra e no outro dia sai no jornal: "Baleia baleia baleia!" </h3>
+		<button onclick="alterar_frase()">Clique aqui para alterar a frase acima </button>
+		
+			
+		<br>
+		
+		<img id="minha_imagem" src="EXEMPLO 28.01 - JAVA SCRIPT - HTML DOM - Fazendo Alterações no HTML.jpg" />
+		<p> <button onclick="alterar_foto()"> Clique aqui para alterar a foto acima </button> </p>
+		
+				
+	</body>
+</html>

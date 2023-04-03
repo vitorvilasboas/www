@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+
+		<field name="search" type="text" label="COM_NEXEVOCONTACT_CONTENT_LBL" description="COM_NEXEVOCONTACT_CONTENT_DSC" hint="JSEARCH_FILTER" class="js-stools-search-string"/>
+
+		<field name="initial_date" type="calendar" label="COM_NEXEVOCONTACT_INITIAL_DATE_LBL" description="COM_NEXEVOCONTACT_INITIAL_DATE_DSC" class="input-small" format="%Y-%m-%d" filter="none" onchange="this.form.fireEvent('submit');this.form.submit();"/>
+		<field name="final_date" type="calendar" label="COM_NEXEVOCONTACT_FINAL_DATE_LBL" description="COM_NEXEVOCONTACT_FINAL_DATE_DSC" class="input-small" format="%Y-%m-%d" filter="none" onchange="this.form.fireEvent('submit');this.form.submit();"/>
+
+		<!-- class "control-group" here, fixes a 9px vertical gap between radio and calendars -->
+		<field name="exported" type="radio" class="control-group btn-group btn-group-yesno" default="0" label="COM_NEXEVOCONTACT_INCLUDE_EXPORTED_LBL" description="COM_NEXEVOCONTACT_INCLUDE_EXPORTED_DSC">
+			<option value="0" onclick="this.form.submit();" >JNO</option>
+			<option value="1" onclick="this.form.submit();" >JYES</option>
+		</field>
+
+		<field name="forms" type="formlist" label="COM_NEXEVOCONTACT_FORMS_LBL" description="COM_NEXEVOCONTACT_FORMS_DSC" multiple="true" onchange="this.form.submit();"/>
+
+	</fields>
+
+	<fields name="list">
+
+		<field name="fullordering" type="list" label="JGLOBAL_SORT_BY" description="JGLOBAL_ORDER_DIRECTION_DESC" onchange="this.form.submit();" default="a.date DESC">
+			<option value="a.date ASC">JDATE_ASC</option>
+			<option value="a.date DESC">JDATE_DESC</option>
+		</field>
+
+		<field name="limit" type="limitbox" class="inputbox input-mini" default="20" label="COM_NEXEVOCONTACT_DROPDOWNITEMS_LBL" description="COM_NEXEVOCONTACT_LIST_LIMIT_DSC" onchange="this.form.submit();"/>
+
+	</fields>
+</form>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Objetos</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript">
+		
+			function Testar_Propriedade()
+			{
+				var mensagem = "Hello World!";
+				var x = mensagem.length; // x esta armazenando o tamanho da variavel mensagem
+				alert(x);               // com o ponto estamos acessando a propriedade do objeto mensagem
+			}
+					
+			function Testar_Metodo()
+			{
+				var mensagem = "Hello World!";
+				var x = mensagem.toUpperCase(); // Acessando o método toUpperCase
+				alert(x);                       // Observe os parenteses para ajudar a diferenciar 
+			}                                   // entre métodos e propriedades
+			
+		</script>
+		
+	</head>
+
+
+	<body>
+
+		<p>	<button onclick="Testar_Propriedade()">Clique aqui para testar propriedades</button> </p>
+		 
+		 <br>
+		 
+		 <p> <button onclick="TestMethod()">Clique aqui para testar metodos</button>	</p>
+	  
+	</body>
+
+</html>

@@ -1,0 +1,144 @@
+/* Position: 
+    Static: Padrão (baixo se block, lado se inline)
+    Relative: Relativo ao static (posição natural) do próprio elemento. Requer propriedades de deslocamento para movimentação do elemento (left, right, top, bottom)
+    Absolute 
+    Fixed
+    Sticky 
+*/
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+.caixa{
+    width: 100px;
+    height: 100px;
+}
+
+.ancestral1{
+    width: 500px;
+    padding: 10px;
+    border: 3px solid #000;
+    margin: 15px;  
+} 
+
+.ancestral2{
+    width: 500px;
+    padding: 10px;
+    border: 3px solid #000;
+    margin: 15px;
+    position: absolute; /* A posição do elemento ancestral altera o contexto dos elementos filhos */
+}
+
+.cx_verde{
+    background: #90EE90;
+    margin: 10px;
+    float: left;
+    position: static; 
+    top: 0px;  /* valores top,left,right,bottom são ignorados (posição natural) */
+    left: 0px; /* idem margin-left, mas sem deslocar outros elementos (pode ser negativo) */
+}
+
+.cx_vermelha{
+    background: #FF0000;
+    margin: 10px;
+    float: left;
+    position: relative; 
+    top: 0px; /* elemento fica na posição natural */
+    left: 0px; 
+}                
+
+.cx_azul{
+    background: #4169E1;
+    margin: 0px;
+    float: left;
+    position: absolute; 
+    bottom: 0px; /* a referência inicial é a porção visível da página */
+    right: 0px;
+}
+
+.limpa {
+    clear: both; /*Limpando a flutuação*/
+}
+
+.cx_amarela{
+    background: #FFFF00;
+    margin: 10px;
+    float: left;
+    position: static;
+    top: 15px;  
+    left: 0px;  
+}
+
+.cx_salmao{
+    background: #FA8072;
+    margin: 10px;
+    float: left;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+}              
+
+.cx_ciano{
+    background: #87CEEB;
+    margin: 10px;
+    float: left;
+    position: absolute; /*Exemplo com absolute*/
+    bottom: 0px; /* valores top,left,right,bottom tem como referência a posição do elemento pai */
+    right: 0px;
+}
+
+.ancestral3{
+    width: 300px;
+    height: 350px;
+    margin: auto 20px;
+    border: 1px solid gray;
+    float: right;
+    position: relative;
+}
+
+.cx_red{
+    background-color: red;
+    position: static;
+}
+  
+.cx_blue{
+    background-color: blue;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    /* z-index: 1; */
+    /* propriedades de deslocamento: top, bottom, left, right */
+}
+  
+.cx_green{
+    background-color: green;
+    border-radius: 50px 10px 5px 2px;
+    /* border: 20px double white; */
+    /* box-sizing: border-box; */
+    box-shadow: 5px 5px gray;
+}
+
+.cx_yellow{
+    background: #f8e14e;
+    position: absolute;
+    top: 20px;  
+    left: 20px;
+    z-index: 0; /* Profundidade: quanto menor mais profundo (camada 1) */
+}
+
+.cx_pink{
+    background: #e523b1;
+    position: absolute; 
+    top: 60px;   
+    z-index: 2; /* camada 2 */
+}                
+
+.cx_brown{
+    background: #490209;
+    position: absolute; 
+    top: 90px; 
+    left: 90px; 
+    z-index: 1; /* camada 1 */
+}  

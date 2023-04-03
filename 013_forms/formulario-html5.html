@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" onclick="alert('Testando JavaScript!')">Mostrar Mensagem</button>
+
+  <form id="cadastro" action="cadastro.php" method="POST">
+
+      <p><label>Estados: </label><!-- uma lista de opções em formato combo-box -->
+          <select name="listaEstados">
+              <option>Tocantins</option>
+              <option>Pará</option>
+              <option>Goiânia</option>
+              <option>Maranhão </option>
+          </select></p>
+      <p><label>Cidades: </label><!-- uma lista de opções em formato list-box -->
+          <select name="listaCidades" size="3">
+              <option>Araguatins</option>
+              <option>Ananás</option>
+              <option>Araguaína</option>
+              <option>Palmas</option>
+          </select></p>
+      
+      <label for ="escolha"> Escolha um instrumento</label>
+      <select id="escolha" name="escolha">
+          <option>Selecione...</option>
+          <optgroup label="Cordas">
+              <option value="violino">Violino</option>
+              <option value="viola">Viola</option>
+              <option value="violoncelo">Violoncelo</option>
+          </optgroup>
+          <optgroup label="Sopros">
+              <option value="flauta">Flauta</option>
+              <option value="oboe">Oboé</option>
+              <option value="clarinete">Clarinete</option>
+          </optgroup>
+      </select>
+      
+      <label for="estilo"> Qual o seu estilo musical ?</label>
+      <input id="estilo" name="estilo" type="text" list="listaEstilos">
+      
+      <datalist id="listaEstilos"><br>Escolha entre estes:
+          <option value="samba">Samba</option>
+          <option value="blues">Blues</option>
+          <option value="jazz">Jazz</option>
+          <option value="mpb">MPB</option>
+          <option value="rock">Rock</option>
+          <option value="clássico">Clássico</option>
+          <option value="bossanova">Bossa-Nova</option>
+          <option value="pop">Pop</option>
+      </datalist>
+
+      <label for="opiniao">O que você mais gostou no evento ?</label>
+      <textarea cols=28 id="opiniao" rows="3" name="opiniao" maxlength="500" wrap="hard" placeholder="coragem, você consegue!"></textarea>
+      
+      <p>Download do Arquivo:<progress value="85" max="100">85%</progress></p>
+      
+      <fieldset>
+          <legend>Resultado da Avaliação de Matemática</legend>
+          <ul style="list-style-type: none">
+              <li><label>João da Silva: </label>
+                  <meter low="60" high="100" max="100" value="30">3.0</meter></li>
+              <li><label>Maria Rosa: </label>
+                  <meter low="60" max="100" value="70">7.0</meter></li>
+              <li><label>Roberto Souza: </label>
+                  <meter low="60" max="100" value="100">10</meter></li>
+              <li><label>Ana Fonseca: </label>
+                  <meter low="60" max="100" value="80">8.0</meter></li>
+              <li><label>José Gonçalves: </label>
+                  <meter low="60" max="100" value="0">0.0</meter></li>
+          </ul>
+      </fieldset>
+
+  </form>
+</body>
+</html>

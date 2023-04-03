@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_NEXEVOCONTACT</name>
+	<creationDate>12 Nov 2015</creationDate>
+	<author>Nexevo Technologies</author>
+	<authorEmail>info@nexevo.in</authorEmail>
+	<authorUrl>http://www.nexevo.in</authorUrl>
+	<copyright>Nexevo Technologies</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.1</version>
+	<description>COM_NEXEVOCONTACT_DESC</description>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>nexevocontact.php</filename>
+		<filename>nexevocontact.inc</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>css</folder>
+		<folder>helpers</folder>
+		<folder>js</folder>
+		<folder>lib</folder>
+		<folder>sef_ext</folder>
+		<folder>uploads</folder>
+		<folder>views</folder>
+	</files>
+
+	<media destination="com_nexevocontact" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>mimetypes</folder>
+	</media>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_nexevocontact.ini</language>
+		<language tag="de-DE">de-DE/de-DE.com_nexevocontact.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.com_nexevocontact.ini</language>
+		<language tag="it-IT">it-IT/it-IT.com_nexevocontact.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.com_nexevocontact.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.com_nexevocontact.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.com_nexevocontact.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.com_nexevocontact.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.com_nexevocontact.ini</language>
+		<language tag="ms-MY">ms-MY/ms-MY.com_nexevocontact.ini</language>		
+	</languages>
+
+	<administration>
+		<menu>COM_NEXEVOCONTACT_MENU</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>nexevocontact.php</filename>
+			<filename>nexevoinstall.php</filename>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>js</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.com_nexevocontact.ini</language>
+			<language tag="de-DE">de-DE/de-DE.com_nexevocontact.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_nexevocontact.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_nexevocontact.ini</language>
+			<language tag="fr-FR">fr-FR/fr-FR.com_nexevocontact.ini</language>
+			<language tag="ms-MY">ms-MY/ms-MY.com_nexevocontact.ini</language>-
+			<language tag="pl-PL">pl-PL/pl-PL.com_nexevocontact.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_nexevocontact.ini</language>
+			<language tag="pt-PT">pt-PT/pt-PT.com_nexevocontact.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_nexevocontact.ini</language>		
+			<language tag="en-GB">en-GB/en-GB.com_nexevocontact.sys.ini</language>
+			<language tag="de-DE">de-DE/de-DE.com_nexevocontact.sys.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_nexevocontact.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_nexevocontact.sys.ini</language>
+			<language tag="fr-FR">fr-FR/fr-FR.com_nexevocontact.sys.ini</language>
+			<language tag="ms-MY">ms-MY/md-MY.com_nexevocontact.sys.ini</language>
+			<language tag="pl-PL">pl-PL/pl-PL.com_nexevocontact.sys.ini</language>
+			<language tag="pt-PT">pt-PT/pt-PT.com_nexevocontact.sys.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_nexevocontact.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_nexevocontact.sys.ini</language>
+		</languages>
+
+	</administration>
+
+	<scriptfile>install.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<chain>
+		<extension directory="modules" name="lib_nexevocontact" type="library"/>
+		<extension directory="modules" name="mod_nexevocontact" type="module"/>
+		<extension directory="modules" name="plg_nexevocontact" type="plugin"/>
+	</chain>
+
+</extension>

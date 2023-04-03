@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test Loop WHILE and DO WHILE</title>
+	
+	<script type="text/javascript">
+	
+		function testWhile()
+		{
+			var result = "";
+			var number = 1;
+			
+			while(number < 1)
+			{
+				result = result + " " + number;
+				number ++;
+			}
+			
+			document.getElementById("out1").innerHTML = result;
+		}
+		
+		function testDoWhile()
+		{
+			var result = "";
+			var number = 1;
+			
+			do
+			{
+				result = result + " " + number;
+				number ++;
+			} while(number < 1)
+			
+			document.getElementById("out2").innerHTML = result;			
+		}
+	
+	</script>
+</head>
+<body>
+
+	<p><button onclick="testWhile()">Click Here to Test WHILE</button></p>
+	
+	<p><span id="out1" name="out1"></span></p>
+	
+	<br>
+	
+	<p><button onclick="testDoWhile()">Click Here to Test DO WHILE</button></p>
+	
+	<p><span id="out2" name="out2"></span></p>
+
+</body>
+</html>

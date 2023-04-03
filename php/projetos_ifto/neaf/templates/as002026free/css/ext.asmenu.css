@@ -1,0 +1,150 @@
+
+/**************************************************************************************/
+/*
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: GNU/GPL
+/*
+/**************************************************************************************/
+
+#as-menu 
+{
+    background-color: transparent;
+	background-image: none;
+	min-height: 20px;
+	float: right;
+	
+}
+
+#as-menu ul.as-menu
+{
+	float: left;
+}
+
+#as-menu ul.as-menu > li a,
+#as-menu ul.as-menu > li > span
+{
+	margin: 0px;
+	padding: 0px 10px;
+	display: block;
+	font-weight: bold;
+	line-height: auto normal;
+	height: auto;
+	letter-spacing: 0px;
+	color: #eee;	
+	text-transform: capitalize !important;
+}
+
+#as-menu ul.as-menu > li > span.separator
+{
+	font-size: 14px;	
+}
+
+#as-menu ul.as-menu > li,
+#as-menu ul.as-menu > li:hover
+{
+	width: auto;
+	margin: 0;
+	padding: 10px 35px;
+	margin: 0 0 0 5px;
+	border-radius:  0 0 10px 10px;
+	background-color: #f6f9f6;
+	transition: background 0.3s ease 0.1s;
+}
+
+#as-menu ul.as-menu > li.active,
+#as-menu ul.as-menu > li.current
+{
+	transition: background 0.3s ease 0.1s;
+	background-color: #6f9e2e;
+	padding: 10px 35px 25px ;
+}
+
+#as-menu ul.as-menu > li:hover
+{
+	transition: background 0.3s ease 0.1s;
+	background-color: #6f9e2e;
+	padding: 10px 35px 25px;
+}
+
+#as-menu ul.as-menu > li.lastItem
+{
+	
+}
+
+#as-menu ul.as-menu > li:first-child
+{
+}
+
+#as-menu ul.as-menu > li.deeper > a:after
+{
+	top: -2px;	
+	content: none;
+}
+
+#as-menu ul.as-menu > li.active > a,
+#as-menu ul.as-menu > li.current > a,
+#as-menu ul.as-menu > li.asHover > a,
+#as-menu ul.as-menu > li:hover > a,
+#as-menu ul.as-menu > li > a:hover,
+#as-menu ul.as-menu > li > span:hover
+{
+}
+
+#as-menu ul.as-menu > li > a
+{
+	color: #595959;
+}
+
+#as-menu ul.as-menu > li.active a,
+#as-menu ul.as-menu > li.current a,
+#as-menu ul.as-menu > li.active a:hover,
+#as-menu ul.as-menu > li.current a:hover,
+#as-menu ul.as-menu > li.active:hover a,
+#as-menu ul.as-menu > li.current:hover a
+{
+	color: #fff;
+	transition: background 0.3s ease 0.1s;
+}
+
+#as-menu ul.as-menu > li:hover a
+{
+	color: #eee;
+}
+
+#as-menu ul.as-menu li:hover ul,
+#as-menu ul.as-menu li.asHover ul
+{
+	left: 0;
+	top: 58px;
+	z-index: 100;
+}
+
+#as-menu ul.as-menu ul
+{
+	background: #6f9e2e;	
+	border-radius: 10px;	
+	opacity: 1;
+}
+
+#as-menu ul.as-menu ul li a,
+#as-menu ul.as-menu ul li span
+{
+	margin: 0px;
+	color: #fff !important;
+}
+
+#as-menu ul.as-menu ul li a:hover,
+#as-menu ul.as-menu ul li span:hover,
+#as-menu ul.as-menu ul li.active > a,
+#as-menu ul.as-menu ul li.asHover > a,
+#as-menu ul.as-menu ul li.active > span,
+#as-menu ul.as-menu ul li.asHover > span
+{
+	color: #eee !important;
+}
+
+#as-menu ul.as-menu ul ul
+{
+	left: 162px !important;
+}

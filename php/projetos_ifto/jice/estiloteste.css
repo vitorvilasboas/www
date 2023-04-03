@@ -1,0 +1,485 @@
+/*
+Desenvolvido por Vilson Soares de Siqueiira
+Data 02/02/2013
+*/
+
+/*Reset-----------------------------------------------------------------------*/
+*{ 
+    margin: 0 auto; 
+    padding: 0;
+}
+#box_topo_menu{
+    padding-left:10px; 
+    border-top: 5px solid #282828;
+    background: #282828; 
+    height: 12px; 
+    border-bottom:solid 15px #282828;
+    font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    line-height: 12px;
+    color: #f4f4f4;
+}
+#box_topo_menu img{
+    border:none;   
+    text-decoration: none;   
+}
+#box_topo_menu a{  
+    text-decoration: none;
+    color:#F60;
+}
+#box_topo_menu a:hover{  
+    text-decoration: none;
+    color:#930;    
+}
+/*Corpo-----------------------------------------------------------------------*/
+body{
+    background: url(imagens/fundo.png)repeat-x;
+}
+/*Box Geral-------------------------------------------------------------------*/
+#box_geral{
+    background: #ffffff; width: 1000px;
+    box-shadow: 0px 0px 20px 10px #666;
+    -moz-box-shadow:0px 0px 20px 10px #666;
+    -webkit-box-shadow: 0px 0px 20px 10px #666;
+}
+/*Topo------------------------------------------------------------------------*/
+#topo{
+    overflow: hidden; 
+    margin-top: 0px;
+    height: 152px; 
+    border:solid 0px black;
+    background: url(imagens/topo_flisol.png) repeat-x;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+/*Inicio do navegator com menu e sub-menu-------------------------------------*/
+#menusub {
+    background:#f4f4f4; 
+    border-top:1px solid #d2d2d2; 
+    border-bottom:1px solid #d2d2d2; 
+    height: 30px;
+    text-align: center;
+}
+#menusub ul li{
+    display: inline; 
+    position:relative; 
+    color:#f4f4f4;  
+    font:15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#menusub ul li a{
+    color:#06c; 
+    font-weight:bold;
+    line-height:30px; 
+    padding: 6px;    
+    text-decoration:none;
+}
+#menusub ul li a:hover{ 
+    background:#d3d3d3; 
+    color:#06c;
+    border-top:2px #d90000 solid ;
+
+}
+#menusub ul li ul{
+    text-align: left; 
+    display:none; 
+    background:#f4f4f4;; 
+    border: 1px solid #d2d2d2;
+}
+#menusub ul li:hover ul{ 
+    display:block;  
+    position:absolute; 
+    top:22px; 
+    left:0;
+    background: #f4f4f4;
+}
+#menusub ul li ul a{
+    text-align: left; 
+    width:140px; height: 15px; 
+    background: #f4f4f4; 
+    line-height: 15px; 
+    display: block; 
+    border-bottom:1px solid #ffffff;
+}
+/*Conteudo Geral - Menu e Paginas --------------------------------------------*/
+
+#conteudo_geral{
+    margin: 0;
+}
+/*Configuraçõe gerais da pagina de Login--------------------------------------*/
+#pagina_login{
+    margin:0 auto;
+    padding:5px; 
+    background:#f4f4f4; 
+    width:400px;
+    border-radius: 10px; 
+    border:2px #999 solid;
+}
+#pagina_login h1{
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    font-variant:small-caps;
+    font-weight:bold;
+    color:#005789; 
+    padding:5px; 
+    background:#f4f4f4;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#pagina_login .login_label1{
+    margin:0px 0 0px 71px;
+    color:#006699; 
+    display: block;
+}
+#pagina_login .login_label2{
+    margin:0px 0 0px 60px;
+    color:#006699;
+}
+#pagina_login .login_link{
+    margin:0; 
+    color:#666;
+    width: 398px; height: 55px;
+}
+#pagina_login .cadastro {
+    background: url(imagens/cadastrar.png) no-repeat;
+    width: 190px;
+    height: 55px;
+    float: left;
+    margin: 5px 0 0 5px;
+}
+#pagina_login .cadastro:hover {
+    background: url(imagens/cadastrar1.png) no-repeat;
+    width: 190px;
+    height: 55px;
+    margin: 5px 0 0 5px;
+}
+#pagina_login .recupera{
+    background: url(imagens/recuperar.png) no-repeat; 
+    width: 190px;
+    height: 55px;
+    float: right;
+    margin: 0px 5px 0 0px;
+    
+}
+#pagina_login .recupera:hover {
+    background: url(imagens/recuperar1.png) no-repeat;
+    width: 190px;
+    height: 55px;
+    margin: 0px 5px 0 0px;
+}
+
+#pagina_login .image_error{
+    background: url(imagens/borda_error.png) no-repeat; 
+    width: 380px; 
+    height: 100px; 
+    padding: 10px; 
+    text-align: center; 
+    color: #cc0000; 
+    font:18px "Trebushed MS",Arial;
+}
+#pagina_login .input_200_2{
+    border:1px solid #333; 
+    font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    color:#666;
+    padding:3px; 
+    width:200px; 
+    margin: 5px;
+}
+#pagina_login .btn{
+    width:100px; 
+    padding:3px; 
+    display:block; 
+    margin:0 auto; 
+    cursor:pointer;
+    color:#006699; 
+    background:#fff; 
+    border:1px solid #006699;
+}
+#pagina_login .btn:hover{
+    background:#f4f4f4; 
+    border:1px solid #006699; 
+    color:#006699;
+}
+
+/*Configuraçõe gerais das paginas---------------------------------------------*/
+#conteudo{
+    margin: 0;
+}
+#pagina{
+    overflow: hidden;
+    margin:5px;
+    padding:5px; 
+    background:#ffffff;
+    width:976px;
+    border: 2px solid #f4f4f4;
+}
+#pagina .titulo1{
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;  
+    font-weight:bold;
+    color:#0066cc; 
+    padding:5px; 
+    background:#ffffff;
+    border-bottom: 2px solid #bb404d;
+    text-align: left;
+    margin-bottom: 2px;
+}
+#pagina .titulo2{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;font-weight: bold;  color: #006699;text-align: justify; padding: 10px}
+#pagina .titulo3{font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-weight: bold;  color: #006699;padding: 2px 0 10px 20px;}
+
+#pagina .link{text-decoration:none; color:#069; font-weight:bold; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#pagina .link:hover{color:#930; text-decoration:underline;}
+
+
+/*#pagina form{margin: 0; width:530px; padding:5px 10px; background:#999;}*/
+#pagina label{
+    display:block; 
+    margin-bottom:5px;
+}
+#pagina span{ 
+    font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    font-weight:bold;
+    color:red;
+}
+#pagina .image_error{
+    background: url(imagens/borda_error.png) no-repeat; 
+    width: 380px; 
+    height: 100px;                     
+    padding: 10px; 
+    text-align: center; 
+    color: #cc0000; 
+    font:18px "Trebushed MS",Arial; 
+    margin:10px 0 10px 0px;}
+
+/*Configuração dos formulario de cadastros------------------------------------*/
+#pagina .input_60{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:60px;}
+#pagina .input_100{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:100px;}
+#pagina .input_200{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:200px;}
+#pagina .input_300{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:300px;}
+#pagina .input_400{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:400px;}
+#pagina .input_500{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:500px;}
+#pagina .input_600{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:600px;}
+#pagina .input_700{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:700px;}
+#pagina .input_800{border:1px solid #333; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:3px; width:800px;}
+
+#pagina .input_radio{margin: 5px 0 5px 0; width:25px;}
+
+
+/*Configuração da pagina area tematica*/
+#pagina .areatema {padding: 5px; width: 752px; color: #006699; background: #ffffff;}
+#pagina .areatema ul{padding: 5px 0 20px 60px; color: #006699;font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;font-weight: bold;}
+#pagina .areatema li {padding: 5px; color: #006699;}
+
+/*Configuração da pagina de inscrição*/
+#pagina .busca_manutencao{width: 966px; background: #fff; height: 28px; padding: 4px;border: 1px solid #b5c4cf;}
+#pagina .img_pesquisa{width: 20px; height:20px; float:left;overflow: hidden; padding-right: 5px; }
+#pagina .div_pesquisa{ font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:0px; width:410px;float:left;overflow: hidden;}
+#pagina .input_pesquisa{border:2px solid #999999; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
+              padding:1px;font-weight: bold; width:400px; border-radius: 5px;}
+#pagina .div_busca{width:124px; float:left;overflow: hidden;}
+#pagina .input_busca{width:120px; padding:4px; cursor:pointer; color:#006699; background:#f4f4f4; 
+                     border:1px solid #006699; border-radius: 5px;font-weight: bold;float:left;overflow: hidden;}
+
+#pagina .input_busca:hover{background:#d2d2d2; border:1px solid #006699; color:#006699;}
+#pagina .novo_registro{text-align: center;width:130px; padding:2px; cursor:pointer; color:#006699; background:#f4f4f4; 
+                     border:1px solid #006699; border-radius: 5px;font-weight: bold;float:right;text-decoration: none;}
+#pagina .novo_registro:hover{background:#d2d2d2; border:1px solid #006699; color:#006699;text-decoration: none;}
+#pagina .novo_registro a img{border:none; text-decoration: none; color:#006699;}
+#pagina .novo_registro a{border:none; text-decoration: none; color:#006699;}
+#pagina .novo_registro a:hover{ text-decoration: none; color:#006699;}
+#pagina .novo_registro a:visited{ text-decoration: none; color:#006699;}
+
+
+#pagina .formulario {width: 976px; color: #0066cc; background: #b5c4cf;}
+#pagina .tabelas{width: 976px; border-spacing: 1px; border-collapse:separate;}
+
+#pagina .tdespaco{background:#b5c4cf; width:976px;margin: 0px;font-size: 5px;color:#b5c4cf; }
+
+#pagina .td70{background: #ffffff; color:#006699; width: 70px; padding: 2px;}
+#pagina .td100{background:#ffffff; color:#006699; width: 100px; padding: 2px;}
+#pagina .td150{background:#ffffff; color:#006699; width: 150px;padding: 2px;}
+#pagina .td200{background:#ffffff; color:#006699; width: 200px; padding: 2px;}
+#pagina .td300{background:#ffffff; color:#006699; width: 300px; padding: 2px;}
+#pagina .td400{background:#ffffff; color:#006699; width: 400px; padding: 2px;}
+#pagina .td500{background:#ffffff; color:#006699; width: 500px;padding: 2px;}
+#pagina .td600{background:#ffffff; color:#006699; width: 600px; padding: 2px;}
+#pagina .td700{background:#ffffff; color:#006699; width: 700px; padding: 2px;}
+#pagina .td800{background:#ffffff; color:#006699; width: 800px; padding: 2px;text-align: justify;}
+
+#pagina .th70t{background:#006699; color:#ffffff; width: 70px; text-align: center; font-weight: bold; }
+#pagina .th100t{background:#006699; color:#ffffff; width: 100px; text-align: center; font-weight: bold;}
+#pagina .th130t{background:#006699; color:#ffffff; width: 130px; text-align: center; font-weight: bold;}
+#pagina .th120t{background:#006699; color:#ffffff; width: 120px; text-align: center; font-weight: bold;}
+#pagina .th176t{background:#006699; color:#ffffff; width: 176px; text-align: center; font-weight: bold;}
+#pagina .th200t{background:#006699; color:#ffffff; width: 200px; text-align: center; font-weight: bold;}
+#pagina .th276t{background:#006699; color:#ffffff; width: 276px; text-align: center; font-weight: bold;}
+#pagina .th300t{background:#006699; color:#ffffff; width: 300px; text-align: center; font-weight: bold;}
+#pagina .th600t{background:#006699; color:#ffffff; width: 600px; text-align: center; font-weight: bold;}
+
+#pagina .tdlink{background: #f4f4f4; width: 70px; color:#0066cc; text-align: center; font-weight: bold;}
+#pagina .tdlink:hover{background: #d2d2d2; width: 70px;  width: 70px; font-weight: bold;}
+#pagina .tdlink a{ color:#006699; width: 70px;  text-decoration: none; font-weight: bold;}
+#pagina .tdlink a:hover{ width: 70px; text-align: center; color:#006699; text-decoration: none; font-weight: bold;}
+#pagina .tdlink a:visited{color:#006699;text-decoration: none; font-weight: bold;}
+#pagina .tdlink img{border:none;}
+
+#pagina .projetos{
+    width: 976px;
+    background: #ffffff;
+    border:1px solid #b5c4cf;
+    font:14px "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+    color: #000 !important;
+}
+#pagina .projetos  span{color:#000 !important;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif !important;}
+#pagina .projetos img{
+    width: 400px;
+    border:1px solid #069;
+    float:right;
+    margin: 10px;
+}
+#pagina .projeto_texto{
+    text-align: justify !important;
+    margin: 10px !important;
+    color: #000 !important;
+    
+}
+#pagina .projeto_texto p{
+    text-align: justify !important;
+    padding: 3px;
+    color: #000;
+}
+#pagina .projeto_texto ul{
+    list-style-position: inside !important;
+    margin-left: 30px !important;
+    list-style-type:  circle !important;
+    color:#000 !important;
+}
+#pagina .projeto_texto ol{
+    list-style-position: inside !important;
+    margin-left: 30px !important;
+    list-style-type:decimal !important;
+    color:#000 !important;
+}
+/*Configuração da pagina home*/
+#pagina .home{overflow: hidden; width:974px;  background: #ffffff;}
+#pagina .home_banner_600{margin-top:3px; width:630px; height: 200px;  border:1px solid #d2d2d2;
+                       background: #ffffff;float:left; }
+#pagina .home_banner_360{margin-top: 3px;width:337px; height:200px; border:0px solid #d2d2d2;
+                       background: #ffffff;float:right;text-align: center; }
+
+#pagina .home_banner_360_160E{margin:0; width:164px; height: 90px;  border:0px solid #d2d2d2;
+                       background: #ffffff;float:left;}
+#pagina .home_banner_360_160E img{margin: 8px 1px 0 1px;}
+#pagina .home_banner_360_160D{margin-left: 5px; width:164px; height: 90px;  border:1px solid #d2d2d2;
+                       background: #000000;float:right; color:#ffffff;}
+#pagina .home_banner_360_160D img{width: 100px;}
+#pagina .home_banner_360_160D p {margin: 10px 2px 0 2px;;text-align: center; font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#pagina .home_banner_360_320T{margin: 5px 0 5px 5px; width:335px; height: 103px;  border:1px solid #d2d2d2;
+                       background: #ffffff;float:right}
+
+#pagina .home_noticias_destaque {margin-top:5px; width:630px; border-radius:0px; border:1px solid #d2d2d2;
+                       background: #ffffff;float:left;}
+#pagina .home_noticias_destaque div{width: 190px; height: 230px; float:left;margin:2px 7px 2px 7px; border:0;}
+#pagina .home_noticias_destaque div img{width: 186px;  padding: 0px;}
+#pagina .home_noticias_destaque a{ color: #000; display: block; padding: 0;text-align: center;}
+#pagina .home_noticias_destaque p {margin: 10px;text-align: justify; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+#pagina .home_noticias_destaque a:hover{ color: #bb404d;display: block;}
+#pagina .home_noticias_todas {margin-top: 5px; width:335px; border-radius:0px; border:1px solid #d2d2d2;
+                       background: #ffffff;float:right; color:#000000;}
+#pagina .home_noticias_todas  a{color:#000000;}
+#pagina .home_noticias_todas  a:hover{color:#069;}
+#pagina .home_texto1 {text-align: left; font-size: 10px; margin: 5px; padding-top:3px;font:11px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#pagina .home_texto2 {text-align: justify; font-size: 12px; margin: 5px; border-bottom: 1px dashed #9999cc; padding-bottom:3px; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#pagina .organiza{border: 2px solid #f4f4f4;}
+
+/*Configuração da pagina noticias*/
+#pagina .noticias{color:#006699;width: 974px; border: 1px solid #d2d2d2; background: #fff; }
+#pagina .noticias_img {float:left;margin :3px 5px ; border:0; width:320px; overflow: hidden;}
+#pagina .noticias fieldset{ border:0;}
+#pagina .noticias hr {border: 1px solid #d2d2d2;}
+#pagina .noticias p{margin:5px; padding: 1px; text-align: justify; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#pagina .noticias ul {list-style-position: inside; margin:5px;padding: 1px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+                             color:#069;text-align:justify ;}
+#pagina .noticias ol {list-style-position: inside; margin: 5px;padding: 1px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+                             color:#069;text-align:justify ;}
+#pagina .noticias li {padding-left: 2px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+                             color:#069;text-align:justify ;}
+/*Configuração da pagina noticias adm*/
+
+#pagina .hoteis {margin:2px; padding: 2px; text-align: justify; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#069; background: #ffffff;}
+
+/*Configurações gerais da pagina*/
+#pagina .contador{margin:3px;padding: 5px;font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000000;
+                  text-align: center}
+#pagina  .disciplinas{border:1px solid #f4f4f4; margin:0 0 5px 0; padding: 10px;}
+#pagina  .disciplinas a {color:#006699; text-decoration: none;}
+#pagina  .disciplinas a:hover {color:#000000; text-decoration: none; background-color: #000000;}
+
+/*Pagina das video aulas*/
+#pagina .videos_destaque{float:left; margin: 0;width: 332px; height: 520px; background: #fff; border:1px solid #d2d2d2;}
+#pagina .videos_destaque ul{list-style: none;}
+li img {margin:0px;padding: 0;width: 100px; height: 69px; display: block; text-decoration: none; list-style: none;}
+#pagina .videos_destaque ul li a{ padding: 5px;display: block; text-decoration: none; font:13px "Trebushed MS",Arial,"Times New Roman";list-style: none;}
+
+
+#pagina .videos_player {float: right; border: 1px solid #d2d2d2; width: 640px; height: 520px;background-color:#000;}
+#pagina .videos_player embed {margin:0;width: 640px; height: 520px;}
+
+#pagina .todos_videos {clear:both;  width: 974px; border: 1px solid #d2d2d2; background:#fff;}
+#pagina .lista_videos {margin:4px 1px 3px 1px; padding: 5px; float: left; width: 312px; height: 90px; }
+#pagina .lista_videos ul{list-style: none;}
+#pagina .lista_videos ul li img {margin:0px;padding: 0;width: 100px; height: 69px; border:0;}
+#pagina .lista_videos ul li a{ padding:0; text-decoration: none; font:13px "Trebushed MS",Arial,"Times New Roman";}
+#pagina .lista_videos ul li a:hover{color:#666; border:none; text-decoration: none;}
+/*Configuraçoes dos botões da pagina*/
+#pagina .btn{width:120px; padding:5px; display:block; margin:5px auto; cursor:pointer;
+             color:#006699; background:#f4f4f4; border:1px solid #006699; border-radius: 5px;font-weight: bold;}
+#pagina .btn:hover{background:#d2d2d2; border:1px solid #006699; color:#006699;}
+
+#pagina .contato_texto{ padding: 5px; float:left; width: 336px; height: 357px; border:none;background: #f4f4f4;
+                        font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#666;}
+#pagina .contato_form{float: right; width: 615px; background:#d2d2d2;padding: 5px;height: 357px;}
+#pagina .contato_form label{padding: 5px;color: #666;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight: bold; display:block;}
+#pagina .contato_texto p{margin:10px;}
+#pagina .contato_texto {font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333;
+                    font-variant:small-caps;}
+#pagina .contato_texto a{color:#063;}
+#pagina .contato_texto a:hover{color:#F60;}
+
+/*Configuração da Galeria de Fotos*/  
+#box_galeria{width:650px; margin:0 auto;}
+#slideshow{width:640px;	height:480px;border:5px solid #FFF; 
+	 margin:0 auto;}
+#slideshow a img{border:none;margin:5px;}
+#slideshow img{	width:640px; height: 530px;}
+#tilulo{float:right;}
+#titulo a{display:block; float:left;text-align:center; height:25px;background:#006699; 
+	border:2px solid #FFF;margin:5px 2px 0 0 ;padding:2px 0 0 0; color:#FFF;text-decoration:none;}
+#pager{float:right;}
+#pager a{display:block;	float:left;text-align:center;width:25px;height:23px;background:#006699; 
+	border:2px solid #FFF;margin:5px 2px 0 0 ;padding:2px 0 0 0; color:#FFF;text-decoration:none;}
+#bt_prev{width: 163px; height: 490px;float: left; background: #000;overflow: hidden;}
+#bt_prev .img_bt_prev{padding: 191px 27px 100px 28px;}
+#carousel{width: 650px; height: 490px;float: left;  overflow: hidden}
+#carousel ul{width: 650px; height: 490px;}
+#carousel ul li{width: 650px; height: 490px; }
+#carousel img{width:640px; height: 480px;border:5px solid #666; }
+#bt_next{width: 163px; height: 490px;float: left; background: #000;}
+#bt_next .img_bt_next{padding: 191px 28px 100px 27px;}
+/*
+#pagina .paginator{display:block; margin:10px 0 5px 0; float:right;}
+#pagina .paginator a{padding:3px 5px; margin:0 1px; border:1px solid #069; font-weight:bold;}
+#pagina .paginator a:hover{background:#069; color:#fff; text-decoration:none;}
+*/
+
+#rodape{clear: both; height: 100px; border:solid 0px black; text-align: center;  background:url(imagens/rodape.png) repeat-x;}
+#rodape .direito p{font:11px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#006600;font-variant:small-caps;}
+#rodape .direito img{padding: 7px 0 2px 0;}
+#rodape .direito{width: 240px;padding: 0 0 0 380px;margin: 5px;}

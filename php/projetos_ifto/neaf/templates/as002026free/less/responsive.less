@@ -1,0 +1,429 @@
+// Core variables and mixins
+@import "variables.less"; // Custom for this template
+@import "../../../media/jui/less/mixins.less";
+
+
+/*========================================================================
+========================================================================*/
+
+/* Large desktop */
+@media (min-width: 1200px) {} 
+
+/*========================================================================
+========================================================================*/
+
+/* Large desktop */
+@media (max-width: 1200px) {
+  #contact_map{height: 376px;}
+
+  #header-row .mod-search_searchword {width: 230px;}
+  .slide_title {font-size: 100px;}
+  .camera_caption a.readmore {right: 60px;}  
+  .mod-newsflash-adv__links .item_content ul li a {
+    font-size: 12px;
+  }
+  h1, h2 {
+    font-size: 30px;
+  }
+
+}
+
+/*========================================================================
+========================================================================*/
+
+/* Narrow desktop */
+@media (max-width: 980px) {
+
+    #logo .logo_title{
+      width: 180px;
+      position: relative;
+      top: 12px;
+    }
+  
+  .thumbnails {margin-left: -12px;}
+  .thumbnails > li {margin-left: 12px;}
+
+  .page-category__team .item_introtext {
+    overflow: visible;
+  }
+
+  #header-row .mod-search {  padding-left: 0;  }
+  #header-row .btn-search {    left: 10px;  }
+  #header-row .mod-search_searchword {width: 220px;}
+
+  .slide_title {
+    font-size: 70px;
+    letter-spacing: -4px;
+    line-height: 44px;
+    margin-bottom: 6px;
+  }
+
+  .camera_caption a.readmore {
+    padding: 19px 27px 16px 20px;
+    font-size: 20px;
+  }
+
+  .camera_caption a.readmore .arrow {
+    right: 12px;
+    top: 27px;
+  }
+
+  .shadow span {
+    left: 2%;
+    width: 96%;
+  }
+
+  .mod-newsflash-adv__links .item_content h2 {
+    line-height: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /*footer*/
+  #back-top{display: none !important;}
+}
+
+/*========================================================================
+========================================================================*/
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {}
+
+/*========================================================================
+========================================================================*/
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px){
+
+    #logo .logo_title{
+    
+  }
+
+  body{padding: 0 !important }
+
+  .container{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  // Stick to bottom footer styles
+  #wrapper{margin: 0;}
+  #footer-wrapper{height: auto;}
+  #push{display: none;}
+
+  #header-row .container {
+    padding: 37px 0px 64px 0px;
+  }
+
+  #header-row .mod-search {margin-left: 40px;}
+  .mod-menu__social {
+    margin-right: 80px;
+  }
+
+  .moduletable.navigation{
+    width: 89%;
+    margin: 20px auto 0;
+  }
+
+
+
+  #navigation-row{
+    .container{
+      margin-bottom: 12px;
+    }
+    position: relative;
+    .shadow span {
+      display: none;
+    }
+  }
+
+  .moduletable.slider{
+    overflow: hidden;
+  }
+
+.slide_title {
+  display: none !important;
+}
+
+#camera-slideshow .camera_caption p {
+  display: none !important;
+}
+
+  .camera_caption a.readmore {
+    right: inherit;
+  }
+
+  .mod-newsflash-adv__links{
+    .item__module{
+      width: 48%;
+      margin: 0 1% 20px;
+      float: left;
+    }
+  }
+
+  #footer{
+    .moduletable.span3{
+      float: right;
+      width: 40%;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  .mod-footer{
+      position: relative;
+      top: -48px;
+    }
+
+  .page-category__clients{
+    .item{
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .item_img{
+      float: left;
+      margin-right: 20px;
+       clear: none !important;
+    }
+  }
+
+  aside{
+    margin-top: 40px;
+  }
+
+  /*navigation*/
+  .select-menu{display: block;  width: 100%;}
+  .sf-menu{display: none;}
+
+
+  /*content*/
+    .item-image.blog-image{float: none; margin: 0 0 20px 0; }
+
+      .row-fluid {
+      [class*="itemSpan"] {
+          display: block;
+          float: none;
+          margin-left: 0;
+          width: auto;
+      }
+    }
+
+      /*gallery*/
+      .page-gallery{
+        .item_img.img-intro{
+          float: left;
+          margin: 0 @baseLineHeight @baseLineHeight 0;
+        }
+      }
+
+      .img-full__left.span5{width: 50%;}
+
+      /*contact*/
+      .contact_form{width: 50%;}
+      .contact_details{
+        margin-bottom: 20px;
+        .span6{
+          width: 50%;
+          float: left;
+        }
+      }
+
+
+/*Modules*/
+
+  /*search*/
+  .mod-search__aside{
+    .mod-search_searchword{
+      width: 50%;
+    }
+  }
+
+  /*login*/
+  .mod-login__aside{
+    .mod-login_username, .mod-login_passwd{
+      width: 50%;
+    }
+  }
+
+}
+
+/*========================================================================
+========================================================================*/
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+  #logo a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  #logo .logo_title{
+    display: block !important;
+    text-align: center;
+    clear: both;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 0 20px;
+  }
+
+  /*contact*/
+    .contact_form{width: 100%;}
+    .contact_details{
+      margin-bottom: @baseLineHeight;
+      .span6{
+        width: 100%;
+        float: none;
+      }
+    }
+
+      .container{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+.camera_caption a.readmore {
+  padding: 0px 10px 0px 10px;
+  font-size: 20px;
+  top: 20px;
+  span{
+    display: none !important;
+  }
+}
+
+#header-row .mod-search_searchword {
+    width: 175px;
+}
+
+.mod-newsflash-adv__links .item__module {
+width: 100%;
+margin: 0 0 20px;
+float: none;
+}
+
+.img-intro__left, .img-full__left {
+float: none !important;
+margin: 0 0 9px 0 !important;
+}
+
+  /*registration*/
+  .page-registration, .page-remind, .page-reset, .page-login, .page-login, .page-profile__edit{
+    form{
+      input, select{
+        width: 100%;
+      }
+      label{
+        display: inline-block;
+      }
+    }
+  }
+
+  .page-category__clients .item_img.img-intro {display: inline-block;}
+
+    /*gallery*/
+    .page-gallery{
+      .item_img.img-intro{
+        float: none;
+        margin: 0 0 @baseLineHeight 0;
+        img{
+          width: 100%;
+        }
+      }
+      .item{
+        text-align: center;
+      }
+    }
+
+    .img-full__left.span5{
+      width: 100%; 
+      margin-right:0; 
+      box-sizing:border-box; 
+      -moz-box-sizing: border-box;
+    }
+
+    /*blog*/
+    .page-blog{
+      .item_img.img-intro{
+        float: none;
+         margin: 0 0 @baseLineHeight 0;
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    /*archive*/
+    .page-archive_filters{
+      select{
+        display: block;
+        width: 100%;
+      }
+    }
+
+  .page-category__clients{
+    .item{
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .item_img{
+      float: none;
+      margin-right: 0px;
+    }
+  }
+
+    #footer{
+    .moduletable.span3{
+      float: right;
+      width: 100%;
+    }
+  }
+
+.mod-footer {
+position: relative;
+top: 33px;
+}
+
+
+
+/*Modules*/
+
+  /*search*/
+  .mod-search__aside{
+    .mod-search_searchword{
+      width: 100%;
+    }
+  }
+
+  /*login*/
+  .mod-login__aside{
+    .mod-login_username, .mod-login_passwd{
+      width: 100%;
+    }
+  }
+
+}
+
+/*========================================================================
+========================================================================*/
+
+/* Portrait phones */
+@media (max-width: 340px) {
+
+  #logo .logo_title {
+    position: relative;
+    top: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #header-row .mod-search_searchword {   width: 150px;}
+
+  .camera_caption a.readmore {
+    top: 40px;
+  }
+
+}

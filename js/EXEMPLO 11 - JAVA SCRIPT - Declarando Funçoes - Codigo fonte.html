@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Declaraçõe de Funções</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<script type="text/javascript">
+			function myFunction() // Para declarar funções utiliza-se a palavra-chave function
+			{                     // Após a palavra-chave function, coloca-se o nome da função
+				alert("Hello World!");
+			}
+		
+			function myCalc(x, y)
+			{
+				return x * y;
+			}
+		
+			function myResult()
+			{
+				document.getElementById("demo").innerHTML = myCalc(5, 2);
+			}
+			
+			// myFunction();
+		</script>
+	</head>
+
+	<body>
+		É possivel chamar as funções do Javascript por meio dos gerenciadores de eventos e de forma direta
+		 
+		
+		<p><button onclick="myFunction()">Clique aqui para ver a mensagem Hello world</button> </p>
+
+		<p><button onclick="myResult()">Clique aqui para ver o resultado</button></p>
+	
+		<p><span id="demo" name="demo">O resultado fica aqui</span></p>
+																					
+	</body>
+
+</html>

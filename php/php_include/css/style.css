@@ -1,0 +1,153 @@
+body{font-family: 'Roboto', sans-serif;}
+
+.linha{
+    width: 960px; /*largura total da página*/
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px 0 5px 0; /* padding: 5px 0; */
+}
+
+.coluna{
+    float: left; /* flutuação do componente à esquerda */
+    padding: 0 10px 0 10px;
+}
+
+.coluna1{width: 60px;}
+.coluna2{width: 140px;}
+.coluna3{width: 220px;}
+.coluna4{width: 300px;}
+.coluna5{width: 380px;}
+.coluna6{width: 460px;}
+.coluna7{width: 540px;}
+.coluna8{width: 620px;}
+.coluna9{width: 700px;}
+.coluna10{width: 780px;}
+.coluna11{width: 860px;}
+.coluna12{width: 940px;}
+
+.topo{
+    background-color: #d5e8da;
+}
+
+.topo img{
+    border: 2px solid #040404;
+    max-width: 100%;
+    min-width: 110px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.topo .img_esquerda{
+    float:left;
+}
+
+.topo h2{
+    text-align: right;
+    font-weight: bold;
+}
+
+.topo p{
+    text-align: right;
+    font-size: 1em;
+}
+
+.rodape{
+    background: #8cb7ac;
+    height: 60px;
+    padding-top: 15px;
+    text-align: center;
+    color: #f8f6cb;
+}
+
+.barra-lateral {
+    padding: 0.5%;
+}
+
+.menu ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.menu ul li{
+    margin: 5%;
+    outline: 1px solid #dedede;
+    text-align: center;
+}
+
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 3%;
+}
+
+.menu a:active, .menu a:after, .menu a:before{
+    text-decoration: none;
+}
+
+.paginas{
+    min-height: 250px;
+    padding-top: 10px;
+}
+
+.perfil{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form_login form{
+    display: block;
+    border: 2px groove #8cb7ac;
+    border-radius: 5px;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 5px 0 5px 30px;
+    vertical-align: middle;
+}
+
+.perfil a.botao_aluno {
+    background: #dc6274;
+    padding: 20px 10px;
+    border-radius: 3px;
+    color: #EBEBEB;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    max-width: 250px;
+    margin-top: 35px;
+    font-size: 13pt;
+}
+
+.perfil a.botao_aluno:hover{
+    background: #ddbdc2;
+    text-decoration: none;
+    padding: 22px 11px;
+}
+
+.perfil a.botao_servidor {
+    background: #52a256;
+    padding: 20px 10px;
+    border-radius: 3px;
+    color: #EBEBEB;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    max-width: 250px;
+    margin-top: 35px;
+    font-size: 13pt;
+}
+
+.perfil a.botao_servidor:hover{
+    background: #a9d9ac;
+    text-decoration: none;
+    padding: 22px 11px;
+    
+}
+
+.conteudo{
+    min-height: 300px;
+}

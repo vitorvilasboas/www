@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="everything_in_everyway" client="site"  method="upgrade">
+	<name>Perfect Facebook Page Plugin in Everyway</name>
+	<author>Perfect Web</author>
+	<creationDate>June 2015</creationDate>
+	<copyright>Copyright (C) 2015 Perfect Web. All rights reserved.</copyright>
+	<license>GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>office@perfect-web.co</authorEmail>
+	<authorUrl>www.perfect-web.co</authorUrl>
+	<version>2.0.4</version>
+	<description></description>
+	<perfect_update_id>31</perfect_update_id>
+	<files>
+		<filename plugin="facebook_page_plugin">facebook_page_plugin.php</filename>
+		<filename>index.html</filename>
+                <filename>instance_config.xml</filename>
+                <filename>helper.php</filename>
+		<folder>form</folder>
+		<folder>tmpl</folder>
+	</files>
+	<media folder="media" destination="plg_everything_in_everyway_facebook_page_plugin">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+		<filename>default_config.json</filename>
+	</media>
+	<languages folder="lang">
+		<language tag="en-GB">en-GB.plg_everything_in_everyway_facebook_page_plugin.ini</language><!-- Configuration -->
+		<language tag="en-GB">en-GB.plg_everything_in_everyway_facebook_page_plugin.sys.ini</language><!-- Plugin name and description -->
+		<language tag="en-GB">en-GB.plg_everything_in_everyway_facebook_page_plugin.site.ini</language><!-- Front-end -->
+	</languages>
+        
+        <scriptfile>installer.script.php</scriptfile>  
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="plugins/everything_in_everyway/facebook_page_plugin/form/fields">
+				<!-- Configuration fields with global options -->
+                                <field type="pwebbutton" hidden="true" /> 
+			</fieldset>
+		</fields>
+	</config>
+</extension>

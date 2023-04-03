@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript OOP - Programação Orientada a Objetos - Conceitos</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			// Declaração da classe carro
+			function Carro(speed)
+			{
+				alert("Classe carro instanciada"); // Método construtor
+				this.speed = speed; // Propriedade da classe
+			}
+			
+			// Por meio da palavra chave prototype, podemos adicionar
+			// uma nova propriedade nas classes em javascript
+			Carro.prototype.msg_speed = 'Mensagem de velocidade';
+			
+			// Por meio da palavra chave prototype, podemos adicionar
+			// um novo método nas classes em javascript
+			// Um método setSpeed foi criado e adicionado na classe Carro
+			Carro.prototype.setSpeed = function(speed){
+				this.speed = speed;
+				alert("Car speed changed");
+			}
+			
+			var car1 = new Carro(40); // Instanciação de objetos do tipo carro
+			var car2 = new Carro(60);
+			
+			// Acessando as propriedades da classe carro
+			alert("Velocidade do carro 1: " + car1.speed);
+			alert("Velocidade do carro 2: " + car2.speed);
+			
+			// Testando acesso a nova propriedade criada pelo prototype
+			alert(car1.msg_speed);
+		
+			// Setando novas velocidades através do método setSpeed para o objeto carro
+			car1.setSpeed(120);
+			car2.setSpeed(140);
+			
+			// Exibindo novas velocidades 
+			alert("Car 1 speed: " + car1.speed);
+			alert("Car 2 speed: " + car2.speed);
+			
+			// Criando uma nova função para estudarmos o conceito de herança em javascript
+			
+			// Criando uma classe chamada car
+			function Car() {} 
+			
+			// Adicionando uma propriedade
+			Car.prototype.msg_speed = 'This is a mesage of speed'; 
+			
+			// Adicionando um novo método na classe car
+			Car.prototype.setSpeed = function(speed) {
+				this.speed = speed;
+				alert("Car speed changed");
+			}
+			
+			// Criando uma classe chamada Ferrari
+			function Ferrari() {}
+			
+			// Herdando os propriedades e métodos da classe carro
+			Ferrari.prototype = new Car();
+			
+			// Exibindo o construtor de Ferrari
+			Ferrari.prototype.constructor = Ferrari;
+			
+			// Alterando o método setSpeed herdado da classe carro
+			Ferrari.prototype.setSpeed = function(speed){
+				this.speed = speed;
+				alert("Ferrari speed changed");
+			}
+			
+			// Criando um objeto do tipo ferrari
+			var ferrarioop = new Ferrari();
+			ferrarioop.setSpeed(20);
+			
+		</script>
+
+	</body>
+</html>

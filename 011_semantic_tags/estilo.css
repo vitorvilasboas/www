@@ -1,0 +1,91 @@
+* { 
+  font-family: verdana, helvetica, arial; 
+}
+
+body{
+  margin: 10px auto;
+  width: 80%;
+}
+
+header{
+  border: 1pt solid slategray;
+  background-color: #f2f2f2;
+  padding: 0px 10px;
+  height: 100px; 
+}
+
+header h2{
+  line-height: 60px;
+}
+
+nav{
+  background-color: snow;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+nav li{
+  list-style-type: none;
+  display: inline;
+  margin-right: 40px;
+}
+
+nav li a{
+  text-decoration: none;
+}
+
+main{
+  width: 74%;
+  float: left;
+  box-sizing: border-box;
+}
+
+article{
+  background: seashell;
+  padding: 10px;
+}
+
+section{
+  border: 1px dotted tan;
+  margin-bottom: 3px;
+  padding: 1%;
+}
+
+section p {
+  cursor: pointer;
+  text-align: justify; 
+}
+
+section img, section figure {
+  width: 300px;
+  border: 1pt solid black;
+  display: inline;
+  margin: 0px;
+}
+
+aside{
+  background-color: snow;
+  width: 24%;
+  float: left;
+  position: relative;
+  text-align: center;
+  padding: 1%;
+}
+
+aside iframe {
+  width: 100%;
+  margin: 2px;
+}
+
+footer{
+  background: #f2f2f2;
+  clear: left;
+  text-align: center;
+  font-size: small;
+  height: 60px;
+  line-height: 60px;
+}
+
+footer address{
+  display: inline;
+}

@@ -1,0 +1,83 @@
+.titulo{
+    text-align: center;
+}
+
+.ala{
+    width: 100px;
+    border: 1px double black ;
+    padding-left: 20px;
+    border-radius: 20px;
+   
+}
+
+.reitoria{
+    text-align: center;
+    margin-top: -240px;
+   
+    
+}
+.vestibular{
+    text-align: center;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 30px;
+}
+.disciplina{
+    text-align: 60px;
+    margin: auto;
+}
+.edital{
+  text-align: center;
+}
+.ed_completo{
+    margin: 35px;
+}
+.das_dp{
+    text-align: center
+}
+.color_pd{
+        color: lightblue;
+        background-color: black;
+}
+.afetado{
+    text-align: center;
+    color: lightblue;
+    background-color: black;
+}
+.turno_afe{
+    text-align: center;
+}
+.divulgacao{
+    text-align: center;
+    color: lightblue;
+    background-color: black;
+}
+.divulga{
+    text-align: center;
+}
+.nome{
+    text-align: center;
+}
+.forms{
+    text-align: center;
+}
+.img{
+    margin: 400px;
+}
+.nome{
+    text-align: center;
+}
+.campus{
+    text-align: center;
+}
+.ler{
+   text-align: center;
+}
+.ingles{
+    text-align: center;
+}
+.mat{
+    text-align: center;
+}

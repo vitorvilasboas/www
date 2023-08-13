@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancoras</title>
+</head>
+<body>
+    <!-- HIPERLINKS (ÂNCORAS) - tag <a></a> - permitem navegação entre páginas no mesmo website (link interno) ou para outro website (externo) -->
+
+    <h2>Exemplo de hiperlink externo</h2>
+    <p>
+        <a href="http://www.ifto.edu.br/formoso" target="_blank" title="Este link leva à página oficial do IFTO" rel="external">
+        Clique aqui para ser direcionado à página do IFTO Formoso
+        </a>
+    </p>
+
+    <!-- href: endereço para o destino -->
+    <!-- O // no endereço do link indica que este link pertence a um site externo -->
+    <!-- A ausência do // fará com que o navegador procure o site na mesma pasta que o site atual -->
+    <!-- title: cria descrições para os buscadores sobre o link -->
+    <!-- target: onde o destino será aberto, nova aba/janela (_blank) ou mesma aba/janela (_self)? -->
+    <!-- rel: nofollow evita indicar sites para os buscadores que não possuam conteudo que se relacione diretamente ao conteúdo do site atual -->
+
+    <h2>Exemplo de hiperlink interno</h2>
+    <p>
+        <a href="destino01.html" title="Este link leva ao destino01.html" target="_self">
+        Clique aqui para abrir o arquivo destino01.html no diretório atual
+        </a> <!-- target="_self": abre na mesma aba (pode ser omitido) -->
+    </p>
+    <p>
+        <a href="./nivel02/destino02.html" title="Este link leva ao destino02.html no diretório nivel02">
+        Clique aqui para abrir o arquivo destino02.html no diretório 'filho'
+        </a>
+    </p>
+
+    <p>
+        Clique <a href="nivel02/nivel03/destino03.html"><b>aqui</b></a> para abrir o arquivo destino03.html no diretório 'neto'
+    </p>
+
+    <h2>Exemplo de hiperlink para download</h2>
+    <p>
+        Clique <a href="nivel02/arquivo.pdf" download="meu arquivo.pdf" type="application/pdf">aqui</a> para baixar o PDF
+    </p>
+    <p>
+        Clique <a href="nivel02/arquivo.zip" download="meu_arquivo.zip" type="application/zip">aqui</a> para baixar o ZIP
+    </p>
+    <p>
+        Clique <a href="nivel02/arquivo.rar" download="meuArquivo.rar" type="application/rar">aqui</a> para baixar o RAR
+    </p>
+</body>
+</html>

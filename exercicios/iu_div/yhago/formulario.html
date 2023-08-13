@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exemplo Básico IU</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    </head>
+    <body>
+        <div class="linha">
+            <div class="coluna col3">
+                <div class="topo_inscricao">
+                </div> 
+            </div>
+            <div class="coluna col9">                    
+                <form class="form_inscricao" action="">
+                    <h3> Formulário de Inscrição </h3>
+                    <label for="nome">Nome: <br>
+                        <input type="text" name="nome" id="nome" placeholder="Informe seu nome aqui" required />
+                    </label>
+                    <label for="email">Email: <br>
+                        <input type="text" name="email" id="email" placeholder="Informe seu email aqui" required />
+                    </label>
+                    <label for="serié/curso"> Serié/Curso: <br>
+                        <select>
+                            <option>Selecione...</option>
+                            <option>1ºInformatica</option>
+                            <option>2ºInformatica</option>
+                            <option>3°Informatica</option>
+                            <option>1ºAgricultura</option>
+                            <option>2ºAgricultura</option>
+                            <option>3ºAgricultura</option>
+                        
+                        </select>
+                    </label>
+                       
+                    <label for="Diversificada"> Diversificada: <br>
+                        <select>
+                            <option>Selecione...</option>
+                            <option>Futsal</option>
+                            <option>Volei</option>
+                            <option>Libras</option>
+                        
+                        </select>
+                    </label>
+                    <input type="submit" class="botao" name="enviar" value="Enviar &raquo;"/>
+                    <input type="reset" class="botao" name="limpar" value="Limpar"/>
+
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>

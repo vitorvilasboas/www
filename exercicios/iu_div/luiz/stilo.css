@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#titulo{
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size:50px;
+}
+
+#teste{
+    color:black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    /* margin-bottom: 100px; */
+    margin-top: -10px;
+}
+
+#diciplina{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+}
+.header{
+    padding: 80px 0;
+    background-color: rgb(18, 170, 68);
+}
+img{
+    display:inline;
+}
+
+#libras{
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+/* #desc{
+    display:inline;
+    text-align: center;
+    float:left;
+} */
+
+#B1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(18, 170, 68);
+    padding: 15px;
+    color:black ;
+    margin-top: 20PX;
+    border-radius: 20px;
+}
+
+#fut{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+}
+
+#fotfut{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#ct{
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#desc{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.butao{
+    border-radius: 20px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(18, 170, 68);
+    padding: 15px;
+    color:black ;
+    margin-top: 50px;
+}   
+
+
+
+.inputGroup {
+
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    text-align: center;
+    margin-top: 50px;
+    
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 9950%;
+   
+  }
+  
+  .inputGroup label {
+    margin-top: -80px;
+    font-size: 100%;
+    position:absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+    
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e8;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
+  }
+
+.voltar{
+    text-align: center;
+}
+
+
+
+.fim_2{
+    text-align:center;
+    font-size: 70px;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 200px;
+
+}
+.form{
+    text-align:left;
+    width: 320px ;
+    margin: auto;
+    margin-top: 30px;
+    
+}
+input{
+    border-radius: 30px;
+    padding: 10px;
+    width: 300px;
+}
+.ES{
+  
+    margin-top: 10px;
+    text-align: center;
+    font-size: large;
+    text-align: center;
+
+}
+.senha{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.email{
+    text-align:left;
+    width: 320px ;
+    margin: auto;
+    margin-top: 30px;
+    
+}
+.but1{
+    text-align: center;
+}
+

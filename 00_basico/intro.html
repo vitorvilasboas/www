@@ -1,0 +1,215 @@
+<!--
+HTML: HyperText Markup Language - criação de documentos usando etiquetas (tags) hierarquicamente organizadas os quais podem ser lidos por diferentes navegadores e transmitidos pela internet. -->
+<!-- Tag comentário (Ctrl + /) - servem para explicar um código ou torná-lo inativo para o navegador - comentário são ignorados durante a interpretação feita pelo browser -->
+<!-- (!) -->
+
+<!DOCTYPE html> <!-- Indica versão 5 do HTML -->
+<html lang="pt-br"> <!-- lang="en" - lang define idioma padrão da página -->
+<head>
+    <!-- ABRE cabeçalho (similar cabeçalho escolar): Configura o documento usando metadados - atributos especializados da tag <meta>. Define informações (taxa de atualização, autor, descrição, palavras chaves, etc) que são invisíveis ao usuário mas importantes para navegadores e buscadores. -->
+    
+    <meta charset="UTF-8"> <!-- define o alfabeto de caracteres (unicode) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da tela útil do dispositivo (viewport) 1.0 == 100% -->
+    <meta name="author" content="Vitor Vilas Boas" />
+    <title>Titulo na aba</title> <!-- título exibido na barra superior -->
+</head> <!-- FECHA cabeçalho -->
+
+<body>
+    <!-- ABRE corpo. Compõe todo o conteúdo visível do site (textos, imagens, links, videos, animações) marcado por tags que definem elementos semânticos do conteúdo -->
+
+    <!-- elemento = tag abertura + conteúdo + tag fechamento -->
+
+    Olá mundo! Este é um elemento de título com tags de abertura e fechamento
+
+
+    <!-- EXERCÍCIO:
+        Crie uma página HTML que mostre seu nome completo. Defina nos metadados: o título, o idioma padrão pt-br, o autor, a codificação UTF-8 e a escala inicial de 100%.
+    -->
+
+    <p>TA FICANDO OSSO!!! </p>
+    <!-- TÍTULOS -->
+    <!-- sufixos de 1 a 6 indicam o nível hierárquico no documento -->
+    <h1>Este é um título de nível 1</h1>
+    <h2>Este é um título de nível 2</h2>
+    <h3>Este é um título de nível 3</h3>
+    <h4>Este é um título de nível 4</h4>
+    <h5>Este é um título de nível 5</h5>
+    <h6>Este é um título de nível 6</h6>
+
+    <h1>A covid afetou o mundo inteiro</h1>
+    <h2>Introdução</h2>
+    Texto da Introdução
+    <h2>Conteúdo</h2>
+    Texto da notícia
+    <h6>Formas de Infecção</h6>
+    <h6>Estatística de infectados</h6>
+    <h6>Produção de Vacinas</h6>
+    <h2>Conclusão</h2>
+    Texto da conclusão
+
+    <!-- PARÁGRAFOS -->
+    <p align="right">Olá Mundo</p>
+
+    <p> Este é um elemento parágrafo com tags de abertura e fechamento </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna metus, porta sed scelerisque eget, imperdiet
+        sit amet nunc. Suspendisse quis semper nisl, ornare posuere dolor. Maecenas commodo venenatis posuere. Sed ac
+        molestie massa, at finibus ante. Mauris id ante eu quam ullamcorper viverra et vel est. Proin aliquam dolor at
+        metus ornare interdum. Proin elementum ligula velit, quis tristique enim vulputate eu. Morbi facilisis dignissim
+        finibus.</p>
+
+    <br> <!-- Quebra de linha -->
+    <br>
+    <br>
+
+    <!-- Navegadores desconsideram espaços excedentes e quebras de linha com "Enter" -->
+
+    <p>
+        Este parágrafo serve para demonstrar a inserção
+        automática das quebras de linha .
+
+        Observe também que os espaços excedentes contidos
+        no documento HTML entre as palavras
+        desse parágrafo são desconsiderados
+        na exibição da página web .
+
+        As quebras de linha também são
+        desconsideradas. O navegador ajusta o texto
+        desse parágrafo ao espaço horizontal do
+        corpo dá página.
+    </p>
+
+    <p>
+        Minha terra tem palmeiras,
+        onde canta os sabiás.
+        As árvores que aqui gorjeiam,
+        não gorjeiam como lá.
+
+        Nosso céu tem mais estrelas,
+        nossas arvores tem mais flores,
+        nossos bosques tem mais vida
+        e nossas vidas mais valores.
+    </p>
+
+    <!-- Para quebrar linha no parágrafo, usamos <br> -->
+
+    <p>
+        Minha terra tem palmeiras,<br>
+        onde canta os sabiás.<br>
+        As árvores que aqui gorjeiam,<br>
+        não gorjeiam como lá.<br><br>
+
+        Nosso céu tem mais estrelas,<br>
+        nossas arvores tem mais flores,<br>
+        nossos bosques tem mais vida<br>
+        e nossas vidas mais valores.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Parágrafo pré formatado: exibe o conteúdo conforme foi digitado -->
+
+    <pre>
+        Este    parágrafo   serve   para    demonstrar  a   inserção
+        automática  das     quebras     de  linha . 
+
+        Com      o     elemento    pre-formatado   os  espaços e quebras    excedentes  
+        no  documento   HTML    são   exibidos  da
+        forma       como       foram             digitados.
+
+        Observe também 
+
+        o tipo de fonte 
+        utilizada nesse texto .
+    </pre>
+
+    <!-- Palavras muito longas podem ser "quebradas" usando <wbr> [Somente palavras na borda direita do parágrafo] -->
+
+    <p>
+        Neste parágrafo mostramos uma quebra de palavra em um parágrafo. Podemos indicar ao navegador como quebrar
+        palavras longas como otorrinolaringologista, assim: Otorrino <wbr>laringo <wbr>logista. Otorrino <wbr>laringo
+        <wbr>logista. Otorrino <wbr>laringo <wbr>logista. Otorrino <wbr>laringo <wbr>logista. Otorrino <wbr>laringo <wbr>logista. Otorrino
+        <wbr>laringo <wbr>logista. Otorrino <wbr>laringo <wbr>logista. Otorrino <wbr>laringo <wbr>logista.
+    </p>
+
+    <!-- ATRIBUTOS - elementos podem ter atributos que alteram sua apresentação -->
+
+    <!-- <nometag nomeatributo="valoratributo"> conteúdo </nomeTag> -->
+
+    <p align="center">Este é um parágrafo centralizado</p>
+    <!-- align = "left" ou "right" ou "center" ou "justify" -->
+
+    <h1 align="center">Meu poema</h1>
+    <!-- align é atributo de h1 e 'center' é seu valor -->
+
+    <p align="center">
+        Minha terra tem <b>palmeiras</b>,<br>onde canta os <i>sabiás</i>.<br>As árvores que aqui gorjeiam,<br>não
+        gorjeiam como lá.<br><br>Nosso céu tem mais estrelas,<br>nossas arvores tem mais flores,<br>nossos bosques tem
+        mais vida<br>e nossas vidas mais valores.
+    </p>
+
+    <p align="justify">
+        Parágrafo justificado: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus sapien vel turpis
+        pellentesque, quis pulvinar massa condimentum. Aenean id laoreet arcu, id posuere dolor. Nunc at aliquam arcu,
+        ac ultricies metus. Duis mi urna, lobortis ut lobortis at, accumsan ut purus. Mauris blandit porta turpis tempor
+        pulvinar. Fusce varius quis orci gravida malesuada. Phasellus sed consectetur leo. Quisque libero odio,
+        scelerisque id sem in, venenatis porttitor lectus. Praesent porta arcu et tortor facilisis convallis. Quisque in
+        metus et dolor elementum volutpat a nec justo. Aenean purus dui, mollis a elementum condimentum, accumsan non
+        lacus. Ut sit amet imperdiet odio.
+    </p>
+
+    <h1 align="center" >O que é Lorem Ipsum?</h1>
+    <p align="justify">
+        Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500. Ao contrário da crença popular, Lorem Ipsum não é simplesmente um texto aleatório. Tem raízes Lorem Ipsum nas seções 1.10.32 e 1.10.33 da peça clássica "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal) de Cícero, escrito em 45 aC. Este livro é um tratado sobre a teoria da ética, muito popular durante o Renascimento. 
+    </p>
+    <p align="justify">
+        É um fato estabelecido há muito tempo que um leitor se distrairá com o conteúdo legível de uma página ao olhar para seu layout. O ponto de usar Lorem Ipsum é que ele tem uma distribuição mais ou menos normal de letras, ao contrário de usar, fazendo com que pareça inglês legível. Muitos pacotes de editoração eletrônica e editores de páginas da web agora usam Lorem Ipsum como seu modelo de texto padrão. Existem muitas variações de passagens de Lorem Ipsum disponíveis, mas a maioria sofreu alterações de alguma forma, por humor injetado, ou palavras aleatórias que não parecem nem um pouco críveis.
+    </p>
+    <p align="justify">
+        Se você for usar uma passagem de Lorem Ipsum, você precisa ter certeza de que não há nada embaraçoso escondido no meio do texto. Todos os geradores Lorem Ipsum na Internet tendem a repetir pedaços predefinidos conforme necessário, tornando este o primeiro gerador verdadeiro na Internet. Ele usa um dicionário de mais de 200 palavras latinas, combinado com um punhado de estruturas de frases modelo, para gerar Lorem Ipsum que parece razoável. O Lorem Ipsum gerado é, portanto, sempre livre de repetição, humor injetado ou palavras não características etc.
+    </p>
+
+    <!--  Tipos de elementos/tags:
+        
+        elementos normais (normal tags): conteúdo é iserido entre tags de abertura e fechamento. 
+        ex: <p>conteúdo do parágrafao</p>
+        
+        elementos vazios (void tags): não possuem conteúdo e são abertos e fechados com tag única (autofechamento). 
+        ex: <br/>, <wbr/>, <hr/>, <img/>, <input/>, <link/>.
+        
+        elementos em bloco: definem seções de conteúdo (containers) que ocupam todo o espaço horizontal da página. 
+        ex: p, pre, div, article, blockquote
+        
+        elementos em linha: são usados para marcar um conteúdo específico (inclusive em um bloco). 
+        ex: a, strong, center, b, i, u, sup, sub, q, em, img, input, abbr, span 
+    -->
+
+    <p>
+        Este é um parágrafo do meu site, <br /><br /><br /> o qual eu desenvolvi durante a disciplina de <br />
+        desenvolvimento de sistemas web.
+    </p> <!-- elemento em bloco e normal -->
+
+    <br> <!-- elemento em linha e vazio -->
+
+    <hr> <!-- linha horizontal -->
+    <hr>
+    <hr>
+
+    <!-- index.html ? -->
+    <p>
+        O documento <i>index.html</i> é a página inicial padrão de uma aplicação web, aberto automaticamente pelo navegador sempre que não for informado outro documento explicitamente na URL.
+    </p>
+
+    <!-- EXERCÍCIO: 
+        Crie uma página HTML que contenha 4 níveis de títulos distintos, organizados hierarquicamente e centralizados. Abaixo de cada título insira um parágrafo Lorem Ipsum.  
+    -->
+
+    <!-- EXERCÍCIO:
+        Crie uma página HTML com 4 hiperlinks (âncoras) para notícias publicadas na internet. Utilize os atributos href, title e target.
+    -->
+
+</body> <!-- FECHA corpo -->
+
+</html>

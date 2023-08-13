@@ -1,0 +1,179 @@
+.cartaz {
+  max-width: 2500px;
+  height: 300px;
+  background-image: url('./img/estudantes.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* ----------------------------------------------------------- */ 
+main{
+  max-width: 2500px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+footer{
+  max-width: 2500px;
+}
+
+.caixa{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+h1{
+  padding-left: 80px;
+  text-shadow: 1px 1px 17px #000;
+}
+#conheca{
+  color: #00bb00;
+ font-size: 3.5em;
+}
+#DIVERSIFICADAS{
+  color: #fff;
+  font-size: 4.1em;
+}
+/* ------------------------------------------------------------ */
+.cartao2 {
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 2500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  margin: auto;
+  display: inline-block;
+  margin: 30px;
+  background-color:#f3f3f3;
+
+}
+
+.para2 {
+  font-size: 15px;
+}
+
+.content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #023200;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content2 .heading2 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.content2 .para2 {
+  line-height: 1.5;
+}
+
+.content2 .btn2 {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  /* background: linear-gradient(-45deg, #00bb00 0%, #00ff00 100%); */
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.cartao2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  /* background-color: #00bb00; */
+  /* background: linear-gradient(-45deg, #bebebe 0%, #ebebeb 100%); */
+  z-index: -1;
+  /* transition: all 2s cubic-bezier(0.23, 2, 0.320, 1); */
+  padding: 60px;
+  color: #000;
+  
+
+}
+.cartao2{
+  border: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+.para2::before{
+  background-color: #fff;
+}
+
+
+.cartao2:hover::before {
+  height: 100%;
+}
+
+.cartao2:hover {
+  box-shadow: none;
+}
+
+.cartao2:hover .btn2{
+  color: #ffffff;
+  background: #2a8500;
+}
+
+.content2 .btn2:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #2a8500;
+}
+
+.content2 .btn2:active {
+  box-shadow: none;
+}
+.mais_informacoes{
+  font-weight: 700;
+}
+
+summary{
+  padding-bottom: 20px;
+  cursor: pointer;
+
+}
+details > .para2{
+  font-size: large;
+  color: rgb(99, 0, 0);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.destaque{
+  font-weight: 2em;
+  font-weight: 900;
+}
+.content2{
+  max-width: 1300px;
+}
+img{
+  width: 500px;
+}
+details > p{
+  margin-top: 15px;
+}
+.sup{
+  margin: 25px 0;
+  background-color: #00bb00;
+  font-weight: 600;
+  color:#073f00 ;
+  border: 1px solid #023200;
+}
+
+
+/* -----------------------ADM----------------------------- */
+

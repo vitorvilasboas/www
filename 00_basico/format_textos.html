@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMATAÇÃO DE TEXTOS</title>
+</head>
+<body>
+    <p>
+        O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.
+    </p>
+
+    <h3>Código-fonte Python</h3>
+    <pre>
+        <code>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('Fim do programa')
+        </code>
+    </pre>
+
+    <h3>Elementos para Formatação de textos</h3>
+
+    texto <b>em negrito</b> (não semântico) <br>
+
+    texto <strong>em destaque</strong> (semântico) <br>
+
+    texto <i>em itálico</i> (não semântico) <br>
+
+    texto <em>com ênfase</em> (semântico) <br>
+
+    texto <u>sublinhado</u> (não semântico) <br>
+
+    texto <mark>marcado</mark> <br>
+
+    texto sobrescrito: x<sup>20</sup>+3 <br>
+
+    texto subescrito: H<sub>2</sub> <br>
+
+    texto <small>menor</small> <br>
+
+    texto <big>maior</big> <br>
+
+    texto <strike>incorreto</strike> <br>
+
+    <p align="justify">
+        <b>Faremos uma longa e profunda viagem</b> no vasto mundo da <i><u>Programação WEB</u></i> e estou certo de que aproveitaremos ao máximo esse tempo que passaremos juntos em <strong>busca das habilidades</strong> e
+        competências que o fará um <s>excelente desenvolvedor</s>, apto a encarar o mercado de trabalho.
+    </p>
+
+    <p align="right">
+        <i> Se não sabes, aprende; se já sabes, ensina.</i> (Confúcio).<br> O <strong>Brasil</strong> é o único país que ganhou <em>cinco vezes</em> a copa do mundo.
+    </p>
+
+    <p align="center">
+        A cidade de São Paulo possui uma área de 1.523 km<sup>2</sup>. Em 2011, São Paulo emitiu 16,430 milhões de
+        toneladas de CO<sub>2</sub>.
+    </p>
+
+    <p align="left">
+        <mark>Java</mark> e <mark>C#</mark> são linguagens de programação <mark>orientadas a objeto</mark>.
+    </p>
+
+    texto <s>tachado gdgddgdfg- substituido/atualizado</s> <br>
+
+    texto <del cite="marcador para estilo">tachado - excluído/inválido</del> <br>
+
+    texto <ins cite="marcador para estilo">inserido - revisado/adicionado depois</ins> <br>
+
+    <p align="justify">
+        Natal é a capital do Rio Grande so Norte. <ins>Sua fundação foi em 25 de dezembro de 1599.</ins><del> A área total dessa cidade é 167,263 Km<sup>2</sup></del>. <s>De acordo com o IBGE, a população dessa cidade é de 774.230 habitantes.</s> De acordo com o IBGE a população dessa cidade é de 803.739 habitantes.
+    </p>
+
+    <marquee behavior="legenda" direction="left">
+        Texto deslizante
+    </marquee>
+
+    <blockquote cite="http://en.wikipedia.org/wiki/Computer"> <!-- citações longas (bloco) -->
+        <p>Texto da citação longa</p>
+    </blockquote>
+
+    <p>
+        Nelson Rodrigues disse :
+        <q cite="http://pt.wikipedia.org/wiki/Nelson_Rodrigues">O adulto não existe. O homem é um menino perene.</q>
+        <!-- citações curtas -->
+    </p>
+
+    <p>
+        Estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets vitor">CSS</abbr> <!--abreviações-->
+    </p>
+
+    <p>
+        O <abbr title="Instituto de Matemática e Estatística">IME </abbr>é uma das unidades da <abbr
+            title="Universidade de São Paulo">USP</abbr>.
+    </p>
+
+    <p>
+        Definição: <dfn title="HyperText Markup Language">HTML</dfn> é a linguagem de marcação padrão para criação de websites.
+    </p>
+
+    <p>
+        dfn aproxima o efeito itálico: <br>
+        Um <dfn> pingado </dfn> é um copo de café com um pouco de leite.<br>
+        Uma <dfn> bomba de chocolate </dfn> é um doce de padaria feito com massa de farinha de trigo com recheio cremoso e cobertura de chocolate.
+    </p>
+
+    <p><sup>1</sup> A <i><b>professora</b></i> escolheu levar a turminha do primeiro ano para um passeio muito empolgante e radical: ela resolveu levar a criançada a uma exposição onde os pequenos  poderiam conhecer um pouco da antiga cultura dos povos gregos e romanos.</p>
+    <p><sup>2</sup> A excelente mostra contava com muitos peças <b>originais</b> como: esculturas, armaduras, escudos, lanças, armas e muitos outros artigos utilizados na antiguidade.</p>
+    <p><sup>3</sup> - E então Felipe! Está gostando da exposição? Perguntou a <sub>entusiasmada professora.</sub></p>
+    <p><sup>4</sup> - Da hora professora! <b>Eu achei muito legal </b>aquela armadura alí. Parece o homem de ferro.</p>
+    <p><sup>5</sup> - E você Bruninho? Do que você gostou mais?</p>
+    <p><sup>6</sup> - Professora eu gostei mais do cachorro quente. Respondeu o concentrado menino.</p>
+    <p><sup>7</sup> - Bem! Agora vamos ver as meninas. <u>Jéssica!</u> O que você está achando da exposição? </p>
+    <p><sup>8</sup> - Professora! Eu não estou <sub>gostando daqui</sub> não. Disse a menina.</p>
+    <p><sup>9</sup> - Por que não meu amor? Você está com medo das esculturas?...Das armaduras?</p>
+    <p><sup>10</sup> - Não! Eu não estou gostando daqui porque aqui só tem coisa quebrada, enferrujada e velha. Justificou a pequena estudante.</p>
+    <p><sup>10</sup> <strike>- Não! Eu não estou gostando daqui porque aqui só tem coisa quebrada, enferrujada e velha. Justificou a pequena estudante.</strike> </p>
+    <br><br>
+    <h2 align="center">A BRASILEIRA QUE SE DEU MAL EM MIAMI</h2>
+    <p align="justify">Para a polícia de Miami, a brasileira Vera Sant'Anna Gomes é mais um número na estatística de turistas assaltados na cidade.Para Vera de 45 anos, promotora carioca, Miami é uma <u>experiência</u> que ela quer <u>esquecer depressa</u>. No <i>domingo, 26 de setembro,</i> ela e uma amiga cometeram o erro clássico: perderam-se numa <b>avenida deserta,</b> a <i>Biscayne Boulevarde,</i> e foram assaltadas ao parar o carro num sinal vermelho. O ladrão arrebentou a janela do automóvel e arrancou a bolsa das mãos de Vera com tanta força que rasgou seu vestido. De quebrar feriu sua mão com caco de vidro.
+    <p align="right"><b>Revista Veja</b></p>
+</body>
+</html>

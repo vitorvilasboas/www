@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site da Heloisa</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="home">
+      <div class="apresentacao">
+        <div class="info">
+          <h1>
+            Bases <br />
+            Diversificadas
+          </h1>
+
+          <div class="button-container">
+            <a href="#imagens-informativas" class="button">Conheça</a>
+            <a  href="#formulario" class="button">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="assets/logo_ifto.svg" alt="" />
+      </div>
+    </section>
+
+    <section id="imagens-informativas">
+      <div class="cabecalho">
+        <h1>
+          Veja os cards informativos sobre <br />as matérias diversificadas
+        </h1>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1602618762130-8c863fbba3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt=""
+          />
+          <strong class="nome-materia">Teatro</strong>
+          <span class="descricao">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, est possimus voluptatibus adipisci libero, sint quia
+            eligendi consequuntur.
+          </span>
+
+          <span class="professor">Professor: Gleuter</span>
+
+          <a class="inscrevase" href="#formulario">inscreva-se</a>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt=""
+          />
+          <strong class="nome-materia">Robótica</strong>
+          <span class="descricao">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, est possimus voluptatibus adipisci libero, sint quia
+            eligendi consequuntur.
+          </span>
+
+          <span class="professor">Professor: Vitor villas boas</span>
+
+          <a class="inscrevase" href="#formulario">inscreva-se</a>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1628255681896-edbe6a253391?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt=""
+          />
+          <strong class="nome-materia">Eletricidade</strong>
+          <span class="descricao">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus, est possimus voluptatibus adipisci libero, sint quia
+            eligendi consequuntur.
+          </span>
+
+          <span class="professor">Professor: Idomeneu</span>
+
+          <a class="inscrevase" href="#formulario">inscreva-se</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario">
+          <div class="coluna">                    
+              <form class="form_inscricao" action="sucesso.html">
+                  <h3> Formulário de Inscrição </h3>
+                  <label for="nome">Nome: <br>
+                      <input class="input" type="text" name="nome" id="nome" placeholder="Informe seu nome aqui" required />
+                  </label>
+                  <label for="email">Email: <br>
+                      <input class="input" type="text" name="email" id="email" placeholder="Informe seu e-mail estudantil aqui" required />
+                  </label>
+                  <label for="selecao"> Selecione a Diversificada que deseja ingressar: <br>
+                      <select class="input">
+                          <option>Selecione...</option>
+                          <option>Teatro</option>
+                          <option>Robotica</option>
+                          <option>Eletricidade</option>
+                      </select>
+                  </label>
+                  <label for="selecao"> Qual série curso está cursando: <br>
+                      <select class="input">
+                          <option>Selecione...</option>
+                          <option>Técnico em Informática | Primeiro Ano </option>
+                          <option>Técnico em Informática | Segundo Ano </option>
+                          <option>Técnico em Informática | Terceiro Ano </option>
+                          <option>Técnico em Agricultura | Primeiro Ano </option>   
+                          <option>Técnico em Agricultura | Segundo Ano </option>     
+                          <option>Técnico em Agricultura | Terceiro Ano </option>                           
+                      </select>
+                  </label>     
+                  <div class="buttons">
+                    <input type="submit"  name="enviar" value="Enviar &raquo;"/>
+                    <input type="reset"  name="limpar" value="Limpar"/>
+                  </div> 
+              </form>
+          </div>
+      </div>
+    </section>
+  </body>
+</html>

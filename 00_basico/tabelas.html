@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/casinha.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Trabalhando com Tabelas</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        } /*Aplicando um reset de margin e padding em todos os elementos*/
+
+        body{
+            margin: 0 auto;
+            width: 80%; /* flexível */
+        }
+
+        h2{
+            color: brown;
+        }
+
+        table,
+        td,
+        th,
+        tfoot {
+            border: 1px solid #000;
+            padding: 5px;
+            margin: 10px;
+            font: 14px Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        th {
+            background-color: #999;
+        }
+
+        .tabela{
+            width: 100%;
+            border-right: 0; /* Zerando border para evitar duplicação de borda */
+            border-left: 0; 
+            border-bottom: 0;
+            border-top: 0;
+            border: 2px solid rgb(100, 45, 68);
+            border-collapse: collapse;
+        }
+
+        .coluna1 {
+            background-color: yellow;
+        }
+
+        .coluna2 {
+            background-color: rgb(100, 200, 100);
+        }
+
+        .tabela caption{
+            background: #005789;
+            font-family: 'Trebuchet MS';
+            font-weight: normal;
+            font-size: 16px;
+            color: #FFF;
+            padding: 8px;
+        }
+
+        .tabela td{
+            text-align: center;
+            border: 2px solid rgb(100, 45, 68);
+        }
+
+        .tabela th{
+            border: 2px solid rgb(100, 45, 68);
+        }
+
+        .tabela img{
+            width: 10px;
+            height: 10px;
+        }
+
+        .tabela tfoot{
+            font-weight: bold;
+            background-color: burlywood;
+            font-size: 10pt;
+        }
+
+        .tabela thead{
+            color: white;
+            background-color: navy;
+        }
+
+        table a{
+            text-decoration: none;
+            color: #FFF;
+            padding: 2px 6px;
+            border: 1px outset #F30;
+            background: #F60;
+            font: bold small-caps 12px arial, helvetiva, sans-serif;
+        }
+
+        /* Eventos */
+
+        table a:hover {
+            border: 2px inset #F00;
+            background: #5b5958;
+            text-decoration: none;
+        }
+
+        table tr:hover, 
+        table th:hover {
+            background: rgb(195, 215, 228);
+        }
+    </style>
+</head>
+<body>
+    <!-- TABELAS -->
+    <h2>Tabelas em HTML</h2>
+    
+    <table>
+        <colgroup>
+            <col class="coluna1">
+            <col class="coluna2">
+        </colgroup>
+        <tr>
+            <th>Linguagem de Marcação</th>
+            <th>Linguagem de Programação</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>XHTML</td>
+            <td>PHP</td>
+        </tr>
+        <tr>
+            <td>XML</td>
+            <td>Java</td>
+        </tr>
+        <tr>
+            <td>SGML</td>
+            <td>Python</td>
+        </tr>
+    </table>
+
+    <!-- cellpadding: espaçamento intra-célula - espaço entre a borda e o interior da celula -->
+    <!-- cellspacing: espaçamento inter-célula - acrescenta espaço entre as linhas da tabela -->
+    <!-- colspan: mesclar colunas -->
+    <!-- rowspan: mesclar linhas -->
+    <!-- title: informa para os navegadores e buscadores uma descrição da tabela-->
+    <!-- tbody: cabeçalho da tabela -->
+    <!-- tfoot: rodapé da tabela -->
+    <!-- align: alinha o conteúdo da celula horizontalmente -->
+    <!-- valign: alinha o conteúdo da celula verticalmente -->
+    <!-- caption: Título da tabela -->
+    <br>
+
+    <table>
+        <caption>Catálogo da PC & Cia</caption>
+        <thead>
+            <tr>
+                <th colspan="4">Tabela d2 preços</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">Visite nossa loja</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="2"> Seminovos</td>
+                <td>Placa Mãe ASUS</td>
+                <td>Placa de Vídeo RADEON</td>
+                <td>Intel Core i3 64 bits</td>
+            </tr>
+            <tr>
+                <td>R$ 500</td>
+                <td>R$ 640</td>
+                <td>R$ 650</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabelas não devem ser usadas para modelar design (pra isso têm-se as CSS) -->
+
+    <br>
+    
+    <table style="width:100%; border:1px solid #000000;">
+        <caption>Este é o Título da tabela</caption>
+        <!-- <colgroup>Colgroup</colgroup> -->
+        <thead>
+            <tr>
+                <th>Cabeçalho 1</th>
+                <th>Cabeçalho 2</th>
+                <th>Cabeçalho 3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr style="height:100px; text-align: center; vertical-align: bottom; padding: 2">
+                <!-- define as linhas da tabela -->
+                <td>Coluna 1 da Linha 1 </td> <!-- esse comando cria colunas -->
+                <td>Coluna 2 da Linha 1 </td>
+                <td>Coluna 3 da Linha 1 </td>
+            </tr>
+        </tbody>
+
+        <tr>
+            <td>Coluna 1 da Linha 2 </td>
+            <td>Coluna 2 da Linha 2 </td>
+            <td>Coluna 3 da Linha 2 </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Coluna 1 da Linha 3 </td>
+            <td>Coluna 2 da Linha 3 </td>
+            <td>Coluna 3 da Linha 3 </td>
+        </tr>
+
+        <tr>
+            <td>Coluna 2 da Linha 4 </td>
+            <td>Coluna 3 da Linha 4 </td>
+        </tr>
+
+        <tfoot>
+            <tr>
+                <td colspan="3" align="center">Última atualização : 05/2021 </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br>
+
+    <table class="tabela">
+        <caption>Este é o título da tabela</caption>
+        <thead><!-- tag semântica que agrupa os elementos do cabeçalho da tabela -->
+            <tr>
+                <th>-</th>
+                <th>Nome</th>
+                <th><img src="../imagens/nerd.ico" alt="imagem emoji nerd"> Telefone</th>
+                <th>Email</th>
+                <th colspan=2>Endereço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody><!-- tag semântica que agrupa os elementos do corpo/conteúdo da tabela -->
+            <tr>
+                <td rowspan=4>Contatos</td>
+                <td>Paulo</td>
+                <td>9999999</td>
+                <td><a href="mailto:#">paulo@ifto.edu.br</a></td>
+                <td>Rua das Acássias</td>
+                <td>Palmas-TO</td>
+                <td><a href="#" title="Excluir Contato">Deletar</a></td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>848484</td>
+                <td>maria@ifto.edu.br</td>
+                <td>1004 sul al 07</td>
+                <td>Palmas-TO</td>
+                <td><a href="#" title="Excluir Contato">Deletar</a></td>
+            </tr>
+            <tr>
+                <td>José</td>
+                <td>85854256</td>
+                <td>jose@gmail.com</td>
+                <td>Rua N7</td>
+                <td>Gurupi-TO</td>
+                <td><a href="#" title="Excluir Contato">Deletar</a></td>
+            </tr>
+            <tr>
+                <td>Vitor</td>
+                <td>98979596</td>
+                <td>vitorvilasboas@ifto.edu.br</td>
+                <td>Rua 3</td>
+                <td>Formoso do Araguaia-TO</td>
+                <td><a href="#" title="Excluir Contato">Deletar</a></td>
+            </tr>
+        </tbody>
+
+        <tfoot><!-- tag semântica que agrupa os elementos do rodapé da tabela -->
+            <td colspan="7">2023 &copy; Todos os direitos reservados</td>
+        </tfoot>
+
+    </table>
+
+
+</body>
+</html>

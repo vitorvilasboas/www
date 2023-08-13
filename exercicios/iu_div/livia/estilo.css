@@ -1,0 +1,103 @@
+body{ font-family:'Roboto', sans-serif; }
+
+.cabecalho{
+    background-color: #98eb90;
+    color: #ffffff;
+}
+
+.rodape{
+    background-color: #c7e2c1;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 100;
+    color: #1d1e1c;
+}
+
+.topo_texto{
+    text-transform: uppercase; 
+    text-align: right;
+    margin-top: 40px;
+}
+
+.conteudo{
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+.conteudo img{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    border: 2px solid #000000;
+    border-radius: 7px;
+}
+
+.conteudo h3, .conteudo h2{
+    color: #f35c16;
+}
+
+.sidebar img{
+    margin: 10px 0;
+    display: block;
+    float: right;
+}
+
+
+.linha_ultima td{
+    background: #a2cc9a;
+    text-align: right;
+}
+
+a.botao {
+    background: #b08b97;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #EBEBEB;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+}
+
+a.botao:hover {
+    background: #a2cc9a;
+    color: #333;
+}
+
+.form_inscricao label{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #086400;
+}
+
+.form_inscricao input.botao{
+    background: #0ea800;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #EBEBEB;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+    width: auto;
+}
+
+.form_inscricao input.botao:hover{
+    background: #c8ffbd;
+    color: #333;
+}
+
+.form_inscricao  input, .form_inscricao  textarea, .form_inscricao select{
+    display: box;
+    margin-bottom: 15px;
+    padding: 5px 2%;
+    width: 70%;
+}
+
+.form_inscricao textarea{
+    height: 150px;
+}
+
